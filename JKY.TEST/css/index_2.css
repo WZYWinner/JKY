@@ -1,0 +1,97 @@
+/* ::::: https://res.mail.qq.com/zh_CN/htmledition/style/comm20101b5cf4.css ::::: */
+
+td, input, button, select, body { font-family: "lucida Grande",Verdana; font-size: 12px; }
+input, textarea, a { outline: medium none; }
+form, body, ul, li { margin: 0px; padding: 0px; }
+select, body, textarea { background-color: rgb(255, 255, 255); font-size: 12px; }
+img { border: medium none; }
+a { text-decoration: none; cursor: pointer; outline: medium none; }
+a:hover { text-decoration: underline; }
+.settingTitle { font-size: 14px; font-weight: bold; text-align: center; padding-top: 5px; min-height: 28px; float: left; width: 100%; }
+.settingSub { white-space: nowrap; font-size: 14px; float: left; padding: 5px 10px 6px; }
+body { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.black { color: rgb(0, 0, 0); }
+.clr { clear: both; height: 1px; overflow: hidden; }
+.pointer { cursor: pointer; }
+.tbody { padding: 2px 7px 6px 4px; }
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+.txt_title { font-weight: bold; font-size: 14px; margin: 4px 0px 5px 8px; }
+.barspace4 { padding: 5px 7px 0px; height: 26px; }
+@media not all {
+}
+@media not all {
+}
+.toolbgline { padding: 7px; background-image: none; }
+.face0 { background: url('../images/face104474.gif') repeat scroll 0px 0px transparent; }
+.face1 { background: url('../images/face104474.gif') repeat scroll -58px 0px transparent; }
+.face2 { background: url('../images/face104474.gif') repeat scroll -116px 0px transparent; }
+.face3 { background: url('../images/face104474.gif') repeat scroll -174px 0px transparent; }
+.face4 { background: url('../images/face104474.gif') repeat scroll -232px 0px transparent; }
+.face5 { background: url('../images/face104474.gif') repeat scroll -290px 0px transparent; }
+.face6 { background: url('../images/face104474.gif') repeat scroll -348px 0px transparent; }
+.face7 { background: url('../images/face104474.gif') repeat scroll -406px 0px transparent; }
+.face8 { background: url('../images/face_f1b51b7.gif') repeat scroll -348px 0px transparent; }
+.face10 { background: url('../images/face104474.gif') repeat scroll -522px 0px transparent; }
+.face13 { background: url('../images/face104474.gif') repeat scroll -580px 0px transparent; }
+.face14 { background: url('../images/face104474.gif') repeat scroll -638px 0px transparent; }
+.face15 { background: url('../images/face104474.gif') repeat scroll -696px 0px transparent; }
+.face16 { background: url('../images/face_021b5285.jpg') repeat scroll 0px 0px transparent; }
+.face17 { background: url('../images/face_021b5285.jpg') repeat scroll -58px 0px transparent; }
+.face18 { background: url('../images/face_f1b51b7.gif') repeat scroll -116px 0px transparent; }
+.face19 { background: url('../images/face_021b5285.jpg') repeat scroll -115px 0px transparent; }
+.face21 { background: url('../images/face_021b5285.jpg') repeat scroll -173px 0px transparent; }
+.face22 { background: url('../images/face_021b5285.jpg') repeat scroll -232px 0px transparent; }
+.face23 { background: url('../images/face_021b5285.jpg') repeat scroll -463px 0px transparent; }
+.face24 { background: url('../images/face_021b5285.jpg') repeat scroll -522px 0px transparent; }
+.face25 { background: url('../images/face_021b5285.jpg') repeat scroll -580px 0px transparent; }
+.face26 { background: url('../images/face_f1b51b7.gif') repeat scroll -464px 0px transparent; }
+.face27 { background: url('../images/face_021b5285.jpg') repeat scroll -638px 0px transparent; }
+.face28 { background: url('../images/face_021b5285.jpg') repeat scroll -696px 0px transparent; }
+.face20 { background: url('../images/face_f1b51b7.gif') repeat scroll -232px 0px transparent; }
+.face210 { background: url('../images/face_foxmail104474.jpg') repeat scroll -58px 0px transparent; }
+.face211 { background: url('../images/face_foxmail104474.jpg') repeat scroll 0px 0px transparent; }
+@media not all {
+}
+.new_update_ico { width: 8px; height: 9px; display: inline-block; background: url('../images/mail1acc05.png') no-repeat scroll -128px -192px transparent; margin-left: 2px; vertical-align: top; position: relative; top: 2px; }
+@media not all, not all {
+	.face0, .face1, .face2, .face3, .face4, .face5, .face6, .face7, .face9, .face10, .face13, .face14, .face15 {  }
+	.face8, .face18, .face26, .face20, .face80, .face108, .face200, .face201, .face202, .face203, .face204 {  }
+	.face16, .face17, .face19, .face21, .face22, .face23, .face24, .face25, .face27, .face28, .face82, .face83, .face84 {  }
+	.face210, .face211 {  }
+	.ico_unreads, .ico_reads, .ico_unrss, .ico_remind_today, .ico_smsnotify_today, .ico_news_today, .ico_manage, .ico_mailtitle, .ico_dkim, .composebtn, .checkbtn, .addrbtn, .inputRound .tl, .inputRound .tr, .inputRound .bl, .inputRound .br, .msg_info .left, .rounded_pic .bd_left, .msg_info .right, .rounded_pic .bd_right, .msg_info .bottom_l, .rounded_pic .bd_left_bt, .msg_info .bottom_r, .rounded_pic .bd_right_bt, .roundedTable .tl, .roundedTable .tr, .roundedTable .bl, .roundedTable .br, .Rr, .Ru, .Rc, .Rh, .Rz, .Ju, .Ti, .Ss, .Sf, .Sp, input.s1bg, .ico_profileTips, .ico_offline, .ico_online, .Zh, .o_title, td.o_title2, table.i td.fs1_g, table.i td.fr, .ico_flag, .K, .K1, table.i td.pr0 div, table.i td.pr1 div, .ico_retome, li.fs .icon_folderlist_star, .icon_starred_min, li.fn .icon_folderlist_star, .icon_starred_min_black, li.fs .icon_folderlist_iclist, li.fn .icon_folderlist_iclist, li.fn .icon_starred_min, .icon_subfolder_1, .icon_star, .qm_ico_flagoff, table.i td.fg div, .icon_starred, .qm_ico_flagon, table.i td.fs1 div, .icon_star_b, .icon_starred_b, .qm_dialog .ico_close_d, .qm_dialog .ico_minimize, li.fs .vip_grouptitle, li.fn .vip_grouptitle, .tip_iclist_ico_btn, .tip_iclist_ico_remove_btn, .qm_ico_reopen, .qm_ico_remind, .qm_ico_remarkoff, .qm_ico_remarkon, .qm_ico_print, .qm_ico_addFilter, .qm_ico_quickdown, .qm_ico_quickup, .flogo, .icon_autoarchive, .editRemind, .setRemind, .uncheck, .checked, .fd_on, .fd_off, .imeon, .imeoff, .mixcheck, .ico_send, .ico_sendqzone, .ico_share, .unread_num .ico_unreadnum, .drifticon, .ml_ico_nummail, .wx_qrCode .qr_icon, .ico_reader, .ico_reader_unread, .ico_drift, .ico_flag_green, .new_update_ico, .new_update_ico_dark, .ico_select_s, .ico_Avira, .ico_ADList, .ico_foldSubMail, .mail_editmode .ico_close, .ico_close_mini, .ico_autoMark_on, .ico_autoMark_off {  }
+}
+@media �screen {
+}
+html { top: 0px; }
+/* ::::: https://res.mail.qq.com/zh_CN/htmledition/style/setting182c5e.css ::::: */
+
+.skinsetting { margin: 0px 2%; height: auto; }
+.skinsetting img { width: 58px; height: 58px; margin: 2px 0px 0px; }
+.skinsetting fieldset { padding: 4px 5px 9px; border-width: 1px 0px 0px; background: none repeat scroll 0% 0% transparent; }
+.skinsetting fieldset legend { margin-left: 10px; padding: 0px 5px; }
+.skinsetting fieldset div { float: left; width: 86px; height: 90px; margin: 2px 1px; }
+.skinsetting div table { height: 84px; width: 100%; }
+.skinsetting div td { text-align: center; padding: 2px 0px 0px; height: auto; }
+@media not all, not all {
+}
+/* ::::: https://rl.mail.qq.com/cgi-bin/getcss?sid=QbeHJmdRpszYNSh7&ft=skin ::::: */
+
+a, a:link, a:visited, a:hover { color: rgb(0, 96, 145); }
+.attbg { background: none repeat scroll 0% 0% rgb(212, 237, 249); }
+@media not all, not all {
+}
+a:hover, .txt_title_none a:hover, .tabtitle td a:hover { color: rgb(0, 135, 202); }
+.settingSub a:hover { color: rgb(0, 135, 202); }
+.toolbg, .toolbg1 { background: none repeat scroll 0% 0% rgb(165, 217, 240); }
+.settingTitle { background: none repeat scroll 0% 0% rgb(165, 217, 240); }
+.toolbgline, .tabtitle td, .readmailinfo, .addr_line, .filtertd1, .bartools { border-bottom: 1px solid rgb(111, 188, 226); }
+.tabtitle td.selected, .colorpanel, .bd, .tpinfo { border: 1px solid rgb(111, 188, 226); }
+.readmailinfo, .settingtable, .tabtitle td.selected, .biginfo, .tipstitle, .colorsure { background: none repeat scroll 0% 0% rgb(236, 249, 255); }
+.settingTitle .selected { background: none repeat scroll 0% 0% rgb(236, 249, 255); }
+.addrtitle { color: rgb(122, 143, 153); }
+.txt_title, .txt_title_tab, .biginfo, .tipstitle { color: rgb(0, 51, 77); }

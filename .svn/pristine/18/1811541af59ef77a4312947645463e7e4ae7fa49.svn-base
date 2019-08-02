@@ -1,0 +1,541 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MySql.Data.MySqlClient;
+using Yaohuasoft.Framework.Library;
+using Yaohuasoft.Framework.DAL;
+using System.Data;
+namespace Yaohuasoft.Framework.BLL.DrugShop
+{
+    public static partial class  DrugInfoBLL
+    {
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Add(DrugInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTimeConvert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+entity.CorpId=corpId;
+            ret = DrugInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Merge(DrugInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTimeConvert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+entity.CorpId=corpId;
+            ret = DrugInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID删除单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Delete(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ret = DrugInfoDAL.Delete(0, id,0);
+            return ret;
+        }
+        public static DrugInfoAuditDALEntity    Entity2AuditEntity2(DrugInfoDALEntity   entity)
+        {
+            DrugInfoAuditDALEntity result = new DrugInfoAuditDALEntity();
+            result.DrugId = entity.DrugId;
+            result.DrugName = entity.DrugName;
+            result.TagList = entity.TagList;
+            result.MendrecommendTag = entity.MendrecommendTag;
+            result.PowerIndex = entity.PowerIndex;
+            result.ProductName = entity.ProductName;
+            result.DrugPicUrl = entity.DrugPicUrl;
+            result.DrugStandard = entity.DrugStandard;
+            result.FactoryName = entity.FactoryName;
+            result.FactoryAddress = entity.FactoryAddress;
+            result.ProductCategory = entity.ProductCategory;
+            result.ApprovalDate = entity.ApprovalDate;
+            result.DrugStandardCode = entity.DrugStandardCode;
+            result.DrugBrand = entity.DrugBrand;
+            result.DrugSale = entity.DrugSale;
+            result.DrugPreparation = entity.DrugPreparation;
+            result.Pinyin = entity.Pinyin;
+            result.GenericName = entity.GenericName;
+            result.DrugOrigin = entity.DrugOrigin;
+            result.EnglishName = entity.EnglishName;
+            result.SellState = entity.SellState;
+            result.SellStateIntro = entity.SellStateIntro;
+            result.IsMedicalInsurance = entity.IsMedicalInsurance;
+            result.IsPrescription = entity.IsPrescription;
+            result.IsBasicDrugs = entity.IsBasicDrugs;
+            result.DrugFunction = entity.DrugFunction;
+            result.DrugStorage = entity.DrugStorage;
+            result.DrugPharmacologic = entity.DrugPharmacologic;
+            result.DrugInterations = entity.DrugInterations;
+            result.DrugAnnouncement = entity.DrugAnnouncement;
+            result.DrugTaboo = entity.DrugTaboo;
+            result.AdverseEffects = entity.AdverseEffects;
+            result.DrugIndication = entity.DrugIndication;
+            result.DrugCharacter = entity.DrugCharacter;
+            result.DrugMaterial = entity.DrugMaterial;
+            result.DrugInstruction = entity.DrugInstruction;
+            result.DrugSpecialCrowd = entity.DrugSpecialCrowd;
+            result.DrugSuitCrowd = entity.DrugSuitCrowd;
+            result.DrugIntro = entity.DrugIntro;
+            result.ValidTime = entity.ValidTime;
+            result.InfoSource = entity.InfoSource;
+            result.IsSeo = entity.IsSeo;
+            result.SeoTitle = entity.SeoTitle;
+            result.SeoKeywords = entity.SeoKeywords;
+            result.SeoDescription = entity.SeoDescription;
+            result.EditUserName = entity.EditUserName;
+            result.EditTime = entity.EditTime;
+            result.AuditState = entity.AuditState;
+            result.AuditReason = entity.AuditReason;
+            result.AuditRemark = entity.AuditRemark;
+            result.AuditTime = entity.AuditTime;
+            result.AuditUserName = entity.AuditUserName;
+            result.CorpId = entity.CorpId;
+            return result;
+        }
+        /// <summary>
+        /// 根据ID提交审核单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int ShenQingById(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【根据ID提交申请】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID同意单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int TongYi(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【同意审核】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID拒绝单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int JuJue(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【拒绝审核】的代码
+            {
+            }
+            {
+            }
+            return ret;
+        }
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Save(DrugInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证名称
+            if (string.IsNullOrEmpty(entity.DrugId.ToStr()))
+                return ret;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+entity.CorpId=corpId;
+            ret = DrugInfoDAL.Update(0, entity,0);
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID获取单个实体
+        /// </summary>
+        public static DrugInfoDALEntity GetEntity(string id,string corpId,string departmentId,string userName)
+        {
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return null;
+            //实体获取
+            var entity = DrugInfoDAL.Select(0, id,0);
+            return entity;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugInfoDALEntity> GetList( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList,
+             int CurrentPageIndex, int PageSize,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugInfoQueryParameter();
+            if (dropList["IsMedicalInsurance"].IsNullOrEmptys()==false) parm.EqualTo.IsMedicalInsurance = dropList["IsMedicalInsurance"].ToString();
+            if (dropList["IsPrescription"].IsNullOrEmptys()==false) parm.EqualTo.IsPrescription = dropList["IsPrescription"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["DrugId"].IsNullOrEmptys() == false) parm.Like.DrugId = textBoxInOne["DrugId"].ToString();
+            if (textBoxInOne["DrugName"].IsNullOrEmptys() == false) parm.Like.DrugName = textBoxInOne["DrugName"].ToString();
+            if (textBoxInOne["TagList"].IsNullOrEmptys() == false) parm.Like.TagList = textBoxInOne["TagList"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+			parm.EqualTo.CorpId=corpId;
+            parm.Pager.PageIndex = CurrentPageIndex-1;//数据从索引0开始
+            parm.Pager.OnePageSize = PageSize;
+            //统计查询  分页使用
+            count = DrugInfoDAL.Count(0, parm,0);
+            //数据库查询
+            list = DrugInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugInfoDALEntity> GetList4Export( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList
+            ,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugInfoQueryParameter();
+            if (dropList["IsMedicalInsurance"].IsNullOrEmptys()==false) parm.EqualTo.IsMedicalInsurance = dropList["IsMedicalInsurance"].ToString();
+            if (dropList["IsPrescription"].IsNullOrEmptys()==false) parm.EqualTo.IsPrescription = dropList["IsPrescription"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["DrugId"].IsNullOrEmptys() == false) parm.Like.DrugId = textBoxInOne["DrugId"].ToString();
+            if (textBoxInOne["DrugName"].IsNullOrEmptys() == false) parm.Like.DrugName = textBoxInOne["DrugName"].ToString();
+            if (textBoxInOne["TagList"].IsNullOrEmptys() == false) parm.Like.TagList = textBoxInOne["TagList"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+			parm.EqualTo.CorpId=corpId;
+            parm.Pager.PageIndex = 0;//数据从索引0开始
+            parm.Pager.OnePageSize = OnePageSize4Export;
+            //统计查询  分页使用
+            count = DrugInfoDAL.Count(0, parm,0);
+            //排序
+            parm.OrderBy.Add("DrugId", YaohuaOrderByType.Desc);
+            //数据库查询
+            list = DrugInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        public static string ImportExcel2Db(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugInfoDALEntity[] list = DrugInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                item.ProductCategory=SysConfigService.GetKey(corpId,"PRODUCT_CATEGORY",item.ProductCategory);
+                item.DrugPreparation=SysConfigService.GetKey(corpId,"DRUG_PREPARATION",item.DrugPreparation);
+                item.DrugOrigin=SysConfigService.GetKey(corpId,"DRUG_ORIGIN",item.DrugOrigin);
+                item.SellState=SysConfigService.GetKey(corpId,"SELL_STATE",item.SellState);
+                item.IsMedicalInsurance=SysConfigService.GetKey(corpId,"IS_MEDICAL_INSURANCE",item.IsMedicalInsurance);
+                item.IsPrescription=SysConfigService.GetKey(corpId,"IS_PRESCRIPTION",item.IsPrescription);
+                item.IsBasicDrugs=SysConfigService.GetKey(corpId,"IS_BASIC_DRUGS",item.IsBasicDrugs);
+                item.IsSeo=SysConfigService.GetKey(corpId,"IS_SEO",item.IsSeo);
+                DrugInfoDALEntity oldEntity = null;
+                if (item.DrugId != null)
+                    oldEntity = DrugInfoBLL.GetEntity(item.DrugId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            ////将新数据写入
+                            Save(item, corpId, departmentId, userName);
+                            ////
+                            OkCount++;
+                        }
+                    break;
+                default:
+                    break;
+            }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        public static string ImportExcel2Db4Audit(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugInfoDALEntity[] list = DrugInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                item.ProductCategory=SysConfigService.GetKey(corpId,"PRODUCT_CATEGORY",item.ProductCategory);
+                item.DrugPreparation=SysConfigService.GetKey(corpId,"DRUG_PREPARATION",item.DrugPreparation);
+                item.DrugOrigin=SysConfigService.GetKey(corpId,"DRUG_ORIGIN",item.DrugOrigin);
+                item.SellState=SysConfigService.GetKey(corpId,"SELL_STATE",item.SellState);
+                item.IsMedicalInsurance=SysConfigService.GetKey(corpId,"IS_MEDICAL_INSURANCE",item.IsMedicalInsurance);
+                item.IsPrescription=SysConfigService.GetKey(corpId,"IS_PRESCRIPTION",item.IsPrescription);
+                item.IsBasicDrugs=SysConfigService.GetKey(corpId,"IS_BASIC_DRUGS",item.IsBasicDrugs);
+                item.IsSeo=SysConfigService.GetKey(corpId,"IS_SEO",item.IsSeo);
+                DrugInfoDALEntity oldEntity = null;
+                if (item.DrugId != null)
+                    oldEntity = DrugInfoBLL.GetEntity(item.DrugId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            var auditEntity2 = Entity2AuditEntity2(item);
+                            auditEntity2.AuditState = "待审核";
+                            DrugInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            var auditEntity2=Entity2AuditEntity2(item);
+                            auditEntity2.AuditState="待审核";
+                            DrugInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                    break;
+                default:
+                    break;
+                }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        /// <summary>
+        /// 导出时最多导出多少条
+        /// </summary>
+        static public int OnePageSize4Export = 1000;
+        /// <summary>
+        /// 将实体数组转化为DataTable
+        /// 取最先N条
+        /// </summary>
+        /// <param name="input">数据列表</param>
+        /// <param name="TopCount">取最先N条</param>
+        /// <returns></returns>
+        static public DataTable EntityList2DataTableCn( DrugInfoDALEntity[] input)
+        {
+            DataTable result = new DataTable();
+            List<DrugInfoDALEntity> list = new List<DrugInfoDALEntity>();
+            ////将LIST列表的ID变成名字
+            foreach (var item in input)
+            {
+                ////克隆后加入新列表
+                DrugInfoDALEntity entity = item.Clone();
+                entity.ProductCategory=SysConfigService.GetValue("","PRODUCT_CATEGORY",item.ProductCategory);
+                entity.DrugPreparation=SysConfigService.GetValue("","DRUG_PREPARATION",item.DrugPreparation);
+                entity.DrugOrigin=SysConfigService.GetValue("","DRUG_ORIGIN",item.DrugOrigin);
+                entity.SellState=SysConfigService.GetValue("","SELL_STATE",item.SellState);
+                entity.IsMedicalInsurance=SysConfigService.GetValue("","IS_MEDICAL_INSURANCE",item.IsMedicalInsurance);
+                entity.IsPrescription=SysConfigService.GetValue("","IS_PRESCRIPTION",item.IsPrescription);
+                entity.IsBasicDrugs=SysConfigService.GetValue("","IS_BASIC_DRUGS",item.IsBasicDrugs);
+                entity.IsSeo=SysConfigService.GetValue("","IS_SEO",item.IsSeo);
+                list.Add(entity);
+            }
+            ////构建DataTable的列
+            result.Columns.Add("批准文号", typeof(string));
+            result.Columns.Add("药品名称", typeof(string));
+            result.Columns.Add("药品标签列表", typeof(string));
+            result.Columns.Add("权重", typeof(int));
+            result.Columns.Add("商品名", typeof(string));
+            result.Columns.Add("药品图片", typeof(string));
+            result.Columns.Add("药品规格", typeof(string));
+            result.Columns.Add("生产企业", typeof(string));
+            result.Columns.Add("生产地址", typeof(string));
+            result.Columns.Add("药品分类", typeof(string));
+            result.Columns.Add("批准日期", typeof(DateTime));
+            result.Columns.Add("药品本位码", typeof(string));
+            result.Columns.Add("品牌", typeof(string));
+            result.Columns.Add("剂型", typeof(string));
+            result.Columns.Add("汉语拼音", typeof(string));
+            result.Columns.Add("通用名", typeof(string));
+            result.Columns.Add("产地", typeof(string));
+            result.Columns.Add("英文名称", typeof(string));
+            result.Columns.Add("销售/生产状态", typeof(string));
+            result.Columns.Add("销售/生产状态说明", typeof(string));
+            result.Columns.Add("是否医保", typeof(string));
+            result.Columns.Add("是否处方药", typeof(string));
+            result.Columns.Add("是否基础药物", typeof(string));
+            result.Columns.Add("功能主治", typeof(string));
+            result.Columns.Add("贮藏方式", typeof(string));
+            result.Columns.Add("药理作用", typeof(string));
+            result.Columns.Add("药物相互作用", typeof(string));
+            result.Columns.Add("注意事项", typeof(string));
+            result.Columns.Add("禁忌", typeof(string));
+            result.Columns.Add("不良反应", typeof(string));
+            result.Columns.Add("适应症", typeof(string));
+            result.Columns.Add("性状", typeof(string));
+            result.Columns.Add("成分", typeof(string));
+            result.Columns.Add("用法用量", typeof(string));
+            result.Columns.Add("特殊人群", typeof(string));
+            result.Columns.Add("适用人群", typeof(string));
+            result.Columns.Add("有效期", typeof(string));
+            result.Columns.Add("SEO字段类型", typeof(string));
+            result.Columns.Add("SEO标题", typeof(string));
+            result.Columns.Add("SEO关键字", typeof(string));
+            result.Columns.Add("SEO描述", typeof(string));
+            result.Columns.Add(" ", typeof(string));
+            int i = 0;
+            ////填充DataTable的数据
+            foreach (DrugInfoDALEntity item in input)
+            {
+                result.Rows.Add(
+                item.DrugId,
+                item.DrugName,
+                item.TagList,
+                item.PowerIndex,
+                item.ProductName,
+                item.DrugPicUrl,
+                item.DrugStandard,
+                item.FactoryName,
+                item.FactoryAddress,
+                item.ProductCategory,
+                item.ApprovalDate,
+                item.DrugStandardCode,
+                item.DrugBrand,
+                item.DrugPreparation,
+                item.Pinyin,
+                item.GenericName,
+                item.DrugOrigin,
+                item.EnglishName,
+                item.SellState,
+                item.SellStateIntro,
+                item.IsMedicalInsurance,
+                item.IsPrescription,
+                item.IsBasicDrugs,
+                item.DrugFunction,
+                item.DrugStorage,
+                item.DrugPharmacologic,
+                item.DrugInterations,
+                item.DrugAnnouncement,
+                item.DrugTaboo,
+                item.AdverseEffects,
+                item.DrugIndication,
+                item.DrugCharacter,
+                item.DrugMaterial,
+                item.DrugInstruction,
+                item.DrugSpecialCrowd,
+                item.DrugSuitCrowd,
+                item.ValidTime,
+                item.IsSeo,
+                item.SeoTitle,
+                item.SeoKeywords,
+                item.SeoDescription,
+                "");
+                i++;
+            }
+            return result;
+        }
+    }
+}

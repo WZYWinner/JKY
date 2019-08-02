@@ -1,0 +1,86 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DrugInfo_Detail.aspx.cs" Inherits="Yaohuasoft.Framework.WebUI.DrugShop.DrugInfoDetail" %>
+<%@ Import Namespace="Yaohuasoft.Framework.Library" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>药品信息详情</title>
+    <link href="/_css/common2014.css" rel="stylesheet" type="text/css" />
+	<link href="/_js/xheditor/xheditor_skin/nostyle/ui.css" rel="stylesheet" type="text/css" />
+    <script src="/_js/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="/_js/xheditor/xheditor-1.1.14-zh-cn.min.js" type="text/javascript"></script>
+    <script src="/_js/xheditor/xheditor_plugins/ubb.min.js" type="text/javascript"></script>
+    <script src="/_js/myxheditor.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="contain">
+		   <h1 class="txt_title">            药品信息     </h1>
+            <span class="toolbg" unselectable="on" onselectstart="return false;">
+<small>
+<a     hidefocus=""   href="DrugInfo_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >返回</a>
+<a    hidefocus="" href="DrugInfo_Modify.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >编辑</a>
+</small>
+                <asp:Label ID="errormsg" runat="server" Text="" CssClass="error"></asp:Label>
+                  </span>
+				<asp:HiddenField ID="hfID" runat="server"  />
+            <ul class="create_list">
+ <li><font>批准文号</font><span> <%=HttpUtility.HtmlEncode(entity.DrugId.ToStr()) %></span></li>
+ <li><font>药品名称</font><span> <%=HttpUtility.HtmlEncode(entity.DrugName.ToStr()) %></span></li>
+ <li><font>药品标签列表</font><span> <%=HttpUtility.HtmlEncode(entity.TagList.ToStr()) %></span></li>
+ <li><font>权重</font><span> <%=HttpUtility.HtmlEncode(entity.PowerIndex.ToStr()) %></span></li>
+ <li><font>商品名</font><span> <%=HttpUtility.HtmlEncode(entity.ProductName.ToStr()) %></span></li>
+ <li><font>药品图片</font><span> <asp:Image ID="imgDrugPicUrl" runat="server" /></span></li>
+ <li><font>药品规格</font><span> <%=HttpUtility.HtmlEncode(entity.DrugStandard.ToStr()) %></span></li>
+ <li><font>生产企业</font><span> <%=HttpUtility.HtmlEncode(entity.FactoryName.ToStr()) %></span></li>
+ <li><font>生产地址</font><span> <%=HttpUtility.HtmlEncode(entity.FactoryAddress.ToStr()) %></span></li>
+ <li><font>药品分类</font><span> <%=HttpUtility.HtmlEncode(entity.ProductCategory.ToStr()) %></span></li>
+ <li><font>批准日期</font><span> <%=HttpUtility.HtmlEncode(entity.ApprovalDate.ToStr()) %></span></li>
+ <li><font>药品本位码</font><span> <%=HttpUtility.HtmlEncode(entity.DrugStandardCode.ToStr()) %></span></li>
+ <li><font>品牌</font><span> <%=HttpUtility.HtmlEncode(entity.DrugBrand.ToStr()) %></span></li>
+ <li><font>剂型</font><span> <%=HttpUtility.HtmlEncode(entity.DrugPreparation.ToStr()) %></span></li>
+ <li><font>汉语拼音</font><span> <%=HttpUtility.HtmlEncode(entity.Pinyin.ToStr()) %></span></li>
+ <li><font>通用名</font><span> <%=HttpUtility.HtmlEncode(entity.GenericName.ToStr()) %></span></li>
+ <li><font>产地</font><span> <%=HttpUtility.HtmlEncode(entity.DrugOrigin.ToStr()) %></span></li>
+ <li><font>英文名称</font><span> <%=HttpUtility.HtmlEncode(entity.EnglishName.ToStr()) %></span></li>
+ <li><font>销售/生产状态</font><span> <%=HttpUtility.HtmlEncode(entity.SellState.ToStr()) %></span></li>
+ <li><font>销售/生产状态说明</font><span> <%=HttpUtility.HtmlEncode(entity.SellStateIntro.ToStr()) %></span></li>
+ <li><font>是否医保</font><span> <%=HttpUtility.HtmlEncode(entity.IsMedicalInsurance.ToStr()) %></span></li>
+ <li><font>是否处方药</font><span> <%=HttpUtility.HtmlEncode(entity.IsPrescription.ToStr()) %></span></li>
+ <li><font>是否基础药物</font><span> <%=HttpUtility.HtmlEncode(entity.IsBasicDrugs.ToStr()) %></span></li>
+ <li><font>功能主治</font><span> <%=HttpUtility.HtmlEncode(entity.DrugFunction.ToStr()) %></span></li>
+ <li><font>贮藏方式</font><span> <%=HttpUtility.HtmlEncode(entity.DrugStorage.ToStr()) %></span></li>
+ <li><font>药理作用</font><span> <%=HttpUtility.HtmlEncode(entity.DrugPharmacologic.ToStr()) %></span></li>
+ <li><font>药物相互作用</font><span> <%=HttpUtility.HtmlEncode(entity.DrugInterations.ToStr()) %></span></li>
+ <li><font>注意事项</font><span> <%=HttpUtility.HtmlEncode(entity.DrugAnnouncement.ToStr()) %></span></li>
+ <li><font>禁忌</font><span> <%=HttpUtility.HtmlEncode(entity.DrugTaboo.ToStr()) %></span></li>
+ <li><font>不良反应</font><span> <%=HttpUtility.HtmlEncode(entity.AdverseEffects.ToStr()) %></span></li>
+ <li><font>适应症</font><span> <%=HttpUtility.HtmlEncode(entity.DrugIndication.ToStr()) %></span></li>
+ <li><font>性状</font><span> <%=HttpUtility.HtmlEncode(entity.DrugCharacter.ToStr()) %></span></li>
+ <li><font>成分</font><span> <%=HttpUtility.HtmlEncode(entity.DrugMaterial.ToStr()) %></span></li>
+ <li><font>用法用量</font><span> <%=HttpUtility.HtmlEncode(entity.DrugInstruction.ToStr()) %></span></li>
+ <li><font>特殊人群</font><span> <%=HttpUtility.HtmlEncode(entity.DrugSpecialCrowd.ToStr()) %></span></li>
+ <li><font>适用人群</font><span> <%=HttpUtility.HtmlEncode(entity.DrugSuitCrowd.ToStr()) %></span></li>
+ <li><font>有效期</font><span> <%=HttpUtility.HtmlEncode(entity.ValidTime.ToStr()) %></span></li>
+ <li><font>信息来源</font><span> <%=HttpUtility.HtmlEncode(entity.InfoSource.ToStr()) %></span></li>
+ <li><font>SEO字段类型</font><span> <%=HttpUtility.HtmlEncode(entity.IsSeo.ToStr()) %></span></li>
+ <li><font>SEO标题</font><span> <%=HttpUtility.HtmlEncode(entity.SeoTitle.ToStr()) %></span></li>
+ <li><font>SEO关键字</font><span> <%=HttpUtility.HtmlEncode(entity.SeoKeywords.ToStr()) %></span></li>
+ <li><font>SEO描述</font><span> <%=HttpUtility.HtmlEncode(entity.SeoDescription.ToStr()) %></span></li>
+ <li><font>修改人员名称</font><span> <%=HttpUtility.HtmlEncode(entity.EditUserName.ToStr()) %></span></li>
+ <li><font>修改时间</font><span> <%=HttpUtility.HtmlEncode(entity.EditTime.ToStr()) %></span></li>
+ <li><font>审核状态</font><span> <%=HttpUtility.HtmlEncode(entity.AuditState.ToStr()) %></span></li>
+ <li><font>审核原因说明</font><span> <%=HttpUtility.HtmlEncode(entity.AuditReason.ToStr()) %></span></li>
+ <li><font>审核备注</font><span> <%=HttpUtility.HtmlEncode(entity.AuditRemark.ToStr()) %></span></li>
+ <li><font>审核时间</font><span> <%=HttpUtility.HtmlEncode(entity.AuditTime.ToStr()) %></span></li>
+ <li><font>审核人员名称</font><span> <%=HttpUtility.HtmlEncode(entity.AuditUserName.ToStr()) %></span></li>
+            </ul>
+            <span class="toolbg" unselectable="on" onselectstart="return false;">
+<small>
+<a     hidefocus=""   href="DrugInfo_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >返回</a>
+<a    hidefocus="" href="DrugInfo_Modify.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >编辑</a>
+</small>
+        </span>
+    </div>
+    </form>
+</body>
+</html>

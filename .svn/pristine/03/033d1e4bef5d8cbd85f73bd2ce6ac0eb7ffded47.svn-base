@@ -1,0 +1,2504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28B5B5E6-4C21-44D1-8B1A-41DE6B32AEEE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DICOS.PRINT.ADMIN</RootNamespace>
+    <AssemblyName>DICOS.PRINT.ADMIN</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.4.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.4\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JKY.TEST.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\JKY.TEST.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MyXls.SL2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\MyXls.SL2.dll</HintPath>
+    </Reference>
+    <Reference Include="net91com.WebControls, Version=1.1.0.0, Culture=neutral, PublicKeyToken=f16826d4b145f6bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\net91com.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Library\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="SWFUploadAPI">
+      <HintPath>..\Library\SWFUploadAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Yaohuasoft.Framework2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\Yaohuasoft.Framework2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Xml\Index.xml" />
+    <Content Include="css\bootstrap-reset.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\index_1.css" />
+    <Content Include="css\index_2.css" />
+    <Content Include="css\index_3.css" />
+    <Content Include="css\login-style.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\style-responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\bar-bg.png" />
+    <Content Include="images\btn.png" />
+    <Content Include="images\btn_left.png" />
+    <Content Include="images\btn_right.png" />
+    <Content Include="images\down.png" />
+    <Content Include="images\face104474.gif" />
+    <Content Include="images\face_021b5285.jpg" />
+    <Content Include="images\face_f1b51b7.gif" />
+    <Content Include="images\face_foxmail104474.jpg" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\ico_loading104474.gif" />
+    <Content Include="images\left_bottom_bg104473.jpg" />
+    <Content Include="images\left_normal_bg104473.jpg" />
+    <Content Include="images\login_bg.png" />
+    <Content Include="images\login_icon.png" />
+    <Content Include="images\login_pic.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo_16_0104473.gif" />
+    <Content Include="images\mail1acc05.png" />
+    <Content Include="images\name.png" />
+    <Content Include="images\password.png" />
+    <Content Include="images\smartsearch104474.png" />
+    <Content Include="images\spacer104474.gif" />
+    <Content Include="images\table_icon.png" />
+    <Content Include="images\temp\cord_pic.png" />
+    <Content Include="images\temp\re_pic.png" />
+    <Content Include="images\tip_icon.png" />
+    <Content Include="images\topline104473.gif" />
+    <Content Include="images\topline_bg104473.gif" />
+    <Content Include="images\top_bg104473.jpg" />
+    <Content Include="images\top_bg_list104473.gif" />
+    <Content Include="images\top_data104473.gif" />
+    <Content Include="images\up.png" />
+    <Content Include="images\uploading104470.gif" />
+    <Content Include="images\wrong.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="Index\LqAdmin.aspx" />
+    <Content Include="Index\LqAdminHomePage.aspx" />
+    <Content Include="Index\SysAdmin.aspx" />
+    <Content Include="Index\SysAdminHomePage.aspx" />
+    <Content Include="Index\GsfAdmin.aspx" />
+    <Content Include="Index\WzyAdmin.aspx" />
+    <Content Include="Index\GsfAdminHomePage.aspx" />
+    <Content Include="Index\WzyAdminHomePage.aspx" />
+    <Content Include="js\jquery-1.8.0.js" />
+    <Content Include="js\jquery-2.1.0.min.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Plupload\css\upload_file.css" />
+    <Content Include="Plupload\script\fancybox\blank.gif" />
+    <Content Include="Plupload\script\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Plupload\script\fancybox\fancybox_loading.gif" />
+    <Content Include="Plupload\script\fancybox\fancybox_overlay.png" />
+    <Content Include="Plupload\script\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Plupload\script\fancybox\fancybox_sprite.png" />
+    <Content Include="Plupload\script\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Plupload\script\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Plupload\script\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Plupload\script\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Plupload\script\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Plupload\script\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Plupload\script\fancybox\i18n\zh-cn.js" />
+    <Content Include="Plupload\script\fancybox\jquery.fancybox.css" />
+    <Content Include="Plupload\script\fancybox\jquery.fancybox.js" />
+    <Content Include="Plupload\script\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Plupload\script\i18n\zh-cn.js" />
+    <Content Include="Plupload\script\jquery-1.8.2.min.js" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\css\jquery.plupload.queue.css" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\img\delete.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\img\done.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\img\error.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\img\icon_close.png" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\img\icon_plus.png" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\img\throbber.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue2\jquery.plupload.queue.js" />
+    <Content Include="Plupload\script\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\done.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\error.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="Plupload\script\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="Plupload\script\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="Plupload\script\jquery.plupload.queue\jquery.plupload.queue.min.js" />
+    <Content Include="Plupload\script\jquery.plupload.single\css\jquery.plupload.single.css" />
+    <Content Include="Plupload\script\jquery.plupload.single\img\icon_plus.png" />
+    <Content Include="Plupload\script\jquery.plupload.single\img\throbber.gif" />
+    <Content Include="Plupload\script\jquery.plupload.single\img\up_btn.png" />
+    <Content Include="Plupload\script\jquery.plupload.single\jquery.plupload.single.js" />
+    <Content Include="Plupload\script\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="Plupload\script\jquery.ui.plupload\img\icon_back.png" />
+    <Content Include="Plupload\script\jquery.ui.plupload\img\icon_back_white.png" />
+    <Content Include="Plupload\script\jquery.ui.plupload\img\loading.gif" />
+    <Content Include="Plupload\script\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="Plupload\script\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="Plupload\script\jquery.ui.plupload\jquery.ui.plupload.min.js" />
+    <Content Include="Plupload\script\moxie.js" />
+    <Content Include="Plupload\script\moxie.min.js" />
+    <Content Include="Plupload\script\Moxie.swf" />
+    <Content Include="Plupload\script\Moxie.xap" />
+    <Content Include="Plupload\script\plupload.dev.js" />
+    <Content Include="Plupload\script\plupload.full.min.js" />
+    <Content Include="Plupload\script\plupload.min.js" />
+    <Content Include="Plupload\script\uploaderFun.js" />
+    <Content Include="Plupload\UC_Plupload.ascx" />
+    <Content Include="Plupload\UC_Plupload2.ascx" />
+    <Content Include="Plupload\UC_PluploadSingle.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="WebHandler\HuangqianHandler.ashx" />
+    <Content Include="WebHandler\LanOrderHandler.ashx" />
+    <Content Include="WebUI\GsfAdmin\2016目录2_List.txt" />
+    <Content Include="WebUI\GsfAdmin\2016目录3_List.txt" />
+    <Content Include="WebUI\GsfAdmin\2016目录4_List.txt" />
+    <Content Include="WebUI\GsfAdmin\2016目录_List.txt" />
+    <Content Include="WebUI\GsfAdmin\GuoUser_Create.aspx" />
+    <Content Include="WebUI\GsfAdmin\GuoUser_Detail.aspx" />
+    <Content Include="WebUI\GsfAdmin\GuoUser_List.aspx" />
+    <Content Include="WebUI\GsfAdmin\GuoUser_Modify.aspx" />
+    <Content Include="WebUI\GsfAdmin\GuoUser_Upload.aspx" />
+    <Content Include="WebUI\GsfAdmin\SysUser_Create.aspx" />
+    <Content Include="WebUI\GsfAdmin\SysUser_Detail.aspx" />
+    <Content Include="WebUI\GsfAdmin\SysUser_List.aspx" />
+    <Content Include="WebUI\GsfAdmin\SysUser_Modify.aspx" />
+    <Content Include="WebUI\GsfAdmin\SysUser_Upload.aspx" />
+    <Content Include="WebUI\LqAdmin\2016目录2_List.txt" />
+    <Content Include="WebUI\LqAdmin\2016目录3_List.txt" />
+    <Content Include="WebUI\LqAdmin\2016目录4_List.txt" />
+    <Content Include="WebUI\LqAdmin\2016目录_List.txt" />
+    <Content Include="WebUI\LqAdmin\SysUser_Create.aspx" />
+    <Content Include="WebUI\LqAdmin\SysUser_Detail.aspx" />
+    <Content Include="WebUI\LqAdmin\SysUser_List.aspx" />
+    <Content Include="WebUI\LqAdmin\SysUser_Modify.aspx" />
+    <Content Include="WebUI\LqAdmin\SysUser_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\2016目录2_List.txt" />
+    <Content Include="WebUI\SysAdmin\2016目录3_List.txt" />
+    <Content Include="WebUI\SysAdmin\2016目录4_List.txt" />
+    <Content Include="WebUI\SysAdmin\2016目录_List.txt" />
+    <Content Include="WebUI\SysAdmin\Activity_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\Activity_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\Activity_List.aspx" />
+    <Content Include="WebUI\SysAdmin\Activity_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\Activity_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselOne_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselOne_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselOne_List.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselOne_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselOne_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselTwo_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselTwo_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselTwo_List.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselTwo_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\CarouselTwo_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\GoodsRecommend_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\GoodsRecommend_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\GoodsRecommend_List.aspx" />
+    <Content Include="WebUI\SysAdmin\GoodsRecommend_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\GoodsRecommend_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\GuoUser_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\GuoUser_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\GuoUser_List.aspx" />
+    <Content Include="WebUI\SysAdmin\GuoUser_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\GuoUser_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\HuangUser_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\HuangUser_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\HuangUser_List.aspx" />
+    <Content Include="WebUI\SysAdmin\HuangUser_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\HuangUser_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanAddress_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanAddress_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanAddress_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanAddress_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanAddress_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanCarousel_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanCarousel_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanCarousel_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanCarousel_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanCarousel_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanGoods_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanGoods_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanGoods_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanGoods_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanGoods_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanMenu_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanMenu_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanMenu_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanMenu_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanMenu_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderGood_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderGood_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderGood_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderGood_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderGood_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderList_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderList_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderList_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderList_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanOrderList_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanSecondMenu_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanSecondMenu_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanSecondMenu_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanSecondMenu_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanSecondMenu_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LanUser_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LanUser_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LanUser_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LanUser_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LanUser_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcAddress_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcAddress_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcAddress_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcAddress_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcAddress_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcCarousel_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcCarousel_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcCarousel_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcCarousel_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcCarousel_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcGoods_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcGoods_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcGoods_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcGoods_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcGoods_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcSubmit_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcSubmit_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcSubmit_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcSubmit_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcSubmit_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcUser_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcUser_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcUser_List.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcUser_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\LxcUser_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqAddress_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqAddress_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqAddress_List.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqAddress_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqAddress_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqGoods_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqGoods_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqGoods_List.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqGoods_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqGoods_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqOrder_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqOrder_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqOrder_List.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqOrder_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqOrder_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqPay_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqPay_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqPay_List.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqPay_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqPay_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqShoppingcar_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqShoppingcar_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqShoppingcar_List.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqShoppingcar_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\MzqShoppingcar_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderDetail_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderDetail_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderDetail_List.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderDetail_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderDetail_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderForm_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderForm_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderForm_List.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderForm_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\OrderForm_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SecuritiesCentre_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SecuritiesCentre_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SecuritiesCentre_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SecuritiesCentre_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SecuritiesCentre_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SignInprize_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SignInprize_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SignInprize_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SignInprize_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SignInprize_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SQL语句.txt" />
+    <Content Include="WebUI\SysAdmin\SysArea_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysArea_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysArea_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysArea_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysArea_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysConfig_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysConfig_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysConfig_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysConfig_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysConfig_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysCorp_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysCorp_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysCorp_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysCorp_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysCorp_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDelete_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDelete_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDelete_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDelete_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDelete_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDepartment_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDepartment_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDepartment_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDepartment_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysDepartment_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysMenu_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysMenu_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysMenu_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysMenu_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysMenu_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysRole_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysRole_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysRole_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysRole_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysRole_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\SysUser_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\SysUser_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\SysUser_List.aspx" />
+    <Content Include="WebUI\SysAdmin\SysUser_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\SysUser_Upload.aspx" />
+    <Content Include="WebUI\SysAdmin\UserInfo_Create.aspx" />
+    <Content Include="WebUI\SysAdmin\UserInfo_Detail.aspx" />
+    <Content Include="WebUI\SysAdmin\UserInfo_List.aspx" />
+    <Content Include="WebUI\SysAdmin\UserInfo_Modify.aspx" />
+    <Content Include="WebUI\SysAdmin\UserInfo_Upload.aspx" />
+    <Content Include="WebUI\WzyAdmin\2016目录2_List.txt" />
+    <Content Include="WebUI\WzyAdmin\2016目录3_List.txt" />
+    <Content Include="WebUI\WzyAdmin\2016目录4_List.txt" />
+    <Content Include="WebUI\WzyAdmin\2016目录_List.txt" />
+    <Content Include="WebUI\WzyAdmin\SysUser_Create.aspx" />
+    <Content Include="WebUI\WzyAdmin\SysUser_Detail.aspx" />
+    <Content Include="WebUI\WzyAdmin\SysUser_List.aspx" />
+    <Content Include="WebUI\WzyAdmin\SysUser_Modify.aspx" />
+    <Content Include="WebUI\WzyAdmin\SysUser_Upload.aspx" />
+    <Content Include="_css\check.css" />
+    <Content Include="_css\comm20101b5cf4.css" />
+    <Content Include="_css\common.css" />
+    <Content Include="_css\common2014.css" />
+    <Content Include="_css\common2016\angular-growl.min.css" />
+    <Content Include="_css\common2016\bootstrap.css" />
+    <Content Include="_css\common2016\common.css" />
+    <Content Include="_css\common2016\console1412.css" />
+    <Content Include="_css\common2016\create.css" />
+    <Content Include="_css\common2016\home.css" />
+    <Content Include="_css\common2016\list.css" />
+    <Content Include="_css\common2016\ticketSystem\attachment.css" />
+    <Content Include="_css\common2016\ticketSystem\common.css" />
+    <Content Include="_css\common2016\ticketSystem\detail.css" />
+    <Content Include="_css\common2016\ticketSystem\list.css" />
+    <Content Include="_css\common2016\ticketSystem\previewImage.css" />
+    <Content Include="_css\common2016\ticketSystem\scene.css" />
+    <Content Include="_css\common2016\ticketSystem\ticketSystem.console.css" />
+    <Content Include="_css\common2016\ticketSystem\tip.css" />
+    <Content Include="_css\common2016\ticketSystem\unreadCount.css" />
+    <Content Include="_css\getcss.css" />
+    <Content Include="_css\Images\calendar.gif" />
+    <Content Include="_css\Images\mail1acc05.png" />
+    <Content Include="_css\Images\ui-icons_2694e8_256x240.png" />
+    <Content Include="_css\Images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="_css\Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="_css\index.css" />
+    <Content Include="_css\jquery-ui-1.8.16.custom.css" />
+    <Content Include="_css\login.css" />
+    <Content Include="_images\bar-bg.png" />
+    <Content Include="_images\btn.png" />
+    <Content Include="_images\btn_left.png" />
+    <Content Include="_images\btn_right.png" />
+    <Content Include="_images\down.png" />
+    <Content Include="_images\face104474.gif" />
+    <Content Include="_images\face_021b5285.jpg" />
+    <Content Include="_images\face_f1b51b7.gif" />
+    <Content Include="_images\icon.png" />
+    <Content Include="_images\Icon_BG.png" />
+    <Content Include="_images\ico_loading104474.gif" />
+    <Content Include="_images\left_bottom_bg104473.jpg" />
+    <Content Include="_images\left_normal_bg104473.jpg" />
+    <Content Include="_images\login.jpg" />
+    <Content Include="_images\login_bg.png" />
+    <Content Include="_images\login_icon.png" />
+    <Content Include="_images\login_pic.png" />
+    <Content Include="_images\logo.png" />
+    <Content Include="_images\logo_16_0104473.gif" />
+    <Content Include="_images\mail1acc05.png" />
+    <Content Include="_images\name.png" />
+    <Content Include="_images\password.png" />
+    <Content Include="_images\smartsearch104474.png" />
+    <Content Include="_images\spacer104474.gif" />
+    <Content Include="_images\table_icon.png" />
+    <Content Include="_images\temp\cord_pic.png" />
+    <Content Include="_images\temp\re_pic.png" />
+    <Content Include="_images\tip_icon.png" />
+    <Content Include="_images\topline104473.gif" />
+    <Content Include="_images\topline_bg104473.gif" />
+    <Content Include="_images\top_bg104473.jpg" />
+    <Content Include="_images\top_bg_list104473.gif" />
+    <Content Include="_images\top_data104473.gif" />
+    <Content Include="_images\up.png" />
+    <Content Include="_images\uploading104470.gif" />
+    <Content Include="_images\wrong.png" />
+    <Content Include="_js\colResizable-1.3.min.js" />
+    <Content Include="_js\common.js" />
+    <Content Include="_js\jquery-1.8.2.js" />
+    <Content Include="_js\jquery-1.8.2.min.js" />
+    <Content Include="_js\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="_js\jquery.metadata.js" />
+    <Content Include="_js\jquery.validate.js" />
+    <Content Include="_js\layer\extend\layer.ext.js" />
+    <Content Include="_js\layer\layer.js" />
+    <Content Include="_js\layer\skin\default\icon-ext.png" />
+    <Content Include="_js\layer\skin\default\icon.png" />
+    <Content Include="_js\layer\skin\default\loading-0.gif" />
+    <Content Include="_js\layer\skin\default\loading-1.gif" />
+    <Content Include="_js\layer\skin\default\loading-2.gif" />
+    <Content Include="_js\layer\skin\layer.css" />
+    <Content Include="_js\layer\skin\layer.ext.css" />
+    <Content Include="_js\messages_zh.js" />
+    <Content Include="_js\My97DatePicker\calendar.js" />
+    <Content Include="_js\My97DatePicker\config.js" />
+    <Content Include="_js\My97DatePicker\lang\en.js" />
+    <Content Include="_js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="_js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="_js\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="_js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="_js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="_js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="_js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="_js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="_js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="_js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="_js\My97DatePicker\WdatePicker.js" />
+    <Content Include="_js\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="_js\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="_js\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="_js\My97DatePicker\开发包\readme.txt" />
+    <Content Include="_js\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="_js\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="_js\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="_js\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="_js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="_js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="_js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="_js\myxheditor.js" />
+    <Content Include="_js\page_common.js" />
+    <Content Include="_js\preview_pic.js" />
+    <Content Include="_js\preview_txt.js" />
+    <Content Include="_js\textareaFullScreen\jquery.textareafullscreen.js" />
+    <Content Include="_js\textareaFullScreen\textareafullscreen.css" />
+    <Content Include="_js\warp.js" />
+    <Content Include="_js\xheditor\xheditor-1.1.14-zh-cn.min.js" />
+    <Content Include="_js\xheditor\xheditor_emot\default\angry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\awkward.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\bye.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\config.txt" />
+    <Content Include="_js\xheditor\xheditor_emot\default\crazy.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\cry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\curse.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\cute.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\despise.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\doubt.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\envy.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\fastcry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\knock.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\laugh.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\mad.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\ohmy.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\panic.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\proud.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\quiet.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\sad.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\shutup.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\shy.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\sleep.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\smile.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\struggle.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\titter.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\tongue.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\wail.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\default\wronged.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\alien.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\angel.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\angry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\bandit.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\biglaugh.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\blink.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\blush.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\config.txt" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\cool.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\cry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\depres.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\devil.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\glare.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\heart.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\joyful.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\kiss.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\laugh.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\magician.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\ninja.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\pinch.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\police.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\sad.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\sick.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\sideways.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\sleep.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\smile.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\surprised.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\tongue.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\unsure.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\w00t.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\whistling.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\wondering.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\ipb\wub.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\1.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\10.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\11.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\12.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\13.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\14.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\15.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\16.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\17.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\18.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\19.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\2.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\20.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\21.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\22.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\23.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\24.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\25.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\26.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\27.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\28.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\29.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\3.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\30.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\31.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\32.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\33.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\34.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\35.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\36.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\37.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\38.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\39.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\4.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\40.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\5.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\6.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\7.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\8.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\msn\9.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\angry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\bad.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\blush.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\brokenheart.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\bye.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\coffee.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\config.txt" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\cool.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\cry.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\curse.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\cute.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\devil.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\envy.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\gift.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\good.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\kiss.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\laugh.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\love.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\music.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\question.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\rose.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\sad.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\shocked.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\shout.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\sick.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\sleepy.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\smile.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\soccer.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\sweat.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\tired.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\tongue.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\victory.gif" />
+    <Content Include="_js\xheditor\xheditor_emot\pidgin\wink.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\add.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\bg1.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\bg2.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\btnbg.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\btnbgr.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\clear.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\progressbg.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\img\start.gif" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\multiupload.css" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\multiupload.html" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\multiupload.js" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\swfupload\swfupload.js" />
+    <Content Include="_js\xheditor\xheditor_plugins\multiupload\swfupload\swfupload.swf" />
+    <Content Include="_js\xheditor\xheditor_plugins\ubb.min.js" />
+    <Content Include="_js\xheditor\xheditor_skin\blank.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\iframe.css" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\anchor.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\close.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\flash.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\icons.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\loading.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\progress.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\progressbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-address.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-div.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-h1.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-h2.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-h3.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-h4.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-h5.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-h6.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-p.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\tag-pre.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\waiting.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\wmp.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\img\wordimg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\default\ui.css" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\iframe.css" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\anchor.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\close.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\flash.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\icons.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\loading.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\progress.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\progressbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-address.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-div.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-h1.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-h2.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-h3.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-h4.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-h5.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-h6.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-p.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\tag-pre.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\waiting.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\wmp.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\img\wordimg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\nostyle\ui.css" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\iframe.css" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\anchor.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\buttonbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\close.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\flash.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\icons.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\loading.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\progress.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\progressbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-address.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-div.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-h1.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-h2.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-h3.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-h4.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-h5.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-h6.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-p.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\tag-pre.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\waiting.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\wmp.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\img\wordimg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007blue\ui.css" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\iframe.css" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\anchor.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\buttonbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\close.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\flash.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\icons.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\loading.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\progress.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\progressbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-address.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-div.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-h1.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-h2.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-h3.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-h4.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-h5.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-h6.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-p.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\tag-pre.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\waiting.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\wmp.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\img\wordimg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\o2007silver\ui.css" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\iframe.css" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\anchor.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\buttonbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\close.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\flash.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\icons.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\loading.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\progress.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\progressbg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-address.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-div.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-h1.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-h2.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-h3.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-h4.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-h5.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-h6.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-p.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\tag-pre.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\titlebg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\waiting.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\wmp.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\img\wordimg.gif" />
+    <Content Include="_js\xheditor\xheditor_skin\vista\ui.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\BaseHanlder.cs" />
+    <Compile Include="Core\Cookie.cs" />
+    <Compile Include="Core\ExtendClass.cs" />
+    <Compile Include="Core\Tool.cs" />
+    <Compile Include="Core\XmlHelper.cs" />
+    <Compile Include="Core\Xml\CacheBase.cs" />
+    <Compile Include="Core\Xml\Cache_Index.cs" />
+    <Compile Include="Core\Xml\Entity_Tag.cs" />
+    <Compile Include="Core\Xml_Channel.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\LqAdmin.aspx.cs">
+      <DependentUpon>LqAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\LqAdmin.aspx.designer.cs">
+      <DependentUpon>LqAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\LqAdminHomePage.aspx.cs">
+      <DependentUpon>LqAdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\LqAdminHomePage.aspx.designer.cs">
+      <DependentUpon>LqAdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\SysAdmin.aspx.cs">
+      <DependentUpon>SysAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\SysAdmin.aspx.designer.cs">
+      <DependentUpon>SysAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\SysAdminHomePage.aspx.cs">
+      <DependentUpon>SysAdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\SysAdminHomePage.aspx.designer.cs">
+      <DependentUpon>SysAdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\GsfAdmin.aspx.cs">
+      <DependentUpon>GsfAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\GsfAdmin.aspx.designer.cs">
+      <DependentUpon>GsfAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\WzyAdmin.aspx.cs">
+      <DependentUpon>WzyAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\WzyAdmin.aspx.designer.cs">
+      <DependentUpon>WzyAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\GsfAdminHomePage.aspx.cs">
+      <DependentUpon>GsfAdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\GsfAdminHomePage.aspx.designer.cs">
+      <DependentUpon>GsfAdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\WzyAdminHomePage.aspx.cs">
+      <DependentUpon>WzyAdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\WzyAdminHomePage.aspx.designer.cs">
+      <DependentUpon>WzyAdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plupload\UC_Plupload.ascx.cs">
+      <DependentUpon>UC_Plupload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plupload\UC_Plupload.ascx.designer.cs">
+      <DependentUpon>UC_Plupload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Plupload\UC_Plupload2.ascx.cs">
+      <DependentUpon>UC_Plupload2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plupload\UC_Plupload2.ascx.designer.cs">
+      <DependentUpon>UC_Plupload2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Plupload\UC_PluploadSingle.ascx.cs">
+      <DependentUpon>UC_PluploadSingle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plupload\UC_PluploadSingle.ascx.designer.cs">
+      <DependentUpon>UC_PluploadSingle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Plupload\uploader.ashx.cs">
+      <DependentUpon>uploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebHandler\HuangqianHandler.ashx.cs">
+      <DependentUpon>HuangqianHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LanAddressHandler.ashx.cs">
+      <DependentUpon>LanAddressHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\GetMenuHandler.ashx.cs">
+      <DependentUpon>GetMenuHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LanGetCarousel.ashx.cs">
+      <DependentUpon>LanGetCarousel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LanGetGoodsHandler.ashx.cs">
+      <DependentUpon>LanGetGoodsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LanOrderHandler.ashx.cs">
+      <DependentUpon>LanOrderHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LanUserHandler.ashx.cs">
+      <DependentUpon>LanUserHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\PayGetHandler.ashx.cs">
+      <DependentUpon>PayGetHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\MAddressManagerHandler.ashx.cs">
+      <DependentUpon>MAddressManagerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\MCarouselHandler.ashx.cs">
+      <DependentUpon>MCarouselHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LoginHandler.ashx.cs">
+      <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LxcCarousel.ashx.cs">
+      <DependentUpon>LxcCarousel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LxcGoods.ashx.cs">
+      <DependentUpon>LxcGoods.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\LxcShoppingCart.ashx.cs">
+      <DependentUpon>LxcShoppingCart.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\MallHandler.ashx.cs">
+      <DependentUpon>MallHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\MLoginHandler.ashx.cs">
+      <DependentUpon>MLoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\MOrderHandler.ashx.cs">
+      <DependentUpon>MOrderHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebHandler\MSignHandler.ashx.cs">
+      <DependentUpon>MSignHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Create.aspx.cs">
+      <DependentUpon>GuoUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Create.aspx.designer.cs">
+      <DependentUpon>GuoUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Detail.aspx.cs">
+      <DependentUpon>GuoUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Detail.aspx.designer.cs">
+      <DependentUpon>GuoUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_List.aspx.cs">
+      <DependentUpon>GuoUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_List.aspx.designer.cs">
+      <DependentUpon>GuoUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Modify.aspx.cs">
+      <DependentUpon>GuoUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Modify.aspx.designer.cs">
+      <DependentUpon>GuoUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Upload.aspx.cs">
+      <DependentUpon>GuoUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\GuoUser_Upload.aspx.designer.cs">
+      <DependentUpon>GuoUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Create.aspx.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Create.aspx.designer.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Detail.aspx.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Detail.aspx.designer.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_List.aspx.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_List.aspx.designer.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Modify.aspx.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Modify.aspx.designer.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Upload.aspx.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\GsfAdmin\SysUser_Upload.aspx.designer.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Create.aspx.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Create.aspx.designer.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Detail.aspx.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Detail.aspx.designer.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_List.aspx.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_List.aspx.designer.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Modify.aspx.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Modify.aspx.designer.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Upload.aspx.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\LqAdmin\SysUser_Upload.aspx.designer.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Create.aspx.cs">
+      <DependentUpon>Activity_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Create.aspx.designer.cs">
+      <DependentUpon>Activity_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Detail.aspx.cs">
+      <DependentUpon>Activity_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Detail.aspx.designer.cs">
+      <DependentUpon>Activity_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_List.aspx.cs">
+      <DependentUpon>Activity_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_List.aspx.designer.cs">
+      <DependentUpon>Activity_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Modify.aspx.cs">
+      <DependentUpon>Activity_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Modify.aspx.designer.cs">
+      <DependentUpon>Activity_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Upload.aspx.cs">
+      <DependentUpon>Activity_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\Activity_Upload.aspx.designer.cs">
+      <DependentUpon>Activity_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Create.aspx.cs">
+      <DependentUpon>CarouselOne_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Create.aspx.designer.cs">
+      <DependentUpon>CarouselOne_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Detail.aspx.cs">
+      <DependentUpon>CarouselOne_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Detail.aspx.designer.cs">
+      <DependentUpon>CarouselOne_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_List.aspx.cs">
+      <DependentUpon>CarouselOne_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_List.aspx.designer.cs">
+      <DependentUpon>CarouselOne_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Modify.aspx.cs">
+      <DependentUpon>CarouselOne_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Modify.aspx.designer.cs">
+      <DependentUpon>CarouselOne_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Upload.aspx.cs">
+      <DependentUpon>CarouselOne_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselOne_Upload.aspx.designer.cs">
+      <DependentUpon>CarouselOne_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Create.aspx.cs">
+      <DependentUpon>CarouselTwo_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Create.aspx.designer.cs">
+      <DependentUpon>CarouselTwo_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Detail.aspx.cs">
+      <DependentUpon>CarouselTwo_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Detail.aspx.designer.cs">
+      <DependentUpon>CarouselTwo_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_List.aspx.cs">
+      <DependentUpon>CarouselTwo_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_List.aspx.designer.cs">
+      <DependentUpon>CarouselTwo_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Modify.aspx.cs">
+      <DependentUpon>CarouselTwo_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Modify.aspx.designer.cs">
+      <DependentUpon>CarouselTwo_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Upload.aspx.cs">
+      <DependentUpon>CarouselTwo_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\CarouselTwo_Upload.aspx.designer.cs">
+      <DependentUpon>CarouselTwo_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Create.aspx.cs">
+      <DependentUpon>GoodsRecommend_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Create.aspx.designer.cs">
+      <DependentUpon>GoodsRecommend_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Detail.aspx.cs">
+      <DependentUpon>GoodsRecommend_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Detail.aspx.designer.cs">
+      <DependentUpon>GoodsRecommend_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_List.aspx.cs">
+      <DependentUpon>GoodsRecommend_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_List.aspx.designer.cs">
+      <DependentUpon>GoodsRecommend_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Modify.aspx.cs">
+      <DependentUpon>GoodsRecommend_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Modify.aspx.designer.cs">
+      <DependentUpon>GoodsRecommend_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Upload.aspx.cs">
+      <DependentUpon>GoodsRecommend_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GoodsRecommend_Upload.aspx.designer.cs">
+      <DependentUpon>GoodsRecommend_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Create.aspx.cs">
+      <DependentUpon>GuoUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Create.aspx.designer.cs">
+      <DependentUpon>GuoUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Detail.aspx.cs">
+      <DependentUpon>GuoUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Detail.aspx.designer.cs">
+      <DependentUpon>GuoUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_List.aspx.cs">
+      <DependentUpon>GuoUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_List.aspx.designer.cs">
+      <DependentUpon>GuoUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Modify.aspx.cs">
+      <DependentUpon>GuoUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Modify.aspx.designer.cs">
+      <DependentUpon>GuoUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Upload.aspx.cs">
+      <DependentUpon>GuoUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\GuoUser_Upload.aspx.designer.cs">
+      <DependentUpon>GuoUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Create.aspx.cs">
+      <DependentUpon>HuangUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Create.aspx.designer.cs">
+      <DependentUpon>HuangUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Detail.aspx.cs">
+      <DependentUpon>HuangUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Detail.aspx.designer.cs">
+      <DependentUpon>HuangUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_List.aspx.cs">
+      <DependentUpon>HuangUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_List.aspx.designer.cs">
+      <DependentUpon>HuangUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Modify.aspx.cs">
+      <DependentUpon>HuangUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Modify.aspx.designer.cs">
+      <DependentUpon>HuangUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Upload.aspx.cs">
+      <DependentUpon>HuangUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\HuangUser_Upload.aspx.designer.cs">
+      <DependentUpon>HuangUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Create.aspx.cs">
+      <DependentUpon>LanAddress_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Create.aspx.designer.cs">
+      <DependentUpon>LanAddress_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Detail.aspx.cs">
+      <DependentUpon>LanAddress_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Detail.aspx.designer.cs">
+      <DependentUpon>LanAddress_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_List.aspx.cs">
+      <DependentUpon>LanAddress_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_List.aspx.designer.cs">
+      <DependentUpon>LanAddress_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Modify.aspx.cs">
+      <DependentUpon>LanAddress_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Modify.aspx.designer.cs">
+      <DependentUpon>LanAddress_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Upload.aspx.cs">
+      <DependentUpon>LanAddress_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanAddress_Upload.aspx.designer.cs">
+      <DependentUpon>LanAddress_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Create.aspx.cs">
+      <DependentUpon>LanCarousel_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Create.aspx.designer.cs">
+      <DependentUpon>LanCarousel_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Detail.aspx.cs">
+      <DependentUpon>LanCarousel_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Detail.aspx.designer.cs">
+      <DependentUpon>LanCarousel_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_List.aspx.cs">
+      <DependentUpon>LanCarousel_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_List.aspx.designer.cs">
+      <DependentUpon>LanCarousel_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Modify.aspx.cs">
+      <DependentUpon>LanCarousel_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Modify.aspx.designer.cs">
+      <DependentUpon>LanCarousel_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Upload.aspx.cs">
+      <DependentUpon>LanCarousel_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanCarousel_Upload.aspx.designer.cs">
+      <DependentUpon>LanCarousel_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Create.aspx.cs">
+      <DependentUpon>LanGoods_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Create.aspx.designer.cs">
+      <DependentUpon>LanGoods_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Detail.aspx.cs">
+      <DependentUpon>LanGoods_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Detail.aspx.designer.cs">
+      <DependentUpon>LanGoods_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_List.aspx.cs">
+      <DependentUpon>LanGoods_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_List.aspx.designer.cs">
+      <DependentUpon>LanGoods_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Modify.aspx.cs">
+      <DependentUpon>LanGoods_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Modify.aspx.designer.cs">
+      <DependentUpon>LanGoods_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Upload.aspx.cs">
+      <DependentUpon>LanGoods_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanGoods_Upload.aspx.designer.cs">
+      <DependentUpon>LanGoods_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Create.aspx.cs">
+      <DependentUpon>LanMenu_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Create.aspx.designer.cs">
+      <DependentUpon>LanMenu_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Detail.aspx.cs">
+      <DependentUpon>LanMenu_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Detail.aspx.designer.cs">
+      <DependentUpon>LanMenu_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_List.aspx.cs">
+      <DependentUpon>LanMenu_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_List.aspx.designer.cs">
+      <DependentUpon>LanMenu_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Modify.aspx.cs">
+      <DependentUpon>LanMenu_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Modify.aspx.designer.cs">
+      <DependentUpon>LanMenu_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Upload.aspx.cs">
+      <DependentUpon>LanMenu_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanMenu_Upload.aspx.designer.cs">
+      <DependentUpon>LanMenu_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Create.aspx.cs">
+      <DependentUpon>LanOrderGood_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Create.aspx.designer.cs">
+      <DependentUpon>LanOrderGood_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Detail.aspx.cs">
+      <DependentUpon>LanOrderGood_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Detail.aspx.designer.cs">
+      <DependentUpon>LanOrderGood_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_List.aspx.cs">
+      <DependentUpon>LanOrderGood_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_List.aspx.designer.cs">
+      <DependentUpon>LanOrderGood_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Modify.aspx.cs">
+      <DependentUpon>LanOrderGood_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Modify.aspx.designer.cs">
+      <DependentUpon>LanOrderGood_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Upload.aspx.cs">
+      <DependentUpon>LanOrderGood_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderGood_Upload.aspx.designer.cs">
+      <DependentUpon>LanOrderGood_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Create.aspx.cs">
+      <DependentUpon>LanOrderList_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Create.aspx.designer.cs">
+      <DependentUpon>LanOrderList_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Detail.aspx.cs">
+      <DependentUpon>LanOrderList_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Detail.aspx.designer.cs">
+      <DependentUpon>LanOrderList_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_List.aspx.cs">
+      <DependentUpon>LanOrderList_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_List.aspx.designer.cs">
+      <DependentUpon>LanOrderList_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Modify.aspx.cs">
+      <DependentUpon>LanOrderList_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Modify.aspx.designer.cs">
+      <DependentUpon>LanOrderList_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Upload.aspx.cs">
+      <DependentUpon>LanOrderList_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanOrderList_Upload.aspx.designer.cs">
+      <DependentUpon>LanOrderList_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Create.aspx.cs">
+      <DependentUpon>LanSecondMenu_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Create.aspx.designer.cs">
+      <DependentUpon>LanSecondMenu_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Detail.aspx.cs">
+      <DependentUpon>LanSecondMenu_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Detail.aspx.designer.cs">
+      <DependentUpon>LanSecondMenu_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_List.aspx.cs">
+      <DependentUpon>LanSecondMenu_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_List.aspx.designer.cs">
+      <DependentUpon>LanSecondMenu_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Modify.aspx.cs">
+      <DependentUpon>LanSecondMenu_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Modify.aspx.designer.cs">
+      <DependentUpon>LanSecondMenu_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Upload.aspx.cs">
+      <DependentUpon>LanSecondMenu_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanSecondMenu_Upload.aspx.designer.cs">
+      <DependentUpon>LanSecondMenu_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Create.aspx.cs">
+      <DependentUpon>LanUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Create.aspx.designer.cs">
+      <DependentUpon>LanUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Detail.aspx.cs">
+      <DependentUpon>LanUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Detail.aspx.designer.cs">
+      <DependentUpon>LanUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_List.aspx.cs">
+      <DependentUpon>LanUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_List.aspx.designer.cs">
+      <DependentUpon>LanUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Modify.aspx.cs">
+      <DependentUpon>LanUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Modify.aspx.designer.cs">
+      <DependentUpon>LanUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Upload.aspx.cs">
+      <DependentUpon>LanUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LanUser_Upload.aspx.designer.cs">
+      <DependentUpon>LanUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Create.aspx.cs">
+      <DependentUpon>LxcAddress_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Create.aspx.designer.cs">
+      <DependentUpon>LxcAddress_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Detail.aspx.cs">
+      <DependentUpon>LxcAddress_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Detail.aspx.designer.cs">
+      <DependentUpon>LxcAddress_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_List.aspx.cs">
+      <DependentUpon>LxcAddress_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_List.aspx.designer.cs">
+      <DependentUpon>LxcAddress_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Modify.aspx.cs">
+      <DependentUpon>LxcAddress_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Modify.aspx.designer.cs">
+      <DependentUpon>LxcAddress_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Upload.aspx.cs">
+      <DependentUpon>LxcAddress_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcAddress_Upload.aspx.designer.cs">
+      <DependentUpon>LxcAddress_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Create.aspx.cs">
+      <DependentUpon>LxcCarousel_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Create.aspx.designer.cs">
+      <DependentUpon>LxcCarousel_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Detail.aspx.cs">
+      <DependentUpon>LxcCarousel_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Detail.aspx.designer.cs">
+      <DependentUpon>LxcCarousel_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_List.aspx.cs">
+      <DependentUpon>LxcCarousel_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_List.aspx.designer.cs">
+      <DependentUpon>LxcCarousel_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Modify.aspx.cs">
+      <DependentUpon>LxcCarousel_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Modify.aspx.designer.cs">
+      <DependentUpon>LxcCarousel_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Upload.aspx.cs">
+      <DependentUpon>LxcCarousel_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcCarousel_Upload.aspx.designer.cs">
+      <DependentUpon>LxcCarousel_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Create.aspx.cs">
+      <DependentUpon>LxcGoods_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Create.aspx.designer.cs">
+      <DependentUpon>LxcGoods_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Detail.aspx.cs">
+      <DependentUpon>LxcGoods_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Detail.aspx.designer.cs">
+      <DependentUpon>LxcGoods_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_List.aspx.cs">
+      <DependentUpon>LxcGoods_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_List.aspx.designer.cs">
+      <DependentUpon>LxcGoods_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Modify.aspx.cs">
+      <DependentUpon>LxcGoods_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Modify.aspx.designer.cs">
+      <DependentUpon>LxcGoods_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Upload.aspx.cs">
+      <DependentUpon>LxcGoods_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcGoods_Upload.aspx.designer.cs">
+      <DependentUpon>LxcGoods_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Create.aspx.cs">
+      <DependentUpon>LxcSubmit_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Create.aspx.designer.cs">
+      <DependentUpon>LxcSubmit_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Detail.aspx.cs">
+      <DependentUpon>LxcSubmit_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Detail.aspx.designer.cs">
+      <DependentUpon>LxcSubmit_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_List.aspx.cs">
+      <DependentUpon>LxcSubmit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_List.aspx.designer.cs">
+      <DependentUpon>LxcSubmit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Modify.aspx.cs">
+      <DependentUpon>LxcSubmit_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Modify.aspx.designer.cs">
+      <DependentUpon>LxcSubmit_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Upload.aspx.cs">
+      <DependentUpon>LxcSubmit_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcSubmit_Upload.aspx.designer.cs">
+      <DependentUpon>LxcSubmit_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Create.aspx.cs">
+      <DependentUpon>LxcUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Create.aspx.designer.cs">
+      <DependentUpon>LxcUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Detail.aspx.cs">
+      <DependentUpon>LxcUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Detail.aspx.designer.cs">
+      <DependentUpon>LxcUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_List.aspx.cs">
+      <DependentUpon>LxcUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_List.aspx.designer.cs">
+      <DependentUpon>LxcUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Modify.aspx.cs">
+      <DependentUpon>LxcUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Modify.aspx.designer.cs">
+      <DependentUpon>LxcUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Upload.aspx.cs">
+      <DependentUpon>LxcUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\LxcUser_Upload.aspx.designer.cs">
+      <DependentUpon>LxcUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Create.aspx.cs">
+      <DependentUpon>MzqAddress_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Create.aspx.designer.cs">
+      <DependentUpon>MzqAddress_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Detail.aspx.cs">
+      <DependentUpon>MzqAddress_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Detail.aspx.designer.cs">
+      <DependentUpon>MzqAddress_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_List.aspx.cs">
+      <DependentUpon>MzqAddress_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_List.aspx.designer.cs">
+      <DependentUpon>MzqAddress_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Modify.aspx.cs">
+      <DependentUpon>MzqAddress_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Modify.aspx.designer.cs">
+      <DependentUpon>MzqAddress_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Upload.aspx.cs">
+      <DependentUpon>MzqAddress_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqAddress_Upload.aspx.designer.cs">
+      <DependentUpon>MzqAddress_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Create.aspx.cs">
+      <DependentUpon>MzqGoods_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Create.aspx.designer.cs">
+      <DependentUpon>MzqGoods_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Detail.aspx.cs">
+      <DependentUpon>MzqGoods_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Detail.aspx.designer.cs">
+      <DependentUpon>MzqGoods_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_List.aspx.cs">
+      <DependentUpon>MzqGoods_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_List.aspx.designer.cs">
+      <DependentUpon>MzqGoods_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Modify.aspx.cs">
+      <DependentUpon>MzqGoods_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Modify.aspx.designer.cs">
+      <DependentUpon>MzqGoods_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Upload.aspx.cs">
+      <DependentUpon>MzqGoods_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqGoods_Upload.aspx.designer.cs">
+      <DependentUpon>MzqGoods_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Create.aspx.cs">
+      <DependentUpon>MzqOrder_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Create.aspx.designer.cs">
+      <DependentUpon>MzqOrder_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Detail.aspx.cs">
+      <DependentUpon>MzqOrder_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Detail.aspx.designer.cs">
+      <DependentUpon>MzqOrder_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_List.aspx.cs">
+      <DependentUpon>MzqOrder_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_List.aspx.designer.cs">
+      <DependentUpon>MzqOrder_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Modify.aspx.cs">
+      <DependentUpon>MzqOrder_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Modify.aspx.designer.cs">
+      <DependentUpon>MzqOrder_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Upload.aspx.cs">
+      <DependentUpon>MzqOrder_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqOrder_Upload.aspx.designer.cs">
+      <DependentUpon>MzqOrder_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Create.aspx.cs">
+      <DependentUpon>MzqPay_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Create.aspx.designer.cs">
+      <DependentUpon>MzqPay_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Detail.aspx.cs">
+      <DependentUpon>MzqPay_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Detail.aspx.designer.cs">
+      <DependentUpon>MzqPay_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_List.aspx.cs">
+      <DependentUpon>MzqPay_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_List.aspx.designer.cs">
+      <DependentUpon>MzqPay_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Modify.aspx.cs">
+      <DependentUpon>MzqPay_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Modify.aspx.designer.cs">
+      <DependentUpon>MzqPay_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Upload.aspx.cs">
+      <DependentUpon>MzqPay_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqPay_Upload.aspx.designer.cs">
+      <DependentUpon>MzqPay_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Create.aspx.cs">
+      <DependentUpon>MzqShoppingcar_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Create.aspx.designer.cs">
+      <DependentUpon>MzqShoppingcar_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Detail.aspx.cs">
+      <DependentUpon>MzqShoppingcar_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Detail.aspx.designer.cs">
+      <DependentUpon>MzqShoppingcar_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_List.aspx.cs">
+      <DependentUpon>MzqShoppingcar_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_List.aspx.designer.cs">
+      <DependentUpon>MzqShoppingcar_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Modify.aspx.cs">
+      <DependentUpon>MzqShoppingcar_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Modify.aspx.designer.cs">
+      <DependentUpon>MzqShoppingcar_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Upload.aspx.cs">
+      <DependentUpon>MzqShoppingcar_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\MzqShoppingcar_Upload.aspx.designer.cs">
+      <DependentUpon>MzqShoppingcar_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Create.aspx.cs">
+      <DependentUpon>OrderDetail_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Create.aspx.designer.cs">
+      <DependentUpon>OrderDetail_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Detail.aspx.cs">
+      <DependentUpon>OrderDetail_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Detail.aspx.designer.cs">
+      <DependentUpon>OrderDetail_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_List.aspx.cs">
+      <DependentUpon>OrderDetail_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_List.aspx.designer.cs">
+      <DependentUpon>OrderDetail_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Modify.aspx.cs">
+      <DependentUpon>OrderDetail_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Modify.aspx.designer.cs">
+      <DependentUpon>OrderDetail_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Upload.aspx.cs">
+      <DependentUpon>OrderDetail_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderDetail_Upload.aspx.designer.cs">
+      <DependentUpon>OrderDetail_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Create.aspx.cs">
+      <DependentUpon>OrderForm_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Create.aspx.designer.cs">
+      <DependentUpon>OrderForm_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Detail.aspx.cs">
+      <DependentUpon>OrderForm_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Detail.aspx.designer.cs">
+      <DependentUpon>OrderForm_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_List.aspx.cs">
+      <DependentUpon>OrderForm_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_List.aspx.designer.cs">
+      <DependentUpon>OrderForm_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Modify.aspx.cs">
+      <DependentUpon>OrderForm_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Modify.aspx.designer.cs">
+      <DependentUpon>OrderForm_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Upload.aspx.cs">
+      <DependentUpon>OrderForm_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\OrderForm_Upload.aspx.designer.cs">
+      <DependentUpon>OrderForm_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Create.aspx.cs">
+      <DependentUpon>SecuritiesCentre_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Create.aspx.designer.cs">
+      <DependentUpon>SecuritiesCentre_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Detail.aspx.cs">
+      <DependentUpon>SecuritiesCentre_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Detail.aspx.designer.cs">
+      <DependentUpon>SecuritiesCentre_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_List.aspx.cs">
+      <DependentUpon>SecuritiesCentre_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_List.aspx.designer.cs">
+      <DependentUpon>SecuritiesCentre_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Modify.aspx.cs">
+      <DependentUpon>SecuritiesCentre_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Modify.aspx.designer.cs">
+      <DependentUpon>SecuritiesCentre_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Upload.aspx.cs">
+      <DependentUpon>SecuritiesCentre_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SecuritiesCentre_Upload.aspx.designer.cs">
+      <DependentUpon>SecuritiesCentre_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Create.aspx.cs">
+      <DependentUpon>SignInprize_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Create.aspx.designer.cs">
+      <DependentUpon>SignInprize_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Detail.aspx.cs">
+      <DependentUpon>SignInprize_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Detail.aspx.designer.cs">
+      <DependentUpon>SignInprize_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_List.aspx.cs">
+      <DependentUpon>SignInprize_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_List.aspx.designer.cs">
+      <DependentUpon>SignInprize_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Modify.aspx.cs">
+      <DependentUpon>SignInprize_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Modify.aspx.designer.cs">
+      <DependentUpon>SignInprize_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Upload.aspx.cs">
+      <DependentUpon>SignInprize_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SignInprize_Upload.aspx.designer.cs">
+      <DependentUpon>SignInprize_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Create.aspx.cs">
+      <DependentUpon>SysArea_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Create.aspx.designer.cs">
+      <DependentUpon>SysArea_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Detail.aspx.cs">
+      <DependentUpon>SysArea_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Detail.aspx.designer.cs">
+      <DependentUpon>SysArea_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_List.aspx.cs">
+      <DependentUpon>SysArea_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_List.aspx.designer.cs">
+      <DependentUpon>SysArea_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Modify.aspx.cs">
+      <DependentUpon>SysArea_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Modify.aspx.designer.cs">
+      <DependentUpon>SysArea_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Upload.aspx.cs">
+      <DependentUpon>SysArea_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysArea_Upload.aspx.designer.cs">
+      <DependentUpon>SysArea_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Create.aspx.cs">
+      <DependentUpon>SysConfig_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Create.aspx.designer.cs">
+      <DependentUpon>SysConfig_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Detail.aspx.cs">
+      <DependentUpon>SysConfig_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Detail.aspx.designer.cs">
+      <DependentUpon>SysConfig_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_List.aspx.cs">
+      <DependentUpon>SysConfig_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_List.aspx.designer.cs">
+      <DependentUpon>SysConfig_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Modify.aspx.cs">
+      <DependentUpon>SysConfig_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Modify.aspx.designer.cs">
+      <DependentUpon>SysConfig_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Upload.aspx.cs">
+      <DependentUpon>SysConfig_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysConfig_Upload.aspx.designer.cs">
+      <DependentUpon>SysConfig_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Create.aspx.cs">
+      <DependentUpon>SysCorp_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Create.aspx.designer.cs">
+      <DependentUpon>SysCorp_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Detail.aspx.cs">
+      <DependentUpon>SysCorp_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Detail.aspx.designer.cs">
+      <DependentUpon>SysCorp_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_List.aspx.cs">
+      <DependentUpon>SysCorp_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_List.aspx.designer.cs">
+      <DependentUpon>SysCorp_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Modify.aspx.cs">
+      <DependentUpon>SysCorp_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Modify.aspx.designer.cs">
+      <DependentUpon>SysCorp_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Upload.aspx.cs">
+      <DependentUpon>SysCorp_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysCorp_Upload.aspx.designer.cs">
+      <DependentUpon>SysCorp_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Create.aspx.cs">
+      <DependentUpon>SysDelete_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Create.aspx.designer.cs">
+      <DependentUpon>SysDelete_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Detail.aspx.cs">
+      <DependentUpon>SysDelete_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Detail.aspx.designer.cs">
+      <DependentUpon>SysDelete_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_List.aspx.cs">
+      <DependentUpon>SysDelete_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_List.aspx.designer.cs">
+      <DependentUpon>SysDelete_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Modify.aspx.cs">
+      <DependentUpon>SysDelete_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Modify.aspx.designer.cs">
+      <DependentUpon>SysDelete_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Upload.aspx.cs">
+      <DependentUpon>SysDelete_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDelete_Upload.aspx.designer.cs">
+      <DependentUpon>SysDelete_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Create.aspx.cs">
+      <DependentUpon>SysDepartment_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Create.aspx.designer.cs">
+      <DependentUpon>SysDepartment_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Detail.aspx.cs">
+      <DependentUpon>SysDepartment_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Detail.aspx.designer.cs">
+      <DependentUpon>SysDepartment_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_List.aspx.cs">
+      <DependentUpon>SysDepartment_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_List.aspx.designer.cs">
+      <DependentUpon>SysDepartment_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Modify.aspx.cs">
+      <DependentUpon>SysDepartment_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Modify.aspx.designer.cs">
+      <DependentUpon>SysDepartment_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Upload.aspx.cs">
+      <DependentUpon>SysDepartment_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysDepartment_Upload.aspx.designer.cs">
+      <DependentUpon>SysDepartment_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Create.aspx.cs">
+      <DependentUpon>SysMenu_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Create.aspx.designer.cs">
+      <DependentUpon>SysMenu_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Detail.aspx.cs">
+      <DependentUpon>SysMenu_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Detail.aspx.designer.cs">
+      <DependentUpon>SysMenu_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_List.aspx.cs">
+      <DependentUpon>SysMenu_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_List.aspx.designer.cs">
+      <DependentUpon>SysMenu_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Modify.aspx.cs">
+      <DependentUpon>SysMenu_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Modify.aspx.designer.cs">
+      <DependentUpon>SysMenu_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Upload.aspx.cs">
+      <DependentUpon>SysMenu_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysMenu_Upload.aspx.designer.cs">
+      <DependentUpon>SysMenu_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Create.aspx.cs">
+      <DependentUpon>SysRole_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Create.aspx.designer.cs">
+      <DependentUpon>SysRole_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Detail.aspx.cs">
+      <DependentUpon>SysRole_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Detail.aspx.designer.cs">
+      <DependentUpon>SysRole_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_List.aspx.cs">
+      <DependentUpon>SysRole_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_List.aspx.designer.cs">
+      <DependentUpon>SysRole_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Modify.aspx.cs">
+      <DependentUpon>SysRole_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Modify.aspx.designer.cs">
+      <DependentUpon>SysRole_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Upload.aspx.cs">
+      <DependentUpon>SysRole_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysRole_Upload.aspx.designer.cs">
+      <DependentUpon>SysRole_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Create.aspx.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Create.aspx.designer.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Detail.aspx.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Detail.aspx.designer.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_List.aspx.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_List.aspx.designer.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Modify.aspx.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Modify.aspx.designer.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Upload.aspx.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\SysUser_Upload.aspx.designer.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Create.aspx.cs">
+      <DependentUpon>UserInfo_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Create.aspx.designer.cs">
+      <DependentUpon>UserInfo_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Detail.aspx.cs">
+      <DependentUpon>UserInfo_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Detail.aspx.designer.cs">
+      <DependentUpon>UserInfo_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_List.aspx.cs">
+      <DependentUpon>UserInfo_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_List.aspx.designer.cs">
+      <DependentUpon>UserInfo_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Modify.aspx.cs">
+      <DependentUpon>UserInfo_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Modify.aspx.designer.cs">
+      <DependentUpon>UserInfo_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Upload.aspx.cs">
+      <DependentUpon>UserInfo_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\SysAdmin\UserInfo_Upload.aspx.designer.cs">
+      <DependentUpon>UserInfo_Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Create.aspx.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Create.aspx.designer.cs">
+      <DependentUpon>SysUser_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Detail.aspx.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Detail.aspx.designer.cs">
+      <DependentUpon>SysUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_List.aspx.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_List.aspx.designer.cs">
+      <DependentUpon>SysUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Modify.aspx.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Modify.aspx.designer.cs">
+      <DependentUpon>SysUser_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Upload.aspx.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUI\WzyAdmin\SysUser_Upload.aspx.designer.cs">
+      <DependentUpon>SysUser_Upload.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plupload\uploader.ashx" />
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="packages.config" />
+    <Content Include="key\800320058122351.pfx" />
+    <Content Include="key\800320058122351_prv.pem" />
+    <Content Include="key\800320058122351_pub.pem" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_css\common2016\fonts\aliyun-console-font.eot" />
+    <Content Include="_css\common2016\fonts\aliyun-console-font.ttf" />
+    <Content Include="_css\common2016\fonts\aliyun-console-font.woff" />
+    <Content Include="_Config\SystemConfig2.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebHandler\VCode.ashx" />
+    <Content Include="WebHandler\Handler1.ashx" />
+    <Content Include="WebHandler\LxcCarousel.ashx" />
+    <Content Include="WebHandler\LxcGoods.ashx" />
+    <Content Include="WebHandler\LxcShoppingCart.ashx" />
+    <Content Include="WebHandler\GetMenuHandler.ashx" />
+    <Content Include="WebHandler\LanGetGoodsHandler.ashx" />
+    <Content Include="WebHandler\LoginHandler.ashx" />
+    <Content Include="WebHandler\MallHandler.ashx" />
+    <Content Include="WebHandler\MLoginHandler.ashx" />
+    <Content Include="WebHandler\LanAddressHandler.ashx" />
+    <Content Include="WebHandler\MCarouselHandler.ashx" />
+    <Content Include="WebHandler\MSignHandler.ashx" />
+    <Content Include="WebHandler\MAddressManagerHandler.ashx" />
+    <Content Include="WebHandler\LanUserHandler.ashx" />
+    <Content Include="WebHandler\LanGetCarousel.ashx" />
+    <Content Include="WebHandler\MOrderHandler.ashx" />
+    <Content Include="WebHandler\PayGetHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JKY.TEST.BLL\JKY.TEST.BLL.csproj">
+      <Project>{2a61aa41-0323-48e3-a9c5-8c71d9c04e85}</Project>
+      <Name>JKY.TEST.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WebUI\SysAdmin.Maual\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24180</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24180/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

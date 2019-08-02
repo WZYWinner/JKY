@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Yaohuasoft.Framework.BLL
+{
+    public static class PayConfig
+    {
+        ////平台公钥
+        public static string PlatformKeyPublic = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCAFhw8Xd8uRFv1tLE/S3gf0B/44WPqYv969l1MWe7Dvjq7OBVsEHNJMVAM3WwMmF0ep0V9GDdBEB9S8nBcWR3TZowY5YAw39UcEnAIZwKiS1KCvK2dMya8FScSmYZ/ISK1Ds7EYDq4eR2cmZZq7wFTKDu/ixwxtTZXATyOtM4orwIDAQAB";
+        ////支付公钥
+        public static string KeyPublic = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmkxtyBhyHZYDypaLEXf+uePmFs2ToAiNacTaDyjgg5IEks7P15uup476/WaQB17UXiht7g0IsTix373TACbGljZm6fKYDm9n6UCdKT+cNCG7b/iFbyGqggjPmwO8POnFMOCcSDfcFpQb/k9k0Dd53Uyy2UKhJ5c3389IgmIfkEYSCIBjbsJ85jeGQ4jy8dOA0Q+xGZUNfeZACjVihHocigrbLCsnexsGa8KnHYn2eayTaPiH3Y/5BXIvhK2VrWuZ2ALD8P6cvEOOMnGxqGS8fn7My2mTZywXYU5GhkDqMMh8u6VidQT0/wgLawqRWrm+03jTubXLFnBbq0f3xDbEjQIDAQAB";// 商户支付Key
+        ////支付私钥
+        public static string PrivateKey = "MIIEowIBAAKCAQEAmkxtyBhyHZYDypaLEXf+uePmFs2ToAiNacTaDyjgg5IEks7P15uup476/WaQB17UXiht7g0IsTix373TACbGljZm6fKYDm9n6UCdKT+cNCG7b/iFbyGqggjPmwO8POnFMOCcSDfcFpQb/k9k0Dd53Uyy2UKhJ5c3389IgmIfkEYSCIBjbsJ85jeGQ4jy8dOA0Q+xGZUNfeZACjVihHocigrbLCsnexsGa8KnHYn2eayTaPiH3Y/5BXIvhK2VrWuZ2ALD8P6cvEOOMnGxqGS8fn7My2mTZywXYU5GhkDqMMh8u6VidQT0/wgLawqRWrm+03jTubXLFnBbq0f3xDbEjQIDAQABAoIBAFwwsCMu3/fnaup/WiYc0PhWP2J+f+bNVVjNwg/ut35FHzBsGujS3t7EYhhHUGTm9vIvK8dgyEHDAxwQueJMSLj1VjYPuWRekfJepchAdl77jJdRIMCOl+bLxubyq2SltCkI+rd3kKt44OTooO57Rve/XNjMo6cZBcxWeBdW807qcEGppM93C3iA/Lyqg0uwiWulO9ykRUCGVOHGNoJSgJumgSlnZAVT5iPEasUJoVLJ1Er6CkTmep4HMor724K3el+S1HvQMmro7ySr1n457GmTy3q2e8luvn5h1WPdYSiiw6rZHtWoEU20Y8IRpsb/vnvyczco3NaWjMfwi9NQqoECgYEA2sh61aHoeX8T58vD01FaCbUpABD7nq8WCSvFYZ36A5ExTcQ35Cb9WGndVti7hg/H5AgNU/kGvJ2WP3KJqOAuMOx0FAXAnJmzcUQ2q1LM+PO43OyTaJr4ZKEEjzoS2Z37dejZWx++kYcgHzoYmn0s4HACjHXlLvSIOUTZuD+Kp60CgYEAtIvJ6cQ5AflcNwyFx3oB2xVl9z5g16zdh3WfhlpI0i+9hQMbnIaAzx+bOU/H3cS3FwyrsxlI2TYMiTKZCiVlOxwL+hX7VU79zbisVHrlCvUikgscVyniieb4ShX7tDvSnU5eeHU0xPzJ1SzZj018noDZjAnUrSkR1Hdu7Ey5rGECgYAIb5iE6kRLgwHiezHm0Qk2vJyDGySIntmrqttmgy/juVJ8XCeHjZVRNmvJcHvylGMxwLm61ixTU4Q6mBEEyPge/M8RApPFtgt8P5QYEQ5EPymOozSf4PHY93h0iVm2uGe8ySiwYc34UIyFh7jxJAh58ve2MMmQgO9LvgLjHtga1QKBgQCkpGV43AvwlOlW+gB1K/nNQ/I8SZIem/FYuhbDekm2Avsc9PyU/MMyHmx7Exn8Tot4ZYGeTYx1KCi+ZHnTGs753FW/tZQA84vXsnTUhU2hdHIWJDOv+O4xO4NobCug7HzgHrtfteJtUOjtkXzEhbEDChVY8w4S6sTrsA5jRoR7gQKBgCvCbfDEXeLsEysx0uobW91CPzSpo7IUjGv4qQZiRVKbF1G/0usUaTvleg2wZ5twSgSbxHk4UzziDB8Ra7AoJxvbYzj6bz9KrW9uCdX6IbvfDrE5Cqm2aODlWOR3LeIsXpff0MLe8VqCzipzktRb+R5jCbn27UKwOFsKhk5SyHi/";//商户支付密钥        ////商户支付ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        //商户ID
+        public static string merNo = "800440054111002";
+        //版本号
+        public static string version = "v1.0";
+        ////支付类型
+        public static string payType = "ALIPAY_H5";
+        ////支付产品名
+        public static string goodsName = "TG娱乐";
+        ////后台异步通知地址
+        public static string notifyUrl = "http://www.tgyule.cn/WebHandler/NotifyHandler.ashx";
+        ////页面通知地址页面回调url 可为空
+        public static string returnUrl = "";
+
+    }
+    public class H5Pay
+    {
+        public string request;//流水号
+        public string version;//版本号
+        public string productId;//产品类型
+        public string transId;//交易类型        
+        public string merNo;//商户号
+        public string orderDate;//订单日期yyyyMMdd
+        public string orderNo;//订单号
+        public string returnUrl;//页面通知地址
+        public string notifyUrl;//异步通知地址
+        public string transAmt;//交易金额  单位分
+        public string commodityName;//商品名称
+        public string signature;//签名
+
+
+    }
+    public class H5rhPay
+    {
+        public int rand;
+        public string member_id;
+        public string order_id;
+        public string user_name;
+        public decimal order_money;
+        public int istype;
+        public string key;
+        public string notify_url;
+
+    }
+    public class H5Payresult
+    {
+        public string merId;
+        public string orderNo;
+        public string amount;
+        public string mp;
+        public string status;
+        public string trxNo;
+        public string payTime;
+        public string sign;
+    }
+    public class H5rhPayresult
+    {
+        public string order_id;
+        public string key;
+        public string status;
+        public string money;
+        public string realprice;
+        public string rank;     
+
+    }
+}

@@ -1,0 +1,5 @@
+
+
+
+LAN_MENU	*	////LanMenuDetailInitEntity方法之前	Session["id"] = Request["id"];
+LAN_SECOND_MENU	*	LanSecondMenuBLL.Add(entity,Session["CorpId"].ToStr(),Session["DepartmentId"].ToStr(),Session["UserName"].ToStr());	LanSecondMenuBLL.Add(entity,Session["CorpId"].ToStr(),Request["id"].ToStr(),Session["UserName"].ToStr());

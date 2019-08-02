@@ -1,0 +1,1 @@
+                this.div药店信息.Visible = check.CheckPower("BLL.UnAuthShop", "药店信息");

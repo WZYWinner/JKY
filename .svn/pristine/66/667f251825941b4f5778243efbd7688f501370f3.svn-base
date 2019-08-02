@@ -1,0 +1,2 @@
+﻿<li class="nav-item ng-scope" title="郭用户" src="/WebUI/GsfAdmin/GuoUser_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">郭用户</span></a></li>
+<li class="nav-item ng-scope" title="后台用户" src="/WebUI/GsfAdmin/SysUser_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">后台用户</span></a></li>

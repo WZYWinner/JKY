@@ -1,0 +1,1 @@
+                this.div药厂信息.Visible = check.CheckPower("BLL.UnAuthFactory", "药厂信息");

@@ -1,0 +1,5 @@
+﻿
+.ticket-list table td {
+    color: #333 !important;
+    font-size:15px;
+}

@@ -1,0 +1,13 @@
+﻿
+.total-unread-count {
+    background: #09c none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    height: 22px;
+    line-height: 23px;
+    margin: 10px 8px 0 0;
+    padding: 0 10px;
+    text-align: center;
+}

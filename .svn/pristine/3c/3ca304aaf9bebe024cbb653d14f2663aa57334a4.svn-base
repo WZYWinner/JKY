@@ -1,0 +1,1 @@
+﻿<li class="nav-item ng-scope" title="HUANG用户" src="/WebUI/SysAdmin/HuangUser_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">HUANG用户</span></a></li>

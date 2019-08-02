@@ -1,0 +1,9 @@
+                this.div药店信息.Visible = check.CheckPower("BLL.DrugShop", "药店信息");
+                this.div用户报价管理.Visible = check.CheckPower("BLL.DrugShop", "用户报价管理");
+                this.div广告推荐.Visible = check.CheckPower("BLL.DrugShop", "广告推荐");
+                this.div反馈信息.Visible = check.CheckPower("BLL.DrugShop", "反馈信息");
+                this.div友情链接.Visible = check.CheckPower("BLL.DrugShop", "友情链接");
+                this.div药剂师信息.Visible = check.CheckPower("BLL.DrugShop", "药剂师信息");
+                this.div药店售药.Visible = check.CheckPower("BLL.DrugShop", "药店售药");
+                this.div药店文章.Visible = check.CheckPower("BLL.DrugShop", "药店文章");
+                this.div药品信息.Visible = check.CheckPower("BLL.DrugShop", "药品信息");

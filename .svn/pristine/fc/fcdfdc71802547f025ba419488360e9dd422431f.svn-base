@@ -1,0 +1,2 @@
+﻿ this.div订单明细.Visible = check.CheckPower("SysAdmin", "订单明细");
+ this.div订单管理.Visible = check.CheckPower("SysAdmin", "订单管理");

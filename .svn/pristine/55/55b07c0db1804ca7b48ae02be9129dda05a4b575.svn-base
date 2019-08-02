@@ -1,0 +1,15 @@
+﻿
+（按钮出现在列表页，代码自行判断状态等）
+（处理的方法名直接用转义方式改造）
+（优先匹配本系统的，如果没有则匹配通配符的）
+（模版列表：list,modify,detail,create）
+
+
+
+
+表名		系统		模版列表			按钮名		窗体名		宽度	高度	弹出层地址
+SYS_USER	SysAdmin	detail	修改密码	修改密码	40%	35%	ModifyPassword.aspx?
+BUSINESS_SETTLED	BusinessAdmin	detail	修改密码	修改密码	40%	35%	ModifyPassword.aspx?
+CUST_ORDER	BusinessAdmin	list	添加备注	添加备注	40%	35%	BusinessRemarks.aspx?
+CUST_ORDER_A	BusinessAdmin	list	添加备注	添加备注	40%	35%	BusinessRemarks.aspx?
+CUST_ORDER_B	BusinessAdmin	list	添加备注	添加备注	40%	35%	BusinessRemarks.aspx?

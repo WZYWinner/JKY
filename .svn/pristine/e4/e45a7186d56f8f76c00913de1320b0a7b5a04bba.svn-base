@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Yaohuasoft.Framework.DAL;
+using Yaohuasoft.Framework.BLL;
+using Yaohuasoft.Framework.Library;
+namespace   Yaohuasoft.Framework.WebUI.DrugFactory
+{
+    public partial class DrugInfoDetail : System.Web.UI.Page
+    {
+        public DrugInfoDALEntity entity = new DrugInfoDALEntity();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //绑定数据
+            if (!IsPostBack)
+            {
+							CheckSession();
+                Bind();
+            }
+        }
+        protected void CheckSession()
+        {
+                ////验证登录权限
+                SessionUtils check = new SessionUtils();
+                bool result = check.CheckPower("DrugFactory");
+            if (result == true)
+                result=check.CheckPower("DrugFactory", "药品信息");
+                if (result == false)
+                {
+				Response.Write("<script>   top.window.location.href = '/Logout.aspx?r='+Math.random() ;</script>");
+                ////Response.Redirect("/Logout.aspx");
+                }
+		}
+        protected void Bind()
+        {
+            if (string.IsNullOrEmpty(Request["id"]))
+            {
+                Response.Redirect("DrugInfo_List.aspx?rnd="+YaohuaID.GenRandomInt()+"&query="+HttpUtility.UrlEncode(Request["query"])+"&id="+HttpUtility.UrlEncode(Request["id"])+"");
+            }
+            string id = HttpUtility.UrlDecode(Request["id"]).ToString();
+            entity = Yaohuasoft.Framework.BLL.DrugFactory.DrugInfoBLL.GetEntity(id,Session["CorpId"].ToStr(),Session["DepartmentId"].ToStr(),Session["UserName"].ToStr());
+			////必须克隆不然会影响缓存数据
+            entity = entity.Clone();
+this.imgDrugPicUrl.ImageUrl=entity.DrugPicUrl.ToStr();
+entity.IsSeo=SysConfigService.GetValue(Session["CorpId"].ToStr(),"IS_SEO",entity.IsSeo.ToStr());
+            hfID.Value = id.ToString();
+        }
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            string id = hfID.Value.ToString();
+            var ret = Yaohuasoft.Framework.BLL.DrugFactory.DrugInfoBLL.Delete(id,Session["CorpId"].ToStr(),Session["DepartmentId"].ToStr(),Session["UserName"].ToStr());
+            if (ret > 0)
+            {
+                Response.Redirect("DrugInfo_List.aspx?rnd="+YaohuaID.GenRandomInt()+"&query="+HttpUtility.UrlEncode(Request["query"])+"&id="+HttpUtility.UrlEncode(Request["id"])+"");
+            }
+            Bind();
+            errormsg.Text = "操作失败！";
+        }
+        protected void btnShenQing_Click(object sender, EventArgs e)
+        {
+            string id = hfID.Value.ToString();
+            var ret = Yaohuasoft.Framework.BLL.DrugFactory.DrugInfoBLL.ShenQingById(id,Session["CorpId"].ToStr(),Session["DepartmentId"].ToStr(),Session["UserName"].ToStr());
+            Bind();
+        }
+    }
+}

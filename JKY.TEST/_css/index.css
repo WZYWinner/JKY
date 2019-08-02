@@ -1,0 +1,24 @@
+#outerwrap{background-color: #F4F4F4;}
+#innerwrap{overflow:hidden; zoom:1;}
+
+/*中间*/
+#contentwrap{width:100%;}
+#content{ overflow:hidden; zoom:1;}
+#content h6{height:59px; line-height:59px; font-size:18px; font-family:"Microsoft yahei", Arial, Helvetica, sans-serif; font-weight:normal;    padding-left: 11px;}
+#content .contentint{overflow:hidden; zoom:1; width:100%;}
+#content .function{overflow:hidden; zoom:1; background:#fff; padding:10px 5px 23px 20px; box-shadow:3px 3px 2px #e9e9e9; margin-bottom:17px; height:191px;}
+#content .function .function_title{height:32px;}
+#content h3{font-size:16px; font-family:"Microsoft yahei", Arial, Helvetica, sans-serif; font-weight:normal; padding-top:5px; color:#666; float:left; display:inline-block; width:auto;}
+#content .function ul{overflow:hidden; zoom:1;}
+#content .function ul li{width:103%; float:left; margin-top:30px; height:41px;}
+#content .function ul li a{height:39px; width:22%; margin-right:2%; border:1px solid #ededed; line-height:41px; text-align:center; background:#f8f8f8; color:#666; font-size:16px; font-family:"Microsoft yahei", Arial, Helvetica, sans-serif; float:left; overflow:hidden; zoom:1;}
+#content .function ul li a:hover{background:#f1f0f0; text-decoration:none; color:#666;}
+#content .function ul li span{color:#f96913; font-size:14px;}
+#content .noticewrap{width:108%; height:228px; }
+#content .notice{width:46%; background:#fff; box-shadow:3px 3px 2px #e9e9e9; float:left; height:224px; display:inline; margin-right:15px; overflow:hidden; zoom:1;}
+#content .notice_top{height:40px; border-bottom:1px solid #ebebeb; padding-top:10px; margin:0 20px;}
+#content .notice .notice_top a{float:right; margin-top:19px; display:inline; color:#999;}
+#content .notice ul {padding:10px 20px 0px 20px;}
+#content .notice ul li{line-height:30px; font-size:14px;}
+#content .notice ul li span{color:#f96913; padding:0 3px;float: right;}
+#content .notice .msg{margin-right:25px;}

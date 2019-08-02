@@ -1,0 +1,17 @@
+
+（优先匹配本系统的，如果没有则匹配通配符的）
+
+
+按钮ID	表 		系统名		模版列表				条件					按钮名 		代码
+1	ORDER_FORM	SysAdmin	LIST	entity.OrderStatus=="已付款"	接单	OrderFormQueryParameter parm0 = new OrderFormQueryParameter();parm0.EqualTo.ORDER_ID
+=id;OrderFormDAL.Update(0,parm0,new OrderFormDALEntity{OrderStatus="已接单"});
+2	ORDER_FORM	SysAdmin	LIST	entity.OrderStatus=="已付款"	拒单	OrderFormQueryParameter parm1 = new OrderFormQueryParameter();parm1.EqualTo.ORDER_ID
+=id;OrderFormDAL.Update(0,parm1,new OrderFormDALEntity{OrderStatus="已拒单"});
+3	ORDER_FORM	SysAdmin	LIST	entity.OrderStatus=="已接单"	派送	OrderFormQueryParameter parm2 = new OrderFormQueryParameter();parm2.EqualTo.ORDER_ID
+=id;OrderFormDAL.Update(0,parm2,new OrderFormDALEntity{OrderStatus="派送中"});
+4	ORDER_FORM	SysAdmin	LIST	entity.OrderStatus=="派送中"	送达	OrderFormQueryParameter parm3 = new OrderFormQueryParameter();parm3.EqualTo.ORDER_ID
+=id;OrderFormDAL.Update(0,parm3,new OrderFormDALEntity{OrderStatus="已送达"});
+	
+
+
+

@@ -1,0 +1,5 @@
+﻿ this.div后台角色.Visible = check.CheckPower("SysAdmin", "后台角色");
+ this.div客户公司.Visible = check.CheckPower("SysAdmin", "客户公司");
+ this.div通用配置信息.Visible = check.CheckPower("SysAdmin", "通用配置信息");
+ this.div地区.Visible = check.CheckPower("SysAdmin", "地区");
+ this.div订单.Visible = check.CheckPower("SysAdmin", "订单");

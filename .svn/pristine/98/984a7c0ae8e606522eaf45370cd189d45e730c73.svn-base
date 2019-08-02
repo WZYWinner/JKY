@@ -1,0 +1,1 @@
+﻿<li class="nav-item ng-scope" title="LAN用户" src="/WebUI/SysAdmin/LanUser_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>"><a href="javascript:void(0)" class="sidebar-trans ng-scope"><div class="nav-icon sidebar-trans"><span class="icon-form"></span> </div><span class="nav-title ng-binding">LAN用户</span></a></li>

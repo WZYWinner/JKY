@@ -1,0 +1,1 @@
+﻿ this.div后台用户.Visible = check.CheckPower("WzyAdmin", "后台用户");

@@ -1,0 +1,68 @@
+.file_add_content { display: inline-block; position: relative; width: 96%; }
+
+.uploader_container { width: 100%; display: inline-block; }
+
+.plupload_dropbox { position: relative; }
+
+.plupload_dropbox li.plupload_delete .plupload_file_thumb a { background: none; }
+
+.create_list li.col2 ul li .plupload_dropbox .plupload_filelist li,.plupload_dropbox .plupload_filelist li { width: 100px; float: left; margin: 10px; padding: 6px; background-color: #e6e6e6; position: relative; background-image: none; border-bottom: none; }
+
+.create_list li ul .plupload_dropbox .plupload_filelist,.plupload_dropbox .plupload_filelist { margin-left: 0; }
+
+.plupload_dropbox .plupload_filelist .plupload_file_thumb { height: 60px; width: 100px; overflow: hidden; text-align: center; position: relative; background: #eee url('../script/jquery.plupload.queue/img/throbber.gif') center no-repeat; cursor: pointer; }
+
+.plupload_dropbox .plupload_filelist .plupload_file_thumb img { border: none; }
+
+.plupload_dropbox .plupload_filelist .plupload_file_name { font-weight: bold; padding: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-sizing: content-box; color: #555; width: auto; float: none; }
+
+.plupload_dropbox .plupload_file_name span { padding: 0; box-sizing: content-box; vertical-align: inherit; white-space: nowrap; font-size: 12px; display: inline; }
+
+.plupload_dropbox .plupload_file_action { float: none; position: absolute; right: -5px; top: -5px; margin-left: 0; text-align: left; }
+
+.plupload_dropbox .plupload_file_size { float: left; text-align: left; }
+
+.create_list li .plupload_dropbox span,.plupload_dropbox span { font-size: 12px; padding-right: 0; }
+
+.plupload_dropbox .plupload_file_size, .plupload_dropbox .plupload_file_status { width: auto; }
+
+.create_list li.col2 ul li .plupload_dropbox .plupload_filelist li.plupload_droptext,.plupload_dropbox .plupload_filelist li.plupload_droptext { background-color: #fff; float: none; line-height: 185px; margin: 0; padding: 0; width: auto; height: 185px; }
+
+.plupload_filelist_footer .plupload_file_action { position: absolute; }
+
+ul, li { margin: 0px; padding: 0px; list-style: none; }
+
+.main_content { width: 96%; display: inline-block; }
+
+.file_header { background: #2a2c2e url("../script/jquery.plupload.queue/img/backgrounds.gif") repeat-x scroll 0 0; min-height: 56px; color: #fff; }
+
+.create_list li .file_header span, .file_header span { line-height: 56px; padding-left: 15px; display: inline-block; float: left; }
+
+.file_content { position: relative; border:1px solid #2a2c2e;}
+
+.create_list li ul.file_list, .create_list li ul.file_list_text,ul.file_list, ul.file_list_text { position: relative; overflow-y: scroll; background: #f5f5f5; height: 185px; margin-left: 0; }
+
+.create_list li.col2 ul li .file_list li, .file_list li { width: 100px; padding: 6px; background: #e6e6e6; float: left; margin: 10px; position: relative; }
+
+.file_list li a { height: 60px; overflow: hidden; display: inline-block; text-align: center; }
+
+.file_list li a img { width: 96px; height: 60px; }
+
+.file_list li font { width: 16px; height: 16px; background: url(../script/jquery.plupload.queue/img/delete.gif)no-repeat; display: inline-block; position: absolute; right: -5px; top: -5px; cursor: pointer; }
+
+.file_list li em { width: 100px; text-overflow: ellipsis; overflow: hidden; white-space: normal; display: inline-block; font-style: normal; font-size: 11px; color: #555; }
+
+.file_footer { line-height: 22px; height: 22px; border-top: 1px solid #fff; vertical-align: middle; background: #dfdfdf; padding: 8px; color: #42454a; }
+
+.file_footer a { background: url(../script/jquery.plupload.queue/img/buttons.png) no-repeat; border: 1px solid #bababa; color: #42454a; padding: 2px 8px 3px 20px; text-decoration: none; font-size: 12px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;line-height: 24px; }
+
+.file_footer a:hover { color: #000; }
+
+.file_list_text li { width: 98%; border-bottom: 1px dashed #bababa; line-height: 34px; margin: 0px 1%; color: #555; }
+
+.file_list_text li a { font-size: 14px; padding-left: 10px; text-decoration: none; color: #555; }
+
+.file_list_text li font { width: 16px; height: 16px; background: url(../script/jquery.plupload.queue/img/delete.gif)no-repeat; display: inline-block; cursor: pointer; margin: 10px 10px 0px 0px; float: right; }
+
+.back_div { position: absolute; right: 8px; top: 8px; width: 30px; height: 56px; }
+.back_div a { display: inline-block; position: absolute; width: 20px; height: 20px; margin: 18px 10px 0px 0px; background: url('../script/jquery.ui.plupload/img/icon_back_white.png') no-repeat; z-index: 3; }

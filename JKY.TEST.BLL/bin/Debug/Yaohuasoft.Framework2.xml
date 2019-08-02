@@ -1,0 +1,4787 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Yaohuasoft.Framework2</name>
+    </assembly>
+    <members>
+        <member name="T:Yaohuasoft.Framework.Library.IEntity">
+            <summary>
+            实体的抽象接口。提供Id、StateId、Execute()方法
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IEntity.Execute(System.Object)">
+            <summary>
+            执行方法,保存进数据库或文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.IEntity._PrimaryKey">
+            <summary>
+            ID主键。数据唯一
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.ITreeEntity">
+            <summary>
+            树形节点的接口
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ITreeEntity.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ITreeEntity.OrderBy">
+            <summary>
+            排序顺序
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ITreeEntity.Name">
+            <summary>
+            节点名
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.IBLLEntity">
+            <summary>
+            逻辑层的实体
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.IBLLEntity.AccessTime">
+            <summary>
+            表示数据的访问时间
+            最后访问。最后修改时间
+            在内存数据库排序时有用
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.ISerializeEntity">
+            <summary>
+            可序列化的实体
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ISerializeEntity.Serialize">
+            <summary>
+            序列化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ISerializeEntity.Deserialize(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.ISyncCache">
+            <summary>
+            缓存同步接口类。单个实体仅一个。
+            用户同步本机以外的数据库更新，
+            并写入到本机缓存中。
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.IClearCache">
+            <summary>
+            清空过期缓存
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IMemoryDb.GetEntityId">
+            <summary>
+            获取本实体名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IMemoryDb.GetMemoryCount">
+            <summary>
+            获取内存数据库的记录数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IMemoryDb.Clear2Default">
+            <summary>
+            把过期没访问的数据从内存内移除
+            间隔N秒执行一次。可以重复反复执行
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IMemoryDb.ClearSystemDeleted">
+            <summary>
+            物理删除N天前标记为系统删除的数据
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.IDalBalance">
+            <summary>
+            数据访问层均衡器。单个数据库实体仅一个。
+            用于统计某个数据库某个表的数据分布情况。
+            并且将某个数据库的数据取出，均衡到其他数据库。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IDalBalance.GetEntityId">
+            <summary>
+            获取本实体名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IDalBalance.CountAllDb(System.Int64,System.Int64)">
+            <summary>
+            统计所有数据库的某个实体，从开始时间到结束时间的数据量
+            </summary>
+            <param name="BeginTime"></param>
+            <param name="EndTime"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.IDalBalance.BalanceAllDb">
+            <summary>
+            统计某个实体，将所有数据量不一致的全部均衡
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.IExecuteEntity">
+            <summary>
+            用于定时执行的实体
+            如果立即执行则设为最小时间
+            如果都不希望执行,则设为最大时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.IExecuteEntity.ExecutePriority">
+            <summary>
+            优先级ID
+            数字越小优先级越高
+            一般是0-100之间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.IExecuteEntity.ExecuteTime">
+            <summary>
+            执行时间
+            如果立即执行则设为最小时间
+            如果都不希望执行,则设为最大时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.IExecuteEntity.Entity2Execute">
+            <summary>
+            需要运行的实体
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.ScheduleEntity">
+            <summary>
+            用于定义计划实体
+            日以上调度 默认三点开始
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ScheduleEntity.NextExecuteTime(System.DateTime)">
+            <summary>
+            下次应该执行的时间 
+            自动会根据上次执行时间判断
+            </summary>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ScheduleEntity.Execute(System.Object)">
+            <summary>
+            将上次执行时间设置成当前时间
+            并且设置下次执行时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ScheduleEntity.StartTime">
+            <summary>
+            开始时间:默认半夜三点 
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ScheduleEntity.BeginTime">
+            <summary>
+            计划开始时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ScheduleEntity.EndTime">
+            <summary>
+            计划结束时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ScheduleEntity.CycleType">
+            <summary>
+            周期类型
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ScheduleEntity.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ScheduleEntity.ExecuteTime">
+            <summary>
+            下一次执行时间
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.EntityConvert">
+            <summary>
+            实体转换器
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EntityConvert.GetId(Yaohuasoft.Framework.Library.IEntity)">
+            <summary>
+            获取ID
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EntityConvert.GetId``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            获取ID
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EntityConvert.FormatEntity(Yaohuasoft.Framework.Library.IEntity@)">
+            <summary>
+            格式化实体信息。填充一些必须的字段
+            修正ID
+            修正修改时间
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EntityConvert.UpdateAccessTime``1(``0,System.DateTime)">
+            <summary>
+            更新访问时间
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EntityConvert.UpdateAccessTime``1(System.Collections.Generic.List{``0},System.DateTime)">
+            <summary>
+            更新访问时间，使用引用方式，可以忽略返回值
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaCachePolicy">
+            <summary>
+            内存数据库缓存策略
+            默认是缓存优先
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCachePolicy.CacheFirst">
+            <summary>
+            缓存优先。如果本查询条件N分钟内查询过。则直接返回内存数据库
+            如果缓存命中则不读取数据库。
+            如果缓存无数据。则读取数据库并缓存。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCachePolicy.DatabaseFirst">
+            <summary>
+            数据库优先。缓存和数据库合并查询后返回。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCachePolicy.NoCache">
+            <summary>
+            不读取缓存。直接读取数据库。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCachePolicy.NoDatabase">
+            <summary>
+            不读取数据库。直接读取缓存。
+            如果内存无数据。则合并查询内存和数据库
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.EnumConverter">
+            <summary>
+            耀华软件公司对枚举类的抽象封装。
+            </summary>
+            <summary>
+            耀华软件公司对枚举类的抽象封装。
+            </summary>
+            <summary>
+            耀华软件公司对枚举类的抽象封装。
+            </summary>
+            <summary>
+            耀华软件公司对枚举类的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EnumConverter.String2CachePolicy(System.String)">
+            <summary>
+            将配置文件里面的信息转换成对应的枚举
+            </summary>
+            <param name="BaseType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.EnumConverter.String2DataBaseType(System.String)">
+            <summary>
+            将配置文件里面的信息转换成对应的枚举
+            </summary>
+            <param name="BaseType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaConnection">
+            <summary>
+            耀华软件公司对DbConnection类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaConnection._strConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaConnection._DbConnection">
+            <summary>
+            通用数据库连接
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaConnection.#ctor">
+            <summary>
+            构造函数。
+            使用配置文件内的数据库配置信息创建数据库连接。
+            耀华软件公司对DbConnection类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaConnection.#ctor(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String)">
+            <summary>
+            构造函数。
+            耀华软件公司对DbConnection类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaConnection.#ctor(System.Data.Common.DbConnection)">
+            <summary>
+            构造函数。
+            耀华软件公司对DbConnection类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaConnection.Dispose">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaConnection.Initialize(System.Data.Common.DbConnection)">
+            <summary>
+            初始化信息
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaConnection.Initialize(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String)">
+            <summary>
+            初始化信息
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.Id">
+            <summary>
+            数据库连接的ID，用于标记数据库连接
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.DbKey">
+            <summary>
+            连接库的ID
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.DbIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.DbIndex2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.UseTime">
+            <summary>
+            使用次数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.DataBaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaConnection.Connection">
+            <summary>
+            DbConnection数据库连接
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDisk">
+            <summary>
+            耀华软件公司对磁盘类的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDisk.GetVolumeInformation(System.String,System.String,System.Int32,System.Int32@,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            获取分区分卷信息
+            </summary>
+            <param name="lpRootPathName"></param>
+            <param name="lpVolumeNameBuffer"></param>
+            <param name="nVolumeNameSize"></param>
+            <param name="lpVolumeSerialNumber"></param>
+            <param name="lpMaximumComponentLength"></param>
+            <param name="lpFileSystemFlags"></param>
+            <param name="lpFileSystemNameBuffer"></param>
+            <param name="nFileSystemNameSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDisk.GetDiskSN(System.String)">
+            <summary>
+            获取磁盘分区序列号
+            </summary>
+            <param name="drvID">盘符。如C</param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.SystemConfig">
+            <summary>
+            耀华软件公司对配置常量类的抽象封装。
+            </summary>
+            <summary>
+            耀华软件公司对配置常量类的抽象封装。
+            </summary>
+            <summary>
+            耀华软件公司对配置常量类的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.IdLength">
+            <summary>
+            ID总长度:16
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.IdDateLength">
+            <summary>
+            ID内时间长度:8
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.IdRndLength">
+            <summary>
+            随机码、用户CODE长度:8
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.ConfigFile">
+            <summary>
+            配置文件的路径
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.GetDbServerEntity4Load(System.Int64)">
+            <summary>
+            获取数据库配置信息（获取所有数据库）
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.GetDbServerEntity(System.Int64)">
+            <summary>
+            获取数据库配置信息（获取第一个数据库）
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.GetWebServerEntity(System.Int64)">
+            <summary>
+            获取WEB配置信息
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.InitDbServer(System.Int64)">
+            <summary>
+            根据数据库编号，初始化数据库配置信息
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.InitWebServer(System.Int64)">
+            <summary>
+            根据数据库编号，初始化数据库配置信息
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.GetMonitorString">
+            <summary>
+            获取监控信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.WebServerTimeOutMillisecond">
+            <summary>
+            超过N秒就认为此服务不可用
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.DbServerTimeOutMillisecond">
+            <summary>
+            超过N秒就认为此服务不可用
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.IsDebug">
+            <summary>
+            如果IsDebug是true，则日志会记录所有的SQL语句
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.IsChangeColumn">
+            <summary>
+            是否变换字段（仅用于SQL语句泛型解析时使用）
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.LastSyncTime">
+            <summary>
+            同步字典表，某数据库某实体的最近同步时间。
+            数据库ID，实体名，时间
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.SyncCacheList">
+            <summary>
+            字典，用于由统一线程调度所有需要同步的方法。
+            每个表，需要同步自己需要的数据库ID
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemConfig.SetIsEncrypt(System.String,Yaohuasoft.Framework.Library.YaohuaEncryptLevel)">
+            <summary>
+            设置加密级别(需要密码^_^)
+            </summary>
+            <param name="password"></param>
+            <param name="input"></param>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig._UserConfigDict">
+            <summary>
+            提供给用户用的配置
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig._SoftConfigDict">
+            <summary>
+            提供给系统用的配置
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.SpliterEntity">
+            <summary>
+            实体之间的分隔符
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SystemConfig.SpliterColumn">
+            <summary>
+            实体内字段之间的分隔符
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.DbServerCount">
+            <summary>
+            数据库服务器的个数。默认为1。
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.DbTableCount">
+            <summary>
+            单表的分割数，如水平分割成10个表
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.IsRemainSql">
+            <summary>
+            是否保留SQL
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.WebServerCount">
+            <summary>
+            WEB服务器的个数。默认为1。
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.CacheDataSecond">
+            <summary>
+            内存数据库最小保留秒数。默认保留5分钟。
+            即使数据量超标也不删除
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.CachePolicy">
+            <summary>
+            内存数据库缓存策略。默认是数据库优先
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.AlertEmailList">
+            <summary>
+            告警通知的邮件列表
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.LogPath">
+            <summary>
+            系统存放日志的路径
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.SoftwareName">
+            <summary>
+            软件名
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.ConfigDir">
+            <summary>
+            默认配置文件路径(不含文件名)
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.DateTimeMaxValue">
+            <summary>
+            默认2200年
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.DateTimeMinValue">
+            <summary>
+            默认1700年
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.Interval4ExecuteQueue">
+            <summary>
+            线程的间隔时间，默认10秒
+            </summary>      
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.Interval4Monitor">
+            <summary>
+            线程的间隔时间，默认60秒
+            </summary>      
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.Interval4Debug">
+            <summary>
+            线程的间隔时间，默认1分钟
+            </summary>      
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.IsRecordLog">
+            <summary>
+            是否记录日志包含异常
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.IsRecordMonitor">
+            <summary>
+            是否记录监控信息
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.OnePageSize">
+            <summary>
+            单页的记录数。默认50条。
+            </summary>      
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.RootPath">
+            <summary>
+            系统根路径地址。需要在系统第一时间注册
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.DLLTemplatePath">
+            <summary>
+            DLL模版路径地址（写全路径，仅生成器使用）
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.UITemplatePath">
+            <summary>
+            UI模版路径地址（写全路径，仅生成器使用）
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.IsRuning">
+            <summary>
+            系统是否正在运行状态
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.IsEncrypt">
+            <summary>
+            配置文件是否加密
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.CorporationName">
+            <summary>
+            公司名
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.CacheClassList">
+            <summary>
+            缓存的类列表
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.DbServerList">
+            <summary>
+            数据库服务器列表的字典表
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.WebServerList">
+            <summary>
+            数据库服务器列表的字典表
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.SystemConfig.ConnectionPoolSize">
+            <summary>
+            数据库连接池的默认容量，默认5
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaWhereType">
+            <summary>
+            耀华软件公司对WhereType查询条件的抽象封装。
+            WHERE查询条件的类型：复杂型。简单型。单个查询条件
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereType.WhereComplex">
+            <summary>
+            复杂版的WHERE条件
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereType.WhereSimple">
+            <summary>
+            简单版的WHERE条件
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereType.WhereParameter">
+            <summary>
+            单个WHERE查询条件
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereType.WhereCombine">
+            <summary>
+            结合版的WHERE条件。用于一个复杂WHERE与单个WHERE结合
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereType.WhereCombine2">
+            <summary>
+            结合版的WHERE条件。用于一个复杂WHERE与单个WHERE结合
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaOrderByType">
+            <summary>
+            耀华软件公司对OrderByType数据库排序类型的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaOrderByType.Asc">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaOrderByType.Desc">
+            <summary>
+            降序
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDbOperator">
+            <summary>
+            耀华软件公司对YaohuaDatabase数据库运算符的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.EqualTo">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.NotEqual">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.In">
+            <summary>
+            IN
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.NotIn">
+            <summary>
+            NOT IN
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.Like">
+            <summary>
+            LIKE
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.NotLike">
+            <summary>
+            NOT LIKE
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.StartWith">
+            <summary>
+            字符串以什么开始
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.EndWith">
+            <summary>
+            字符串以什么结尾
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.GreatTo">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.LessTo">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.GreatEqual">
+            <summary>
+            大等于
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.LessEqual">
+            <summary>
+            小等于
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbOperator.IsNull">
+            <summary>
+            空值
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.WhereComplex">
+            <summary>
+            复杂版的WHERE条件的面向对象实现
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Where.Add(Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            添加检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Where.Remove(Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            移除检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereComplex.#ctor(Yaohuasoft.Framework.Library.WhereParameter,Yaohuasoft.Framework.Library.YaohuaWhereOperator,Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            构造函数（简单版）
+            </summary>
+            <param name="LeftQp"></param>
+            <param name="QueryOperator"></param>
+            <param name="RightQp"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereComplex.#ctor(Yaohuasoft.Framework.Library.WhereComplex,Yaohuasoft.Framework.Library.YaohuaWhereOperator,Yaohuasoft.Framework.Library.WhereComplex)">
+            <summary>
+            构造函数（复杂版）
+            </summary>
+            <param name="LeftQp"></param>
+            <param name="QueryOperator"></param>
+            <param name="RightQp"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereComplex.#ctor(Yaohuasoft.Framework.Library.WhereParameter,Yaohuasoft.Framework.Library.YaohuaWhereOperator,Yaohuasoft.Framework.Library.WhereComplex)">
+            <summary>
+            构造函数（结合版）
+            </summary>
+            <param name="LeftQp"></param>
+            <param name="QueryOperator"></param>
+            <param name="RightQp"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereComplex.#ctor(Yaohuasoft.Framework.Library.WhereComplex,Yaohuasoft.Framework.Library.YaohuaWhereOperator,Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            构造函数（结合版）
+            </summary>
+            <param name="LeftQp"></param>
+            <param name="QueryOperator"></param>
+            <param name="RightQp"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereComplex.ToString">
+            <summary>
+            重载：ToString转为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaFile">
+            <summary>
+            耀华软件公司对File类的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.WriteAllText(System.String,System.String)">
+            <summary>
+            以覆盖方式向指定文件写入信息
+            (利用操作系统默认的编码方式)
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="contents">内容</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.WriteAllText(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            以覆盖方式向指定文件写入信息
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="contents">内容</param>
+            <param name="encoding">编码方式</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.WriteAllLines(System.String,System.String[])">
+            <summary>
+            以数据行方式写入文件（覆盖模式）
+            </summary>
+            <param name="path"></param>
+            <param name="contents"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.WriteAllLines(System.String,System.String[],System.Text.Encoding)">
+            <summary>
+            以数据行方式写入文件（覆盖模式）
+            </summary>
+            <param name="path"></param>
+            <param name="contents"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.AppendAllText(System.String,System.String)">
+            <summary>
+            以添加方式向指定文件内写入信息    
+            </summary>
+            <param name="path"></param>
+            <param name="contents"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.AppendAllText(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            以添加方式向指定文件内写入信息
+            </summary>
+            <param name="path"></param>
+            <param name="contents"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.AppendNewLine(System.String,System.String)">
+            <summary>
+            以添加方式向指定文件写入信息
+            新添加一行写入
+            </summary>
+            <param name="path"></param>
+            <param name="contents"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.AppendNewLine(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            以添加方式向指定文件写入信息
+            新添加一行写入   
+            </summary>
+            <param name="path"></param>
+            <param name="contents"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.Copy(System.String,System.String)">
+            <summary>
+            拷贝文件(如果重名强制覆盖)
+            </summary>
+            <param name="sourceFileName">源文件</param>
+            <param name="destFileName">目标文件</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.Copy(System.String,System.String,System.Boolean)">
+            <summary>
+            拷贝文件
+            </summary>
+            <param name="sourceFileName">源文件</param>
+            <param name="destFileName">目标文件</param>
+            <param name="overWrite">是否强制覆盖</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.Move(System.String,System.String)">
+            <summary>
+            移动文件(强制覆盖)
+            </summary>
+            <param name="sourceFileName">源文件</param>
+            <param name="destFileName">目标文件</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.Move(System.String,System.String,System.Boolean)">
+            <summary>
+            移动文件
+            </summary>
+            <param name="sourceFileName">源文件</param>
+            <param name="destFileName">目标文件</param>
+            <param name="overWrite">是否强制覆盖</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.Delete(System.String)">
+            <summary>
+            删除指定文件
+            </summary>
+            <param name="path">文件路径</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.Exists(System.String)">
+            <summary>
+            判断文件是否存在,文件路径字符串差异可能会有影响
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.ReadAllText(System.String)">
+            <summary>
+            打开指定文件。读取所有文字信息。并关闭该文件
+            </summary>
+            <param name="path">文件路径</param>
+            <returns>字符串（包含换行）</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.ReadAllText(System.String,System.Text.Encoding)">
+            <summary>
+            打开指定文件。读取所有文字信息。并关闭该文件
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="encoding">编码格式</param>
+            <returns>字符串（包含换行）</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.ReadAllLines(System.String)">
+            <summary>
+            打开指定文件。读取所有行。并关闭该文件
+            </summary>
+            <param name="path">文件路径</param>
+            <returns>字符串数组</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.ReadAllLines(System.String,System.Text.Encoding)">
+            <summary>
+            打开指定文件。读取所有行。关闭该文件
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="encoding">编码方式</param>
+            <returns>字符串数组</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.ReadAllTextDES(System.String,System.Text.Encoding)">
+            <summary>
+            用DES方式读取文件
+            </summary>
+            <param name="path"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFile.ReadAllLinesDES(System.String,System.Text.Encoding)">
+            <summary>
+            将加密的文件解密成明文的字符串数组
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="encoding">编码方式</param>
+            <returns>明文的字符串数组</returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaExecuteQueue">
+            <summary>
+            耀华软件公司对系统数据总线的抽象封装。
+            每次500毫秒写入100个数据
+            默认总线范围是0-999。（不能超过0到999的范围。但可以非连续）。
+            支持多条数据总线。根据ExecutePriority的大小来确定优先级。越小优先级越大。
+            默认延时ExecutePriority的秒数执行
+            内部含有一组默认静态数据总线。也可以自行新建数据总线。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaExecuteQueue._Dict">
+            <summary>
+            用于数据存储
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.InitializeBus(System.Int32)">
+            <summary>
+            初始化具体某条系统总线。可以反复调用。
+            本方法自行判断是否应该初始化。
+            在内部会顺带初始化整个系统数据总线
+            </summary>
+            <param name="ExecutePriority"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.InQueue(System.Int32,Yaohuasoft.Framework.Library.IEntity)">
+            <summary>
+            将数据添加到系统数据总线内。自行会进行总线的初始化
+            </summary>
+            <param name="ExecutePriority">执行优先级</param>
+            <param name="Entity"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.InQueueList(System.Int32,System.Collections.Generic.IEnumerable{Yaohuasoft.Framework.Library.IEntity})">
+            <summary>
+            将数据添加到系统数据总线内。自行会进行总线的初始化
+            </summary>
+            <param name="ExecutePriority"></param>
+            <param name="Entity"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.WriteBatchEntity4Thread(System.Int32)">
+            <summary>
+            写入特定数量的实体。
+            由特定线程自动定时调用
+            </summary>
+            <param name="Count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.WriteAllEntity">
+            <summary>
+            写入全部实体。
+            由特定线程自动定时调用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.ResetIntervalMillSecond">
+            <summary>
+            根据数据量动态的设置间隔时间，时间范围在10毫秒到10000毫秒
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.GetCount">
+            <summary>
+            取执行队列内的总数（内用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.GetMonitorString">
+            <summary>
+            获取监控信息
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.Initialize">
+            <summary>
+            初始化及启动后台线程。可以反复调用。
+            本方法自行判断是否应该初始化。
+            只用于需要修改初始设置的情况
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.Thread2Run01(System.Object)">
+            <summary>
+            启动独立单线程将实体写入数据库。
+            定时写入特定数量的实体。
+            当系统停止时。写入全部实体
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.Thread2Run02(System.Object)">
+            <summary>
+            启动独立单线程将实体写入数据库。
+            定时写入特定数量的实体。
+            当系统停止时。写入全部实体
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.BatchCount">
+            <summary>
+            每批次写入的数据量。默认20个实体
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.Count">
+            <summary>
+            取执行队列内的总数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.ExecuteQueue">
+            <summary>
+            默认的静态数据总线。
+            如果需要其他的设置则重新新建一个数据总线
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.HasInit">
+            <summary>
+            是否初始化的系统开关
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaExecuteQueue.IntervalMillSecond">
+            <summary>
+            批次之间写入的时间间隔。默认1000毫秒。
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaCache">
+            <summary>
+            耀华软件公司对Dictionary字典类的抽象封装。
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaExistType">
+            <summary>
+            数据比较的存在类型（不存在。新的。旧的。相等）
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaExistType.NotExist">
+            <summary>
+            不存在
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaExistType.Equal">
+            <summary>
+            相等
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaExistType.New">
+            <summary>
+            新的
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaExistType.Old">
+            <summary>
+            旧的
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection">
+            <summary>
+            耀华软件公司对DbParameterCollection类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.list">
+            <summary>
+            YaohuaDbParameter列表
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.#ctor">
+            <summary>
+            构造函数。
+            耀华软件公司对DbParameterCollection类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.Add(Yaohuasoft.Framework.Library.YaohuaDbParameter)">
+            <summary>
+            添加一个YaohuaDbParameter参数
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.Remove(Yaohuasoft.Framework.Library.YaohuaDbParameter)">
+            <summary>
+            移除一个YaohuaDbParameter参数
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.Clear">
+            <summary>
+            清除所有的YaohuaDbParameter参数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.Item(System.Int32)">
+            <summary>
+            根据ID定位YaohuaDbParameter参数
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDbParameterCollection.Parameters">
+            <summary>
+            返回DbParameter数组
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.DbConnectionPool">
+            <summary>
+            耀华软件公司对数据库连接池类的抽象封装。
+            当没可用连接时，会创建一个连接加入到队列中。
+            每25毫秒会回收空闲25毫秒以上的数据库连接   
+            效率大概在15,000毫秒每万次。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.DbConnectionPool._ConnectionPool">
+            <summary>
+            连接的列表，是连接池的实际容器
+            </summary>   
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool.GetMonitorString">
+            <summary>
+            获取监控信息
+            DbIndex=0,DbCount=3 | DbIndex=1,DbCount=3
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool.GetPoolSize(System.String)">
+            <summary>
+            返回第N个数据库队列的连接数
+            如果不存在某队列，则自动创建一个队列
+            </summary>
+            <param name="dbIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool.Recycle(Yaohuasoft.Framework.Library.YaohuaConnection)">
+            <summary>
+            回收数据库连接，放回到队列中
+            </summary>
+            <param name="conn"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool.EnQueue(System.String,Yaohuasoft.Framework.Library.YaohuaConnection)">
+            <summary>
+            回收放入队列
+            </summary>
+            <param name="DbKey"></param>
+            <param name="conn"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool.InitializeQueue(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="DbKey"></param>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaString">
+            <summary>
+            字符串相关特殊处理辅助类
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaString.spliter">
+            <summary>
+            字符串分隔符
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Split2Str(System.String,System.String)">
+            <summary>
+            字符串切割
+            </summary>
+            <param name="input"></param>
+            <param name="spliter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Split2Int(System.String,System.String)">
+            <summary>
+            字符串切割成INT型
+            暂不去重。需要外界自行去重
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="input"></param>
+            <param name="spliter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Confuse(System.String[])">
+            <summary>
+            混淆字符串
+            </summary>
+            <param name="aa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Confuse(System.Int32,System.String[])">
+            <summary>
+            混淆字符串
+            </summary>
+            <param name="length"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Md5ToLong(System.String)">
+            <summary>
+            根据MD5值转换成INT型的值
+            </summary>
+            <param name="md5"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.SubStringCn(System.String,System.Int32,System.Boolean)">
+            <summary>
+            截取字符串，中文2字节，英文1字节
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <param name="flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Length4Cn(System.String)">
+            <summary>
+            获取字符串长度，中文2字节，英文1字节
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.FormatSQL(System.String,System.Int64)">
+            <summary>
+            格式化带特殊标记的SQL，用于处理数据库特性的
+            </summary>
+            <param name="strSrc"></param>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.FormatSQL(System.String,Yaohuasoft.Framework.Library.YaohuaDataBaseType)">
+            <summary>
+            格式化带特殊标记的SQL，用于处理数据库特性的
+            </summary>
+            <param name="strSrc"></param>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.Clean4Entity(System.String)">
+            <summary>
+            清除SQL的非法字符，单引号
+            </summary>
+            <param name="strSrc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.CleanHide(System.String)">
+            <summary>
+            去除字符串内的隐藏字符。包括换行。以及头尾空格
+            </summary>
+            <param name="strSrc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.ToUpper(System.Object)">
+            <summary>
+            字符串大写。包含去空格等。并补足N位长度。默认用0左补齐
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.ToUpper(System.Object,System.Int32)">
+            <summary>
+            字符串大写。包含去空格等。并补足N位长度。默认用0左补齐
+            </summary>
+            <param name="input"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.ToUpper(System.Object,System.Int32,System.Int32)">
+            <summary>
+            字符串大写。包含去空格等。并补足N位长度。默认用0左补齐
+            </summary>
+            <param name="input"></param>
+            <param name="begin"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.ToUpper(System.Object,System.Int32,System.Int32,System.Char)">
+            <summary>
+            字符串大写。包含去空格等。并补足N位长度。默认用0左补齐
+            </summary>
+            <param name="input"></param>
+            <param name="begin"></param>
+            <param name="length"></param>
+            <param name="padChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.HtmlDecode(System.String)">
+            <summary>
+            HTML解码
+            </summary>
+            <param name="value">待解码的HTML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.HtmlEncode(System.String)">
+            <summary>
+            HTML编码
+            </summary>
+            <param name="value">待编码的HTML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.UrlDecode(System.String)">
+            <summary>
+            Url解码
+            </summary>
+            <param name="value">待解码的Url字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaString.UrlEncode(System.String)">
+            <summary>
+            Url编码
+            </summary>
+            <param name="value">待编码的Url字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.OrderBy">
+            <summary>
+            耀华软件公司对数据库OrderBy类的抽象封装。
+            QueryParams的收集器。
+            数据库的查询条件的OOP实现。
+            带随机排序功能。
+            在分布式异构数据库时需要注意数据库类型。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.OrderBy.list">
+            <summary>
+            装有OrderParameter类型的List
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.OrderBy.DataBaseType">
+            <summary>
+            数据库类型。在分布式异构数据库时用到
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderBy.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderBy.Add(Yaohuasoft.Framework.Library.OrderParameter)">
+            <summary>
+            添加检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderBy.Remove(Yaohuasoft.Framework.Library.OrderParameter)">
+            <summary>
+            移除检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderBy.GetByIndex(System.Int32)">
+            <summary>
+            方法：获取检索参数对象
+            </summary>
+            <param name="index">序列索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderBy.ToString">
+            <summary>
+            ToString重载。将where转为SQL条件语句
+            获得 WHERE 结果字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.OrderBy.IsRandomSort">
+            <summary>
+            是否随机排序。如果随即排序则其他的参数将无效
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMail.SendMail(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             wang50211933@sina.cn 为注册了新浪邮箱   wangqibin  为密码
+             利用新浪的smtp服务来发送,收件邮箱请填写139邮箱，这样可以收到短信,有些邮箱比如@qq.com收不到，应为qq邮箱会报错，提示垃圾短信
+            </summary>
+            <param name="to">请填写139邮箱</param>
+            <param name="title">标题</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.SystemMemory">
+            <summary>
+            系统内存相关操作
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemMemory.SetProcessWorkingSetSize(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置进程的物理内存占用
+            </summary>
+            <param name="hProcess">进程句柄</param>
+            <param name="dwMinimumWorkingSetSize">最小物理内存占用</param>
+            <param name="dwMaximumWorkingSetSize">最大物理内存占用</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemMemory.GetCurrentProcess">
+            <summary>
+            获得当前进程的句柄
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemMemory.ReduceMemory">
+            <summary>
+            减少内存使用。维持应用程序最小内存使用
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SystemMemory.ReduceMemory(System.Int32,System.Int32)">
+            <summary>
+            减少内存使用
+            </summary>
+            <param name="minMemory">最小物理内存</param>
+            <param name="maxMemory">最大物理内存</param>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Result.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Result.#ctor(Yaohuasoft.Framework.Library.IEntity)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Result.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.Result.ResultCode">
+            <summary>
+            0表示正确。大于0是信息。小于0是错误类型
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.Result.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.Result.Entity">
+            <summary>
+            实体（非必须）
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.Result.TotalCount">
+            <summary>
+            总记录数。受影响的记录数（非必须）
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.JsonSerializer">
+            <summary>
+            耀华软件 JSON序列化和反序列化的工具类
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.JsonSerializer._Serializer">
+            <summary>
+            JSON序列化工具类
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.JsonSerializer.Serialize(System.Object)">
+            <summary>
+            将对象JSON序列化成字符串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.JsonSerializer.Deserialize``1(System.String)">
+            <summary>
+            将字符串JSON反序列化成对象
+            </summary>
+            <typeparam name="TEnttiy"></typeparam>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.JsonSerializer.RecursionLimit">
+            <summary>
+            序列化深度限制。默认为10
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.JsonSerializer.Converter">
+            <summary>
+            设置序列化器的转换器，主要用于时间类型的
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbMonitor.CheckDbServer">
+            <summary>
+            检查所有服务器的响应时间
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbMonitor.CheckDbServer(System.Int64)">
+            <summary>
+            检查单个服务器的响应时间
+            </summary>
+            <param name="DbIndex"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbMonitor.PingOneDatabase(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String)">
+            <summary>
+            获取单个数据库的响应时间
+            </summary>
+            <param name="DbType"></param>
+            <param name="DbConnString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbMonitor.GetMonitorString">
+            <summary>
+            获取监控信息
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaEncryptLevel">
+            <summary>
+            耀华软件公司对EncryptLevel加密级别的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaEncryptLevel.None">
+            <summary>
+            均不加密
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaEncryptLevel.Config">
+            <summary>
+            核心配置文件加密
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaEncryptLevel.Network">
+            <summary>
+            网络通讯加密+核心配置文件加密
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaEncryptLevel.All">
+            <summary>
+            全加密
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.ObjectConvert">
+            <summary>
+            耀华软件公司对数据类型转换ObjectConvert的抽象封装。
+            提供常用的数据类型转换。
+            保证不会抛格式转换异常。如果有异常则返回默认值
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Contains``1(``0[],``0)">
+            <summary>
+            含有一个即返回TRUE
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="orig"></param>
+            <param name="refence"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Distinct``1(``0[])">
+            <summary>
+            获取非重复的数据
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.DistinctObject``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            获取非重复的数据
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToInt(System.String)">
+            <summary>
+            类型转换成数字，如果不能转，则是0
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToIntNull(System.String)">
+            <summary>
+            类型转换成数字，如果不能转，则是0
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToInt(System.Nullable{System.Int64})">
+            <summary>
+            类型转换成数字，如果不能转，则是0
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToInt(System.Int64)">
+            <summary>
+            类型转换成数字，如果不能转，则是0
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToLongSecond(System.DateTime)">
+            <summary>
+            将时间型转换成到秒级的长整型
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Round(System.Double)">
+            <summary>
+            小数四舍五入，默认留2位小数
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Round(System.Decimal)">
+            <summary>
+            小数四舍五入，默认留2位小数
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Round(System.Single)">
+            <summary>
+            小数四舍五入，默认留2位小数
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.IsNullOrEmptys(System.Object)">
+            <summary>
+            判断对象是否为空。
+            包含将字符串前后去空操作。
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToStr(System.Object)">
+            <summary>
+            OBJECT转字符串。
+            如果是字符串，则可以截取指定长度，
+            中文2字符，英文1字符。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToStr(System.Object,System.Int32)">
+            <summary>
+            OBJECT转字符串。
+            如果是字符串，则可以截取指定长度，
+            中文2字符，英文1字符。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToString(System.Object)">
+            <summary>
+            OBJECT转字符串。
+            如果是字符串，则可以截取指定长度，
+            中文2字符，英文1字符。
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToString(System.Object,System.Int32)">
+            <summary>
+            OBJECT转字符串。
+            如果是字符串，则可以截取指定长度，
+            中文2字符，英文1字符。
+            </summary>
+            <param name="objIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Decimal2Int(System.Decimal)">
+            <summary>
+            数据库专用方法。由于数据库的小数一般只有金额只需精确到2位。
+            因此直接使用int型保存。用时进行位数处理
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToHashID(System.Object)">
+            <summary>
+            将对象哈希后。生成8位的字符串。
+            带有防止哈希值一样的逻辑。
+            无论大小写。哈希值都是一样的。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToHashID(System.Object,System.Int32)">
+            <summary>
+            将对象哈希后。生成N位的字符串。
+            带有防止哈希值一样的逻辑。
+            无论大小写。哈希值都是一样的。
+            </summary>
+            <param name="obj"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.ToHashInt(System.String)">
+            <summary>
+            获取哈希值。用于数据库分库。永远取正数
+            取后8位。ID后8位是用户特性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Contains``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            含有一个即返回TRUE
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="orig"></param>
+            <param name="refence"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ObjectConvert.Contains``1(``0,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            含有一个即返回TRUE
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="orig"></param>
+            <param name="refence"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.Code">
+            <summary>
+            耀华软件公司对Code编码类的抽象封装。
+            支持字符串、时间、数字之间的编码转换。
+            效率大概在5-50毫秒每万次
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Str36ToStr16(System.String)">
+            <summary>
+            36进制字符串转换为16进制字符串
+            </summary>
+            <param name="strRnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Str16ToStr36(System.String,System.Int32)">
+            <summary>
+            解码：将16进制字符串转化为36进制的字符串。
+            内部会转大写和去横线
+            </summary>
+            <param name="strRnd">16进制字符串</param>
+            <param name="Length">输出长度</param>
+            <returns>36进制的字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Str16ToLong(System.String)">
+            <summary>
+            解码：将16进制字符串转化为长整形数字。只取前8位进行转换。
+            </summary>
+            <param name="strRnd">字符串</param>
+            <returns>长整形数字</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Long2Str16(System.Int64)">
+            <summary>
+            长整形转换为16进制字符串
+            </summary>
+            <param name="lngInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Str36ToLong(System.String)">
+            <summary>
+            解码：将36进制字符串转化为长整形数字。
+            只截取前16位。
+            </summary>
+            <param name="strRnd">字符串</param>
+            <returns>长整形数字</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Long2Str36(System.Int64)">
+            <summary>
+            编码：将长整形数转化为36进制字符串
+            </summary>
+            <param name="lngInput">长整型数字</param>
+            <returns>36进制字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Str36ToDate(System.String)">
+            <summary>
+            将8位长度的36进制的字符串转为时间类型
+            </summary>
+            <param name="strDate">时间编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Code.Date2Str36(System.DateTime)">
+            <summary>
+            将时间型转为36进制字符串，固定返回8位的
+            </summary>
+            <param name="dateTime">时间型</param>
+            <returns>36进制字符串</returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.TestLibrary.TestCode">
+            <summary>
+            耀华软件公司对Code编码类的抽象封装。
+            支持字符串、时间、数字之间的编码转换。
+            效率大概在5-50毫秒每万次
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.HttpRequest.HttpPostData(System.String,System.String,Yaohuasoft.Framework.Library.Result@)">
+            <summary>
+            使用Url链接发送Post数据
+            </summary>
+            <param name="url">请求的链接</param>
+            <param name="data">请求的数据</param>
+            <returns>返回的String数据</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.HttpRequest.HttpGetData(System.String)">
+            <summary>
+            GET方式获取数据
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.HttpRequest.HttpGetData(System.String,Yaohuasoft.Framework.Library.Result@)">
+            <summary>
+            GET方式获取数据
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.HttpRequest.HttpGetData4Monitor(System.String,Yaohuasoft.Framework.Library.Result@)">
+            <summary>
+            GET方式获取数据
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDataType">
+            <summary>
+            耀华软件公司。对DataType数据类型的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.Bool">
+            <summary>
+            BOOL型
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.BoolList">
+            <summary>
+            BOOL的列表型
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.Int32">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.Int64">
+            <summary>
+            长整数
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.Decimal">
+            <summary>
+            小数
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.DateTime">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.StringList">
+            <summary>
+            字符串列表
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.Int32List">
+            <summary>
+            整形列表
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.Int64List">
+            <summary>
+            长整形列表
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.DecimalList">
+            <summary>
+            小数列表
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataType.DateTimeList">
+            <summary>
+            时间列表。暂时无用
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDataBaseType">
+            <summary>
+            耀华软件公司对DataBaseType数据库类型的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataBaseType.SqlServer">
+            <summary>
+            SqlServer数据库
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataBaseType.MySql">
+            <summary>
+            MySql数据库
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataBaseType.Odbc">
+            <summary>
+            ODBC数据库
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDataBaseType.Access">
+            <summary>
+            Access数据库
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDbParameter">
+            <summary>
+            耀华软件公司对DbParameter类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDbParameter.#ctor(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String,Yaohuasoft.Framework.Library.YaohuaDataType,System.Object)">
+            <summary>
+            构造函数。
+            耀华软件公司对DbParameter类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+            <param name="dbType"></param>
+            <param name="strColName"></param>
+            <param name="YaohuaDataType"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDbParameter.Initialize(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String,Yaohuasoft.Framework.Library.YaohuaDataType,System.Object)">
+            <summary>
+            初始化信息
+            </summary>
+            <param name="dbType"></param>
+            <param name="strColName"></param>
+            <param name="YaohuaDataType"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDbParameter.Parameter">
+            <summary>
+            返回DbParameter
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.WhereSimple">
+            <summary>
+            QueryParams的收集器
+            数据库的查询条件的OOP实现
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereSimple.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereSimple.Add(Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            添加检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereSimple.Remove(Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            移除检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereSimple.AddForOr(Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            添加检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereSimple.RemoveForOr(Yaohuasoft.Framework.Library.WhereParameter)">
+            <summary>
+            移除检索参数
+            </summary>
+            <param name="obj">参数对象</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereSimple.ToString">
+            <summary>
+            ToString重载。将where转为SQL条件语句
+            获得 WHERE 结果字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WhereSimple.List">
+            <summary>
+            装有WhereParameter类型的List
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WhereSimple.Item(System.Int32)">
+            <summary>
+            方法：获取检索参数对象
+            </summary>
+            <param name="index">序列索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaThread.Sleep(System.Int32)">
+            <summary>
+            休息N毫秒
+            休眠时间必须是15毫秒以上
+            判断系统执行状态SystemConfig.IsRuning
+            </summary>
+            <param name="Millisecond"></param>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaMonitor._dictProgram">
+            <summary>
+            程序日志用的字典表（统计最大平均时间次数等）
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordMonitor(System.Int64,System.String)">
+            <summary>
+            记录程序运行日志（汇总）。
+            效率：百万次7000毫秒
+            </summary>
+            <param name="Millisecond"></param>
+            <param name="OperationName"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordMonitor(System.Int64,System.String,System.String)">
+            <summary>
+            记录程序运行日志（汇总）。
+            效率：百万次7000毫秒
+            </summary>
+            <param name="Millisecond"></param>
+            <param name="OperationName"></param>
+            <param name="LogType"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordMonitor(System.Int64,System.String,System.String,System.String)">
+            <summary>
+            记录程序运行日志（汇总）。
+            效率：百万次7000毫秒
+            </summary>
+            <param name="Millisecond"></param>
+            <param name="OperationName"></param>
+            <param name="LogType"></param>
+            <param name="SQL"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.WriteAllMonitor2File">
+            <summary>
+            将所有监控信息写入文件（执行次数5次内和最大调用时间50毫秒内则不写日志）
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.GetLogFileFullPath(System.DateTime,Yaohuasoft.Framework.Library.YaohuaCycleType,System.String,Yaohuasoft.Framework.Library.YaohuaLogType)">
+            <summary>
+            获取日志应该存放的文件名。包括路径。
+            如果目录不存在则会自动创建   
+            </summary>
+            <param name="logDate"></param>
+            <param name="cycleType"></param>
+            <param name="OperationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.GetMonitorString2">
+            <summary>
+            获取监控信息
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaMonitor.InRunning">
+            <summary>
+            线程是否在运行中
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaMonitor.ThreadId">
+            <summary>
+            当前线程的ID
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.Initialize">
+            <summary>
+            初始化及启动后台线程。可以反复调用。
+            本方法自行判断是否应该初始化。
+            只用于需要修改初始设置的情况
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.Thread2Run(System.Object)">
+            <summary>
+            启动独立单线程将实体写入数据库。
+            定时写入特定数量的实体。
+            当系统停止时。写入全部实体
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaMonitor._dictLog">
+            <summary>
+            程序日志用的字典表（记录明细）
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordException(System.Exception)">
+            <summary>
+            记录异常信息。
+            效率：10万条43000毫秒。
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordException(System.Exception,System.String)">
+            <summary>
+            记录异常信息。
+            效率：10万条43000毫秒。
+            </summary>
+            <param name="ex"></param>
+            <param name="sql"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordException(System.Exception,System.String,System.Int64)">
+            <summary>
+            记录异常信息。
+            效率：10万条43000毫秒。
+            </summary>
+            <param name="ex"></param>
+            <param name="sql"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordException(System.Exception,System.String,Yaohuasoft.Framework.Library.YaohuaLogType,System.String)">
+            <summary>
+            记录异常信息。
+            效率：10万条43000毫秒。
+            </summary>
+            <param name="ex"></param>
+            <param name="Message"></param>
+            <param name="LogType"></param>
+            <param name="OperationName"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordLog(Yaohuasoft.Framework.Library.YaohuaLogType)">
+            <summary>
+            记录系统日志。
+            效率：10万条17000毫秒。
+            </summary>
+            <param name="Message"></param>
+            <param name="LogType"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordLog(System.String,Yaohuasoft.Framework.Library.YaohuaLogType)">
+            <summary>
+            记录系统日志。
+            效率：10万条17000毫秒。
+            </summary>
+            <param name="Message"></param>
+            <param name="LogType"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordLog(System.String,Yaohuasoft.Framework.Library.YaohuaLogType,System.String)">
+            <summary>
+            记录系统日志。
+            效率：10万条17000毫秒。
+            </summary>
+            <param name="Message"></param>
+            <param name="LogType"></param>
+            <param name="OperationName"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.RecordLog(Yaohuasoft.Framework.Library.YaohuaMonitor.LogEntity)">
+            <summary>
+            记录系统日志。
+            效率：10万条17000毫秒。
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.Exception2Entity(System.Exception,System.String,Yaohuasoft.Framework.Library.YaohuaLogType,System.String)">
+            <summary>
+            异常信息转换为日志实体
+            </summary>
+            <param name="ex"></param>
+            <param name="OperationName"></param>
+            <param name="LogType"></param>
+            <param name="SQL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.WriteAllLog2File">
+            <summary>
+            将所有日志信息写入文件
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.HasInit">
+            <summary>
+            是否初始化的系统开关
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.IntervalSecond">
+            <summary>
+            批次之间写入的时间间隔。默认120秒。
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity">
+            <summary>
+            程序调度情况的日志实体
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.OperationName">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.LogTime">
+            <summary>
+            日志记录的时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.LogType">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.SQL">
+            <summary>
+            SQL语句等，作为统计标准
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.RunCount">
+            <summary>
+            调用次数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.AvgMillisecond">
+            <summary>
+            平均毫秒数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.TotalMillisecond">
+            <summary>
+            总毫秒数
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.MinMillisecond">
+            <summary>
+            单次执行最小时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.MaxMillisecond">
+            <summary>
+            单次执行最大时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.RunCount2">
+            <summary>
+            运行次数-监控用
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.MaxMillisecond2">
+            <summary>
+            单次执行最大时间-监控用
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.AvgMillisecond2">
+            <summary>
+            平均毫秒数-监控用
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaMonitor.ProgramMonitorEntity.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaMonitor.LogEntity">
+            <summary>
+            作为最终的写入文件或数据库的实体
+            上一级为ExceptionEntity
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaMonitor.LogEntity.ToString">
+            <summary>
+            重载ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.Licence">
+            <summary>
+            耀华软件。证书校验类
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._IsFirstUse">
+            <summary>
+            是否第一次使用本证书。系统启动的时候允许修改时间远大于当前时间
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._LastCheckTime">
+            <summary>
+            最后检查时间
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._CheckInterval">
+            <summary>
+            60秒检查一次数据。必须正数。私有
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._FileName">
+            <summary>
+            文件名
+            </summary> 
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._DesCode1">
+            <summary>
+            密码1
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._DesCode2">
+            <summary>
+            密码2
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._SysPassword">
+            <summary>
+            系统密码
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._LastWriteTime">
+            <summary>
+            最后写入时间
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Licence.Destroy">
+            <summary>
+            销毁证书。并且休眠N长时间。阻止进程继续
+            </summary>
+            <param name="CorporationName"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Licence.CheckOnly(System.String)">
+            <summary>
+            检查证书文件是否合法
+            </summary>
+            <param name="CorporationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Licence.Check">
+            <summary>
+            检查证书。如果证书验证不通过。会销毁证书。并且永久等待
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Licence.Check(System.String)">
+            <summary>
+            检查证书。如果证书验证不通过。会销毁证书。并且永久等待
+            </summary>
+            <param name="CorporationName"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Licence.CreteDemo">
+            <summary>
+            创建证书的例子
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Licence.Create(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            创建证书
+            </summary>
+            <param name="CorporationName"></param>
+            <param name="SysPassword"></param>
+            <param name="UserName"></param>
+            <param name="UserPassword"></param>
+            <param name="ExpTime"></param>
+            <param name="CreateTime"></param>
+            <param name="AllTime"></param>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Licence._UserConfigDict">
+            <summary>
+            提供给用户用的配置
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.Licence.HasInit">
+            <summary>
+            是否初始化
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDatabase">
+            <summary>
+            数据库操作类：提供执行SQL语句，获取连接，打开关闭数据库
+            注意：如果是使用空构造函数　将使用连接池，否则将新建连接
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase._YaohuaConnection">
+            <summary>
+            通用数据库连接
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase._DbCommand">
+            <summary>
+            通用数据库命令
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase._ConnectionString">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase._DataBaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase._CommandTimeout">
+            <summary>
+            默认的命令执行超时时间
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.GetDabaseIndex(System.Int64)">
+            <summary>
+            根据任意INT值获取数据库分库ID。
+            取最后2位数，然后与系统配置的总数据库取模
+            </summary>
+            <param name="dbIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.GetTableIndex(System.Int64)">
+            <summary>
+            根据任意INT值获取分表ID。
+            取前面几位数，然后与系统配置的总表数取模
+            </summary>
+            <param name="SplitId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.#ctor(System.Int64)">
+            <summary>
+            根据数据库编号，生成一个数据库访问类，使用数据库连接池的资源
+            </summary>
+            <param name="dbIndex"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.Finalize">
+            <summary>
+            析构函数，回收资源
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.RunProcedure(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            方法：执行存储过程
+            </summary>
+            <param name="ProcName">过程名</param>
+            <param name="Parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.ExecuteNonQuery(System.String)">
+            <summary>
+            执行SQL命令，无返回值
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="EntityId">主实体名</param>
+            <param name="TableName">主表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.ExecuteNonQuery(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行SQL命令，无返回值
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="EntityId">主实体名</param>
+            <param name="TableName">主表名</param>
+            <param name="Parameter">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.SelectTable(System.String)">
+            <summary>
+            方法：查询脚本，返回一个DataTable
+            </summary>
+            <param name="sql">SQL脚本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.SelectTable2Entity``1(System.Int64,System.String)">
+            <summary>
+            根据SQL获取实体数组。
+            不支持分表，只能写上表名。
+            字段名映射，数据库用DATA_ID，类字段名DataId
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="Parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.DataTable2Entity``1(System.Data.DataTable)">
+            <summary>
+            泛型模式转换，将DATATABLE转换为实体列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.ExecuteNonQuery4DbStr(System.String)">
+            <summary>
+            执行SQL命令，无返回值
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="EntityId">主实体名</param>
+            <param name="TableName">主表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.ExecuteNonQuery4DbStr(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行SQL命令，无返回值
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="EntityId">主实体名</param>
+            <param name="TableName">主表名</param>
+            <param name="Parameter">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.SelectTable4DbStr(System.String)">
+            <summary>
+            方法：查询脚本，返回一个DataTable
+            </summary>
+            <param name="sql">SQL脚本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase.Dispose">
+            <summary>
+            方法：释放资源
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase.DbIndex">
+            <summary>
+            数据库编号
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase.ConnectionState">
+            <summary>
+            察看数据库连接状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase.ConnectionString">
+            <summary>
+            察看数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase.CommandTimeout">
+            <summary>
+            Command超时时间（秒）
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase.Connection">
+            <summary>
+            返回数据库连接
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase.YaohuaConnection">
+            <summary>
+            返回数据库连接
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaWhereOperator">
+            <summary>
+            耀华软件公司对WhereOperator查询关系符的抽象封装
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereOperator.And">
+            <summary>
+            与
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaWhereOperator.Or">
+            <summary>
+            或
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.SetParameter">
+            <summary>
+            耀华软件公司对单个SET语句的抽象封装。
+            在分布式异构数据库时需要注意数据库类型。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SetParameter._strColName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SetParameter._objColVal">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SetParameter._bsDateType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.SetParameter.DataBaseType">
+            <summary>
+            数据库类型。在分布式异构数据库时用到
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SetParameter.#ctor(System.String,System.Object,Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            构造函数，默认使用0号数据库的数据库类型
+            </summary>
+            <param name="strColName">字段名</param>
+            <param name="objColVal">值</param>
+            <param name="bsDateType">数据类型</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SetParameter.#ctor(System.String,System.Object,Yaohuasoft.Framework.Library.YaohuaDataType,System.Int64)">
+            <summary>
+            构造函数，默认使用0号数据库的数据库类型
+            </summary>
+            <param name="strColName">字段名</param>
+            <param name="objColVal">值</param>
+            <param name="bsDateType">数据类型</param>
+        </member>
+        <!-- 对于成员“M:Yaohuasoft.Framework.Library.SetParameter.#ctor(System.String,System.Object,Yaohuasoft.Framework.Library.YaohuaDataType,Yaohuasoft.Framework.Library.YaohuaDataBaseType)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Yaohuasoft.Framework.Library.SetParameter.Initialize(System.String,System.Object,Yaohuasoft.Framework.Library.YaohuaDataType,Yaohuasoft.Framework.Library.YaohuaDataBaseType)">
+            <summary>
+            构造函数，默认使用0号数据库的数据库类型
+            </summary>
+            <param name="strColName"></param>
+            <param name="objColVal"></param>
+            <param name="bsDateType"></param>
+            <param name="dbType"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.SetParameter.ToString">
+            <summary>
+            ToString重载。将SP转为单个SET语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.PageParameter">
+            <summary>
+            分页信息。第几页。每页N条。从什么时间到什么时间
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.PageParameter.Enable">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.PageParameter.PageIndex">
+            <summary>
+            分页。第几页。默认0
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.PageParameter.OnePageSize">
+            <summary>
+            一页的记录数。默认50
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr">
+            <summary>
+            耀华软件公司对数据库连接池类的抽象封装。
+            当没可用连接时，会创建一个连接加入到队列中。
+            每25毫秒会回收空闲25毫秒以上的数据库连接   
+            效率大概在15,000毫秒每万次。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr._ConnectionPool">
+            <summary>
+            连接的列表，是连接池的实际容器
+            </summary>   
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr.GetMonitorString">
+            <summary>
+            获取监控信息
+            DbIndex=0,DbCount=3 | DbIndex=1,DbCount=3
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr.GetPoolSize(System.String)">
+            <summary>
+            返回第N个数据库队列的连接数
+            如果不存在某队列，则自动创建一个队列
+            </summary>
+            <param name="dbIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr.Recycle(Yaohuasoft.Framework.Library.YaohuaConnection)">
+            <summary>
+            回收数据库连接，放回到队列中
+            </summary>
+            <param name="conn"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr.EnQueue(System.String,Yaohuasoft.Framework.Library.YaohuaConnection)">
+            <summary>
+            回收放入队列
+            </summary>
+            <param name="DbKey"></param>
+            <param name="conn"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbConnectionPool4DbStr.InitializeQueue(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="DbKey"></param>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaTreeBuilder`1">
+            <summary>
+            树形生成器。将有父子关系的数据。转化成树形
+            </summary>
+            <typeparam name="TEntity">泛型。必须是树形实体</typeparam>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaTreeBuilder`1.List2Tree(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            将列表型转换为树形
+            业务规则,默认的父节点为""
+            </summary>
+            <param name="AllEntitys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaTreeBuilder`1.GetSubTree(`0,System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            获取子树
+            </summary>
+            <param name="Parent"></param>
+            <param name="AllEntitys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaTreeBuilder`1.Tree2List(System.Collections.Generic.IEnumerable{Yaohuasoft.Framework.Library.TreeEntity{`0}})">
+            <summary>
+            将树形转换为列表型
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.TreeEntity`1">
+            <summary>
+            树节点的承载类
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.TreeEntity`1.Entity">
+            <summary>
+            本节点
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.TreeEntity`1.Child">
+            <summary>
+            子节点列表
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaExcel">
+            <summary>
+            耀华软件公司对EXCEL导入的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaExcel.Excel2DataTable(System.String)">
+            <summary>
+            将服务端的EXCEL导入成DataTable（支持2003和2007格式）
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaCycleType">
+            <summary>
+            耀华软件公司对CycleType周期类型的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.Day">
+            <summary>
+            日
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.Week">
+            <summary>
+            周
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.TenDay">
+            <summary>
+            旬
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.Month">
+            <summary>
+            月
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.Quarter">
+            <summary>
+            季度
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.Year">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCycleType.Minute">
+            <summary>
+            分钟
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.DAL._CommonBLL">
+            <summary>
+            UAP的通用逻辑层
+            用于申明内存数据库。定时调度等
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.DAL._CommonBLL.ClearPageSort``1(``0)">
+            <summary>
+            将分页信息和排序信息清除。用于参数缓存用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.DAL.IQueryParameter">
+            <summary>
+            查询参数集的抽象类。用于处理处理缓存信息
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.DAL.IQueryParameter.Pager">
+            <summary>
+            分页信息，默认查询单次最大记录数
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.DAL.IQueryParameter.OrderBy">
+            <summary>
+            排序信息
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaSerializer">
+            <summary>
+            耀华软件的实体序列化和反序列化类
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSerializer.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaSerializer.SpliterEntity">
+            <summary>
+            实体之间的分隔符
+            </summary>
+            
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaSerializer.SpliterColumn">
+            <summary>
+            实体内字段之间的分隔符
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.WhereParameter">
+            <summary>
+            单个数据库查询条件的OOP实现
+            多个查询条件。将采用WhereAnd
+            在分布式异构数据库时需要注意数据库类型。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WhereParameter._strColName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WhereParameter._objColVal">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WhereParameter._bsOperator">
+            <summary>
+            操作符
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WhereParameter._bsDateType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WhereParameter.DataBaseType">
+            <summary>
+            数据库类型。在分布式异构数据库时用到
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereParameter.Initialize(System.String,System.Object,Yaohuasoft.Framework.Library.YaohuaDbOperator,Yaohuasoft.Framework.Library.YaohuaDataType,Yaohuasoft.Framework.Library.YaohuaDataBaseType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="strColName">字段名</param>
+            <param name="objColVal">值</param>
+            <param name="bsOperator">操作符</param>
+            <param name="bsDateType">数据类型</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WhereParameter.ToString">
+            <summary>
+            ToString重载。将QP转为单个SQL条件语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.Entitys">
+            <summary>
+            耀华软件公司对实体类的抽象封装。
+            取实体标准表。实体类型。用户。实体信息等
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Entitys.ToCapital(System.String)">
+            <summary>
+            数据库名转类名
+            从下横线名转为首字母大写名
+            </summary>
+            <param name="EntityId">实体名</param>
+            <returns>首字母大写字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Entitys.ToSeparator(System.String)">
+            <summary>
+            类名转数据库名
+            </summary>
+            <param name="EntityId">实体名</param>
+            <returns>带下横线的字符串</returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDict`2">
+            <summary>
+            耀华软件公司对Dictionary字典类的抽象封装。
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDict`2._Dict">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDict`2._DictDate">
+            <summary>
+            用于存储某个KEY的上次使用时间
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDict`2._lastRun">
+            <summary>
+            最近执行时间
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.Add(`0,`1)">
+            <summary>
+            新增或更新数据
+            内部自动会判断数据是否存在。并会屏蔽异常
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.Add(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>
+            新增或更新数据
+            内部自动会判断数据是否存在。并会屏蔽异常
+            </summary>
+            <param name="dict"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.Remove(`0)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.Remove(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            删除数据
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.ContainsKey(`0)">
+            <summary>
+            检查某个KEY是否存在
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.ContainsValue(`1)">
+            <summary>
+            检查某个VALUE是否存在
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.GetMonitorString">
+            <summary>
+            获取监控信息
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.Clear">
+            <summary>
+            删除全部数据
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.ClearExpireData">
+            <summary>
+            122秒清理一次数据，内部已经防止重复执行
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDict`2.GetExpireId(System.DateTime)">
+            <summary>
+            获取超时没用的数据ID
+            </summary>
+            <param name="minDate"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.CacheSecond">
+            <summary>
+            缓存秒数，默认是INT的最大值
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.Dict">
+            <summary>
+            返回字典
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.Keys">
+            <summary>
+            返回KEY的数组
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.Array">
+            <summary>
+            返回VALUE的数组
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.KeyValueArray">
+            <summary>
+            返回KEY和VALUE的数组
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.Count">
+            <summary>
+            获取数据量
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDict`2.Item(`0)">
+            <summary>
+            根据KEY获取数据。如果数据不存在则返回默认值
+            设置数据。存在则更新数据。不存在则新建数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaQueue`1">
+            <summary>
+            耀华软件公司对Queue字典类的抽象封装。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaQueue`1._Queue">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaQueue`1.Count">
+            <summary>
+            获取数据量
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaID">
+            <summary>
+            耀华软件公司对ID类的抽象封装。
+            系统内部使用的ID标识。包括生成ID。解析ID等
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.NewID">
+            <summary>
+            生成新ID，有时间特性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.NewID(System.DateTime)">
+            <summary>
+            生成新ID，根据输入的时间
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.NewID(System.String)">
+            <summary>
+            根据用户ID，生成新ID
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.GenRandom(System.String)">
+            <summary>
+            生成随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.GenRandomInt">
+            <summary>
+            生成随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.GenRandomInt(System.String)">
+            <summary>
+            生成随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaID.DateTime2Id(System.DateTime)">
+            <summary>
+            根据时间生成8位的36进制的字符串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDataAdapter">
+            <summary>
+            耀华软件公司对DbDataAdapter类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDataAdapter.#ctor(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.Data.Common.DbCommand)">
+            <summary>
+            构造函数。
+            耀华软件公司对DbDataAdapter类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="command">DbCommand数据库命令</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDataAdapter.#ctor(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String,System.Data.Common.DbConnection,System.Data.Common.DbParameter[])">
+            <summary>
+            构造函数。
+            耀华软件公司对DbDataAdapter类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="sql">SQL语句</param>
+            <param name="connection">数据库连接</param>
+            <param name="parameter">参数</param>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDataAdapter.DataAdapter">
+            <summary>
+            DbDataAdapter
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.DbTypeConverter">
+            <summary>
+            耀华软件公司对数据类型和操作类型转换的抽象封装。
+            提供数据类型和操作类型的操作。
+            提供DB类型和OOP类型间转换。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2SqlDbType(Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            将耀华软件公司的DataType数据类型转换为SqlServer数据库的SqlDbType
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2OleDbType(Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            将耀华软件公司的DataType数据类型转换为Ole数据库的SqlDbType
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2OdbcDbType(Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            将耀华软件公司的DataType数据类型转换为Ole数据库的SqlDbType
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2MySqlDbType(Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            将耀华软件公司的DataType数据类型转换为Ole数据库的SqlDbType
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2DbTypeSymbol(Yaohuasoft.Framework.Library.YaohuaDataType,System.Int64)">
+            <summary>
+            根据耀华软件公司的DataType数据类型取得数据库数据类型的分隔符。
+            在分布式异构数据库时需要注意数据库类型。
+            </summary>
+            <param name="dataType"></param>
+            <param name="dbIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2DbTypeSymbol(Yaohuasoft.Framework.Library.YaohuaDataType,Yaohuasoft.Framework.Library.YaohuaDataBaseType)">
+            <summary>
+            根据耀华软件公司的DataType数据类型取得数据库数据类型的分隔符。
+            在分布式异构数据库时需要注意数据库类型。
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns>DB引号</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataTypeToString(Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            根据耀华软件公司的DataType数据类型转换为类型的字符串。
+            用于代码生成。
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns>数据类型字符串（C#编码）</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDataType2DefaultValue(Yaohuasoft.Framework.Library.YaohuaDataType)">
+            <summary>
+            根据耀华软件公司的DataType数据类型取得数据库的初始默认值
+            </summary>
+            <param name="dataType">耀华软件公司的DataType数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.YaohuaDbOperator2DbOperator(Yaohuasoft.Framework.Library.YaohuaDbOperator)">
+            <summary>
+            根据耀华软件公司的YaohuaDatabase运算符取得实际数据库运算符
+            </summary>
+            <param name="Operator">耀华软件公司的YaohuaDatabase运算符</param>
+            <returns>数据库操作符</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.DbType2YaohuaDataType(System.String)">
+            <summary>
+            根据数据库的数据类型生成耀华软件公司的DataType数据类型
+            </summary>
+            <param name="dbType">数据库的数据类型</param>
+            <returns>耀华软件公司的DataType数据类型</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.DbType2YaohuaTypeString(System.String)">
+            <summary>
+            根据数据库的数据类型转为耀华软件公司的DataType数据类型字符串。
+            用于代码生成。
+            </summary>
+            <param name="dbType">数据库的数据类型</param>
+            <returns>耀华软件公司的DataType数据类型字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.Connection2DataBaseType(System.Data.Common.DbConnection)">
+            <summary>
+            根据DbConnection数据库连接生成耀华软件公司对DataBaseType数据库类型
+            </summary>
+            <param name="connection">根据DbConnection数据库连接</param>
+            <returns>耀华软件公司对DataBaseType数据库类型</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.GetAmountNum(System.String)">
+            <summary>
+            根据耀华软件公司的AmountType数据量类型转为实际数值
+            </summary>
+            <param name="AmountType">耀华软件公司的AmountType数据量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbTypeConverter.Object2String(System.Object)">
+            <summary>
+            耀华软件公司的对象转字符串实现
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDirectory">
+            <summary>
+            耀华软件公司对Directory类的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Create(System.String)">
+            <summary>
+            创建目录（非强制创建）
+            </summary>
+            <param name="path">路径</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Create(System.String,System.Boolean)">
+            <summary>
+            创建目录
+            如果强制创建。则先删除目标目录
+            </summary>
+            <param name="path">路径</param>
+            <param name="force">是否强制创建</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Delete(System.String)">
+            <summary>
+            删除目录。采用递归方式删除路径
+            </summary>
+            <param name="path">路径</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Delete(System.String,System.Boolean)">
+            <summary>
+            删除目录
+            </summary>
+            <param name="path">路径</param>
+            <param name="recursive">递归删除</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Exists(System.String)">
+            <summary>
+            察看目录是否存在
+            </summary>
+            <param name="path">路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Copy(System.String,System.String)">
+            <summary>
+            拷贝路径及下属文件,包括子目录
+            </summary>
+            <param name="strSource">源目录</param>
+            <param name="strDest">目标目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Copy(System.String,System.String,System.Boolean)">
+            <summary>
+            拷贝路径及下属文件,包括子目录。
+            具备单个文件错误回滚功能
+            </summary>
+            <param name="strSource">源目录</param>
+            <param name="strDest">目标目录</param>
+            <param name="recursive">递归</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Move(System.String,System.String)">
+            <summary>
+            移动目录及下属文件,包括子目录。
+            具备单个文件错误回滚功能
+            </summary>
+            <param name="strSource">源目录</param>
+            <param name="strDest">目标目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.Move(System.String,System.String,System.Boolean)">
+            <summary>
+            移动目录及下属文件,包括子目录。
+            具备单个文件错误回滚功能
+            </summary>
+            <param name="strSource">源目录</param>
+            <param name="strDest">目标目录</param>
+            <param name="recursive">递归</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.MoveBatch(System.String,System.String)">
+            <summary>
+            移动目录及下属文件,包括子目录。
+            等全部拷贝完。再删除源文件
+            </summary>
+            <param name="strSource">源目录</param>
+            <param name="strDest">目标目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDirectory.ListSubFile(System.IO.FileSystemInfo)">
+            <summary>
+            递归获取目录下的所有文件
+            </summary>
+            <param name="info">目录信息DirectoryInfo</param>
+            <returns>文件列表</returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaCollection`1">
+            <summary>
+            耀华软件公司对数据集合类的抽象封装。
+            包括数组、列表、队列、堆栈、双向链表的一些基本操作。包括相互转换。去重排序等。
+            </summary>
+            <typeparam name="T">泛型的数据类型</typeparam>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.AddArray(`0[],`0[])">
+            <summary>
+            向数据集合内添加数组。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.AddArray(System.Collections.Generic.List{`0},`0[])">
+            <summary>
+            向数据集合内添加数组。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.AddArray(System.Collections.Generic.Queue{`0},`0[])">
+            <summary>
+            向数据集合内添加数组。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.AddArray(System.Collections.Generic.Stack{`0},`0[])">
+            <summary>
+            向数据集合内添加数组。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.AddArray(System.Collections.Generic.LinkedList{`0},`0[])">
+            <summary>
+            向数据集合内添加数组。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.AddArray``1(System.Collections.Generic.Dictionary{`0,``0},System.Object[0:,0:])">
+            <summary>
+            向数据集合内添加数组。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToString(`0[],System.String)">
+            <summary>
+            数据集合转字符串。用分隔符间隔
+            </summary>
+            <param name="input"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToString(System.Collections.Generic.List{`0},System.String)">
+            <summary>
+            数据集合转字符串。用分隔符间隔
+            </summary>
+            <param name="input"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToString(System.Collections.Generic.Queue{`0},System.String)">
+            <summary>
+            数据集合转字符串。用分隔符间隔
+            </summary>
+            <param name="input"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToString(System.Collections.Generic.Stack{`0},System.String)">
+            <summary>
+            数据集合转字符串。用分隔符间隔
+            </summary>
+            <param name="input"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToString(System.Collections.Generic.LinkedList{`0},System.String)">
+            <summary>
+            数据集合转字符串。用分隔符间隔
+            </summary>
+            <param name="input"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToString``1(System.Collections.Generic.Dictionary{`0,``0},System.String,System.String)">
+            <summary>
+            数据集合转字符串。用分隔符间隔
+            </summary>
+            <param name="input"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Sort(`0[],Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            对数据集合进行排序（可正反序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Sort(System.Collections.Generic.List{`0},Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            对数据集合进行排序（可正反序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Sort(System.Collections.Generic.Queue{`0},Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            对数据集合进行排序（可正反序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Sort(System.Collections.Generic.Stack{`0},Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            对数据集合进行排序（可正反序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Sort(System.Collections.Generic.LinkedList{`0},Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            对数据集合进行排序（可正反序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Sort``1(System.Collections.Generic.Dictionary{`0,``0},Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            对数据集合进行排序（可正反序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Reverse(`0[])">
+            <summary>
+            对数据集合进行反转（非排序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Reverse(System.Collections.Generic.List{`0})">
+            <summary>
+            对数据集合进行反转（非排序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Reverse(System.Collections.Generic.Queue{`0})">
+            <summary>
+            对数据集合进行反转（非排序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Reverse(System.Collections.Generic.Stack{`0})">
+            <summary>
+            对数据集合进行反转（非排序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Reverse(System.Collections.Generic.LinkedList{`0})">
+            <summary>
+            对数据集合进行反转（非排序）。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToArray(System.Collections.Generic.List{`0})">
+            <summary>
+            将数据集合转为数组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToArray(System.Collections.Generic.Queue{`0})">
+            <summary>
+            将数据集合转为数组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToArray(System.Collections.Generic.Stack{`0})">
+            <summary>
+            将数据集合转为数组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToArray(System.Collections.Generic.LinkedList{`0})">
+            <summary>
+            将数据集合转为数组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.ToArray``1(System.Collections.Generic.Dictionary{`0,``0})">
+            <summary>
+            将数据集合转为数组
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Array2List(`0[])">
+            <summary>
+            将数组转为数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Array2Queue(`0[])">
+            <summary>
+            将数组转为数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Array2Stack(`0[])">
+            <summary>
+            将数组转为数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Array2LinkedList(`0[])">
+            <summary>
+            将数组转为数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Clone(`0[])">
+            <summary>
+            克隆数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Clone(System.Collections.Generic.List{`0})">
+            <summary>
+            克隆数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Clone(System.Collections.Generic.Queue{`0})">
+            <summary>
+            克隆数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Clone(System.Collections.Generic.Stack{`0})">
+            <summary>
+            克隆数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Clone(System.Collections.Generic.LinkedList{`0})">
+            <summary>
+            克隆数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Clone``1(System.Collections.Generic.Dictionary{`0,``0})">
+            <summary>
+            克隆数据集合
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Distinct(`0[])">
+            <summary>
+            对数据集合进行去重排序操作。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Distinct(System.Collections.Generic.List{`0})">
+            <summary>
+            对数据集合进行去重排序操作。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Distinct(System.Collections.Generic.Queue{`0})">
+            <summary>
+            对数据集合进行去重排序操作。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Distinct(System.Collections.Generic.Stack{`0})">
+            <summary>
+            对数据集合进行去重排序操作。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.Distinct(System.Collections.Generic.LinkedList{`0})">
+            <summary>
+            对数据集合进行去重排序操作。
+            默认对源数据进行修改。如有所需自行Clone()备份。
+            </summary>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCollection`1.CompareToString(`0,`0)">
+            <summary>
+            通过ToString排序来比较泛型对象大小
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.WriteLogType">
+            <summary>
+            耀华软件公司对WriteLogType日志写入类型的抽象封装
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WriteLogType.File">
+            <summary>
+            只写入文件
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WriteLogType.Database">
+            <summary>
+            只写数据库
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.WriteLogType.FileAndDB">
+            <summary>
+            数据库和文件都写
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.ThreadStd.InRunning">
+            <summary>
+            线程是否在运行中
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.ThreadStd.ThreadId">
+            <summary>
+            当前线程的ID
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ThreadStd.Initialize">
+            <summary>
+            初始化及启动后台线程。可以反复调用。
+            本方法自行判断是否应该初始化。
+            只用于需要修改初始设置的情况
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.ThreadStd.Thread2Run(System.Object)">
+            <summary>
+            启动独立单线程将实体写入数据库。
+            定时写入特定数量的实体。
+            当系统停止时。写入全部实体
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ThreadStd.HasInit">
+            <summary>
+            是否初始化的系统开关
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.ThreadStd.IntervalSecond">
+            <summary>
+            批次之间写入的时间间隔。默认60秒。
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.Set">
+            <summary>
+            耀华软件公司对数据库SET语句的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Set.Add(Yaohuasoft.Framework.Library.SetParameter)">
+            <summary>
+            添加检索参数
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Set.Remove(Yaohuasoft.Framework.Library.SetParameter)">
+            <summary>
+            移除检索参数
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Set.ToString">
+            <summary>
+            ToString重载。将SPC转为SQL条件语句
+            获得SET语句串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.Set.Item(System.Int32)">
+            <summary>
+            获取检索参数对象
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache">
+            <summary>
+            数据库操作类：提供执行SQL语句，获取连接，打开关闭数据库
+            注意：如果是使用空构造函数　将使用连接池，否则将新建连接
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.SelectTable(System.Int64,System.String,System.String)">
+            <summary>
+            带缓存的查询
+            </summary>
+            <param name="sql"></param>
+            <param name="Parameter"></param>
+            <param name="delParm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.SelectTable2Entity``1(System.Int64,System.String)">
+            <summary>
+            根据SQL获取实体数组。
+            不支持分表，只能写上表名。
+            字段名映射，数据库用DATA_ID，类字段名DataId
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="Parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.HasCache(System.String)">
+            <summary>
+            是否有本查询条件的缓存
+            内部判断缓存是否过期等
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.SetCacheSecond(System.Int32)">
+            <summary>
+            设置缓存描述
+            </summary>
+            <param name="saveSecond"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.HasCache(System.String,System.Int32)">
+            <summary>
+            是否有本查询条件的缓存
+            内部判断缓存是否过期等
+            </summary>
+            <param name="parm"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.Parameter2CacheId(System.String)">
+            <summary>
+            根据PARM条件生成用于缓存的ID
+            缓存ID，含有条件，分页等信息
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.DeleteCache(System.String)">
+            <summary>
+            根据某个条件删除缓存
+            如删除某个用户本实体的所有缓存
+            </summary>
+            <param name="delParm"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.DeleteCacheBegin(System.String)">
+            <summary>
+            根据某个条件删除缓存
+            如删除某个用户本实体的所有缓存
+            </summary>
+            <param name="delParm"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.DelParm2CacheId(System.String)">
+            <summary>
+            根据删除参数，获取需要删除的缓存ID
+            </summary>
+            <param name="delParm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.DelParm2CacheIdBegin(System.String)">
+            <summary>
+            根据删除参数，获取需要删除的缓存ID
+            </summary>
+            <param name="delParm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.InsertCache(System.String,System.String,System.Data.DataTable)">
+            <summary>
+            写入或者更新缓存
+            根据查询条件，和删除条件，缓存数据
+            </summary>
+            <param name="delParm"></param>
+            <param name="parm"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.SelectCache(System.String)">
+            <summary>
+            查询缓存，只进行缓存操作，不查实际数据库。
+            内部不进行是否有缓存的验证
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache._cacheStore">
+            <summary>
+            缓存的实际存储空间
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache._cacheIdMap">
+            <summary>
+            ID映射关系，前为条件ID，后为移出条件
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.CacheDataSecond">
+            <summary>
+            最小保留分钟数。默认保留30分钟
+            即使数据量超标也不删除
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaDatabase4Cache.HasInit">
+            <summary>
+            是否初始化
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaSysMonitor">
+            <summary>
+            用于系统信息监控
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.GetMonitorString">
+            <summary>
+            获取监控信息
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.CpuUsage">
+            <summary>
+            全局CPU当前的使用量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.ProcessCpuUsage(System.String)">
+            <summary>
+            全局CPU当前的使用量
+            程序有错
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.MemoryRemain">
+            <summary>
+            剩余可用的物理内存/MB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.MemoryUsage">
+            <summary>
+            已用的物理内存/MB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.ProcessMemoryUsage(System.String)">
+            <summary>
+            当前程序已用的物理内存/MB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.DiskRead">
+            <summary>
+            当前秒的总体磁盘读取量/MB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.DiskWrite">
+            <summary>
+            当前秒的总体磁盘写入量/MB
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaSysMonitor.GetParentOperationName">
+            <summary>
+            获取调用方的程序名
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.XmlConfig.WriteXmlSetting(System.String,System.String,System.String,System.String)">
+            <summary>
+            对Xml文件进行写操作的函数
+            </summary>
+            <param name="Section"></param>
+            <param name="Key"></param>
+            <param name="Value"></param>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.XmlConfig.ReadXmlSetting(System.String,System.String,System.String)">
+            <summary>
+            对Xml文件进行读操作的函数
+            </summary>
+            <param name="Section"></param>
+            <param name="Key"></param>
+            <param name="filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.XmlConfig.WriteXmlSetting4Licence(System.String,System.String,System.String,System.String)">
+            <summary>
+            写证书文件
+            </summary>
+            <param name="Section"></param>
+            <param name="Key"></param>
+            <param name="Value"></param>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.XmlConfig.ReadXmlSetting4Config(System.String,System.String,System.String)">
+            <summary>
+            核心配置文件信息的写入专用
+            </summary>
+            <param name="Section"></param>
+            <param name="Key"></param>
+            <param name="filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.XmlConfig.WriteXmlSetting4Config(System.String,System.String,System.String,System.String)">
+            <summary>
+            核心配置文件信息的读取专用
+            </summary>
+            <param name="Section"></param>
+            <param name="Key"></param>
+            <param name="Value"></param>
+            <param name="filepath"></param>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.Cryptography">
+            <summary>
+            耀华软件公司对Cryptography加密类的抽象封装。
+            提供DES加密。标准MD5加密。加强版MD5加密等。
+            效率大概在500-5000毫秒每万次。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Cryptography._strKey64">
+            <summary>
+            默认DES 64位KEY钥匙
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.Cryptography._strIv64">
+            <summary>
+            默认DES 64位IV钥匙
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES_Encode(System.String[])">
+            <summary>
+            DES加密。利用默认的KEY
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES_Encode(System.String)">
+            <summary>
+            DES加密。利用默认的KEY
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES_Encode(System.String,System.String,System.String)">
+            <summary>
+            DES加密。输入KEY和IV钥匙。分别8位字符串
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <param name="strKey64">KEY钥匙。8位字符串</param>
+            <param name="strIv64">IV钥匙。8位字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES3_Encode(System.String,System.String)">
+            <summary>
+            3DES加密
+            </summary>
+            <param name="strString"></param>
+            <param name="strKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES_Decode(System.String[])">
+            <summary>
+            DES解码。利用默认钥匙
+            </summary>
+            <param name="strCrytography"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES_Decode(System.String)">
+            <summary>
+            DES解码。利用默认钥匙
+            </summary>
+            <param name="strCrytography">密文字符串</param>
+            <returns>原文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES_Decode(System.String,System.String,System.String)">
+            <summary>
+            DES解密。利用用户输入的钥匙
+            </summary>
+            <param name="strCrytography">密文字符串</param>
+            <param name="strKey64">KEY密码</param>
+            <param name="strIv64">IV密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.DES3_Decode(System.String,System.String)">
+              <summary>   
+              3DES解密   
+              </summary>   
+              <param   name="strString"></param>   
+              <param   name="strKey"></param>   
+              <returns></returns>   
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.MD5_Encode32(System.String)">
+            <summary>
+            MD5加密算法（32位长度）
+            每位从0-F。16进制。
+            内部带缓存功能，可提升性能
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.MD5_Encode16(System.String)">
+            <summary>
+            MD5加密算法（16位长度）
+            每位从0-F。16进制
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.YaohuaMD5_Encode32(System.String)">
+            <summary>
+            耀华软件公司提供的加强版MD5加密算法（32位长度）
+            每位从0-Z。36进制
+            16位和32位加密采用不同的加密钥匙
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.Cryptography.YaohuaMD5_Encode16(System.String)">
+            <summary>
+            耀华软件公司提供的加强版MD5加密算法（16位长度）
+            每位从0-Z。36进制
+            16位和32位加密采用不同的加密钥匙
+            </summary>
+            <param name="strCrytography">原文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.OrderParameter">
+            <summary>
+            耀华软件公司对OrderBy单个条件的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderParameter.#ctor(System.String,Yaohuasoft.Framework.Library.YaohuaOrderByType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="strColName"></param>
+            <param name="orderType"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.OrderParameter.ToString">
+            <summary>
+            ToString重载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDateFormat">
+            <summary>
+            耀华软件公司对DateFormat时间格式的抽象封装。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.YYYYMMDD">
+            <summary>
+            时间格式：YYYYMMDD
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.YYYYMMDDHHMISS">
+            <summary>
+            时间格式：YYYYMMDDHHMISS
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.YYYY_MM_DD">
+            <summary>
+            时间格式：YYYY-MM-DD
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.YYYY_MM_DD_HH_MI">
+            <summary>
+            时间格式：YYYY-MM-DD HH:MI
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.YYYY_MM_DD_HH_MI_SS">
+            <summary>
+            时间格式：YYYY-MM-DD HH:MI:SS
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.Millisecond">
+            <summary>
+            时间格式：YYYY-MM-DD HH:MI:SS.MS
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.HH_MI">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaDateFormat.YUE_RI">
+            <summary>
+            3月4日
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.TimeInterval">
+            <summary>
+            计时器。计算两个时间的差距。常用于计算程序执行时间
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.TimeInterval.#ctor">
+            <summary>
+            构造函数就已经开始计时
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.TimeInterval.Start">
+            <summary>
+            开始计时
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.TimeInterval.Stop">
+            <summary>
+            计时
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.TimeInterval.Step">
+            <summary>
+            计时
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.TimeInterval.Interval">
+            <summary>
+            时间间隔（毫秒）
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaLogType">
+            <summary>
+            耀华软件公司对LogType日志类型的抽象封装
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.Exception">
+            <summary>
+            程序异常信息。100毫秒记录一次。优先级-100
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.Error">
+            <summary>
+            已知的系统错误信息。实时记录。优先级-100。
+            用于记录无可用数据库，数据库超时等
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.Debug">
+            <summary>
+            调试信息。用户程序调用路径的分析。
+            正常运行环境下则不会记录此日志。实时记录。优先级-100
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.Monitor">
+            <summary>
+            监控日志。用于监测心跳。10秒记录一次日志即可。优先级0
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.State">
+            <summary>
+            程序执行状态的监控。实时记录。优先级0
+            暂时无用。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.Program">
+            <summary>
+            程序日志。用于关键信息的记录。实时记录。优先级0
+            暂时无用。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.ProgramMonitor">
+            <summary>
+            程序监控
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaLogType.UserVisit">
+            <summary>
+            用户访问
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaCommand">
+            <summary>
+            耀华软件公司对DbCommand类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCommand._DataBaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Yaohuasoft.Framework.Library.YaohuaCommand._DbCmd">
+            <summary>
+            抽象的数据库命令
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCommand.#ctor(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String,System.Data.Common.DbConnection,System.Data.Common.DbParameter[])">
+            <summary>
+            构造函数。
+            耀华软件公司对DbCommand类的抽象封装。
+            支持SqlServer、Access、Oracle、MySql等数据库。
+            </summary>
+            <param name="cmdText">SQL语句</param>
+            <param name="connection">数据库连接</param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaCommand.Initialize(Yaohuasoft.Framework.Library.YaohuaDataBaseType,System.String,System.Data.Common.DbConnection,System.Data.Common.DbParameter[])">
+            <summary>
+            初始化YaohuaCommand
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="sql">查询字符串</param>
+            <param name="connection">数据库连接</param>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.YaohuaCommand.Command">
+            <summary>
+            数据库命令DbCommand
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaFtp">
+            <summary>
+            FTPFactory 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setRemoteHost(System.String)">
+            
+             Set the name of the FTP server to connect to.
+            
+             Server name
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.getRemoteHost">
+            
+             Return the name of the current FTP server.
+            
+             Server name
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setRemotePort(System.Int32)">
+            
+             Set the port number to use for FTP.
+            
+             Port number
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.getRemotePort">
+            
+             Return the current port number.
+            
+             Current port number
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setRemotePath(System.String)">
+            
+             Set the remote directory path.
+            
+             The remote directory path
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.getRemotePath">
+            
+             Return the current remote directory path.
+            
+             The current remote directory path.
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setRemoteUser(System.String)">
+            
+             Set the user name to use for logging into the remote server.
+            
+             Username
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setRemotePass(System.String)">
+            
+             Set the password to user for logging into the remote server.
+            
+             Password
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.getFileList(System.String)">
+            
+             Return a string array containing the remote directory's file list.
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.getFileSize(System.String)">
+            
+             Return the size of a file.
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.login">
+            
+             Login to the remote server.
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setBinaryMode(System.Boolean)">
+            
+             If the value of mode is true, set binary mode for   downloads.
+             Else, set Ascii mode.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.download(System.String)">
+            
+             Download a file to the Assembly's local directory,
+             keeping the same file name.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.download(System.String,System.Boolean)">
+            
+             Download a remote file to the Assembly's local directory,
+             keeping the same file name, and set the resume flag.
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.download(System.String,System.String)">
+            
+             Download a remote file to a local file name which can    include
+             a path. The local file name will be created or overwritten,
+             but the path must exist.
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.download(System.String,System.String,System.Boolean)">
+            
+             Download a remote file to a local file name which can include
+             a path, and set the resume flag. The local file name will be
+             created or overwritten, but the path must exist.
+            
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.upload(System.String)">
+            
+             Upload a file.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.upload(System.String,System.Boolean)">
+            
+             Upload a file and set the resume flag.
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.deleteRemoteFile(System.String)">
+            
+             Delete a file from the remote FTP server.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.renameRemoteFile(System.String,System.String)">
+            
+             Rename a file on the remote FTP server.
+            
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.mkdir(System.String)">
+            
+             Create a directory on the remote FTP server.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.rmdir(System.String)">
+            
+             Delete a directory on the remote FTP server.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.chdir(System.String)">
+            
+             Change the current working directory on the remote FTP   server.
+            
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.close">
+            
+             Close the FTP connection.
+            
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaFtp.setDebug(System.Boolean)">
+            
+             Set debug mode.
+            
+            
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaDate">
+            <summary>
+            耀华软件公司对日期操作类的抽象封装。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.Days(System.DateTime)">
+            <summary>
+            取一个可衡量的天数。
+            返回距离0000年的天数
+            </summary>
+            <param name="TheDate">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetDate(System.DateTime,Yaohuasoft.Framework.Library.YaohuaCycleType)">
+            <summary>
+            输入日期。及周期类型。返回符合该周期的时间
+            </summary>
+            <param name="TheDate">初始日期</param>
+            <param name="CycleType">周期类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetDate(System.DateTime,Yaohuasoft.Framework.Library.YaohuaCycleType,System.Int32)">
+            <summary>
+            输入日期。及周期类型。返回符合该周期的时间
+            </summary>
+            <param name="TheDate">初始日期</param>
+            <param name="CycleType">周期类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetDate(System.DateTime,System.String)">
+            <summary>
+            输入日期。及周期类型。返回符合该周期的时间
+            周期类型：D日。W周。T旬。M月。Q季度。Y年
+            </summary>
+            <param name="TheDate">初始日期</param>
+            <param name="CycleType">周期类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetDate(System.DateTime,System.String,System.Int32)">
+            <summary>
+            输入日期。及周期类型。返回符合该周期的时间
+            周期类型：MINUTE分钟。DAY日。WEEK周。TENDAY旬。MONTH月。QUARTER季度。YEAR年
+            时间间隔：0表示在此时间的前一个符合要求的时间间隔。周为本周一
+            </summary>
+            <param name="TheDate"></param>
+            <param name="CycleType"></param>
+            <param name="Interval"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.String2Date(System.String,Yaohuasoft.Framework.Library.YaohuaDateFormat)">
+            <summary>
+            字符串转时间。输入时间字符串、时间格式
+            </summary>
+            <param name="strDate">时间字符串</param>
+            <param name="DateFormat">时间格式</param>
+            <returns>时间</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.Date2String(System.DateTime,Yaohuasoft.Framework.Library.YaohuaDateFormat)">
+            <summary>
+            时间转字符串
+            </summary>
+            <param name="TheDate">时间</param>
+            <param name="DateFormat">时间格式</param>
+            <returns>时间字符串</returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.Ticks2Second(System.Int64)">
+            <summary>
+            Ticks型取秒差
+            </summary>
+            <param name="Ticks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.Ticks2Millisecond(System.Int64)">
+            <summary>
+            Ticks型取毫秒差
+            </summary>
+            <param name="Ticks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.Ticks2Microsecond(System.Int64)">
+            <summary>
+            Ticks型取微秒差
+            </summary>
+            <param name="Ticks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetTimeString(System.DateTime)">
+            <summary>
+            显示通俗的时间。如3分钟前。今天05:32。昨天21:43
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetTimeString(System.DateTime,System.DateTime)">
+            <summary>
+            显示通俗的时间。如3分钟前。今天05:32。昨天21:43
+            </summary>
+            <param name="input"></param>
+            <param name="now"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.SpDate2String(System.String)">
+            <summary>
+            将特殊格式的时间字符串转换为正常的时间字符串
+            如Sun Feb 03 19:55:29 2008
+            如2008-07-20, 23:57:12
+            </summary>
+            <param name="strList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.SpDate2String1(System.String)">
+            <summary>
+            Sun Feb 03 19:55:29 2008
+            </summary>
+            <param name="SpDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.MailDate2String(System.String)">
+            <summary>
+            27 Sep 2008 11:36:02
+            </summary>
+            <param name="SpDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.SpMonth2Month(System.String)">
+            <summary>
+            jan feb等特殊月份
+            </summary>
+            <param name="SpMonth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.YaohuaDate.GetThirtyMinute(System.DateTime)">
+            <summary>
+            截取到最近的三十分
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.YaohuaConvert">
+            <summary>
+            耀华软件公司对数据类型和操作类型转换的抽象封装。
+            提供数据类型和操作类型的操作。
+            提供DB类型和OOP类型间转换。
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WebMonitor.CheckWebServer">
+            <summary>
+            检查所有服务器的响应时间
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WebMonitor.CheckWebServer(System.Int64)">
+            <summary>
+            检查单个服务器的响应时间
+            </summary>
+            <param name="WebIndex"></param>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WebMonitor.GetWebServer(System.String)">
+            <summary>
+            获取一个可用的服务器地址。
+            </summary>
+            <param name="user"></param>
+            <param name="webIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.WebMonitor.GetMonitorString">
+            <summary>
+            获取监控信息
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.DbServerEntity">
+            <summary>
+            数据库服务器实体
+            </summary>
+        </member>
+        <member name="M:Yaohuasoft.Framework.Library.DbServerEntity.ToString">
+            <summary>
+            重构系统方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.DbServerEntity.Id">
+            <summary>
+            数据库服务器ID
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.DbServerEntity.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.DbServerEntity.DbConnString">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.DbServerEntity.Millisecond">
+            <summary>
+            响应时间
+            </summary>
+        </member>
+        <member name="T:Yaohuasoft.Framework.Library.WebServerEntity">
+            <summary>
+            数据库服务器实体
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WebServerEntity.Id">
+            <summary>
+            数据库服务器ID
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WebServerEntity.NotAccess">
+            <summary>
+            只监控不访问
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WebServerEntity.Url">
+            <summary>
+            首页登录地址
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WebServerEntity.Monitor">
+            <summary>
+            监控接口地址
+            </summary>
+        </member>
+        <member name="P:Yaohuasoft.Framework.Library.WebServerEntity.Millisecond">
+            <summary>
+            响应时间
+            </summary>
+        </member>
+    </members>
+</doc>

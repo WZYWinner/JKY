@@ -1,0 +1,5 @@
+﻿ this.div王用户.Visible = check.CheckPower("SysAdmin", "王用户");
+ this.div订单.Visible = check.CheckPower("SysAdmin", "订单");
+ this.div郭用户.Visible = check.CheckPower("SysAdmin", "郭用户");
+ this.div刘用户.Visible = check.CheckPower("SysAdmin", "刘用户");
+ this.div后台用户.Visible = check.CheckPower("SysAdmin", "后台用户");

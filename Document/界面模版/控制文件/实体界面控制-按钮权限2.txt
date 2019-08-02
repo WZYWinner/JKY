@@ -1,0 +1,202 @@
+﻿															
+业务经理后台															
+															
+CONTRACT_INFO_AUDIT	ServiceManager	否	是	是	否	否	是	否	是	是	是	是	否	是	
+BUILD_ITEM_BILL_AUDIT	ServiceManager	否	是	是	否	否	是	否	是	是	是	是	否	是	
+SIMPLE_CONTRACT_AUDIT	ServiceManager	否	是	是	否	否	是	否	是	是	是	是	否	是	
+CHARGE_BILL	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+TEST_INFORM_BILL	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+CUST_MANAGE	ServiceManager	否	否	否	否	否	否	否	是	是	是	是	否	是	
+CUST_ACCOUNT	ServiceManager	否	否	否	否	否	否	否	是	是	是	是	否	是	
+DETECT_ENTRUST_AUDIT	ServiceManager	否	否	否	否	否	是	否	是	是	是	是	否	是	
+REPORD_PRINT	ServiceManager	是	否	是	是	否	否	否	是	是	是	是	否	是	
+REPORD_ACCOUNT	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+DETECT_REPORD	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_ENTRUST	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_WITNESS	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_CONSTRUCTION	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_EXECUTION	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+NEWS_INFORM	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	否	
+PEOSON_INFO	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	否	
+PROJECT_INFO	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+USER_LIMIT	ServiceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+STAFF_MANAGEMENT	ServiceManager	是	是	是	是	否	否	否	是	否	否	是	否	是	
+															
+业务员后台															
+															
+CONTRACT_INFO	Salesman	是	否	是	是	否	否	是	是	是	否	是	否	是	
+SALESMAN_INFO	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+BUILD_ITEM_BILL	Salesman	是	否	是	是	否	否	是	是	是	否	是	否	是	
+UNIT_ENTRUST	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_WITNESS	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_CONSTRUCTION	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+UNIT_EXECUTION	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+CHARGE_BILL	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+TEST_INFORM_BILL	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+SIMPLE_CONTRACT	Salesman	是	否	是	是	否	否	是	是	是	否	是	否	是	
+DETECTION_DELEGATE	Salesman	是	否	是	否	否	否	否	是	是	是	是	否	是	
+REPORD_PRINT	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+REPORD_ARCHIVE	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+REPORD_ACCOUNT	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	是	
+NEWS_INFORM	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	否	
+PEOSON_INFO	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	否	
+PROJECT_INFO	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	否	
+SYS_DEPARTMENT	Salesman	是	否	是	是	否	否	否	是	是	是	是	否	否	
+财务经理后台															
+															
+CONTRACT_INFO	FinanceManager	否	否	否	否	否	否	否	是	是	是	是	否	是	
+BUILD_ITEM_BILL	FinanceManager	否	否	否	否	否	否	否	是	是	是	是	否	是	
+SIMPLE_CONTRACT	FinanceManager	否	否	否	否	否	否	否	是	否	否	是	否	是	
+CHARGE_BILL	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+FINANCE_CHARGE	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+TEST_INFORM_BILL	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+TEST_CHARGE	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+COST_GATHER	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+CUST_MANAGE	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+CUST_ACCOUNT	FinanceManager	否	否	否	是	否	否	否	是	是	是	是	否	是	
+ACCOUNT_SETTLEMENT_AUDIT	FinanceManager	否	否	否	否	否	是	否	是	是	是	是	否	是	
+DETECT_REPORD	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+NEWS_INFORM	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	否	
+PEOSON_INFO	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	否	
+USER_LIMIT	FinanceManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+STAFF_MANAGEMENT	FinanceManager	是	是	是	是	否	否	否	是	否	否	是	否	是	
+财务员后台															
+															
+CONTRACT_INFO	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+BUILD_ITEM_BILL	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+SIMPLE_CONTRACT	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+CHARGE_BILL	Finance	是	是	是	是	否	否	否	是	是	是	是	否	是	
+FINANCE_CHARGE	Finance	是	是	是	是	否	否	否	是	是	是	是	否	是	
+TEST_INFORM_BILL	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+TEST_CHARGE	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+COST_GATHER	Finance	是	是	是	是	否	否	否	是	是	是	是	否	是	
+CUST_MANAGE	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+CUST_ACCOUNT	Finance	否	否	否	否	否	否	否	是	是	是	是	否	是	
+ACCOUNT_SETTLEMENT	Finance	是	是	是	是	否	否	否	是	是	是	是	否	是	
+DETECT_REPORD	Finance	否 	否 	否 	否 	否 	否 	否	是	是	是	是	否	是	
+NEWS_INFORM	Finance	否 	否 	否 	否 	否 	否 	否	是	是	是	是	否	是	
+PEOSON_INFO	Finance	是	是	是	是	否	否 	否	是	是	是	是	否	是	
+															
+															
+															
+															
+项目负责人后台															
+															
+CONTRACT_INFO	ItemManage	否	否	是	否	否	否	是	是	否	否	是	否	是	
+BUILD_ITEM_BILL	ItemManage	是	否	是	否	否	否	是	是	是	是	是	否	是	
+SIMPLE_CONTRACT	ItemManage	否	否	是	否	否	否	是	是	否	否	是	否	是	
+DETECTION_DELEGATE	ItemManage	否	否	否	否	否	否	否	是	否	否	是	否	是	
+DETECT_REPORD	ItemManage	否	否	否	否	否	否	否	是	否	否	是	否	是	
+USER_LIMIT	ItemManage	是	是	是	是	否	否	否	是	否	否	是	否	是	
+STAFF_MANAGEMENT	ItemManage	是	是	是	是	否	否	否	是	否	否	是	否	是	
+NEWS_INFORM	ItemManage	否	是	否	否	否	否	否	是	是	是	是	否	是	
+PEOSON_INFO	ItemManage	是	是	是	是	否	否	否	是	是	是	是	否	否	
+PROJECT_INFO	ItemManage	否	否	否	否	否	否	否	是	否	是	是	否	否	
+															
+															
+															
+项目人员后台															
+															
+CONTRACT_INFO	Item	否	否	否	否	否	否	否	是	是	是	是	否	是	
+BUILD_ITEM_BILL	Item	否	否	否	否	否	否	否	是	是	是	是	否	是	
+SIMPLE_CONTRACT	Item	是	是	是	是	否	否	否	是	是	是	是	否	是	
+DETECT_ENTRUST	Item	否	否	否	否	否	否	否	是	是	是	是	否	是	
+DETECT_REPORD	Item	否	否	否	否	否	否	否	是	是	是	是	否	是	
+PROJECT_INFO	Item	否	否	否	否	否	否	否	是	是	是	是	否	否	
+NEWS_INFORM	Item	否	是	否	否	否	否	否	是	是	是	是	否	是	
+PEOSON_INFO	Item	是	是	是	是	否	否	否	是	是	是	是	否	否	
+															
+															
+客户后台															
+															
+CONTRACT_INFO	CustManager	是	是	是	是	否	否	是	是	是	是	是	否	是	
+SIMPLE_CONTRACT	CustManager	是	是	是	是	否	否	是	是	是	是	是	否	是	
+CHARGE_BILL	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+TEST_INFORM_BILL	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+COST_GATHER	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+ACCOUNT_SETTLEMENT	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+UNIT_ENTRUST	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+UNIT_WITNESS	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+UNIT_CONSTRUCTION	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+UNIT_EXECUTION	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+NEWS_INFORM	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+PEOSON_INFO	CustManager	是	是	是	是	否	否	否	是	是	是	是	否	是	
+PROJECT_INFO	CustManager	否	否	否	否	否	否	否	是	否	是	是	否	是	
+实验经理后台															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+实验员后台															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															

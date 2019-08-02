@@ -1,0 +1,52 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DrugfactoryNews_Detail.aspx.cs" Inherits="Yaohuasoft.Framework.WebUI.DrugFactory.DrugfactoryNewsDetail" %>
+<%@ Import Namespace="Yaohuasoft.Framework.Library" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>药厂新闻详情</title>
+    <link href="/_css/common2014.css" rel="stylesheet" type="text/css" />
+	<link href="/_js/xheditor/xheditor_skin/nostyle/ui.css" rel="stylesheet" type="text/css" />
+    <script src="/_js/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="/_js/xheditor/xheditor-1.1.14-zh-cn.min.js" type="text/javascript"></script>
+    <script src="/_js/xheditor/xheditor_plugins/ubb.min.js" type="text/javascript"></script>
+    <script src="/_js/myxheditor.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="contain">
+		   <h1 class="txt_title">            药厂新闻     </h1>
+            <span class="toolbg" unselectable="on" onselectstart="return false;">
+<small>
+<a     hidefocus=""   href="DrugfactoryNews_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >返回</a>
+<a    hidefocus="" href="DrugfactoryNews_Modify.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >编辑</a>
+<asp:Button ID="btnDelete"   CssClass="btn"   runat="server" Text="删除" OnClientClick="return confirm('确认要删除该数据!');" onclick="btnDelete_Click" />
+</small>
+                <asp:Label ID="errormsg" runat="server" Text="" CssClass="error"></asp:Label>
+                  </span>
+				<asp:HiddenField ID="hfID" runat="server"  />
+            <ul class="create_list">
+ <li><font>文章ID</font><span> <%=HttpUtility.HtmlEncode(entity.NewsId.ToStr()) %></span></li>
+ <li><font>标题</font><span> <%=HttpUtility.HtmlEncode(entity.NewsTitle.ToStr()) %></span></li>
+ <li><font>内容</font><span> <%=HttpUtility.HtmlEncode(entity.NewsContent.ToStr()) %></span></li>
+ <li><font>药厂ID</font><span> <%=HttpUtility.HtmlEncode(entity.FactoryId.ToStr()) %></span></li>
+ <li><font>文章分类</font><span> <%=HttpUtility.HtmlEncode(entity.ArticleTypes.ToStr()) %></span></li>
+ <li><font>权重</font><span> <%=HttpUtility.HtmlEncode(entity.PowerIndex.ToStr()) %></span></li>
+ <li><font>关键字</font><span> <%=HttpUtility.HtmlEncode(entity.SeoKeywords.ToStr()) %></span></li>
+ <li><font>描述</font><span> <%=HttpUtility.HtmlEncode(entity.SeoDescription.ToStr()) %></span></li>
+ <li><font>修改人员名称</font><span> <%=HttpUtility.HtmlEncode(entity.EditUserName.ToStr()) %></span></li>
+ <li><font>修改时间</font><span> <%=HttpUtility.HtmlEncode(entity.EditTime.ToStr()) %></span></li>
+ <li><font>审核状态</font><span> <%=HttpUtility.HtmlEncode(entity.AuditState.ToStr()) %></span></li>
+ <li><font>审核原因说明</font><span> <%=HttpUtility.HtmlEncode(entity.AuditReason.ToStr()) %></span></li>
+ <li><font>审核时间</font><span> <%=HttpUtility.HtmlEncode(entity.AuditTime.ToStr()) %></span></li>
+            </ul>
+            <span class="toolbg" unselectable="on" onselectstart="return false;">
+<small>
+<a     hidefocus=""   href="DrugfactoryNews_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >返回</a>
+<a    hidefocus="" href="DrugfactoryNews_Modify.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >编辑</a>
+<asp:Button ID="btnDelete2"   CssClass="btn"   runat="server" Text="删除" OnClientClick="return confirm('确认要删除该数据!');" onclick="btnDelete_Click" />
+</small>
+        </span>
+    </div>
+    </form>
+</body>
+</html>

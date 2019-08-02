@@ -1,0 +1,11 @@
+﻿.simple-form-field select.form-control{width: 160px;}
+.table-hover tbody tr:hover td{background:#f9f9fa;cursor:pointer;}
+.title_r{float:right;margin:10px 0px 4px 0px;}
+.form-inline .simple-form-field ,.form-inline .form-group{margin:4px 4px 4px 0px;}
+.table{margin-bottom:0px;}
+.tfoot{background-color: #f5f6fa;padding:12px 0px;width:100%;border:1px solid #e1e6eb;border-top:none;float:left;}
+.ck_span{margin:0px 10px;}
+.no-hover-white:hover{background:#fff !important;}
+.none-data-info {font-size: 18px;height: 200px;padding-top: 90px;}
+.nav-tabs{margin-bottom:6px;}
+.alert{margin-bottom:10px;}

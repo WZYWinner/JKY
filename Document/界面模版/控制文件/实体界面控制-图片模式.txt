@@ -1,0 +1,2 @@
+表名	系统名	图片字段	标题字段
+UNIT_DETECT_INFO	*	CONTACT_PEOPLE	UNIT_NAME

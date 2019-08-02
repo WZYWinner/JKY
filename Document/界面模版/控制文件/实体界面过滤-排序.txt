@@ -1,0 +1,2 @@
+﻿UNIT_DETECT_INFO#按开始时间排序#parm.OrderBy.Add("StartTime",YaohuaOrderByType.Desc);
+UNIT_DETECT_INF_AUDIT#按审核时间排序#parm.OrderBy.Add("AuditTime",YaohuaOrderByType.Desc);

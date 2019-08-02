@@ -1,0 +1,74 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DrugshopInfo_Detail.aspx.cs" Inherits="Yaohuasoft.Framework.WebUI.SysAdmin.DrugshopInfoDetail" %>
+<%@ Import Namespace="Yaohuasoft.Framework.Library" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>药店信息详情</title>
+    <link href="/_css/common2014.css" rel="stylesheet" type="text/css" />
+	<link href="/_js/xheditor/xheditor_skin/nostyle/ui.css" rel="stylesheet" type="text/css" />
+    <script src="/_js/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="/_js/xheditor/xheditor-1.1.14-zh-cn.min.js" type="text/javascript"></script>
+    <script src="/_js/xheditor/xheditor_plugins/ubb.min.js" type="text/javascript"></script>
+    <script src="/_js/myxheditor.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="contain">
+		   <h1 class="txt_title">            药店信息     </h1>
+            <span class="toolbg" unselectable="on" onselectstart="return false;">
+<small>
+<a     hidefocus=""   href="DrugshopInfo_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >返回</a>
+<a    hidefocus="" href="DrugshopInfo_Modify.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >编辑</a>
+<asp:Button ID="btnDelete"   CssClass="btn"   runat="server" Text="删除" OnClientClick="return confirm('确认要删除该数据!');" onclick="btnDelete_Click" />
+</small>
+                <asp:Label ID="errormsg" runat="server" Text="" CssClass="error"></asp:Label>
+                  </span>
+				<asp:HiddenField ID="hfID" runat="server"  />
+            <ul class="create_list">
+ <li><font>药店ID</font><span> <%=HttpUtility.HtmlEncode(entity.ShopId.ToStr()) %></span></li>
+ <li><font>药店名称</font><span> <%=HttpUtility.HtmlEncode(entity.ShopName.ToStr()) %></span></li>
+ <li><font>是否认证</font><span> <%=HttpUtility.HtmlEncode(entity.IsVerify.ToStr()) %></span></li>
+ <li><font>联系人</font><span> <%=HttpUtility.HtmlEncode(entity.ShopLegal.ToStr()) %></span></li>
+ <li><font>权重</font><span> <%=HttpUtility.HtmlEncode(entity.PowerIndex.ToStr()) %></span></li>
+ <li><font>等级</font><span> <%=HttpUtility.HtmlEncode(entity.ShopGrade.ToStr()) %></span></li>
+ <li><font>街道地址</font><span> <%=HttpUtility.HtmlEncode(entity.ShopAddress.ToStr()) %></span></li>
+ <li><font>营业时间</font><span> <%=HttpUtility.HtmlEncode(entity.ShopTime.ToStr()) %></span></li>
+ <li><font>上班时间</font><span> <%=HttpUtility.HtmlEncode(entity.OnHours.ToStr()) %></span></li>
+ <li><font>下班时间</font><span> <%=HttpUtility.HtmlEncode(entity.OffHours.ToStr()) %></span></li>
+ <li><font>电子邮箱</font><span> <%=HttpUtility.HtmlEncode(entity.ShopEmail.ToStr()) %></span></li>
+ <li><font>邮政编码</font><span> <%=HttpUtility.HtmlEncode(entity.ShopZip.ToStr()) %></span></li>
+ <li><font>QQ</font><span> <%=HttpUtility.HtmlEncode(entity.ShopQq.ToStr()) %></span></li>
+ <li><font>公司LOGO</font><span> <asp:Image ID="imgShopLogo" runat="server" /></span></li>
+ <li><font>联系电话</font><span> <%=HttpUtility.HtmlEncode(entity.ShopTel.ToStr()) %></span></li>
+ <li><font>联系手机</font><span> <%=HttpUtility.HtmlEncode(entity.ShopMobile.ToStr()) %></span></li>
+ <li><font>传真</font><span> <%=HttpUtility.HtmlEncode(entity.ShopFax.ToStr()) %></span></li>
+ <li><font>简介</font><span> <%=HttpUtility.HtmlEncode(entity.ShopSynopsis.ToStr()) %></span></li>
+ <li><font>医保属性</font><span> <%=HttpUtility.HtmlEncode(entity.ShopMedicare.ToStr()) %></span></li>
+ <li><font>法人/代理人姓名</font><span> <%=HttpUtility.HtmlEncode(entity.LegalName.ToStr()) %></span></li>
+ <li><font>企业法人/代理人身份证照片</font><span> <asp:Image ID="imgLegalIdentityPic" runat="server" /></span></li>
+ <li><font>法人/代理人身份证号</font><span> <%=HttpUtility.HtmlEncode(entity.LegalIdentity.ToStr()) %></span></li>
+ <li><font>营业执照</font><span> <asp:Image ID="imgBusinessLicencePic" runat="server" /></span></li>
+ <li><font>营业执照号码</font><span> <%=HttpUtility.HtmlEncode(entity.BusinessLicenceNum.ToStr()) %></span></li>
+ <li><font>营业执照有效期</font><span> <%=HttpUtility.HtmlEncode(entity.BusinessLicenceTime.ToStr()) %></span></li>
+ <li><font>经营范围</font><span> <%=HttpUtility.HtmlEncode(entity.BusinessScope.ToStr()) %></span></li>
+ <li><font>特色服务</font><span> <%=HttpUtility.HtmlEncode(entity.ShopSpecial.ToStr()) %></span></li>
+ <li><font>地图标注</font><span> <%=HttpUtility.HtmlEncode(entity.ShopMap.ToStr()) %></span></li>
+ <li><font>经营方式</font><span> <%=HttpUtility.HtmlEncode(entity.ShopBusinessMode.ToStr()) %></span></li>
+ <li><font>药店官网</font><span> <%=HttpUtility.HtmlEncode(entity.Website.ToStr()) %></span></li>
+ <li><font>管理用户ID</font><span> <%=HttpUtility.HtmlEncode(entity.UserId.ToStr()) %></span></li>
+ <li><font>SEO开关</font><span> <%=HttpUtility.HtmlEncode(entity.IsSeo.ToStr()) %></span></li>
+ <li><font>SEO标题</font><span> <%=HttpUtility.HtmlEncode(entity.SeoTitle.ToStr()) %></span></li>
+ <li><font>SEO关键字</font><span> <%=HttpUtility.HtmlEncode(entity.SeoKeywords.ToStr()) %></span></li>
+ <li><font>SEO描述</font><span> <%=HttpUtility.HtmlEncode(entity.SeoDescription.ToStr()) %></span></li>
+            </ul>
+            <span class="toolbg" unselectable="on" onselectstart="return false;">
+<small>
+<a     hidefocus=""   href="DrugshopInfo_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >返回</a>
+<a    hidefocus="" href="DrugshopInfo_Modify.aspx?rnd=<%=YaohuaID.GenRandomInt()%>&query=<%=HttpUtility.UrlEncode(Request["query"])%>&id=<%=HttpUtility.UrlEncode(Request["id"])%>"  >编辑</a>
+<asp:Button ID="btnDelete2"   CssClass="btn"   runat="server" Text="删除" OnClientClick="return confirm('确认要删除该数据!');" onclick="btnDelete_Click" />
+</small>
+        </span>
+    </div>
+    </form>
+</body>
+</html>

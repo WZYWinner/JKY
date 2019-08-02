@@ -1,0 +1,93 @@
+﻿////////////////SysAdmin后台/////////////////
+
+
+<div class="big_btn">
+    <h3><span></span>账号信息</h3>
+    <div class="line">
+        <ul>
+        
+            <li id="div账号信息" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/AccountInfo_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">账号信息</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="big_btn">
+    <h3><span></span>安装包</h3>
+    <div class="line">
+        <ul>
+        
+            <li id="div安装包" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/ApkInfo_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">安装包</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="big_btn">
+    <h3><span></span>权限管理</h3>
+    <div class="line">
+        <ul>
+        
+            <li id="div后台用户" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysUser_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">后台用户</a>
+            </li>
+
+            <li id="div后台角色" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysRole_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">后台角色</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="big_btn">
+    <h3><span></span>基础数据</h3>
+    <div class="line">
+        <ul>
+        
+            <li id="div数据回收站" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysDelete_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">数据回收站</a>
+            </li>
+
+            <li id="div通用配置信息" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysConfig_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">通用配置信息</a>
+            </li>
+
+            <li id="div系统菜单" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysMenu_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">系统菜单</a>
+            </li>
+
+            <li id="div客户公司" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysCorp_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">客户公司</a>
+            </li>
+
+            <li id="div部门" runat="server">
+                <a href="javascript:showRight('/WebUI/SysAdmin/SysDepartment_List.aspx?rnd=<%=YaohuaID.GenRandomInt()%>')">部门</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+this.div账号信息.Visible = check.CheckPower("SysAdmin", "账号信息");
+
+this.div安装包.Visible = check.CheckPower("SysAdmin", "安装包");
+
+this.div后台用户.Visible = check.CheckPower("SysAdmin", "后台用户");
+this.div后台角色.Visible = check.CheckPower("SysAdmin", "后台角色");
+
+this.div数据回收站.Visible = check.CheckPower("SysAdmin", "数据回收站");
+this.div通用配置信息.Visible = check.CheckPower("SysAdmin", "通用配置信息");
+this.div系统菜单.Visible = check.CheckPower("SysAdmin", "系统菜单");
+this.div客户公司.Visible = check.CheckPower("SysAdmin", "客户公司");
+this.div部门.Visible = check.CheckPower("SysAdmin", "部门");
+
+
+
+
+
+

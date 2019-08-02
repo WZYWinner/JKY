@@ -1,0 +1,28 @@
+﻿
+列表去向：只用在主表的列表页中
+结果页面：用在子表的保存成功后，跳转的列表页
+[界面层类型]是WebUI和WapUI等
+[后台类型]是SysAdmin等
+
+
+
+表				系统	列表去向						结果页面
+FORM_MAIN		*		/[界面层类型]2/[后台类型]/<%#Eval("FormType")%>_Detail.aspx		无
+FORM_MAIN_A		*		BusinessLog_List.aspx	无
+FORM_MAIN_B		*		/[界面层类型]2/[后台类型]/<%#Eval("FormType")%>_Detail.aspx		无
+FORM_MAIN_C		*		/[界面层类型]2/[后台类型]/<%#Eval("FormType")%>_Detail.aspx		无
+FORM_MAIN_D		*		/[界面层类型]2/[后台类型]/<%#Eval("FormType")%>_Detail.aspx		无
+FORM_MAIN_E		*		/[界面层类型]2/[后台类型]/<%#Eval("FormType")%>A_Detail.aspx		无
+
+BRAND_INFO	*	../SysAdmin.Manual/BrandInfo_Detail.aspx	无
+BRAND_INFO_A	*	../SysAdmin.Manual/BrandInfo_Detail.aspx	无
+BRAND_INFO_B	*	../SysAdmin.Manual/BrandInfo_Detail.aspx	无
+BRAND_INFO_C	*	../SysAdmin.Manual/BrandInfo_Detail.aspx	无
+BRAND_INFO_D	*	../SysAdmin.Manual/BrandInfo_Detail.aspx	无
+
+BUSINESS_LOG	*	aa_detail.aspx	无
+CUST_ORDER	*	CustOrderDel_List.aspx	无
+CUST_ORDER_A	*	CustOrderDelB_List.aspx	无
+CUST_ORDER_B	*	CustOrderDelD_List.aspx	无
+CUST_ORDER_D	*	CustOrderDelF_List.aspx	无
+REBATE_STATISTICS	*	RebateFee_List.aspx	无

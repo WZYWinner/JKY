@@ -1,0 +1,52 @@
+﻿
+.prewviewable-image .thumbnails {
+    width: 36px;
+}
+.prewviewable-image .thumbnails .border {
+    border: 2px solid white;
+}
+.prewviewable-image .thumbnails .border:hover {
+    border: 2px solid #09c;
+}
+.prewviewable-image .thumbnails .current-border {
+    border: 2px solid #09c;
+}
+.prewviewable-image .thumbnails .operations {
+    line-height: 8px;
+}
+.prewviewable-image .thumbnails .operations a {
+    color: #666;
+}
+.prewviewable-image .thumbnails .operations a:hover {
+    color: #039;
+}
+.prewviewable-image .thumbnails img {
+    border: 1px solid #09c;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+.prewviewable-image .thumbnails .arrow-down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #09c;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin: 0 auto;
+    width: 0;
+}
+.prewviewable-image .preview {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-top: 20px;
+    max-height: 400px;
+    max-width: 600px;
+    padding: 2px 10px 10px;
+}
+.prewviewable-image .preview img {
+    margin-top: 5px;
+    max-height: 320px;
+    max-width: 580px;
+}

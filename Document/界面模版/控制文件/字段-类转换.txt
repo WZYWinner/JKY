@@ -1,0 +1,13 @@
+
+
+
+
+*		CORP_ID		SysCorpService
+*		DEPARTMENT_NAME		SysDepartmentService
+SYS_ROLE	USER_POWER_LIST		SysMenuService
+*	ROLE_ID		SysRoleService
+*	AREA_CODE	SysAreaService
+SYS_AREA	PARENT_ID	SysAreaService
+SYS_AREA	ROOT_ID	SysAreaService
+*	SYS_USER_ID	SysUserService
+

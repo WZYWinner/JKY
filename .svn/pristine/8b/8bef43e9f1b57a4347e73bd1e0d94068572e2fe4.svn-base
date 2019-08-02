@@ -1,0 +1,1 @@
+<div class="big_btn"   id="div药店信息" runat="server"><h3><a href="javascript:showRight('/WebUI/BLL.UnAuthShop/DrugshopInfo_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">药店信息</a></h3></div>

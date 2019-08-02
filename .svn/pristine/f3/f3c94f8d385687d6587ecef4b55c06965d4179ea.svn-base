@@ -1,0 +1,2362 @@
+﻿										
+										
+STAFF_MANAGEMENT	STAFF_MANAGEMENT	ServiceManager	否	否	否	否	否	否	否	否
+STAFF_MANAGEMENT	STAFF_ID	ServiceManager	否	否	下拉	下拉	否	否	否	否
+STAFF_MANAGEMENT	DEPARTMENT_ID	ServiceManager	是	是	否	否	否	否	否	否
+STAFF_MANAGEMENT	DEPARTMENT_NAME	ServiceManager	是	是	只读	是	否	否	否	否
+STAFF_MANAGEMENT	USER_NAME	ServiceManager	否	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	PASSWORD	ServiceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	NAME	ServiceManager	下拉	下拉	下拉	下拉	否	否	否	否
+STAFF_MANAGEMENT	STAFF_STYLE	ServiceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	TELEPHONE	ServiceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	EMAIL	ServiceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	QQ	ServiceManager	是	是	只读	否	否	否	否	否
+USER_LIMIT	CREATE_TIME	ServiceManager	下拉	下拉	下拉	下拉	否	否	否	否
+USER_LIMIT	STAFF_STYLE	ServiceManager	否	是	是	是	否	否	否	否
+USER_LIMIT	NAME	ServiceManager	是	是	是	是	否	否	否	否
+USER_LIMIT	PASSWORD	ServiceManager	是	是	是	是	否	否	否	否
+USER_LIMIT	USER_LIMIT	ServiceManager	否	是	只读	否	否	否	否	否
+USER_LIMIT	CREATE_PEOPLE	ServiceManager	是	是	只读	否	否	否	否	否
+CONTRACT_INFO	CREATE_TIME	ServiceManager	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	ENTRUST_ITEM	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	UNDERTAKE_UNIT	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	FINISH_DEPARTMENT	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	CONTRACT_CODE	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	CONTRACT_QUANTITY	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	CONTRACT_TIME	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	CONTRACT_MONEY	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	DISCOUNT_MONEY	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	PAY_TYPE	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	PAY_START_TIME	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	PAY_END_TIME	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	ITEM_SORT	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	START_TIME	ServiceManager	否	否	否	否	日期	是	只读	否
+CONTRACT_INFO	END_TIME	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	ITEM_AREA	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	ITEM_PLACE	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	ITEM_MEMBER	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	CONTACT_TEL	ServiceManager	否	否	否	否	否	是	只读	否
+CONTRACT_INFO	CONTRACT_SUMMARY	ServiceManager	否	否	否	否	是	是	只读	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	ServiceManager	否	否	否	否	否	是	是	是
+CONTRACT_INFO	CONTRACT_JUDGE	ServiceManager	否	否	否	否	否	是	文件	文件
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	ITEM_STATE	ServiceManager	否	否	否	否	是	是	否	否
+CONTRACT_INFO	AUDIT_STATE	ServiceManager	否	否	否	否	否	是	多行文本	多行文本
+CONTRACT_INFO	AUDIT_REASON	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	AUDIT_TIME	ServiceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO_AUDIT	AUDIT_USER_NAME									
+BUILD_ITEM_BILL		ServiceManager	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUILD_ITEM_BILL_ID	ServiceManager	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_ID	ServiceManager	否	否	否	否	是	是	只读	否
+BUILD_ITEM_BILL	CONTRACT_CODE	ServiceManager	否	否	否	否	是	是	只读	否
+BUILD_ITEM_BILL	ENTRUST_UNIT_NAME	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	ENTRUST_ITEM	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	FINISH_DEPARTMENT	ServiceManager	否	否	否	否	是	是	只读	否
+BUILD_ITEM_BILL	CONTRACT_MONEY	ServiceManager	否	否	否	否	是	是	只读	否
+BUILD_ITEM_BILL	DISCOUNT_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	IF_EXEMPTION_TAX	ServiceManager	否	否	否	否	是	是	只读	否
+BUILD_ITEM_BILL	BUDGET_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	SUBCONTRACT_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	PURCHASE_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	OTHER_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	FACULTY_TRANSFER_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	TAX_CHARGE_MONEY	ServiceManager	否	否	否	否	是	是	只读	否
+BUILD_ITEM_BILL	TOTAL_MONEY	ServiceManager	否	否	否	否	否	是	只读	否
+BUILD_ITEM_BILL	GROSS_MARGIN	ServiceManager	否	否	否	否	否	是	多行文本	多行文本
+BUILD_ITEM_BILL	REMARK_INFO	ServiceManager	否	否	否	否	否	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_PEOPLE	ServiceManager	否	否	否	否	否	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_TIME	ServiceManager	否	否	否	否	是	是	否	否
+BUILD_ITEM_BILL	ARCHIVE_STATE	ServiceManager	否	否	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_STATE	ServiceManager	否	否	否	否	否	是	多行文本	多行文本
+BUILD_ITEM_BILL	AUDIT_REASON	ServiceManager	否	否	否	否	否	是	否	否
+BUILD_ITEM_BILL	AUDIT_TIME	ServiceManager	否	否	否	否	否	是	否	否
+BUILD_ITEM_BILL_AUDIT	AUDIT_USER_NAME									
+SIMPLE_CONTRACT		ServiceManager	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	ServiceManager	否	否	否	否	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	PAY_TYPE	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	PAY_TIME	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	ITEM_AREA	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	ITEM_PIACE	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	ITEM_MEMBER	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	ServiceManager	否	否	否	否	否	是	只读	否
+SIMPLE_CONTRACT	CONTACT_TEL	ServiceManager	否	否	否	否	是	是	只读	否
+SIMPLE_CONTRACT	AUDIT_STATE	ServiceManager	否	否	否	否	否	是	多行文本	多行文本
+SIMPLE_CONTRACT	AUDIT_REASON	ServiceManager	否	否	否	否	否	是	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	ServiceManager	否	否	否	否	否	是	否	否
+SIMPLE_CONTRACT_AUDIT	AUDIT_USER_NAME									
+CHARGE_BILL		ServiceManager	否	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_ID	ServiceManager	否	否	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_ID	ServiceManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	INFORM_BILL_CODE	ServiceManager	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	ENTRUST_UNIT_NAME	ServiceManager	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	ENTRUST_ITEM	ServiceManager	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	UNDERTAKE_UNIT	ServiceManager	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	FINISH_DEPARTMENT	ServiceManager	是	是	只读	只读	否	否	否	否
+CHARGE_BILL	CONTRACT_CODE	ServiceManager	是	是	只读	只读	否	否	否	否
+CHARGE_BILL	PAY_TYPE	ServiceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_PRICE	ServiceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_NUMBER	ServiceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	TOTAL_MONEY	ServiceManager	是	是	是	是	否	否	否	否
+CHARGE_BILL	DISCOUNT_MONEY	ServiceManager	是	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_MONER	ServiceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_TIME	ServiceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_PEOPLE	ServiceManager	否	是	下拉	下拉	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_UNIT	ServiceManager	是	是	下拉	下拉	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_ACCOUNT	ServiceManager	是	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_STATE	ServiceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_TIME	ServiceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_PEOPLE	ServiceManager				是	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_UNIT	ServiceManager				是	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_ACCOUNT	ServiceManager				是	否	否	否	否
+CHARGE_BILL	CHARGE_STATE	ServiceManager				是	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_TIME	ServiceManager				是	否	否	否	否
+	RECEIVE_MONEY_PEOPLE	ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是	否	否	否	否
+		ServiceManager				是				
+		ServiceManager				是				
+		ServiceManager				是	否	否	否	否
+TEST_INFORM_BILL		ServiceManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CHARGE_ID	ServiceManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_ID	ServiceManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	INFORM_BILL_CODE	ServiceManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CODE	ServiceManager	是	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_UNIT_NAME	ServiceManager	否	否	只读	只读	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_ITEM	ServiceManager	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	UNDERTAKE_UNIT	ServiceManager	是	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	FINISH_DEPARTMENT	ServiceManager	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_CODE	ServiceManager	是	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	DETECT_SORT	ServiceManager	是	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	DETECT_GROUP	ServiceManager	否	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DETECT_NEMBER	ServiceManager	否	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DETECT_PRICE	ServiceManager	否	是	日期	日期	否	否	否	否
+TEST_INFORM_BILL	DETECT_TIME	ServiceManager	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	FINISH_TIME	ServiceManager	否	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_UNIT	ServiceManager	否	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_ACCOUNT	ServiceManager	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	TOTAL_MONEY	ServiceManager	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DISCOUNT_MONEY	ServiceManager	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY	ServiceManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_TIME	ServiceManager	是	是	否	否	否	否	否	否
+CUST_MANAGE	CHARGE_STATE	ServiceManager	否	否	否	否	否	否	否	否
+CUST_MANAGE	CUST_ID	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	CUST_UNIT	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	CUST_NAME	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	CUST_TEL	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	QQ_INFO	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	MAIL_INFO	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	CUST_ADDRESS	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	REGISTRATION_TIME 	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	ACCOUNT_BANK	ServiceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	BANK_ACCOUNT	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	STATE_INFO	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ACCOUNT_ID	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	CUST_ACCOUNT	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ENTRUST_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ENTRUST_ITEM	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	CONTRACT_CODE	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	PAY_TYPE	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ACCOUNT_MONEY	ServiceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ITEM_DISCOUNT	ServiceManager	是	是	是	是	否	否	否	否
+DETECT_ENTRUST	ACCOUNT_BALANCE	ServiceManager	否	否	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_ID	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	ENTRUST_UNIT_NAME	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	ENTRUST_PEOPLE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	ENTRUST_ITEM	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	CONTRACT_CODE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	ITEM_AREA	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	ENTRUST_BILL_CODE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	ENTRUST_TIME	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	FINISH_TIME	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	FINISH_DEPARTMENT	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	ITEM_CONTACT_PEOPLE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	ITEM_MEMBER	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	WITNESS_UNIT_NAME	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	WITNESS_PEOPLE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	EXECUTION_UNIT_NAME	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	DETECT_SORT	ServiceManager	否	否	否	否	是	是	否	否
+DETECT_ENTRUST	DETECT_GROUP	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	BULID_PEOPLE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	BULID_TIME	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	ARCHIVE_STATE	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	AUDIT_STATE	ServiceManager	否	否	否	否	否	是	多行文本	多行文本
+DETECT_ENTRUST	AUDIT_REASON	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST	AUDIT_TIME	ServiceManager	否	否	否	否	否	是	否	否
+DETECT_ENTRUST_AUDIT	AUDIT_USER_NAME									
+REPORD_PRINT		ServiceManager	否	否	否	否	否	否	否	否
+REPORD_PRINT	RERORD_ID	ServiceManager	否	否	否	否	否	否	否	否
+REPORD_PRINT	TEST_ID	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_PRINT	CONTRACT_CODE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	TEST_CODE	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	RERORD_CODE	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	ENTRUST_UNIT_NAME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	ENTRUST_ITEM	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	WITNESS_UNIT	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	WITNESS_PEOPLE_NAME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	EXECUTION_UNIT_NAME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	EXECUTION_CONTACT_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	FINISH_DEPARTMENT	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	DETECT_SORT	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	DETECT_GROUP	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	DETECT_ACCORD	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	DETECT_ENVIRONMENT	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	REPORD_INSTRUCTION 	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	TEST_TIME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	TEST_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	PROOFREAD_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	PROOFREAD_TIME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	AUDIT_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	AUDIT_TIME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	APPROVE_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	APPROVE_TIME	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_NUMBER	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	DESTROY_NUMBER	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_TIME	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_PEOPLE	ServiceManager	是	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_STATE	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	MEASUREMENT_CERTIFICATION	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	LABORATORY_CHAPTER	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_PRINT	OFFICE_CHAPTER	ServiceManager	否	是	否	否	否	否	否	否
+REPORD_ACCOUNT	PRODUCT_CHAPTER	ServiceManager	否	否	否	否	否	否	否	否
+REPORD_ACCOUNT	PRINT_ID	ServiceManager	否	否	否	否	否	否	否	否
+REPORD_ACCOUNT	REPORD_ID	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	CONTRACT_CODE	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	REPORD_CODE	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	ENTRUST_ITEM 	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	ENTRUST_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	TEST_CODE	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	PRINT_NUMBER	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	PRINT_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	PRINT_TIME	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	ARCHIVE_STATE	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	TAKE_REPORD_NUMBER	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	TAKE_REPORD_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	TAKE_REPORD_TIME	ServiceManager	是	是	是	是	否	否	否	否
+DETECT_REPORD	REMARK_INFO	ServiceManager	否	否	否	否	否	否	否	否
+DETECT_REPORD	DETECT_REPORD_ID	ServiceManager	否	否	否	否	否	否	否	否
+DETECT_REPORD	TEST_ID	ServiceManager	否	是	是	是	否	否	否	否
+DETECT_REPORD	TEST_CODE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_CODE	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_UNIT_NAME	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	CONTRACT_CODE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_ITEM	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_UNIT_NAME	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXECUTION_UNIT_NAME	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	UNDERTAKE_UNIT	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	FINISH_DEPARTMENT	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_SORT	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_GROUP	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ACCORD	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ENVIRONMENT	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_INSTRUCTION 	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	CHARGE_STATE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_TIME	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	ARCHIVE_STATE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_TIME	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_STATE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_TIME	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_STATE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_PEOPLE	ServiceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_TIME	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_STATE	ServiceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	PRINT_STATE	ServiceManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	REMARK_INFO	ServiceManager	否	否	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_ID	ServiceManager	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	ENTRUST_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+PROJECT_INFO	ENTRUST_ITEM	ServiceManager	是	是	是	是	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_CODE	ServiceManager	否	是	下拉	下拉	否	否	否	否
+PROJECT_INFO	ITEM_AREA	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	ITEM_PIACE	ServiceManager	否	是	多选	多选	否	否	否	否
+PROJECT_INFO	ITEM_MEMBER	ServiceManager	是	是	下拉	下拉	否	否	否	否
+PROJECT_INFO	ITEM_CONTACT_PEOPLE	ServiceManager	否	是	下拉	下拉	否	否	否	否
+PROJECT_INFO	CONTRACT_TYPE	ServiceManager	是	是	是	是	否	否	否	否
+PROJECT_INFO	CONTRACT_CODE	ServiceManager	是	是	日期	日期	否	否	否	否
+PROJECT_INFO	START_TIME	ServiceManager	是	是	日期	日期	否	否	否	否
+PROJECT_INFO	END_TIME	ServiceManager	是	否	否	否	否	否	否	否
+PROJECT_INFO	ITEM_STATE	ServiceManager	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	WITNESS_UNIT_NAME	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	WITNESS_CONTACT_PEOLE	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	CONTACT_TEL	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	WITNESS_CODE	ServiceManager	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	EXECUTION_UNIT_NAME	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_PEOPLE	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_TEL	ServiceManager	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_UNIT_NAME	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_PEOPLE	ServiceManager	否	是	是	是	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_TEL	ServiceManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_TIME	ServiceManager	否	是	否	否	否	否	否	否
+NEWS_INFORM	PROJECT_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_ID	ServiceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	ServiceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_USER	ServiceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	ServiceManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TIME	ServiceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_WARN	ServiceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	STATE_INFO	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	ServiceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	QQ_INFO	ServiceManager	否	否	否	否	否	否	否	否
+UNIT_ENTRUST	ENTRUST_UNIT_ID	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	ENTRUST_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	CONTACT_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	CONTACT_TEL	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	UNIT_ADDRESS	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	UNIT_TYPE	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_ENTRUST	REGISTRATION_TIME 	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_WITNESS	END_TIME	ServiceManager	否	否	否	否	否	否	否	否
+UNIT_WITNESS	WITNESS_UNIT_ID	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_WITNESS	WITNESS_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_WITNESS	WITNESS_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_WITNESS	CONTACT_TEL	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_WITNESS	UNIT_ADDRESS	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_WITNESS	UNIT_TYPE	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_WITNESS	REGISTRATION_TIME 	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_CONSTRUCTION	END_TIME	ServiceManager	否	否	否	否	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_UNIT_ID	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_CONTACT_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_CONTACT_TEL	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	UNIT_ADDRESS	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	UNIT_TYPE	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_CONSTRUCTION	REGISTRATION_TIME 	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_EXECUTION	END_TIME	ServiceManager	否	否	否	否	否	否	否	否
+UNIT_EXECUTION	EXECUTION_UNIT_ID	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	EXECUTION_UNIT_NAME	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	EXECUTION_CONTACT_PEOPLE	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	EXECUTION_CONTACT_TEL	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	UNIT_ADDRESS	ServiceManager	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	UNIT_TYPE	ServiceManager	是	是	日期	日期	否	否	否	否
+UNIT_EXECUTION	REGISTRATION_TIME 	ServiceManager	是	是	日期	日期	否	否	否	否
+	END_TIME									
+										
+BUILD_ITEM_BILL		FinanceManager	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUILD_ITEM_BILL_ID	FinanceManager	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_ID	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	CONTRACT_CODE	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	ENTRUST_UNIT_NAME	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	ENTRUST_ITEM	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	FINISH_DEPARTMENT	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	CONTRACT_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	DISCOUNT_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	IF_EXEMPTION_TAX	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	BUDGET_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	SUBCONTRACT_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	PURCHASE_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	OTHER_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	FACULTY_TRANSFER_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	TAX_CHARGE_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	TOTAL_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	GROSS_MARGIN	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	REMARK_INFO	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_PEOPLE	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_TIME	FinanceManager	是	否	否	否	是	是	否	否
+BUILD_ITEM_BILL	ARCHIVE_STATE	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_STATE	FinanceManager	否	是	否	否	是	是	多行文本	多行文本
+BUILD_ITEM_BILL	AUDIT_REASON	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_TIME	FinanceManager	否	是	否	否	是	是	否	否
+UNIT_ENTRUST	AUDIT_USER_NAME	Salesman	否	否	否	否	否	否	否	否
+UNIT_ENTRUST	ENTRUST_UNIT_ID	Salesman	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	ENTRUST_UNIT_NAME	Salesman	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	CONTACT_PEOPLE	Salesman	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	CONTACT_TEL	Salesman	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	UNIT_ADDRESS	Salesman	是	是	是	是	否	否	否	否
+UNIT_ENTRUST	UNIT_TYPE	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_ENTRUST	REGISTRATION_TIME 	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_WITNESS	END_TIME	Salesman	否	否	否	否	否	否	否	否
+UNIT_WITNESS	WITNESS_UNIT_ID	Salesman	是	是	是	是	否	否	否	否
+UNIT_WITNESS	WITNESS_UNIT_NAME	Salesman	是	是	是	是	否	否	否	否
+UNIT_WITNESS	WITNESS_PEOPLE	Salesman	是	是	是	是	否	否	否	否
+UNIT_WITNESS	CONTACT_TEL	Salesman	是	是	是	是	否	否	否	否
+UNIT_WITNESS	UNIT_ADDRESS	Salesman	是	是	是	是	否	否	否	否
+UNIT_WITNESS	UNIT_TYPE	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_WITNESS	REGISTRATION_TIME 	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_CONSTRUCTION	END_TIME	Salesman	否	否	否	否	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_UNIT_ID	Salesman	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_UNIT_NAME	Salesman	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_CONTACT_PEOPLE	Salesman	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_CONTACT_TEL	Salesman	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	UNIT_ADDRESS	Salesman	是	是	是	是	否	否	否	否
+UNIT_CONSTRUCTION	UNIT_TYPE	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_CONSTRUCTION	REGISTRATION_TIME 	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_EXECUTION	END_TIME	Salesman	否	否	否	否	否	否	否	否
+UNIT_EXECUTION	EXECUTION_UNIT_ID	Salesman	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	EXECUTION_UNIT_NAME	Salesman	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	EXECUTION_CONTACT_PEOPLE	Salesman	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	EXECUTION_CONTACT_TEL	Salesman	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	UNIT_ADDRESS	Salesman	是	是	是	是	否	否	否	否
+UNIT_EXECUTION	UNIT_TYPE	Salesman	是	是	日期	日期	否	否	否	否
+UNIT_EXECUTION	REGISTRATION_TIME 	Salesman	是	是	日期	日期	否	否	否	否
+PROJECT_INFO	END_TIME	Salesman	否	否	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_ID	Salesman	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	ENTRUST_UNIT_NAME	Salesman	是	是	是	是	否	否	否	否
+PROJECT_INFO	ENTRUST_ITEM	Salesman	是	是	是	是	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_PEOPLE	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_CODE	Salesman	否	是	下拉	下拉	否	否	否	否
+PROJECT_INFO	ITEM_AREA	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	ITEM_PIACE	Salesman	否	是	多选	多选	否	否	否	否
+PROJECT_INFO	ITEM_MEMBER	Salesman	是	是	下拉	下拉	否	否	否	否
+PROJECT_INFO	ITEM_CONTACT_PEOPLE	Salesman	否	是	下拉	下拉	否	否	否	否
+PROJECT_INFO	CONTRACT_TYPE	Salesman	是	是	是	是	否	否	否	否
+PROJECT_INFO	CONTRACT_CODE	Salesman	否	是	日期	日期	否	否	否	否
+PROJECT_INFO	START_TIME	Salesman	是	是	日期	日期	否	否	否	否
+PROJECT_INFO	END_TIME	Salesman	否	否	否	否	否	否	否	否
+PROJECT_INFO	ITEM_STATE	Salesman	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	WITNESS_UNIT_NAME	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	WITNESS_CONTACT_PEOLE	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	CONTACT_TEL	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	WITNESS_CODE	Salesman	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	EXECUTION_UNIT_NAME	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_PEOPLE	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_TEL	Salesman	下拉	下拉	下拉	下拉	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_UNIT_NAME	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_PEOPLE	Salesman	否	是	是	是	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_TEL	Salesman	否	是	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_TIME	Salesman	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PROJECT_PEOPLE	Salesman	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	Salesman	是	是	下拉	下拉	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	Salesman	否	是	是	是	否	否	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	Salesman	是	是	多行文本	多行文本	否	否	否	否
+CONTRACT_INFO	ENTRUST_ITEM	Salesman	否	是	是	是	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	Salesman	否	下拉	下拉	下拉	否	否	否	否
+CONTRACT_INFO	UNDERTAKE_UNIT	Salesman	下拉	下拉	下拉	下拉	否	否	否	否
+CONTRACT_INFO	FINISH_DEPARTMENT	Salesman	否	否	多选	多选	否	否	否	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	Salesman	是	是	只读	只读	否	否	否	否
+CONTRACT_INFO	CONTRACT_CODE	Salesman	否	是 	是	是	否	否	否	否
+CONTRACT_INFO	CONTRACT_QUANTITY	Salesman	否	是	日期	日期	否	否	否	否
+CONTRACT_INFO	CONTRACT_TIME	Salesman	是	是	是	是	否	否	否	否
+CONTRACT_INFO	CONTRACT_MONEY	Salesman	是	是	是	是	否	否	否	否
+CONTRACT_INFO	DISCOUNT_MONEY	Salesman	是	是	下拉	下拉	否	否	否	否
+CONTRACT_INFO	PAY_TYPE	Salesman	否	是	日期	日期	否	否	否	否
+CONTRACT_INFO	PAY_START_TIME	Salesman	否	是	日期	日期	否	否	否	否
+CONTRACT_INFO	PAY_END_TIME	Salesman	是	是	下拉	下拉	否	否	否	否
+CONTRACT_INFO	ITEM_SORT	Salesman	否	是	日期	日期	否	否	否	否
+CONTRACT_INFO	START_TIME	Salesman	否	是	日期	日期	否	否	否	否
+CONTRACT_INFO	END_TIME	Salesman	否	是	下拉	下拉	否	否	否	否
+CONTRACT_INFO	ITEM_AREA	Salesman	否	是	是	是	否	否	否	否
+CONTRACT_INFO	ITEM_PLACE	Salesman	否	是	只读	只读	否	否	否	否
+CONTRACT_INFO	ITEM_MEMBER	Salesman	是	是	只读	只读	否	否	否	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	Salesman	是	否	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_STATE	Salesman	否	是	是	是	否	否	否	否
+CONTRACT_INFO	CONTACT_TEL	Salesman	否	是	多行文本	多行文本	否	否	否	否
+CONTRACT_INFO	CONTRACT_SUMMARY	Salesman	是	是	下拉	下拉	否	否	否	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	Salesman	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_JUDGE	Salesman	否	是	文件	文件	否	否	否	否
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	Salesman	是	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_STATE	Salesman	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_REASON	Salesman	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_TIME	Salesman	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_USER_NAME	Salesman	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	Salesman	是	是	下拉	下拉	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	Salesman	是	是	多行文本	多行文本	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	Salesman	否	是	是	是	否	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	Salesman	否	是	是	是	否	是	否	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	Salesman	否	是	下拉	下拉	否	是	否	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	Salesman	是	是	下拉	下拉	是	是	否	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	Salesman	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	Salesman	否	日期	日期	日期	否	是	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	Salesman	是	是	是	是	是	是	否	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	Salesman	是	是	是	是	是	是	否	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	Salesman	否	是	多行文本	多行文本	否	是	否	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	Salesman	是	是	下拉	下拉	是	是	否	否
+SIMPLE_CONTRACT	PAY_TYPE	Salesman	否	是	日期	日期	否	是	否	否
+SIMPLE_CONTRACT	PAY_TIME	Salesman	否	是	下拉	下拉	否	是	否	否
+SIMPLE_CONTRACT	ITEM_AREA	Salesman	否	是	是	是	否	是	否	否
+SIMPLE_CONTRACT	ITEM_PIACE	Salesman	否	是	多选	多选	否	是	否	否
+SIMPLE_CONTRACT	ITEM_MEMBER	Salesman	是	是	下拉	下拉	是	是	否	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	Salesman	否	是	是	是	否	是	否	否
+SIMPLE_CONTRACT	CONTACT_TEL	Salesman	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	AUDIT_STATE	Salesman	否	是	否	否	否	是	多行文本	多行文本
+SIMPLE_CONTRACT	AUDIT_REASON	Salesman	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	Salesman	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT_AUDIT	AUDIT_USER_NAME									
+CHARGE_BILL		Salesman	否	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_ID	Salesman	否	否	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_ID	Salesman	是	是	否	否	否	否	否	否
+CHARGE_BILL	INFORM_BILL_CODE	Salesman	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	ENTRUST_UNIT_NAME	Salesman	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	ENTRUST_ITEM	Salesman	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	UNDERTAKE_UNIT	Salesman	否	是	只读	只读	否	否	否	否
+CHARGE_BILL	FINISH_DEPARTMENT	Salesman	是	是	只读	只读	否	否	否	否
+CHARGE_BILL	CONTRACT_CODE	Salesman	是	是	只读	只读	否	否	否	否
+CHARGE_BILL	PAY_TYPE	Salesman	否	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_PRICE	Salesman	否	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_NUMBER	Salesman	否	是	是	是	否	否	否	否
+CHARGE_BILL	TOTAL_MONEY	Salesman	是	是	是	是	否	否	否	否
+CHARGE_BILL	DISCOUNT_MONEY	Salesman	是	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_MONER	Salesman	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_TIME	Salesman	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_PEOPLE	Salesman	否	是	下拉	下拉	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_UNIT	Salesman	是	是	下拉	下拉	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_ACCOUNT	Salesman	是	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_STATE	Salesman	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_TIME	Salesman	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_PEOPLE	Salesman	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CHARGE_ID	Salesman	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_ID	Salesman	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	INFORM_BILL_CODE	Salesman	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CODE	Salesman	是	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_UNIT_NAME	Salesman	否	否	只读	只读	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_ITEM	Salesman	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	UNDERTAKE_UNIT	Salesman	是	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	FINISH_DEPARTMENT	Salesman	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_CODE	Salesman	是	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	DETECT_SORT	Salesman	是	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	DETECT_GROUP	Salesman	否	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DETECT_NEMBER	Salesman	否	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DETECT_PRICE	Salesman	否	是	日期	日期	否	否	否	否
+TEST_INFORM_BILL	DETECT_TIME	Salesman	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	FINISH_TIME	Salesman	否	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_UNIT	Salesman	否	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_ACCOUNT	Salesman	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	TOTAL_MONEY	Salesman	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DISCOUNT_MONEY	Salesman	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY	Salesman	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_PEOPLE	Salesman	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_TIME	Salesman	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	CHARGE_STATE	Salesman	否	否	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_ID	Salesman	下拉	下拉	下拉	下拉	否	是	否	否
+DETECT_ENTRUST	ENTRUST_UNIT_NAME	Salesman	否	是	是	是	否	是	否	否
+DETECT_ENTRUST	ENTRUST_PEOPLE	Salesman	是	是	是	是	是	是	否	否
+DETECT_ENTRUST	ENTRUST_ITEM	Salesman	否	是	是	是	否	是	否	否
+DETECT_ENTRUST	CONTRACT_CODE	Salesman	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	ITEM_AREA	Salesman	是	是	否	否	是	是	否	否
+DETECT_ENTRUST	ENTRUST_BILL_CODE	Salesman	否	是	日期	日期	否	是	否	否
+DETECT_ENTRUST	ENTRUST_TIME	Salesman	是	是	日期	日期	是	是	否	否
+DETECT_ENTRUST	FINISH_TIME	Salesman	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	FINISH_DEPARTMENT	Salesman	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	ITEM_CONTACT_PEOPLE	Salesman	是	是	多选	多选	是	是	否	否
+DETECT_ENTRUST	ITEM_MEMBER	Salesman	否	是	是	是	否	是	否	否
+DETECT_ENTRUST	WITNESS_UNIT_NAME	Salesman	否	是	下拉	下拉	否	是	否	否
+DETECT_ENTRUST	WITNESS_PEOPLE	Salesman	否	是	下拉	下拉	否	是	否	否
+DETECT_ENTRUST	EXECUTION_UNIT_NAME	Salesman	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	DETECT_SORT	Salesman	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	DETECT_GROUP	Salesman	否	是	否	否	是	是	否	否
+DETECT_ENTRUST	BULID_PEOPLE	Salesman	否	是	否	否	否	是	否	否
+DETECT_ENTRUST	BULID_TIME	Salesman	是	是	否	否	否	是	否	否
+DETECT_ENTRUST	ARCHIVE_STATE	Salesman	是	是	否	否	是	是	否	否
+DETECT_ENTRUST	AUDIT_STATE	Salesman	否	是	否	否	否	是	多行文本	多行文本
+DETECT_ENTRUST	AUDIT_REASON	Salesman	否	是	否	否	否	是	否	否
+DETECT_ENTRUST	AUDIT_TIME	Salesman	否	是	否	否	否	是	否	否
+DETECT_ENTRUST_AUDIT	AUDIT_USER_NAME									
+REPORD_PRINT		Salesman	否	否	否	否	否	否	否	否
+REPORD_PRINT	RERORD_ID	Salesman	否	否	只读	只读	否	否	否	否
+REPORD_PRINT	TEST_ID	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	CONTRACT_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_PRINT	TEST_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_PRINT	RERORD_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_PRINT	ENTRUST_UNIT_NAME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	ENTRUST_ITEM	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	WITNESS_UNIT	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	WITNESS_PEOPLE_NAME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	EXECUTION_UNIT_NAME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	EXECUTION_CONTACT_PEOPLE	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	FINISH_DEPARTMENT	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_PRINT	DETECT_SORT	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_PRINT	DETECT_GROUP	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	DETECT_ACCORD	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	DETECT_ENVIRONMENT	Salesman	否	是	多行文本	多行文本	否	否	否	否
+REPORD_PRINT	REPORD_INSTRUCTION 	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	TEST_TIME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	TEST_PEOPLE	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	PROOFREAD_PEOPLE	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	PROOFREAD_TIME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	AUDIT_PEOPLE	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	AUDIT_TIME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	APPROVE_PEOPLE	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_PRINT	APPROVE_TIME	Salesman	是	是	是	是	否	否	否	否
+REPORD_PRINT	PRINT_NUMBER	Salesman	是	是	是	是	否	否	否	否
+REPORD_PRINT	DESTROY_NUMBER	Salesman	否	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_TIME	Salesman	否	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_PEOPLE	Salesman	是	是	否	否	否	否	否	否
+REPORD_PRINT	PRINT_STATE	Salesman	是	是	是	是	否	否	否	否
+REPORD_PRINT	MEASUREMENT_CERTIFICATION	Salesman	是	是	是	是	否	否	否	否
+REPORD_PRINT	LABORATORY_CHAPTER	Salesman	是	是	是	是	否	否	否	否
+REPORD_PRINT	OFFICE_CHAPTER	Salesman	是	是	是	是	否	否	否	否
+REPORD_ARCHIVE	PRODUCT_CHAPTER	Salesman	否	否	否	否	否	否	否	否
+REPORD_ARCHIVE	ARCHIVE_ID	Salesman	否	否	否	否	否	否	否	否
+REPORD_ARCHIVE	EXTECT_REPORD_ID	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ARCHIVE	REPORD_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ARCHIVE	CONTRACT_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ARCHIVE	ENTRUST_UNIT_NAME	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ARCHIVE	ENTRUST_ITEM	Salesman	是	是	是	是	否	否	否	否
+REPORD_ARCHIVE	REPORD_SORT	Salesman	是	是	是	是	否	否	否	否
+REPORD_ARCHIVE	REPORD_NUMBER	Salesman	是	是	是	是	否	否	否	否
+REPORD_ARCHIVE	REPORD_PAGE	Salesman	是	是	是	是	否	否	否	否
+REPORD_ARCHIVE	REPORD_DESTROY_NUMBER	Salesman	是	是	否	否	否	否	否	否
+REPORD_ARCHIVE	ARCHIVE_PEOPLE	Salesman	是	是	否	否	否	否	否	否
+REPORD_ARCHIVE	ARCHIVE_TIME	Salesman	是	是	否	否	否	否	否	否
+REPORD_ARCHIVE	RECEIVE_PEOPLE	Salesman	是	是	否	否	否	否	否	否
+REPORD_ARCHIVE	REMARK_INFO	Salesman	是	是	否	否	否	否	否	否
+REPORD_ACCOUNT	OPERATION_INFO	Salesman	否	否	否	否	否	否	否	否
+REPORD_ACCOUNT	PRINT_ID	Salesman	否	否	否	否	否	否	否	否
+REPORD_ACCOUNT	REPORD_ID	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	CONTRACT_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	REPORD_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	ENTRUST_ITEM 	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	ENTRUST_UNIT_NAME	Salesman	否	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	TEST_CODE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	PRINT_NUMBER	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	PRINT_PEOPLE	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	PRINT_TIME	Salesman	是	是	只读	只读	否	否	否	否
+REPORD_ACCOUNT	ARCHIVE_STATE	Salesman	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	TAKE_REPORD_NUMBER	Salesman	是	是	是	是	否	否	否	否
+REPORD_ACCOUNT	TAKE_REPORD_PEOPLE	Salesman	是	是	日期	日期	否	否	否	否
+REPORD_ACCOUNT	TAKE_REPORD_TIME	Salesman	否	是	是	是	否	否	否	否
+NEWS_INFORM	REMARK_INFO	Salesman	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_ID	Salesman	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	Salesman	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	Salesman	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TIME	Salesman	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_WARN	Salesman	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	STATE_INFO	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	Salesman	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	Salesman	是	是	是	是	否	否	否	否
+	QQ_INFO									
+										
+CONTRACT_INFO		FinanceManager	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	ENTRUST_ITEM	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	UNDERTAKE_UNIT	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	FINISH_DEPARTMENT	FinanceManager	否	否	否	否	否	是	否	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	CONTRACT_CODE	FinanceManager	否	是 	否	否	否	是	否	否
+CONTRACT_INFO	CONTRACT_QUANTITY	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	CONTRACT_TIME	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	CONTRACT_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	DISCOUNT_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	PAY_TYPE	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	PAY_START_TIME	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	PAY_END_TIME	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	ITEM_SORT	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	START_TIME	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	END_TIME	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	ITEM_AREA	FinanceManager	是	否	否	否	否	是	否	否
+CONTRACT_INFO	ITEM_STATE	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	ITEM_PLACE	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	ITEM_MEMBER	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	CONTACT_TEL	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	CONTRACT_SUMMARY	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	FinanceManager	否	是	否	否	否	是	是	是
+CONTRACT_INFO	CONTRACT_JUDGE	FinanceManager	否	是	否	否	否	是	文件只读	文件只读
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	FinanceManager	是	是	否	否	是	是	否	否
+CONTRACT_INFO	AUDIT_STATE	FinanceManager	否	是	否	否	否	是	多行文本	多行文本
+CONTRACT_INFO	AUDIT_REASON	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO	AUDIT_TIME	FinanceManager	否	是	否	否	否	是	否	否
+CONTRACT_INFO_AUDIT	AUDIT_USER_NAME									
+BUILD_ITEM_BILL		FinanceManager	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUILD_ITEM_BILL_ID	FinanceManager	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_ID	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	CONTRACT_CODE	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	ENTRUST_UNIT_NAME	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	ENTRUST_ITEM	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	FINISH_DEPARTMENT	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	CONTRACT_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	DISCOUNT_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	IF_EXEMPTION_TAX	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	BUDGET_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	SUBCONTRACT_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	PURCHASE_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	OTHER_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	FACULTY_TRANSFER_MONEY	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	TAX_CHARGE_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	TOTAL_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	GROSS_MARGIN	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	REMARK_INFO	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_PEOPLE	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_TIME	FinanceManager	是	否	否	否	是	是	否	否
+BUILD_ITEM_BILL	ARCHIVE_STATE	FinanceManager	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_STATE	FinanceManager	否	是	否	否	是	是	多行文本	多行文本
+BUILD_ITEM_BILL	AUDIT_REASON	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_TIME	FinanceManager	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL_AUDIT	AUDIT_USER_NAME									
+SIMPLE_CONTRACT		FinanceManager	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	FinanceManager	否	日期	否	否	否	是	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	PAY_TYPE	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	PAY_TIME	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	ITEM_AREA	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	ITEM_PIACE	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	ITEM_MEMBER	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	CONTACT_TEL	FinanceManager	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	AUDIT_STATE	FinanceManager	否	是	否	否	否	是	多行文本	多行文本
+SIMPLE_CONTRACT	AUDIT_REASON	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	FinanceManager	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT_AUDIT	AUDIT_USER_NAME									
+CHARGE_BILL		FinanceManager	否	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_ID	FinanceManager	否	否	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_ID	FinanceManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	INFORM_BILL_CODE	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	ENTRUST_UNIT_NAME	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	ENTRUST_ITEM	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	UNDERTAKE_UNIT	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	FINISH_DEPARTMENT	FinanceManager	是	是	是	是	否	否	否	否
+CHARGE_BILL	CONTRACT_CODE	FinanceManager	是	是	只读	只读	否	否	否	否
+CHARGE_BILL	PAY_TYPE	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_PRICE	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_NUMBER	FinanceManager	否	是	是	是	否	否	否	否
+CHARGE_BILL	TOTAL_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+CHARGE_BILL	DISCOUNT_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+CHARGE_BILL	CHARGE_MONER	FinanceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_TIME	FinanceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_PEOPLE	FinanceManager	否	是	下拉	下拉	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_UNIT	FinanceManager	是	是	下拉	下拉	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_ACCOUNT	FinanceManager	是	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_STATE	FinanceManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_TIME	FinanceManager	否	是	否	否	否	否	否	否
+FINANCE_CHARGE	RECEIVE_MONEY_PEOPLE	FinanceManager	否	否	否	否	否	否	否	否
+FINANCE_CHARGE	FINANCE_ID	FinanceManager	是	是	否	否	否	否	否	否
+FINANCE_CHARGE	INFORM_BILL_CODE	FinanceManager	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	ENTRUST_UNIT_NAME	FinanceManager	是	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	CONTRACT_CODE	FinanceManager	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	UNDERTAKE_UNIT	FinanceManager	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	ITEM_NAME	FinanceManager	是	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	PAY_TYPE	FinanceManager	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	CHARGE_PRICE	FinanceManager	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	CHARGE_NUMBER	FinanceManager	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	TOTAL_MONEY	FinanceManager	是	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	DISCOUNT_MONEY	FinanceManager	否	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	RECEIVE_MONEY_UNIT	FinanceManager	是	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	RECEIVE_MONEY_ACCOUNT	FinanceManager	是	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	CHARGE_WAY	FinanceManager	是	是	是	是	否	否	否	否
+FINANCE_CHARGE	CHARGE_MONEY	FinanceManager	否	是	否	否	否	否	否	否
+FINANCE_CHARGE	CHARGE_TIME	FinanceManager	是	是	日期	日期	否	否	否	否
+FINANCE_CHARGE	GET_MONEY_TIME	FinanceManager	是	是	否	否	否	否	否	否
+FINANCE_CHARGE	CHARGE_PEOPLE	FinanceManager	是	是	是	是	否	否	否	否
+FINANCE_CHARGE	INVOICE_CODE	FinanceManager	否	是	是	是	否	否	否	否
+FINANCE_CHARGE	INVOICE_MONEY	FinanceManager	否	是	否	否	否	否	否	否
+FINANCE_CHARGE	INVOICE_TIME	FinanceManager	否	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	WRITE_INVOICE_UNIT	FinanceManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	CHARGE_STATE	FinanceManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CHARGE_ID	FinanceManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_ID	FinanceManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	INFORM_BILL_CODE	FinanceManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CODE	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_UNIT_NAME	FinanceManager	否	否	只读	只读	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_ITEM	FinanceManager	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	UNDERTAKE_UNIT	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	FINISH_DEPARTMENT	FinanceManager	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_CODE	FinanceManager	是	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	DETECT_SORT	FinanceManager	是	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	DETECT_GROUP	FinanceManager	否	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DETECT_NEMBER	FinanceManager	否	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DETECT_PRICE	FinanceManager	否	是	日期	日期	否	否	否	否
+TEST_INFORM_BILL	DETECT_TIME	FinanceManager	否	是	只读	只读	否	否	否	否
+TEST_INFORM_BILL	FINISH_TIME	FinanceManager	否	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_UNIT	FinanceManager	否	是	下拉	下拉	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_ACCOUNT	FinanceManager	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	TOTAL_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	DISCOUNT_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY	FinanceManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_PEOPLE	FinanceManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_TIME	FinanceManager	是	是	否	否	否	否	否	否
+TEST_CHARGE	CHARGE_STATE	FinanceManager	否	否	否	否	否	否	否	否
+TEST_CHARGE	TEST_COST_ID	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	INFORM_BILL_CODE	FinanceManager	否	是	否	否	否	否	否	否
+TEST_CHARGE	TEST_CODE	FinanceManager	否	是	只读	只读	否	否	否	否
+TEST_CHARGE	FINISH_DEPARTMENT	FinanceManager	否	是	只读	只读	否	否	否	否
+TEST_CHARGE	ENTRUST_UNIT_NAME	FinanceManager	否	是	只读	只读	否	否	否	否
+TEST_CHARGE	CONTRACT_CODE	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	DETECT_GROUP	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	DETECT_NEMBER	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	DETECT_PRICE	FinanceManager	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	TOTAL_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+TEST_CHARGE	DISCOUNT_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+TEST_CHARGE	RECEIVE_MONEY	FinanceManager	否	是	下拉	下拉	否	否	否	否
+TEST_CHARGE	CHARGE_WAY	FinanceManager	否	是	否	否	否	否	否	否
+TEST_CHARGE	RECEIVE_MONEY_ACCOUNT	FinanceManager	否	是	否	否	否	否	否	否
+TEST_CHARGE	INVOICE_TIME	FinanceManager	是	是	否	否	否	否	否	否
+TEST_CHARGE	INVOICE_CODE	FinanceManager	否	是	是	是	否	否	否	否
+TEST_CHARGE	INVOICE_MONEY	FinanceManager	是	是	否	否	否	否	否	否
+COST_GATHER	CHARGE_STATE	FinanceManager	否	否	否	否	否	否	否	否
+COST_GATHER	GATHER_ID	FinanceManager	是	是	是	是	否	否	否	否
+COST_GATHER	ENTRUST_ITEM	FinanceManager	是	是	下拉	下拉	否	否	否	否
+COST_GATHER	ENTRUST_UNIT_NAME	FinanceManager	是	是	是	是	否	否	否	否
+COST_GATHER	CONTRACT_CODE	FinanceManager	是	是	是	是	否	否	否	否
+COST_GATHER	TEST_COST	FinanceManager	是	是	是	是	否	否	否	否
+COST_GATHER	CONTRACT_COST	FinanceManager	是	是	是	是	否	否	否	否
+COST_GATHER	OTHER_COST	FinanceManager	是	是	是	是	否	否	否	否
+COST_GATHER	OTHER_COST_INSTRUCTION 	FinanceManager	是	是	是	是	否	否	否	否
+CUST_MANAGE	TOTAL_MONEY	FinanceManager	否	否	否	否	否	否	否	否
+CUST_MANAGE	CUST_ID	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	CUST_UNIT	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	CUST_NAME	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	CUST_TEL	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	QQ_INFO	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	MAIL_INFO	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	CUST_ADDRESS	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	REGISTRATION_TIME 	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	ACCOUNT_BANK	FinanceManager	是	是	只读	只读	否	否	否	否
+CUST_MANAGE	BANK_ACCOUNT	FinanceManager	是	是	下拉	下拉	否	否	否	否
+CUST_ACCOUNT	STATE_INFO	FinanceManager	否	否	否	否	否	否	否	否
+CUST_ACCOUNT	ACCOUNT_ID	FinanceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	CUST_ACCOUNT	FinanceManager	是	是	是	下拉	否	否	否	否
+CUST_ACCOUNT	ENTRUST_UNIT_NAME	FinanceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ENTRUST_ITEM	FinanceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	CONTRACT_CODE	FinanceManager	是	是	是	下拉	否	否	否	否
+CUST_ACCOUNT	PAY_TYPE	FinanceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ACCOUNT_MONEY	FinanceManager	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ITEM_DISCOUNT	FinanceManager	是	是	是	是	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_BALANCE	FinanceManager	否	否	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_ID	FinanceManager	否	否	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_ID	FinanceManager	是	是	只读	只读	是	是	否	否
+ACCOUNT_SETTLEMENT	CUST_ACCOUNT	FinanceManager	否	是	只读	只读	否	是	否	否
+ACCOUNT_SETTLEMENT	ENTRUST_UNIT_NAME	FinanceManager	否	是	只读	只读	否	是	否	否
+ACCOUNT_SETTLEMENT	ENTRUST_ITEM	FinanceManager	是	是	只读	只读	是	是	否	否
+ACCOUNT_SETTLEMENT	CONTRACT_CODE	FinanceManager	否	是	只读	只读	否	是	否	否
+ACCOUNT_SETTLEMENT	TEST_CODE	FinanceManager	是	是	只读	只读	是	是	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_MONEY	FinanceManager	是	是	下拉	下拉	是	是	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_TYPE	FinanceManager	是	是	是	是	是	是	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_MONEY	FinanceManager	是	是	只读	只读	是	是	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_BALABCE	FinanceManager	是	是	只读	只读	是	是	否	否
+ACCOUNT_SETTLEMENT	ROLL_OUT_ACCOUNT	FinanceManager	是	是	只读	只读	否	是	否	否
+ACCOUNT_SETTLEMENT	NAME_INFO	FinanceManager	否	是	是	是	否	是	否	否
+ACCOUNT_SETTLEMENT	INVOICE_CODE	FinanceManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	HANDLING_PEOPLE	FinanceManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	HANDLING_TIME	FinanceManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	AUDIT_STATE	FinanceManager	否	是	是	是	否	是	多行文本	多行文本
+ACCOUNT_SETTLEMENT	AUDIT_REASON	FinanceManager	否	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	AUDIT_TIME	FinanceManager	否	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT_AUDIT	AUDIT_USER_NAME									
+STAFF_MANAGEMENT		FinanceManager	否	否	否	否	否	否	否	否
+STAFF_MANAGEMENT	STAFF_ID	FinanceManager	否	否	下拉	下拉	否	否	否	否
+STAFF_MANAGEMENT	DEPARTMENT_ID	FinanceManager	是	是	否	否	否	否	否	否
+STAFF_MANAGEMENT	DEPARTMENT_NAME	FinanceManager	是	是	只读	是	否	否	否	否
+STAFF_MANAGEMENT	USER_NAME	FinanceManager	否	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	PASSWORD	FinanceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	NAME	FinanceManager	下拉	下拉	下拉	下拉	否	否	否	否
+STAFF_MANAGEMENT	STAFF_STYLE	FinanceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	TELEPHONE	FinanceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	EMAIL	FinanceManager	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	QQ	FinanceManager	是	是	只读	否	否	否	否	否
+USER_LIMIT	CREATE_TIME	FinanceManager	下拉	下拉	下拉	下拉	否	否	否	否
+USER_LIMIT	STAFF_STYLE	FinanceManager	否	是	是	是	否	否	否	否
+USER_LIMIT	NAME	FinanceManager	是	是	是	是	否	否	否	否
+USER_LIMIT	PASSWORD	FinanceManager	是	是	是	是	否	否	否	否
+USER_LIMIT	USER_LIMIT	FinanceManager	否	是	只读	否	否	否	否	否
+USER_LIMIT	CREATE_PEOPLE	FinanceManager	是	是	只读	否	否	否	否	否
+DETECT_REPORD	CREATE_TIME	FinanceManager	否	否	否	否	否	否	否	否
+DETECT_REPORD	DETECT_REPORD_ID	FinanceManager	否	否	否	否	否	否	否	否
+DETECT_REPORD	TEST_ID	FinanceManager	否	是	是	是	否	否	否	否
+DETECT_REPORD	TEST_CODE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_CODE	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_UNIT_NAME	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	CONTRACT_CODE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_ITEM	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_UNIT_NAME	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_PEOPLE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXECUTION_UNIT_NAME	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	UNDERTAKE_UNIT	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	FINISH_DEPARTMENT	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_SORT	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_GROUP	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ACCORD	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ENVIRONMENT	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_INSTRUCTION 	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	CHARGE_STATE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_TIME	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	ARCHIVE_STATE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_PEOPLE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_PEOPLE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_TIME	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_STATE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_PEOPLE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_TIME	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_STATE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_PEOPLE	FinanceManager	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_TIME	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_STATE	FinanceManager	是	是	否	否	否	否	否	否
+DETECT_REPORD	PRINT_STATE	FinanceManager	否	是	否	否	否	否	否	否
+NEWS_INFORM	REMARK_INFO	FinanceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_ID	FinanceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	FinanceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_USER	FinanceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	FinanceManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TIME	FinanceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_WARN	FinanceManager	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	STATE_INFO	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	FinanceManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	FinanceManager	是	是	是	是	否	否	否	否
+	QQ_INFO									
+										
+CONTRACT_INFO		FinanceMan	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_ITEM	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	UNDERTAKE_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	FINISH_DEPARTMENT	FinanceMan	否	否	否	否	否	否	否	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_CODE	FinanceMan	否	是 	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_QUANTITY	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_TIME	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	DISCOUNT_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_TYPE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_START_TIME	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_END_TIME	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_SORT	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	START_TIME	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	END_TIME	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_AREA	FinanceMan	是	否	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_STATE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_PLACE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_MEMBER	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTACT_TEL	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_SUMMARY	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_JUDGE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	FinanceMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_STATE	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_REASON	FinanceMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_TIME	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_USER_NAME	FinanceMan	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUILD_ITEM_BILL_ID	FinanceMan	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_ID	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_CODE	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	ENTRUST_UNIT_NAME	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	ENTRUST_ITEM	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	FINISH_DEPARTMENT	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	DISCOUNT_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	IF_EXEMPTION_TAX	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUDGET_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	SUBCONTRACT_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	PURCHASE_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	OTHER_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	FACULTY_TRANSFER_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	TAX_CHARGE_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	TOTAL_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	GROSS_MARGIN	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	REMARK_INFO	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	WRITE_BILL_PEOPLE	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	WRITE_BILL_TIME	FinanceMan	是	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	ARCHIVE_STATE	FinanceMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_STATE	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_REASON	FinanceMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_TIME	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_USER_NAME	FinanceMan	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	FinanceMan	否	日期	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	PAY_TYPE	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	PAY_TIME	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_AREA	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_PIACE	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_MEMBER	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTACT_TEL	FinanceMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_STATE	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_REASON	FinanceMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	AUDIT_USER_NAME	FinanceMan	否	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_ID	FinanceMan	否	否	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_ID	FinanceMan	是	是	否	否	否	否	否	否
+CHARGE_BILL	INFORM_BILL_CODE	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	ENTRUST_UNIT_NAME	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	ENTRUST_ITEM	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	UNDERTAKE_UNIT	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	FINISH_DEPARTMENT	FinanceMan	是	是	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_CODE	FinanceMan	是	是	否	否	否	否	否	否
+CHARGE_BILL	PAY_TYPE	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_PRICE	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_NUMBER	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	TOTAL_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+CHARGE_BILL	DISCOUNT_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_MONER	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_TIME	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_ACCOUNT	FinanceMan	是	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_STATE	FinanceMan	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_TIME	FinanceMan	否	是	否	否	否	否	否	否
+FINANCE_CHARGE	RECEIVE_MONEY_PEOPLE	FinanceMan	否	否	否	否	否	否	否	否
+FINANCE_CHARGE	FINANCE_ID	FinanceMan	是	是	否	否	否	否	否	否
+FINANCE_CHARGE	INFORM_BILL_CODE	FinanceMan	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	ENTRUST_UNIT_NAME	FinanceMan	是	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	CONTRACT_CODE	FinanceMan	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	UNDERTAKE_UNIT	FinanceMan	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	ITEM_NAME	FinanceMan	是	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	PAY_TYPE	FinanceMan	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	CHARGE_PRICE	FinanceMan	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	CHARGE_NUMBER	FinanceMan	否	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	TOTAL_MONEY	FinanceMan	是	是	只读	只读	否	否	否	否
+FINANCE_CHARGE	DISCOUNT_MONEY	FinanceMan	否	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	RECEIVE_MONEY_UNIT	FinanceMan	是	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	RECEIVE_MONEY_ACCOUNT	FinanceMan	是	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	CHARGE_WAY	FinanceMan	是	是	是	是	否	否	否	否
+FINANCE_CHARGE	CHARGE_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+FINANCE_CHARGE	CHARGE_TIME	FinanceMan	是	是	日期	日期	否	否	否	否
+FINANCE_CHARGE	GET_MONEY_TIME	FinanceMan	是	是	否	否	否	否	否	否
+FINANCE_CHARGE	CHARGE_PEOPLE	FinanceMan	是	是	是	是	否	否	否	否
+FINANCE_CHARGE	INVOICE_CODE	FinanceMan	否	是	是	是	否	否	否	否
+FINANCE_CHARGE	INVOICE_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+FINANCE_CHARGE	INVOICE_TIME	FinanceMan	否	是	下拉	下拉	否	否	否	否
+FINANCE_CHARGE	WRITE_INVOICE_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	CHARGE_STATE	FinanceMan	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CHARGE_ID	FinanceMan	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_ID	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	INFORM_BILL_CODE	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CODE	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_UNIT_NAME	FinanceMan	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_ITEM	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	UNDERTAKE_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	FINISH_DEPARTMENT	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_CODE	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_SORT	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_GROUP	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_NEMBER	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_PRICE	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_TIME	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	FINISH_TIME	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_UNIT	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_ACCOUNT	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TOTAL_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DISCOUNT_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_TIME	FinanceMan	是	是	否	否	否	否	否	否
+TEST_CHARGE	CHARGE_STATE	FinanceMan	否	否	否	否	否	否	否	否
+TEST_CHARGE	TEST_COST_ID	FinanceMan	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	INFORM_BILL_CODE	FinanceMan	否	是	否	否	否	否	否	否
+TEST_CHARGE	TEST_CODE	FinanceMan	否	是	只读	只读	否	否	否	否
+TEST_CHARGE	FINISH_DEPARTMENT	FinanceMan	否	是	只读	只读	否	否	否	否
+TEST_CHARGE	ENTRUST_UNIT_NAME	FinanceMan	否	是	只读	只读	否	否	否	否
+TEST_CHARGE	CONTRACT_CODE	FinanceMan	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	DETECT_GROUP	FinanceMan	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	DETECT_NEMBER	FinanceMan	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	DETECT_PRICE	FinanceMan	是	是	只读	只读	否	否	否	否
+TEST_CHARGE	TOTAL_MONEY	FinanceMan	是	是	是	是	否	否	否	否
+TEST_CHARGE	DISCOUNT_MONEY	FinanceMan	是	是	是	是	否	否	否	否
+TEST_CHARGE	RECEIVE_MONEY	FinanceMan	否	是	下拉	下拉	否	否	否	否
+TEST_CHARGE	CHARGE_WAY	FinanceMan	否	是	否	否	否	否	否	否
+TEST_CHARGE	RECEIVE_MONEY_ACCOUNT	FinanceMan	否	是	否	否	否	否	否	否
+TEST_CHARGE	INVOICE_TIME	FinanceMan	是	是	否	否	否	否	否	否
+TEST_CHARGE	INVOICE_CODE	FinanceMan	否	是	是	是	否	否	否	否
+TEST_CHARGE	INVOICE_MONEY	FinanceMan	是	是	否	否	否	否	否	否
+COST_GATHER	CHARGE_STATE	FinanceMan	否	否	否	否	否	否	否	否
+COST_GATHER	GATHER_ID	FinanceMan	是	是	是	是	否	否	否	否
+COST_GATHER	ENTRUST_ITEM	FinanceMan	是	是	下拉	下拉	否	否	否	否
+COST_GATHER	ENTRUST_UNIT_NAME	FinanceMan	是	是	是	是	否	否	否	否
+COST_GATHER	CONTRACT_CODE	FinanceMan	是	是	是	是	否	否	否	否
+COST_GATHER	TEST_COST	FinanceMan	是	是	是	是	否	否	否	否
+COST_GATHER	CONTRACT_COST	FinanceMan	是	是	是	是	否	否	否	否
+COST_GATHER	OTHER_COST	FinanceMan	是	是	是	是	否	否	否	否
+COST_GATHER	OTHER_COST_INSTRUCTION 	FinanceMan	是	是	是	是	否	否	否	否
+CUST_MANAGE	TOTAL_MONEY	FinanceMan	否	否	否	否	否	否	否	否
+CUST_MANAGE	CUST_ID	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	CUST_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	CUST_NAME	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	CUST_TEL	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	QQ_INFO	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	MAIL_INFO	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	CUST_ADDRESS	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	REGISTRATION_TIME 	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	ACCOUNT_BANK	FinanceMan	是	是	否	否	否	否	否	否
+CUST_MANAGE	BANK_ACCOUNT	FinanceMan	是	是	否	否	否	否	否	否
+CUST_ACCOUNT	STATE_INFO	FinanceMan	否	否	否	否	否	否	否	否
+CUST_ACCOUNT	ACCOUNT_ID	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	CUST_ACCOUNT	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ENTRUST_UNIT_NAME	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ENTRUST_ITEM	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	CONTRACT_CODE	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	PAY_TYPE	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ACCOUNT_MONEY	FinanceMan	是	是	是	是	否	否	否	否
+CUST_ACCOUNT	ITEM_DISCOUNT	FinanceMan	是	是	是	是	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_BALANCE	FinanceMan	否	否	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_ID	FinanceMan	否	否	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_ID	FinanceMan	是	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	CUST_ACCOUNT	FinanceMan	否	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	ENTRUST_UNIT_NAME	FinanceMan	否	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	ENTRUST_ITEM	FinanceMan	是	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	CONTRACT_CODE	FinanceMan	否	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	TEST_CODE	FinanceMan	是	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_MONEY	FinanceMan	是	是	下拉	下拉	否	否	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_TYPE	FinanceMan	是	是	是	是	否	否	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_MONEY	FinanceMan	是	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_BALABCE	FinanceMan	是	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	ROLL_OUT_ACCOUNT	FinanceMan	是	是	只读	只读	否	否	否	否
+ACCOUNT_SETTLEMENT	NAME_INFO	FinanceMan	否	是	是	是	否	否	否	否
+ACCOUNT_SETTLEMENT	INVOICE_CODE	FinanceMan	否	是	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	HANDLING_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	HANDLING_TIME	FinanceMan	是	是	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	AUDIT_STATE	FinanceMan	否	是	是	是	否	否	否	否
+ACCOUNT_SETTLEMENT	AUDIT_REASON	FinanceMan	否	是	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	AUDIT_TIME	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_USER_NAME	FinanceMan	否	否	否	否	否	否	否	否
+DETECT_REPORD	DETECT_REPORD_ID	FinanceMan	否	否	否	否	否	否	否	否
+DETECT_REPORD	TEST_ID	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	TEST_CODE	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_CODE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_UNIT_NAME	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	CONTRACT_CODE	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_ITEM	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_UNIT_NAME	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXECUTION_UNIT_NAME	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	UNDERTAKE_UNIT	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	FINISH_DEPARTMENT	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_SORT	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_GROUP	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ACCORD	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ENVIRONMENT	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_INSTRUCTION 	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	CHARGE_STATE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_TIME	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	ARCHIVE_STATE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_TIME	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_STATE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_TIME	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_STATE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_PEOPLE	FinanceMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_TIME	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_STATE	FinanceMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	PRINT_STATE	FinanceMan	是	是	否	否	否	否	否	否
+NEWS_INFORM	REMARK_INFO	FinanceMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_ID	FinanceMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	FinanceMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_USER	FinanceMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	FinanceMan	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TIME	FinanceMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_WARN	FinanceMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	STATE_INFO	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	FinanceMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	FinanceMan	是	是	是	是	否	否	否	否
+	QQ_INFO									
+										
+STAFF_MANAGEMENT		ItemManage	否	否	否	否	否	否	否	否
+STAFF_MANAGEMENT	STAFF_ID	ItemManage	否	否	下拉	下拉	否	否	否	否
+STAFF_MANAGEMENT	DEPARTMENT_ID	ItemManage	是	是	否	否	否	否	否	否
+STAFF_MANAGEMENT	DEPARTMENT_NAME	ItemManage	是	是	只读	是	否	否	否	否
+STAFF_MANAGEMENT	USER_NAME	ItemManage	否	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	PASSWORD	ItemManage	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	NAME	ItemManage	下拉	下拉	下拉	下拉	否	否	否	否
+STAFF_MANAGEMENT	STAFF_STYLE	ItemManage	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	TELEPHONE	ItemManage	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	EMAIL	ItemManage	是	是	是	是	否	否	否	否
+STAFF_MANAGEMENT	QQ	ItemManage	是	是	只读	否	否	否	否	否
+USER_LIMIT	CREATE_TIME	ItemManage	下拉	下拉	下拉	下拉	否	否	否	否
+USER_LIMIT	STAFF_STYLE	ItemManage	否	是	是	是	否	否	否	否
+USER_LIMIT	NAME	ItemManage	是	是	是	是	否	否	否	否
+USER_LIMIT	PASSWORD	ItemManage	是	是	是	是	否	否	否	否
+USER_LIMIT	USER_LIMIT	ItemManage	否	是	只读	否	否	否	否	否
+USER_LIMIT	CREATE_PEOPLE	ItemManage	是	是	只读	否	否	否	否	否
+CONTRACT_INFO	CREATE_TIME	ItemManage	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	ENTRUST_ITEM	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	UNDERTAKE_UNIT	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	FINISH_DEPARTMENT	ItemManage	否	否	只读	只读	否	是	否	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	CONTRACT_CODE	ItemManage	否	是 	只读	只读	否	是	否	否
+CONTRACT_INFO	CONTRACT_QUANTITY	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	CONTRACT_TIME	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	CONTRACT_MONEY	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	DISCOUNT_MONEY	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	PAY_TYPE	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	PAY_START_TIME	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	PAY_END_TIME	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	ITEM_SORT	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	START_TIME	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	END_TIME	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	ITEM_AREA	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	ITEM_PLACE	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	ITEM_MEMBER	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	CONTACT_TEL	ItemManage	是	否	只读	只读	否	是	否	否
+CONTRACT_INFO	ITEM_STATE	ItemManage	否	是	只读	只读	否	是	否	否
+CONTRACT_INFO	CONTRACT_SUMMARY	ItemManage	是	是	只读	只读	是	是	否	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	ItemManage	否	是	是	是	否	是	是	是
+CONTRACT_INFO	CONTRACT_JUDGE	ItemManage	否	是	是	是	否	是	文件只读	文件只读
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	ItemManage	是	是	否	否	是	是	否	否
+CONTRACT_INFO	AUDIT_STATE	ItemManage	否	是	否	否	否	是	多行文本	多行文本
+CONTRACT_INFO	AUDIT_REASON	ItemManage	否	是	否	否	否	是	否	否
+CONTRACT_INFO	AUDIT_TIME	ItemManage	否	是	否	否	否	是	否	否
+CONTRACT_INFO_AUDIT	AUDIT_USER_NAME									
+BUILD_ITEM_BILL		ItemManage	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUILD_ITEM_BILL_ID	ItemManage	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_ID	ItemManage	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	CONTRACT_CODE	ItemManage	是	是	只读	只读	是	是	否	否
+BUILD_ITEM_BILL	ENTRUST_UNIT_NAME	ItemManage	否	是	只读	只读	是	是	否	否
+BUILD_ITEM_BILL	ENTRUST_ITEM	ItemManage	否	是	只读	只读	是	是	否	否
+BUILD_ITEM_BILL	FINISH_DEPARTMENT	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	CONTRACT_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	DISCOUNT_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	IF_EXEMPTION_TAX	ItemManage	是	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	BUDGET_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	SUBCONTRACT_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	PURCHASE_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	OTHER_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	FACULTY_TRANSFER_MONEY	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	TAX_CHARGE_MONEY	ItemManage	是	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	TOTAL_MONEY	ItemManage	是	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	GROSS_MARGIN	ItemManage	否	是	是	是	是	是	否	否
+BUILD_ITEM_BILL	REMARK_INFO	ItemManage	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_PEOPLE	ItemManage	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	WRITE_BILL_TIME	ItemManage	是	否	否	否	是	是	否	否
+BUILD_ITEM_BILL	ARCHIVE_STATE	ItemManage	是	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_STATE	ItemManage	否	是	否	否	是	是	多行文本	多行文本
+BUILD_ITEM_BILL	AUDIT_REASON	ItemManage	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL	AUDIT_TIME	ItemManage	否	是	否	否	是	是	否	否
+BUILD_ITEM_BILL_AUDIT	AUDIT_USER_NAME									
+SIMPLE_CONTRACT		ItemManage	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	ItemManage	否	日期	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	PAY_TYPE	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	PAY_TIME	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	ITEM_AREA	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	ITEM_PIACE	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	ITEM_MEMBER	ItemManage	是	是	只读	只读	是	是	否	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	ItemManage	否	是	只读	只读	否	是	否	否
+SIMPLE_CONTRACT	CONTACT_TEL	ItemManage	是	是	否	否	是	是	否	否
+SIMPLE_CONTRACT	AUDIT_STATE	ItemManage	否	是	否	否	否	是	多行文本	多行文本
+SIMPLE_CONTRACT	AUDIT_REASON	ItemManage	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	ItemManage	否	是	否	否	否	是	否	否
+SIMPLE_CONTRACT_AUDIT	AUDIT_USER_NAME									
+DETECT_ENTRUST		ItemManage	否	否	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_ID	ItemManage	是	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	ENTRUST_UNIT_NAME	ItemManage	否	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	ENTRUST_PEOPLE	ItemManage	是	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	ENTRUST_ITEM	ItemManage	否	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	CONTRACT_CODE	ItemManage	是	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	ITEM_AREA	ItemManage	是	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	ENTRUST_BILL_CODE	ItemManage	否	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	ENTRUST_TIME	ItemManage	是	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	FINISH_TIME	ItemManage	是	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	FINISH_DEPARTMENT	ItemManage	是	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	ITEM_CONTACT_PEOPLE	ItemManage	否	是	只读	只读	是	是	否	否
+DETECT_ENTRUST	ITEM_MEMBER	ItemManage	否	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	WITNESS_UNIT_NAME	ItemManage	否	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	WITNESS_PEOPLE	ItemManage	否	是	只读	只读	否	是	否	否
+DETECT_ENTRUST	EXECUTION_UNIT_NAME	ItemManage	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	DETECT_SORT	ItemManage	是	是	下拉	下拉	是	是	否	否
+DETECT_ENTRUST	DETECT_GROUP	ItemManage	否	是	否	否	是	是	否	否
+DETECT_ENTRUST	BULID_PEOPLE	ItemManage	否	是	否	否	否	是	否	否
+DETECT_ENTRUST	BULID_TIME	ItemManage	是	是	否	否	否	是	否	否
+DETECT_ENTRUST	ARCHIVE_STATE	ItemManage	是	是	否	否	是	是	否	否
+DETECT_ENTRUST	AUDIT_STATE	ItemManage	否	是	否	否	否	是	多行文本	多行文本
+DETECT_ENTRUST	AUDIT_REASON	ItemManage	否	是	否	否	否	是	否	否
+DETECT_ENTRUST	AUDIT_TIME	ItemManage	否	是	否	否	否	是	否	否
+DETECT_ENTRUST_AUDIT	AUDIT_USER_NAME									
+DETECT_REPORD		ItemManage	否	否	否	否	否	否	否	否
+DETECT_REPORD	DETECT_REPORD_ID	ItemManage	否	否	否	否	否	否	否	否
+DETECT_REPORD	TEST_ID	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	TEST_CODE	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_CODE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_UNIT_NAME	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	CONTRACT_CODE	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_ITEM	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_UNIT_NAME	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXECUTION_UNIT_NAME	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	UNDERTAKE_UNIT	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	FINISH_DEPARTMENT	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_SORT	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_GROUP	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ACCORD	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ENVIRONMENT	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_INSTRUCTION 	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	CHARGE_STATE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_TIME	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	ARCHIVE_STATE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_TIME	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_STATE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_TIME	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_STATE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_TIME	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_STATE	ItemManage	是	是	否	否	否	否	否	否
+DETECT_REPORD	PRINT_STATE	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	REMARK_INFO	ItemManage	否	否	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_ID	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	ENTRUST_UNIT_NAME	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	ENTRUST_ITEM	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_PEOPLE	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_CODE	ItemManage	否	是	否	否	否	是	否	否
+PROJECT_INFO	ITEM_AREA	ItemManage	否	是	否	否	否	是	否	否
+PROJECT_INFO	ITEM_PIACE	ItemManage	否	是	否	否	否	是	否	否
+PROJECT_INFO	ITEM_MEMBER	ItemManage	是	是	否	否	是	是	否	否
+PROJECT_INFO	ITEM_CONTACT_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONTRACT_TYPE	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	CONTRACT_CODE	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	START_TIME	ItemManage	是	是	否	否	否	否	否	否
+PROJECT_INFO	END_TIME	ItemManage	是	否	否	否	否	是	否	否
+PROJECT_INFO	ITEM_STATE	ItemManage	下拉	下拉	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_UNIT_NAME	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_CONTACT_PEOLE	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONTACT_TEL	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_CODE	ItemManage	下拉	下拉	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_UNIT_NAME	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_TEL	ItemManage	下拉	下拉	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_UNIT_NAME	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_PEOPLE	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_TEL	ItemManage	否	是	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_TIME	ItemManage	否	是	否	否	否	否	否	否
+NEWS_INFORM	PROJECT_PEOPLE	ItemManage	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_ID	ItemManage	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	ItemManage	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_USER	ItemManage	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	ItemManage	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TIME	ItemManage	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_WARN	ItemManage	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	STATE_INFO	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	ItemManage	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	ItemManage	是	是	是	是	否	否	否	否
+	QQ_INFO									
+										
+CONTRACT_INFO		ItemMan	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_ITEM	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	UNDERTAKE_UNIT	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	FINISH_DEPARTMENT	ItemMan	否	否	否	否	否	否	否	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_CODE	ItemMan	否	是 	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_QUANTITY	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_TIME	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_MONEY	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	DISCOUNT_MONEY	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_TYPE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_START_TIME	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_END_TIME	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_SORT	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	START_TIME	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	END_TIME	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_AREA	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_PLACE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_MEMBER	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTACT_TEL	ItemMan	是	否	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_STATE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_SUMMARY	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_JUDGE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	ItemMan	是	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_STATE	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_REASON	ItemMan	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_TIME	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_USER_NAME	ItemMan	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUILD_ITEM_BILL_ID	ItemMan	否	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_ID	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_CODE	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	ENTRUST_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	ENTRUST_ITEM	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	FINISH_DEPARTMENT	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	CONTRACT_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	DISCOUNT_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	IF_EXEMPTION_TAX	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	BUDGET_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	SUBCONTRACT_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	PURCHASE_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	OTHER_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	FACULTY_TRANSFER_MONEY	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	TAX_CHARGE_MONEY	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	TOTAL_MONEY	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	GROSS_MARGIN	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	REMARK_INFO	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	WRITE_BILL_PEOPLE	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	WRITE_BILL_TIME	ItemMan	是	否	否	否	否	否	否	否
+BUILD_ITEM_BILL	ARCHIVE_STATE	ItemMan	是	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_STATE	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_REASON	ItemMan	否	是	否	否	否	否	否	否
+BUILD_ITEM_BILL	AUDIT_TIME	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_USER_NAME	ItemMan	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	ItemMan	否	日期	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	PAY_TYPE	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	PAY_TIME	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_AREA	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_PIACE	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_MEMBER	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTACT_TEL	ItemMan	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_STATE	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_REASON	ItemMan	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	AUDIT_USER_NAME	ItemMan	否	否	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_ID	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_PEOPLE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_ITEM	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	CONTRACT_CODE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	ITEM_AREA	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_BILL_CODE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	ENTRUST_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	FINISH_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	FINISH_DEPARTMENT	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	ITEM_CONTACT_PEOPLE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	ITEM_MEMBER	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	WITNESS_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	WITNESS_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	EXECUTION_UNIT_NAME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	DETECT_SORT	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	DETECT_GROUP	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	BULID_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	BULID_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	ARCHIVE_STATE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_ENTRUST	AUDIT_STATE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	AUDIT_REASON	ItemMan	否	是	否	否	否	否	否	否
+DETECT_ENTRUST	AUDIT_TIME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_USER_NAME	ItemMan	否	否	否	否	否	否	否	否
+DETECT_REPORD	DETECT_REPORD_ID	ItemMan	否	否	否	否	否	否	否	否
+DETECT_REPORD	TEST_ID	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	TEST_CODE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_CODE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	CONTRACT_CODE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	ENTRUST_ITEM	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	WITNESS_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXECUTION_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	UNDERTAKE_UNIT	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	FINISH_DEPARTMENT	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_SORT	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_GROUP	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ACCORD	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	DETECT_ENVIRONMENT	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	REPORD_INSTRUCTION 	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	CHARGE_STATE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	ARCHIVE_STATE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	EXEP_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	PROOFREAD_STATE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	AUDIT_STATE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_TIME	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	APPROVE_STATE	ItemMan	是	是	否	否	否	否	否	否
+DETECT_REPORD	PRINT_STATE	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	REMARK_INFO	ItemMan	否	否	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_ID	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	ENTRUST_UNIT_NAME	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	ENTRUST_ITEM	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_PEOPLE	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_CODE	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_AREA	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_PIACE	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_MEMBER	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_CONTACT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONTRACT_TYPE	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	CONTRACT_CODE	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	START_TIME	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	END_TIME	ItemMan	是	否	否	否	否	否	否	否
+PROJECT_INFO	ITEM_STATE	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_CONTACT_PEOLE	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONTACT_TEL	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_CODE	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_TEL	ItemMan	是	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_UNIT_NAME	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_PEOPLE	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_TEL	ItemMan	否	是	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_TIME	ItemMan	否	是	否	否	否	否	否	否
+NEWS_INFORM	PROJECT_PEOPLE	ItemMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_ID	ItemMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	ItemMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_USER	ItemMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	ItemMan	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TIME	ItemMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_WARN	ItemMan	是	是	是	是	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	STATE_INFO	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	ItemMan	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	ItemMan	是	是	是	是	否	否	否	否
+	QQ_INFO									
+										
+PEOSON_INFO		CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	PERSON_ID	CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	LOGIN_ACCOUND_	CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	ACCOUNT_PASSWORD	CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	NAME_INFO	CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	SEX_NIFO	CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	CONTACT_TEL	CustManager	是	是	是	是	否	否	否	否
+PEOSON_INFO	MAIL_INFO	CustManager	是	是	是	是	否	否	否	否
+CONTRACT_INFO	QQ_INFO	CustManager	否	否	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_ID	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_NAME	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_ITEM	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ENTRUST_UNIT_TEL	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	UNDERTAKE_UNIT	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	FINISH_DEPARTMENT	CustManager	否	否	否	否	否	否	否	否
+CONTRACT_INFO	ASSIST_DEPARTMENT	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_CODE	CustManager	否	是 	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_QUANTITY	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_TIME	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_MONEY	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	DISCOUNT_MONEY	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_TYPE	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_START_TIME	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	PAY_END_TIME	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_SORT	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	START_TIME	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	END_TIME	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_AREA	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_PLACE	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_MEMBER	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_CONTACT_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	ITEM_STATE	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_SUMMARY	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_AUDIT_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_JUDGE	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	CONTRACT_APPEND_DOCUMENT	CustManager	是	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_STATE	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_REASON	CustManager	否	是	否	否	否	否	否	否
+CONTRACT_INFO	AUDIT_TIME	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_USER_NAME	CustManager	否	否	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_ID	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_ITEM	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_UNIT_TEL	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ENTRUST_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	UNDERTAKE_UNIT	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	FINISH_DEPARTMENT	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_CODE	CustManager	否	日期	否	否	否	否	否	否
+SIMPLE_CONTRACT	SIMPLE_CONTRACT_TIME	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTRACT_MONEY	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	DISCOUNT_MONEY	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTRACT_SUMMARY	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	PAY_TYPE	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	PAY_TIME	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_AREA	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_PIACE	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_MEMBER	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	ITEM_CONTACT_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_STATE	CustManager	否	是	否	否	否	否	多行文本	多行文本
+SIMPLE_CONTRACT	AUDIT_REASON	CustManager	否	是	否	否	否	否	否	否
+SIMPLE_CONTRACT	AUDIT_TIME	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	AUDIT_USER_NAME	CustManager	否	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_ID	CustManager	否	否	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_ID	CustManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	INFORM_BILL_CODE	CustManager	下拉	下拉	否	否	否	否	否	否
+CHARGE_BILL	ENTRUST_UNIT_NAME	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	ENTRUST_ITEM	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	UNDERTAKE_UNIT	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	FINISH_DEPARTMENT	CustManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	CONTRACT_CODE	CustManager	是	是	只读	只读	否	否	否	否
+CHARGE_BILL	PAY_TYPE	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_PRICE	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_NUMBER	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	TOTAL_MONEY	CustManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	DISCOUNT_MONEY	CustManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_MONER	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_TIME	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	WRITE_BILL_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_UNIT	CustManager	是	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_ACCOUNT	CustManager	是	否	否	否	否	否	否	否
+CHARGE_BILL	CHARGE_STATE	CustManager	否	是	否	否	否	否	否	否
+CHARGE_BILL	RECEIVE_MONEY_TIME	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_PEOPLE	CustManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CHARGE_ID	CustManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_ID	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	INFORM_BILL_CODE	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TEST_CODE	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_UNIT_NAME	CustManager	否	否	否	否	否	否	否	否
+TEST_INFORM_BILL	ENTRUST_ITEM	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	UNDERTAKE_UNIT	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	FINISH_DEPARTMENT	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	CONTRACT_CODE	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_SORT	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_GROUP	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_NEMBER	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_PRICE	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DETECT_TIME	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	FINISH_TIME	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_UNIT	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY_ACCOUNT	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	TOTAL_MONEY	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	DISCOUNT_MONEY	CustManager	是	是	否	否	否	否	否	否
+TEST_INFORM_BILL	RECEIVE_MONEY	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+TEST_INFORM_BILL	WRITE_BILL_TIME	CustManager	是	是	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	CHARGE_STATE	CustManager	否	否	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_ID	CustManager	否	否	否	否	否	否	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_ID	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	CUST_ACCOUNT	CustManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	ENTRUST_UNIT_NAME	CustManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	ENTRUST_ITEM	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	CONTRACT_CODE	CustManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	TEST_CODE	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_MONEY	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_TYPE	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	SETTLEMENT_MONEY	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	ACCOUNT_BALABCE	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	ROLL_OUT_ACCOUNT	CustManager	是	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	NAME_INFO	CustManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	INVOICE_CODE	CustManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	HANDLING_PEOPLE	CustManager	否	是	否	否	否	是	否	否
+ACCOUNT_SETTLEMENT	HANDLING_TIME	CustManager	是	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	AUDIT_STATE	CustManager	否	是	否	否	否	是	多行文本	多行文本
+ACCOUNT_SETTLEMENT	AUDIT_REASON	CustManager	否	是	否	否	是	是	否	否
+ACCOUNT_SETTLEMENT	AUDIT_TIME	CustManager	否	是	否	否	是	是	否	否
+UNIT_ENTRUST	AUDIT_USER_NAME	CustManager	否	否	否	否	否	否	否	否
+UNIT_ENTRUST	ENTRUST_UNIT_ID	CustManager	是	是	否	否	否	否	否	否
+UNIT_ENTRUST	ENTRUST_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+UNIT_ENTRUST	CONTACT_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+UNIT_ENTRUST	CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+UNIT_ENTRUST	UNIT_ADDRESS	CustManager	是	是	否	否	否	否	否	否
+UNIT_ENTRUST	UNIT_TYPE	CustManager	是	是	否	否	否	否	否	否
+UNIT_ENTRUST	REGISTRATION_TIME 	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	END_TIME	CustManager	否	否	否	否	否	否	否	否
+UNIT_WITNESS	WITNESS_UNIT_ID	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	WITNESS_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	WITNESS_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	UNIT_ADDRESS	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	UNIT_TYPE	CustManager	是	是	否	否	否	否	否	否
+UNIT_WITNESS	REGISTRATION_TIME 	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	END_TIME	CustManager	否	否	否	否	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_UNIT_ID	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_CONTACT_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	CONSTRUCTION_CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	UNIT_ADDRESS	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	UNIT_TYPE	CustManager	是	是	否	否	否	否	否	否
+UNIT_CONSTRUCTION	REGISTRATION_TIME 	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	END_TIME	CustManager	否	否	否	否	否	否	否	否
+UNIT_EXECUTION	EXECUTION_UNIT_ID	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	EXECUTION_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	EXECUTION_CONTACT_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	EXECUTION_CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	UNIT_ADDRESS	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	UNIT_TYPE	CustManager	是	是	否	否	否	否	否	否
+UNIT_EXECUTION	REGISTRATION_TIME 	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	END_TIME	CustManager	否	否	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_ID	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	ENTRUST_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	ENTRUST_ITEM	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	SEND_SAMPLE_CODE	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_AREA	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_PIACE	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_MEMBER	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	ITEM_CONTACT_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONTRACT_TYPE	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	CONTRACT_CODE	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	START_TIME	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	END_TIME	CustManager	是	否	否	否	否	否	否	否
+PROJECT_INFO	ITEM_STATE	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_UNIT_NAME	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_CONTACT_PEOLE	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONTACT_TEL	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	WITNESS_CODE	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_UNIT_NAME	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	EXECUTION_CONTACT_TEL	CustManager	是	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_UNIT_NAME	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_PEOPLE	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	CONSTRUCTION_CONTACT_TEL	CustManager	否	是	否	否	否	否	否	否
+PROJECT_INFO	PROJECT_TIME	CustManager	否	是	否	否	否	否	否	否
+NEWS_INFORM	PROJECT_PEOPLE	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	NEWS_ID	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	NEWS_TYPE	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_USER	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TATEL	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_TIME	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_WARN	CustManager	是	是	否	否	否	否	否	否
+NEWS_INFORM	INFORM_CONTENT 	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	STATE_INFO	CustManager	否	否	否	否	否	否	否	否
+COST_GATHER	GATHER_ID	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	ENTRUST_ITEM	CustManager	下拉	下拉	否	否	否	否	否	否
+COST_GATHER	ENTRUST_UNIT_NAME	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	CONTRACT_CODE	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	TEST_COST	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	CONTRACT_COST	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	OTHER_COST	CustManager	是	是	否	否	否	否	否	否
+COST_GATHER	OTHER_COST_INSTRUCTION 	CustManager	是	是	否	否	否	否	否	否
+	TOTAL_MONEY									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										

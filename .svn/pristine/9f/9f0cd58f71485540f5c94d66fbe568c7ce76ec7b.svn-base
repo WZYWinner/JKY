@@ -1,0 +1,1 @@
+<li  id="div药厂信息" runat="server"><a href="javascript:showRight('/WebUI/BLL.UnAuthFactory/DrugfactoryInfo_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">药厂信息</a></li>

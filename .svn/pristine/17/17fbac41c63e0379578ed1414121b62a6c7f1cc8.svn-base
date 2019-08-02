@@ -1,0 +1,50 @@
+﻿										
+										
+GUO_USER	GUO_USER_ID		否	否	否	否	否	否	否	否
+GUO_USER	USER_NAME		是	是	是	是	否	否	否	否
+GUO_USER	PASSWORD		是	是	是	是	否	否	否	否
+GUO_USER	TELEPHONE		是	是	是	是	否	否	否	否
+GUO_USER	ADDRESS		是	是	是	是	否	否	否	否
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+LIU_USER	LIU_USER_ID		否	否	否	否	否	否	否	否
+LIU_USER	LIU_NAME		是	是	是	是	否	否	否	否
+LIU_USER	PASSWORD		是	是	是	是	否	否	否	否
+lIU_USER	TELEPHONE		是	是	是	是	否	否	否	否
+										
+										
+WANG_USER	WANG_USER_ID		否	否	否	否	否	否	否	否
+WANG_USER	USER_NAME		是	是	是	是	否	否	否	否
+WANG_USER	PASSWORD		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_ID		否	否	否	否	否	否	否	否
+ORDER_FORM	ORDER_TIME		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_USER		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_PRICE		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_MERCHANTS		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_STATUS		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_DETAIL_ID		否	否	否	否	否	否	否	否
+ORDER_DETAIL	ORDER_ID		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_UNIT_PRICE		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_NUM		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_SUBTOTAL		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_NOTE		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_DISCOUNTS		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_TOTAL_PRICE		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_REAL_PEICE		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_TEL		是	是	是	是	否	否	否	否

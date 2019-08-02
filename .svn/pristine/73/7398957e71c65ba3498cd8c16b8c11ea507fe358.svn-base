@@ -1,0 +1,411 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MySql.Data.MySqlClient;
+using Yaohuasoft.Framework.Library;
+using Yaohuasoft.Framework.DAL;
+using System.Data;
+namespace Yaohuasoft.Framework.BLL.DrugFactory
+{
+    public static partial class  DrugfactoryInfoBLL
+    {
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Add(DrugfactoryInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugfactoryInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Merge(DrugfactoryInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugfactoryInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID删除单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Delete(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ret = DrugfactoryInfoDAL.Delete(0, id,0);
+            return ret;
+        }
+        public static DrugfactoryInfoAuditDALEntity    Entity2AuditEntity2(DrugfactoryInfoDALEntity   entity)
+        {
+            DrugfactoryInfoAuditDALEntity result = new DrugfactoryInfoAuditDALEntity();
+            result.FactoryId = entity.FactoryId;
+            result.FactoryName = entity.FactoryName;
+            result.FactoryGrade = entity.FactoryGrade;
+            result.FactoryLegal = entity.FactoryLegal;
+            result.AreaId = entity.AreaId;
+            result.FactoryAddress = entity.FactoryAddress;
+            result.FactoryTel = entity.FactoryTel;
+            result.FactoryFax = entity.FactoryFax;
+            result.FactoryZip = entity.FactoryZip;
+            result.FactoryWebsite = entity.FactoryWebsite;
+            result.FactoryLogo = entity.FactoryLogo;
+            result.FactorySynopsis = entity.FactorySynopsis;
+            result.FactoryDynamic = entity.FactoryDynamic;
+            result.FactoryType = entity.FactoryType;
+            result.GmpLicensePic = entity.GmpLicensePic;
+            result.GspLicensePic = entity.GspLicensePic;
+            result.BusinessLicencePic = entity.BusinessLicencePic;
+            result.FactoryDrugtypes = entity.FactoryDrugtypes;
+            result.UserId = entity.UserId;
+            result.FactoryMap = entity.FactoryMap;
+            result.LegalIdentityPic = entity.LegalIdentityPic;
+            result.LegalName = entity.LegalName;
+            result.LegalIdentity = entity.LegalIdentity;
+            result.BusinessLicenceTime = entity.BusinessLicenceTime;
+            result.BusinessLicenceNum = entity.BusinessLicenceNum;
+            result.FactoryEmail = entity.FactoryEmail;
+            result.LegalTel = entity.LegalTel;
+            result.FactoryQq = entity.FactoryQq;
+            result.PowerIndex = entity.PowerIndex;
+            result.IsSeo = entity.IsSeo;
+            result.SeoTitle = entity.SeoTitle;
+            result.SeoKeywords = entity.SeoKeywords;
+            result.SeoDescription = entity.SeoDescription;
+            result.EditUserName = entity.EditUserName;
+            result.EditTime = entity.EditTime;
+            result.AuditState = entity.AuditState;
+            result.AuditReason = entity.AuditReason;
+            result.AuditRemark = entity.AuditRemark;
+            result.AuditTime = entity.AuditTime;
+            result.AuditUserName = entity.AuditUserName;
+            return result;
+        }
+        /// <summary>
+        /// 根据ID提交审核单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int ShenQingById(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【根据ID提交申请】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID同意单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int TongYi(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【同意审核】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID拒绝单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int JuJue(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【拒绝审核】的代码
+            {
+            }
+            {
+            }
+            return ret;
+        }
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Save(DrugfactoryInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证名称
+            if (string.IsNullOrEmpty(entity.FactoryId.ToStr()))
+                return ret;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugfactoryInfoDAL.Update(0, entity,0);
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID获取单个实体
+        /// </summary>
+        public static DrugfactoryInfoDALEntity GetEntity(string id,string corpId,string departmentId,string userName)
+        {
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return null;
+            //实体获取
+            var entity = DrugfactoryInfoDAL.Select(0, id,0);
+            return entity;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugfactoryInfoDALEntity> GetList( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList,
+             int CurrentPageIndex, int PageSize,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugfactoryInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugfactoryInfoQueryParameter();
+            if (dropList["FactoryGrade"].IsNullOrEmptys()==false) parm.EqualTo.FactoryGrade = dropList["FactoryGrade"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["FactoryName"].IsNullOrEmptys() == false) parm.Like.FactoryName = textBoxInOne["FactoryName"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+            parm.Pager.PageIndex = CurrentPageIndex-1;//数据从索引0开始
+            parm.Pager.OnePageSize = PageSize;
+            //统计查询  分页使用
+            count = DrugfactoryInfoDAL.Count(0, parm,0);
+            //数据库查询
+            list = DrugfactoryInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugfactoryInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugfactoryInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugfactoryInfoDALEntity> GetList4Export( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList
+            ,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugfactoryInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugfactoryInfoQueryParameter();
+            if (dropList["FactoryGrade"].IsNullOrEmptys()==false) parm.EqualTo.FactoryGrade = dropList["FactoryGrade"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["FactoryName"].IsNullOrEmptys() == false) parm.Like.FactoryName = textBoxInOne["FactoryName"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+            parm.Pager.PageIndex = 0;//数据从索引0开始
+            parm.Pager.OnePageSize = OnePageSize4Export;
+            //统计查询  分页使用
+            count = DrugfactoryInfoDAL.Count(0, parm,0);
+            //排序
+            parm.OrderBy.Add("FactoryId", YaohuaOrderByType.Desc);
+            //数据库查询
+            list = DrugfactoryInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugfactoryInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugfactoryInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        public static string ImportExcel2Db(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugfactoryInfoDALEntity[] list = DrugfactoryInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugfactoryInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                DrugfactoryInfoDALEntity oldEntity = null;
+                if (item.FactoryId != null)
+                    oldEntity = DrugfactoryInfoBLL.GetEntity(item.FactoryId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            ////将新数据写入
+                            Save(item, corpId, departmentId, userName);
+                            ////
+                            OkCount++;
+                        }
+                    break;
+                default:
+                    break;
+            }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        public static string ImportExcel2Db4Audit(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugfactoryInfoDALEntity[] list = DrugfactoryInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugfactoryInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                DrugfactoryInfoDALEntity oldEntity = null;
+                if (item.FactoryId != null)
+                    oldEntity = DrugfactoryInfoBLL.GetEntity(item.FactoryId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            var auditEntity2 = Entity2AuditEntity2(item);
+                            auditEntity2.AuditState = "待审核";
+                            DrugfactoryInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            var auditEntity2=Entity2AuditEntity2(item);
+                            auditEntity2.AuditState="待审核";
+                            DrugfactoryInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                    break;
+                default:
+                    break;
+                }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        /// <summary>
+        /// 导出时最多导出多少条
+        /// </summary>
+        static public int OnePageSize4Export = 1000;
+        /// <summary>
+        /// 将实体数组转化为DataTable
+        /// 取最先N条
+        /// </summary>
+        /// <param name="input">数据列表</param>
+        /// <param name="TopCount">取最先N条</param>
+        /// <returns></returns>
+        static public DataTable EntityList2DataTableCn( DrugfactoryInfoDALEntity[] input)
+        {
+            DataTable result = new DataTable();
+            List<DrugfactoryInfoDALEntity> list = new List<DrugfactoryInfoDALEntity>();
+            ////将LIST列表的ID变成名字
+            foreach (var item in input)
+            {
+                ////克隆后加入新列表
+                DrugfactoryInfoDALEntity entity = item.Clone();
+                list.Add(entity);
+            }
+            ////构建DataTable的列
+            result.Columns.Add(" ", typeof(string));
+            int i = 0;
+            ////填充DataTable的数据
+            foreach (DrugfactoryInfoDALEntity item in input)
+            {
+                result.Rows.Add(
+                "");
+                i++;
+            }
+            return result;
+        }
+    }
+}

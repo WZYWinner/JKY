@@ -1,0 +1,89 @@
+﻿
+.ticket-detail .info-panel {
+    background: #eaedf1 none repeat scroll 0 0;
+    padding: 20px 20px 14px;
+}
+.ticket-detail .attach {
+    display: inline-block;
+    margin-left: 8px;
+}
+.ticket-detail .attach .current-border {
+    border: 2px solid white;
+}
+.ticket-detail .attach .current-border:hover {
+    border: 2px solid #09c;
+}
+.ticket-detail .attach .placeholder-image {
+    height: 30px;
+    left: 4px;
+    position: absolute;
+    top: 3px;
+    width: 30px;
+}
+.ticket-detail .attach .current .current-border {
+    border: 2px solid #09c;
+}
+.ticket-detail .attach .current .arrow-down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #09c;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin: 0 auto;
+    width: 0;
+}
+.ticket-detail .attachImage {
+    border: 1px solid #09c;
+    cursor: pointer;
+    height: 32px;
+    position: relative;
+    width: 32px;
+    z-index: 1000;
+}
+.ticket-detail .operation-link {
+    margin-right: 16px;
+}
+.ticket-detail .form-confirm {
+    background: #f5f6fb none repeat scroll 0 0;
+    padding: 10px 20px;
+}
+.ticket-detail .form-confirm .operation-reopen {
+    line-height: 32px;
+}
+.user-icon {
+    border: 2px solid #d6d6d6;
+    border-radius: 60px;
+    float: left;
+    height: 40px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 40px;
+}
+.user-icon img {
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.message-item {
+    border-top: 1px dashed #bcbcbc;
+    padding: 18px;
+    position: relative;
+}
+.message-item .item-content {
+    margin-top: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.message-item:first-child {
+    border: medium none;
+}
+.message-item:last-child {
+    background: #eafbff none repeat scroll 0 0;
+}
+.score-label {
+    display: none;
+}
+.chat-form .control-label {
+    text-align: left !important;
+}

@@ -1,0 +1,39 @@
+﻿										
+										
+GUO_USER	GUO_USER_ID									
+GUO_USER	USER_NAME		是	是	是	是	否	否	否	否
+GUO_USER	PASSWORD		是	是	是	是	否	否	否	否
+GUO_USER	TELEPHONE		是	是	是	是	否	否	否	否
+GUO_USER	ADDRESS		是	是	是	是	否	否	否	否
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+LIU_USER	LIU_USER_ID									
+LIU_USER	LIU_NAME		是	是	是	是	否	否	否	否
+LIU_USER	PASSWORD		是	是	是	是	否	否	否	否
+										
+										
+WANG_USER	WANG_USER_ID									
+WANG_USER	USER_NAME		是	是	是	是	否	否	否	否
+WANG_USER	PASSWORD		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_ID		否	否	否	否	否	否	否	否
+ORDER_FORM	ORDER_NAME		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_TEL		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_ADDRESS		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_STATUS		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_NOTE		是	是	是	是	否	否	否	否

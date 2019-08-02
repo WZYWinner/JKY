@@ -1,0 +1,2 @@
+﻿ this.div郭用户.Visible = check.CheckPower("GsfAdmin", "郭用户");
+ this.div后台用户.Visible = check.CheckPower("GsfAdmin", "后台用户");

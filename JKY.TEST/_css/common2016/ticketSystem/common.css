@@ -1,0 +1,61 @@
+﻿
+.blue, .blue:hover {
+    color: #09c !important;
+}
+.no-breakline {
+    white-space: nowrap;
+}
+.text-size-12 {
+    font-size: 12px !important;
+}
+.text-size-18 {
+    font-size: 18px !important;
+}
+.text-size-36 {
+    font-size: 36px !important;
+}
+.dashed-line {
+    border-top: 1px dashed #ccc;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-explode {
+    color: #999 !important;
+    margin: 0 !important;
+}
+.margin-bottom-12 {
+    margin-bottom: 12px;
+}
+.popover-inner {
+    color: black;
+}
+.form-inline .simple-form-field {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.form-inline .simple-form-field {
+    display: inline-block;
+    margin: 4px 8px 4px 0;
+    vertical-align: middle;
+}
+.form-inline .form-control-wrap {
+    display: inline-block;
+    vertical-align: middle;
+}
+.inline-block {
+    display: inline-block !important;
+}
+.table-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.dynamic-form .radio {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.step-bar .popover .popover-inner {
+    padding: 0 4px;
+}
+

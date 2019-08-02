@@ -1,0 +1,5 @@
+                this.div反馈信息.Visible = check.CheckPower("BLL.DrugDealer", "反馈信息");
+                this.div友情链接.Visible = check.CheckPower("BLL.DrugDealer", "友情链接");
+                this.div药品信息.Visible = check.CheckPower("BLL.DrugDealer", "药品信息");
+                this.div经销商信息.Visible = check.CheckPower("BLL.DrugDealer", "经销商信息");
+                this.div经销商售药.Visible = check.CheckPower("BLL.DrugDealer", "经销商售药");

@@ -1,0 +1,16 @@
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\JKY.TEST.BLL.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\JKY.TEST.BLL.pdb
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\AspNetPager.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\BouncyCastle.Crypto.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\JKY.TEST.DAL.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\MySql.Data.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\MyXls.SL2.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\net91com.WebControls.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\NPOI.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\Yaohuasoft.Framework2.dll
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\JKY.TEST.DAL.xml
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\NPOI.xml
+D:\JKY.TEST\JKY.TEST.BLL\bin\Debug\Yaohuasoft.Framework2.xml
+D:\JKY.TEST\JKY.TEST.BLL\obj\Debug\JKY.TEST.BLL.dll
+D:\JKY.TEST\JKY.TEST.BLL\obj\Debug\JKY.TEST.BLL.pdb
+D:\JKY.TEST\JKY.TEST.BLL\obj\Debug\JKY.TEST.BLL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,7 @@
+
+
+标签ID#表名#代码
+
+
+
+abcd#DRUG_INFO#TEMPCODE;

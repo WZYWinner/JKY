@@ -1,0 +1,9 @@
+
+
+格式：表名#字段名#代码
+已知变量：  %CorpId%  %DepartmentId%    %UserName%
+说明：表名和字段名可以用*作为通配符
+
+
+LAN_SECOND_MENU#LAN_MENU_ID#entity.LanMenuId = departmentId;
+SYS_USER#PASSWORD#if(entity.Password.Length!=32)entity.Password=entity.Password.MD5_Encode32();////长度不等于32位

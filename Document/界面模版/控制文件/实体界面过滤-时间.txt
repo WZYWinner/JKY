@@ -1,0 +1,5 @@
+BIZ_DEMO_AUDIT 		AUDIT_TIME        	时间
+BIZ_DEMO                DEMO_DATE    	 	时间    
+
+BRAND_INFO	APP_DATE	时间
+BRAND_INFO	REG_DATE	时间

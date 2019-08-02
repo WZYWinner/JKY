@@ -1,0 +1,409 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MySql.Data.MySqlClient;
+using Yaohuasoft.Framework.Library;
+using Yaohuasoft.Framework.DAL;
+using System.Data;
+namespace Yaohuasoft.Framework.BLL.DrugDealer
+{
+    public static partial class  DrugdealerInfoBLL
+    {
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Add(DrugdealerInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugdealerInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Merge(DrugdealerInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugdealerInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID删除单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Delete(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ret = DrugdealerInfoDAL.Delete(0, id,0);
+            return ret;
+        }
+        public static DrugdealerInfoAuditDALEntity    Entity2AuditEntity2(DrugdealerInfoDALEntity   entity)
+        {
+            DrugdealerInfoAuditDALEntity result = new DrugdealerInfoAuditDALEntity();
+            result.DealerId = entity.DealerId;
+            result.DealerName = entity.DealerName;
+            result.DealerGrade = entity.DealerGrade;
+            result.PowerIndex = entity.PowerIndex;
+            result.DealerLogo = entity.DealerLogo;
+            result.BusinessScope = entity.BusinessScope;
+            result.ManageUserId = entity.ManageUserId;
+            result.DealerLinkname = entity.DealerLinkname;
+            result.DealerTel = entity.DealerTel;
+            result.DealerMap = entity.DealerMap;
+            result.DealerSynopsis = entity.DealerSynopsis;
+            result.DealerWebsite = entity.DealerWebsite;
+            result.GspLicensePic = entity.GspLicensePic;
+            result.LegalName = entity.LegalName;
+            result.LegalIdentityPic = entity.LegalIdentityPic;
+            result.LegalIdentity = entity.LegalIdentity;
+            result.BusinessLicencePic = entity.BusinessLicencePic;
+            result.BusinessLicenceNum = entity.BusinessLicenceNum;
+            result.BusinessLicenceTime = entity.BusinessLicenceTime;
+            result.DealerMobile = entity.DealerMobile;
+            result.DealerFax = entity.DealerFax;
+            result.DealerEmail = entity.DealerEmail;
+            result.ZipCode = entity.ZipCode;
+            result.DealerQq = entity.DealerQq;
+            result.AreaId = entity.AreaId;
+            result.DealerAddress = entity.DealerAddress;
+            result.DealerShopwebsite = entity.DealerShopwebsite;
+            result.IsSeo = entity.IsSeo;
+            result.SeoTitle = entity.SeoTitle;
+            result.SeoKeywords = entity.SeoKeywords;
+            result.SeoDescription = entity.SeoDescription;
+            result.AuditState = entity.AuditState;
+            result.AuditReason = entity.AuditReason;
+            result.AuditRemark = entity.AuditRemark;
+            result.AuditTime = entity.AuditTime;
+            result.AuditUserName = entity.AuditUserName;
+            result.EditUserName = entity.EditUserName;
+            result.EditTime = entity.EditTime;
+            return result;
+        }
+        /// <summary>
+        /// 根据ID提交审核单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int ShenQingById(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【根据ID提交申请】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID同意单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int TongYi(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【同意审核】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID拒绝单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int JuJue(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【拒绝审核】的代码
+            {
+            }
+            {
+            }
+            return ret;
+        }
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Save(DrugdealerInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证名称
+            if (string.IsNullOrEmpty(entity.DealerId.ToStr()))
+                return ret;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugdealerInfoDAL.Update(0, entity,0);
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID获取单个实体
+        /// </summary>
+        public static DrugdealerInfoDALEntity GetEntity(string id,string corpId,string departmentId,string userName)
+        {
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return null;
+            //实体获取
+            var entity = DrugdealerInfoDAL.Select(0, id,0);
+            return entity;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugdealerInfoDALEntity> GetList( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList,
+             int CurrentPageIndex, int PageSize,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugdealerInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugdealerInfoQueryParameter();
+            if (dropList["DealerGrade"].IsNullOrEmptys()==false) parm.EqualTo.DealerGrade = dropList["DealerGrade"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["DealerName"].IsNullOrEmptys() == false) parm.Like.DealerName = textBoxInOne["DealerName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+            parm.Pager.PageIndex = CurrentPageIndex-1;//数据从索引0开始
+            parm.Pager.OnePageSize = PageSize;
+            //统计查询  分页使用
+            count = DrugdealerInfoDAL.Count(0, parm,0);
+            //数据库查询
+            list = DrugdealerInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugdealerInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugdealerInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugdealerInfoDALEntity> GetList4Export( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList
+            ,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugdealerInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugdealerInfoQueryParameter();
+            if (dropList["DealerGrade"].IsNullOrEmptys()==false) parm.EqualTo.DealerGrade = dropList["DealerGrade"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["DealerName"].IsNullOrEmptys() == false) parm.Like.DealerName = textBoxInOne["DealerName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+            parm.Pager.PageIndex = 0;//数据从索引0开始
+            parm.Pager.OnePageSize = OnePageSize4Export;
+            //统计查询  分页使用
+            count = DrugdealerInfoDAL.Count(0, parm,0);
+            //排序
+            parm.OrderBy.Add("DealerId", YaohuaOrderByType.Desc);
+            //数据库查询
+            list = DrugdealerInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugdealerInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugdealerInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        public static string ImportExcel2Db(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugdealerInfoDALEntity[] list = DrugdealerInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugdealerInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                DrugdealerInfoDALEntity oldEntity = null;
+                if (item.DealerId != null)
+                    oldEntity = DrugdealerInfoBLL.GetEntity(item.DealerId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            ////将新数据写入
+                            Save(item, corpId, departmentId, userName);
+                            ////
+                            OkCount++;
+                        }
+                    break;
+                default:
+                    break;
+            }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        public static string ImportExcel2Db4Audit(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugdealerInfoDALEntity[] list = DrugdealerInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugdealerInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                DrugdealerInfoDALEntity oldEntity = null;
+                if (item.DealerId != null)
+                    oldEntity = DrugdealerInfoBLL.GetEntity(item.DealerId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            var auditEntity2 = Entity2AuditEntity2(item);
+                            auditEntity2.AuditState = "待审核";
+                            DrugdealerInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            var auditEntity2=Entity2AuditEntity2(item);
+                            auditEntity2.AuditState="待审核";
+                            DrugdealerInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                    break;
+                default:
+                    break;
+                }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        /// <summary>
+        /// 导出时最多导出多少条
+        /// </summary>
+        static public int OnePageSize4Export = 1000;
+        /// <summary>
+        /// 将实体数组转化为DataTable
+        /// 取最先N条
+        /// </summary>
+        /// <param name="input">数据列表</param>
+        /// <param name="TopCount">取最先N条</param>
+        /// <returns></returns>
+        static public DataTable EntityList2DataTableCn( DrugdealerInfoDALEntity[] input)
+        {
+            DataTable result = new DataTable();
+            List<DrugdealerInfoDALEntity> list = new List<DrugdealerInfoDALEntity>();
+            ////将LIST列表的ID变成名字
+            foreach (var item in input)
+            {
+                ////克隆后加入新列表
+                DrugdealerInfoDALEntity entity = item.Clone();
+                list.Add(entity);
+            }
+            ////构建DataTable的列
+            result.Columns.Add(" ", typeof(string));
+            int i = 0;
+            ////填充DataTable的数据
+            foreach (DrugdealerInfoDALEntity item in input)
+            {
+                result.Rows.Add(
+                "");
+                i++;
+            }
+            return result;
+        }
+    }
+}

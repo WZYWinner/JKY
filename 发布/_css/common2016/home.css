@@ -1,0 +1,34 @@
+﻿body {background:#eaedf1;font-size: 14px;color:#333;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+h5,ul,li,ol{margin:0px;padding:0px;}
+ul,li,ol{list-style:none;}
+a{text-decoration:none;}
+em{font-style:normal;}
+span,font{display: inline-block;}
+
+.home_main{position:relative;margin:0px 8px;padding:8px 0px;}
+.home_main_right{min-width:360px;height:180px;position:absolute;right:0px;top:8px;}
+.home_main_left{padding-right:392px;}
+.main_left_top{background:#fff;height:180px;position:relative;}
+.right_top_1{background:#fff;width:180px;height:100%;text-align: center;box-sizing:border-box;}
+.right_top_1 img {background: #fff none repeat scroll 0 0;border-radius: 100px;-moz-border-radius:100px;display: inline-block; height: 50px; margin-top:36px; width: 50px;}
+.right_top_1 h5 {color: #09c !important;font-size: 16px;font-weight: 400;letter-spacing: 0.1em;line-height: 40px;}
+.right_top_1 font {color: #06c;line-height: 34px;width: 100%;font-size:12px;}
+.left_top_2{width:100%;height:100%;}
+.top_2_left{width:180px;height:100%;padding:30px;box-sizing:border-box;float:left;margin-right:16px;background:#fff;}
+.top_2_left ul li{float:left;}
+.top_2_left font{margin:6px 0 18px;width:100%;}
+.top_2_left h5{text-align:center;}
+.top_2_left h5 a{color: #09c !important;font-size: 30px;font-weight: 300;line-height: 24px;text-indent:1em;}
+.top_2_left h5 em{font-size:12px;margin-left:4px;color:#666;}
+
+/* 图片鼠标划过向左移动区域 */
+.main_left_bottom {background: #fff;margin: 16px 0;padding: 10px 0;}
+.main_left_bottom small{display: block;height: 320px;margin: 0 10px;width: 610px;}
+.main_left_bottom small li{float:left;}
+.main_left_bottom small li a{display: block; height: 160px;position: relative;width: 295px;overflow:hidden;}
+.main_left_bottom small li a span{display: block;left: 25px;position: absolute;top: 25px;z-index: 2;}
+.main_left_bottom small li a span h3{font-size: 24px;font-weight: normal;margin-bottom: 15px;}
+.main_left_bottom small li a span p{color: #666;font-size: 14px;margin: 0;}
+.main_left_bottom small li a img{left: 0;position: absolute;top: 0;transition: all 0.3s ease 0s;z-index: 1;}
+.main_left_bottom small li a:hover{cursor:pointer;}
+.main_left_bottom small li a:hover img{left:-10px;}

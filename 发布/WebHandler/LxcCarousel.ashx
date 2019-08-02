@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="LxcCarousel.ashx.cs" Class="Yaohuasoft.Framework.Web.LxcCarousel" %>

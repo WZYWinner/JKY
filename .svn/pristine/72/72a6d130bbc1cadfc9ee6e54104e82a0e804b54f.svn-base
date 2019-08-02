@@ -1,0 +1,280 @@
+﻿									
+									
+SYS_USER	SYS_USER_ID	否	否	否	否	否	否	否	否
+SYS_USER	USER_NAME	是	是	只读	是	否	否	否	否
+SYS_USER	ROLE_ID	下拉	下拉	下拉只读	否	否	否	否	否
+SYS_USER	SYS_TYPE	是	否	下拉	下拉	否	否	否	否
+SYS_USER	CORP_ID	否	否	否	否	否	否	否	否
+SYS_USER	DEPARTMENT_ID	否	否	否	否	否	否	否	否
+SYS_USER	USER_POWER_LIST	否	否	否	否	否	否	否	否
+SYS_USER	PASSWORD	否	否	是	是	否	否	否	否
+SYS_USER	PIC_URL	否	否	否	否	否	否	否	否
+SYS_USER	REAL_NAME	是	是	是	是	否	否	否	否
+SYS_USER	TELEPHONE	是	是	是	是	否	否	否	否
+SYS_USER	EMAIL	否	是	是	是	否	否	否	否
+SYS_USER	QQ	否	是	是	是	否	否	否	否
+SYS_USER	SEX	否	是	下拉	下拉	否	否	否	否
+SYS_USER	AREA_ID	否	否	否	否	否	否	否	否
+SYS_USER	SESSION	否	否	否	否	否	否	否	否
+SYS_USER	LAST_LOGIN_TIME	否	是	只读	否	否	否	否	否
+SYS_ROLE	ROLE_ID	否	否	否	否	否	否	否	否
+SYS_ROLE	ROLE_NAME	是	是	是	是	否	否	否	否
+SYS_ROLE	SYS_TYPE	是	是	下拉	下拉	否	否	否	否
+SYS_ROLE	CORP_ID	否	否	否	否	否	否	否	否
+SYS_ROLE	USER_POWER_LIST	是	是	多选文本	多选文本	否	否	否	否
+SYS_ROLE	EDIT_USER_NAME	是	是	否	否	否	否	否	否
+SYS_ROLE	EDIT_TIME	是	是	否	否	否	否	否	否
+SYS_CORP	CORP_ID	是	是	否	否	否	否	否	否
+SYS_CORP	CORE_CODE	是	是	是	是	否	否	否	否
+SYS_CORP	CORP_NAME	是	是	是	是	否	否	否	否
+SYS_DEPARTMENT	DEPARTMENT_ID	否	否	否	否	否	否	否	否
+SYS_DEPARTMENT	CORP_ID	是	是	下拉	下拉	否	否	否	否
+SYS_DEPARTMENT	DEPARTMENT_CODE	是	是	是	是	否	否	否	否
+SYS_DEPARTMENT	DEPARTMENT_NAME	是	是	是	是	否	否	否	否
+SYS_MENU	MENU_ID	否	否	否	否	否	否	否	否
+SYS_MENU	CN_NAME	是	是	是	是	否	否	否	否
+SYS_MENU	POWER_INDEX	是	是	是	是	否	否	否	否
+SYS_CONFIG	CONFIG_ID	否	否	否	否	否	否	否	否
+SYS_CONFIG	TYPE_ID	是	是	是	是	否	否	否	否
+SYS_CONFIG	POWER_INDEX	是	是	是	是	否	否	否	否
+SYS_CONFIG	CODE	是	是	是	是	否	否	否	否
+SYS_CONFIG	NAME	是	是	是	是	否	否	否	否
+SYS_CONFIG	DESCRIPT	否	是	多行文本	多行文本	否	否	否	否
+SYS_DELETE	DEL_ID	否	是	是	是	否	否	否	否
+SYS_DELETE	DATA_ID	是	是	是	是	否	否	否	否
+SYS_DELETE	DATA_TYPE	是	是	下拉	下拉	否	否	否	否
+SYS_DELETE	DATA_JSON	是	是	是	是	否	否	否	否
+SYS_DELETE	DEL_TIME	是	是	是	是	否	否	否	否
+SYS_AREA	AREA_ID	是	是	是	是	否	否	否	否
+SYS_AREA	AREA_NAME	是	是	是	是	否	否	否	否
+SYS_AREA	AREA_FULL_NAME	是	是	是	是	否	否	否	否
+SYS_AREA	PARENT_ID	是	是	是	是	否	否	否	否
+SYS_AREA	LEVEL_INDEX	是	是	是	是	否	否	否	否
+SYS_AREA	ROOT_ID	是	是	是	是	否	否	否	否
+SYS_AREA	POWER_INDEX	是	是	是	是	否	否	否	否
+SYS_AREA	IS_PRI	是	是	是	是	否	否	否	否
+SYS_AREA	ZIP_CODE	是	是	是	是	否	否	否	否
+									
+									
+LXC_USER	LXC_USER_ID	否	否	否	否	否	否	否	否
+LXC_USER	USER_NAME	是	是	是	是	否	否	否	否
+LXC_USER	USER_PASSWD	是	是	是	是	否	否	否	否
+LXC_USER	USER_TIME	是	是	是	是	否	否	否	否
+									
+LAN_MENU	LAN_MENU_ID	否	否	否	否	否	否	否	否
+LAN_MENU	LAN_MENU_NAME	是	是	是	是	否	否	否	否
+LAN_MENU	LAN_MENU_IMG	是	图片	图片	图片	否	否	否	否
+LAN_MENU	LAN_MENU_POST_IMG	是	图片	图片	图片	否	否	否	否
+									
+LAN_SECOND_MENU	LAN_SECOND_MENU_ID	否	否	否	否	否	否	否	否
+LAN_SECOND_MENU	LAN_MENU_ID	否	否	否	否	否	否	否	否
+LAN_SECOND_MENU	LAN_SECOND_MENU_NAME	是	是	是	是	否	否	否	否
+LAN_SECOND_MENU	LAN_SECOND_MENU_IMG	是	图片	图片	图片	否	否	否	否
+									
+LAN_GOODS	GOODS_ID	否	否	否	否	否	否	否	否
+LAN_GOODS	GOODS_NAME	是	是	是	是	否	否	否	否
+LAN_GOODS	LAN_MENU_PARENT_NAME	是	是	是	下拉	否	否	否	否
+LAN_GOODS	LAN_MENU_SUB_NAME	是	是	是	下拉	否	否	否	否
+LAN_GOODS	GOODS_PRICE	是	是	是	是	否	否	否	否
+LAN_GOODS	GOODS_MSG	是	是	是	是	否	否	否	否
+LAN_GOODS	GOODS_NUM	是	是	是	是	否	否	否	否
+LAN_GOODS	GOODS_TYPE	是	是	是	是	否	否	否	否
+LAN_GOODS	GOODS_SHOWIMG	是	图片	图片	图片	否	否	否	否
+LAN_GOODS	GOODS_MOREIMG	是	多图片	多图片	多图片	否	否	否	否
+									
+LXC_CAROUSEL	LXC_CAROUSEL_ID	否	否	否	否	否	否	否	否
+LXC_CAROUSEL	LXC_CAROUSEL_URL	是	图片	图片	图片	否	否	否	否
+LXC_CAROUSEL	LXC_CAROUSEL_NAME	是	是	是	是	否	否	否	否
+									
+MZQ_GOODS	MZQ_GOODS_ID	否	否	否	否	否	否	否	否
+MZQ_GOODS	 MZQ_GOODS_SELLER	是	是	是	是	否	否	否	否
+MZQ_GOODS	MZQ_GOODS_NAME	是	是	是	是	否	否	否	否
+MZQ_GOODS	GOODS_TYPE	是	是	是	是	否	否	否	否
+MZQ_GOODS	MZQ_GOODS_PRICE	是	是	是	是	否	否	否	否
+MZQ_GOODS	MZQ_GOODS_PIC	是	图片	图片	图片	否	否	否	否
+									
+MZQ_SHOPPINGCAR	MZQ_SHOPPINGCAR_ID	否	否	否	否	否	否	否	否
+MZQ_SHOPPINGCAR	MZQ_GOODS_ID	是	是	是	是	否	否	否	否
+MZQ_SHOPPINGCAR	MZQ_SHOPPINGCAR_NAME	是	是	是	是	否	否	否	否
+MZQ_SHOPPINGCAR	MZQ_SHOPPINGCAR_PRICE	是	是	是	是	否	否	否	否
+MZQ_SHOPPINGCAR	MZQ_SHOPPINGCAR_PIC	是	图片	图片	图片	否	否	否	否
+MZQ_SHOPPINGCAR	GOODS_NUMBER	是	是	是	是	否	否	否	否
+MZQ_SHOPPINGCAR	CHECKED_SATE	是	是	是	是	否	否	否	否
+									
+LXC_GOODS	LXC_GOODS_ID	否	否	否	否	否	否	否	否
+LXC_GOODS	LXC_GOODS_NAME	是	是	是	是	否	否	否	否
+LXC_GOODS	LXC_GOODS_PRICE	是	是	是	是	否	否	否	否
+LXC_GOODS	LXC_GOODS_PIC	是	图片	图片	图片	否	否	否	否
+LXC_GOODS	LXC_GOODS_NUM	是	是	是	是	否	否	否	否
+LXC_GOODS	LXC_GOODS_PICS	是	多图片	多图片	多图片	否	否	否	否
+									
+LXC_SHOPPINGCAR	LXC_SHOPPINGCAR_ID	否	否	否	否	否	否	否	否
+LXC_SHOPPINGCAR	LXC_SHOPPINGCAR_NAME	是	是	是	是	否	否	否	否
+LXC_SHOPPINGCAR	LXC_SHOPPINGCAR_PRICE	是	是	是	是	否	否	否	否
+LXC_SHOPPINGCAR	LXC_SHOPPINGCAR_PIC	是	图片	图片	图片	否	否	否	否
+LXC_SHOPPINGCAR	LXC_SHOPPINGCAR_NUM	是	是	是	是	否	否	否	否
+									
+LAN_ADDRESS	LAN_ADDRESS_ID	否	否	否	否	否	否	否	否
+LAN_ADDRESS	SYS_USER_ID	是	是	是	是	否	否	否	否
+LAN_ADDRESS	LAN_ADDRESS_USERNAME	是	是	是	是	否	否	否	否
+LAN_ADDRESS	LAN_ADDRESS_PHONE	是	是	是	是	否	否	否	否
+LAN_ADDRESS	LAN_ADDRESS_NAME	是	是	是	是	否	否	否	否
+									
+CAROUSEL_ONE	ID	否	否	否	否	否	否	否	否
+CAROUSEL_ONE	SELLER	是	是	是	是	否	否	否	否
+CAROUSEL_ONE	AD_PIC	是	图片	图片	图片	否	否	否	否
+CAROUSEL_ONE	AD_TEXT	是	是	是	是	否	否	否	否
+CAROUSEL_ONE	EDIT_USER	是	是	否	否	否	否	否	否
+CAROUSEL_ONE	EDIT_TIME	是	是	否	否	否	否	否	否
+									
+CAROUSEL_TWO	ID	否	否	否	否	否	否	否	否
+CAROUSEL_TWO	SELLER	是	是	是	是	否	否	否	否
+CAROUSEL_TWO	AD_PIC	是	图片	图片	图片	否	否	否	否
+CAROUSEL_TWO	AD_TEXT	是	是	是	是	否	否	否	否
+CAROUSEL_TWO	EDIT_USER	是	是	否	否	否	否	否	否
+CAROUSEL_TWO	EDIT_TIME	是	是	否	否	否	否	否	否
+									
+USER_INFO	ID	否	否	否	否	否	否	否	否
+USER_INFO	NAME	是	是	是	是	否	否	否	否
+USER_INFO	PWD	是	是	是	是	否	否	否	否
+USER_INFO	HEAD	是	图片	图片	图片	否	否	否	否
+USER_INFO	TEL	是	是	是	是	否	否	否	否
+USER_INFO	EXPERIENCE	是	是	是	是	否	否	否	否
+USER_INFO	EDIT_TIME	是	是	是	是	否	否	否	否
+									
+GOODS_RECOMMEND	ID	否	否	否	否	否	否	否	否
+GOODS_RECOMMEND	GOODS_ID	是	是	是	是	否	否	否	否
+GOODS_RECOMMEND	GOODS_NAME	是	是	是	是	否	否	否	否
+GOODS_RECOMMEND	GOODS_PIC	是	图片	图片	图片	否	否	否	否
+GOODS_RECOMMEND	LENGTH	是	是	是	是	否	否	否	否
+GOODS_RECOMMEND	POSITION	是	是	是	是	否	否	否	否
+GOODS_RECOMMEND	EDIT_USER	是	是	否	否	否	否	否	否
+GOODS_RECOMMEND	EDIT_TIME	是	是	否	否	否	否	否	否
+									
+MZQ_ORDER	BILL_ID	否	否	否	否	否	否	否	否
+MZQ_ORDER	GOODS_ID	是	是	是	是	否	否	否	否
+MZQ_ORDER	SETTLEMENT_MONEY	是	是	是	是	否	否	否	否
+MZQ_ORDER	FREIGHT	是	是	是	是	否	否	否	否
+MZQ_ORDER	SETTLEMENT_TIME	是	是	是	是	否	否	否	否
+MZQ_ORDER	SETTLEMENT_STATE	是	是	是	是	否	否	否	否
+MZQ_ORDER	ADDRESS_ID	是	是	是	是	否	否	否	否
+MZQ_ORDER	USER_ID	是	是	是	是	否	否	否	否
+MZQ_ORDER	BANK_NAME	是	是	是	是	否	否	否	否
+MZQ_ORDER	BANK_NUMBER	是	是	是	是	否	否	否	否
+MZQ_ORDER	PAY_WAY	是	是	是	是	否	否	否	否
+MZQ_ORDER	ENTERPRISE_NOTE	是	是	多行文本	是	否	否	否	否
+									
+MZQ_PAY	            ID	否	否	否	否	否	否	否	否
+MZQ_PAY	USER_ID	是	是	是	是	否	否	否	否
+MZQ_PAY	GOODS_ID	是	是	是	是	否	否	否	否
+MZQ_PAY	GOODS_NAME	是	是	是	是	否	否	否	否
+MZQ_PAY	GOODS_PRICE	是	是	是	是	否	否	否	否
+MZQ_PAY	GOODS_NUMBER	是	是	是	是	否	否	否	否
+MZQ_PAY	BILL_ID	是	是	是	是	否	否	否	否
+MZQ_PAY	SETTLEMENT_STATE	是	是	是	是	否	否	否	否
+MZQ_PAY	SETTLEMENT_TIME	是	是	是	是	否	否	否	否
+MZQ_PAY	ADDRESS_ID	是	是	是	是	否	否	否	否
+MZQ_PAY	GOODS_PIC	是	图片	图片	图片	否	否	否	否
+									
+SIGN_INPRIZE	ID	否	否	否	否	否	否	否	否
+SIGN_INPRIZE	USER_ID	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	SIGN_GRADE	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	SIGN_COUNT	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	CONTINUITY_DAY	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	SIGN_DAY_COUNT	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	INTEGRAL	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	SIGN_TIME	是	是	是	是	否	否	否	否
+SIGN_INPRIZE	EDIT_USER	是	是	否	否	否	否	否	否
+SIGN_INPRIZE	EDIT_TIME	是	是	否	否	否	否	否	否
+									
+ACTIVITY	ID	否	否	否	否	否	否	否	否
+ACTIVITY	TITLE	是	是	是	是	否	否	否	否
+ACTIVITY	SELLER	是	是	是	是	否	否	否	否
+ACTIVITY	ACTIVITY_INTEGRAL	是	是	是	是	否	否	否	否
+ACTIVITY	ACTIVITY_PIC	是	多图片	图片	多图片	否	否	否	否
+ACTIVITY	ACTIVITY_DETAILED	是	是	是	是	否	否	否	否
+ACTIVITY	ACTIVITY_LENGTH	是	是	是	是	否	否	否	否
+ACTIVITY	ACTIVITY_BEGIN_TIME	是	是	是	是	否	否	否	否
+ACTIVITY	ACTIVITY_END_TIME	是	是	是	是	否	否	否	否
+ACTIVITY	EDIT_USER	是	是	否	否	否	否	否	否
+ACTIVITY	EDIT_TIME	是	是	否	否	否	否	否	否
+									
+ SECURITIES_CENTRE	ID	否	否	否	否	否	否	否	否
+ SECURITIES_CENTRE	NUM	是	是	是	是	否	否	否	否
+ SECURITIES_CENTRE	TYPE	是	是	否	否	否	否	否	否
+SECURITIES_CENTRE	GOODS_ID	是	是	是	是	否	否	否	否
+SECURITIES_CENTRE	TICKET_PIC	是	图片	图片	图片	否	否	否	否
+SECURITIES_CENTRE	SELLER	是	是	是	是	否	否	否	否
+SECURITIES_CENTRE	USER_ID	是	是	是	是	否	否	否	否
+SECURITIES_CENTRE	TICKET_INFO	是	是	是	是	否	否	否	否
+SECURITIES_CENTRE	END_TIME	是	是	是	是	否	否	否	否
+ SECURITIES_CENTRE	 SECURITIES_CENTRE_TIME	是	是	是	是	否	否	否	否
+ SECURITIES_CENTRE	DISABLE	是	是	是	是	否	否	否	否
+ SECURITIES_CENTRE	EDIT_USER	是	是	否	否	否	否	否	否
+ SECURITIES_CENTRE	EDIT_TIME	是	是	否	否	否	否	否	否
+LXC_ADDRESS	LXC_ADDRESS_ID	否	否	否	否	否	否	否	否
+LXC_ADDRESS	LXC_ADDRESS_NAME	是	是	是	是	否	否	否	否
+LXC_ADDRESS	LXC_ADDRESS_PHONE	是	是	是	是	否	否	否	否
+LXC_ADDRESS	LXC_ADDRESS_ADRES	是	是	是	是	否	否	否	否
+LXC_ADDRESS	LXC_ADDRESS_STATUS	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_ID	否	否	否	否	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_NAME	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_PRICE	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_PIC	是	图片	图片	图片	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_NUM	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_ADDRESS_NAME	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_ADDRESS_PHONE	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_ADDRESS_ADRES	是	是	是	是	否	否	否	否
+LXC_SUBMIT	LXC_SUBMIT_ADDRESS_TIME	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_ID	否	否	否	否	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_GOODSNUM	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_SUMGOODSPRICE	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_SENTPRICE	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_SUMPRICE	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_TYPE	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_ADDTIME	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_OKTIME	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_USERID	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_USERNAME	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_USERTEL	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_ADDRESS	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_SENDUSER	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_LIST_SENDUSERTEL	是	是	是	是	否	否	否	否
+LAN_ORDER_LIST	LAN_ORDER_TYPE	是	是	是	是	否	否	否	否
+LAN_ORDER_GOOD	LAN_ORDER_GOOD_ID	否	否	否	否	否	否	否	否
+LAN_ORDER_GOOD	LAN_ORDER_LIST_ID	否	否	否	否	否	否	否	否
+LAN_ORDER_GOOD	GOODS_ID	否	否	否	否	否	否	否	否
+LAN_ORDER_GOOD	GOODS_MSG	是	是	是	是	否	否	否	否
+LAN_ORDER_GOOD	GOODS_SHOWIMG	是	图片	图片	图片	否	否	否	否
+LAN_ORDER_GOOD	GOODS_PRICE	是	是	是	是	否	否	否	否
+LAN_ORDER_GOOD	LAN_ORDER_GOOD_NUM	是	是	是	是	否	否	否	否
+LAN_ORDER_GOOD	LAN_ORDER_GOODS_SUMPRICE	是	是	是	是	否	否	否	否
+ MZQ_ADDRESS	ADDRESS_ID	否	否	否	否	否	否	否	否
+ MZQ_ADDRESS	USER_ID	是	是	是	是	否	否	否	否
+ MZQ_ADDRESS	CONSIGNEE_INFO	是	是	是	是	否	否	否	否
+ MZQ_ADDRESS	CONSIGNEE_REGION	是	是	是	是	否	否	否	否
+ MZQ_ADDRESS	REGION_INFO	是	是	三级地区	三级地区	否	否	否	否
+ MZQ_ADDRESS	RECEIVING_ADDRESS	是	是	多行文本	多行文本	否	否	否	否
+ MZQ_ADDRESS	TELEPHONE	是	是	是	是	否	否	否	否
+ MZQ_ADDRESS	STATE	是	是	是	是	否	否	否	否
+									
+LAN_CAROUSEL	LAN_CAROUSEL_ID	否	否	否	否	否	否	否	否
+LAN_CAROUSEL	LAN_CAROUSEL_IMG	是	图片	图片	图片	否	否	否	否
+LAN_CAROUSEL	LAN_CAROUSEL_NAME	是	是	是	是	否	否	否	否
+									
+LAN_USER	LAN_USER_ID	否	否	否	否	否	否	否	否
+LAN_USER	LAN_USER_NAME	是	是	是	是	否	否	否	否
+LAN_USER	LAN_USER_PWD	是	是	是	是	否	否	否	否
+LAN_USER	LAN_USER_REALNAME	是	是	是	是	否	否	否	否
+LAN_USER	LAN_USER_PHONE	是	是	是	是	否	否	否	否
+LAN_USER	LAN_USER_IMG	是	图片	图片	图片	否	否	否	否
+LAN_USER	LAN_USER_SEX	是	是	是	是	否	否	否	否
+LAN_USER	LAN_USER_ADDTIME	是	是	是	是	否	否	否	否
+HUANG_USER	ID	否	否	否	否	否	否	否	否
+HUANG_USER	USER_NAME	是	是	是	是	否	否	否	否
+HUANG_USER	USER_REALNAME	是	是	是	是	否	否	否	否
+HUANG_USER	USER_PHONE	是	是	是	是	否	否	否	否
+HUANG_USER	USER_SEX	是	是	是	是	否	否	否	否
+HUANG_USER	USER_PWD	是	是	是	是	否	否	否	否
+HUANG_USER	USER_QUESTION	是	是	是	是	否	否	否	否
+HUANG_USER	USER_QANSWER	是	是	是	是	否	否	否	否

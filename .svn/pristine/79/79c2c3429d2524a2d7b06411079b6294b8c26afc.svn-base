@@ -1,0 +1,510 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MySql.Data.MySqlClient;
+using Yaohuasoft.Framework.Library;
+using Yaohuasoft.Framework.DAL;
+using System.Data;
+namespace Yaohuasoft.Framework.BLL.DrugShop
+{
+    public static partial class  DrugshopInfoBLL
+    {
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Add(DrugshopInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugshopInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Merge(DrugshopInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugshopInfoDAL.Merge(0, entity,0);
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID删除单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Delete(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ret = DrugshopInfoDAL.Delete(0, id,0);
+            return ret;
+        }
+        public static DrugshopInfoAuditDALEntity    Entity2AuditEntity2(DrugshopInfoDALEntity   entity)
+        {
+            DrugshopInfoAuditDALEntity result = new DrugshopInfoAuditDALEntity();
+            result.ShopId = entity.ShopId;
+            result.ShopName = entity.ShopName;
+            result.IsVerify = entity.IsVerify;
+            result.ShopLegal = entity.ShopLegal;
+            result.PowerIndex = entity.PowerIndex;
+            result.ShopGrade = entity.ShopGrade;
+            result.AreaId = entity.AreaId;
+            result.ShopAddress = entity.ShopAddress;
+            result.ShopTime = entity.ShopTime;
+            result.OnHours = entity.OnHours;
+            result.OffHours = entity.OffHours;
+            result.ShopEmail = entity.ShopEmail;
+            result.ShopZip = entity.ShopZip;
+            result.ShopQq = entity.ShopQq;
+            result.ShopLogo = entity.ShopLogo;
+            result.ShopTel = entity.ShopTel;
+            result.ShopMobile = entity.ShopMobile;
+            result.ShopFax = entity.ShopFax;
+            result.ShopSynopsis = entity.ShopSynopsis;
+            result.ShopMedicare = entity.ShopMedicare;
+            result.LegalName = entity.LegalName;
+            result.LegalIdentityPic = entity.LegalIdentityPic;
+            result.LegalIdentity = entity.LegalIdentity;
+            result.GmpLicensePic = entity.GmpLicensePic;
+            result.GspLicensePic = entity.GspLicensePic;
+            result.BusinessLicencePic = entity.BusinessLicencePic;
+            result.BusinessLicenceNum = entity.BusinessLicenceNum;
+            result.BusinessLicenceTime = entity.BusinessLicenceTime;
+            result.BusinessScope = entity.BusinessScope;
+            result.ShopSpecial = entity.ShopSpecial;
+            result.ShopMap = entity.ShopMap;
+            result.ShopBusinessMode = entity.ShopBusinessMode;
+            result.Website = entity.Website;
+            result.UserId = entity.UserId;
+            result.IsSeo = entity.IsSeo;
+            result.SeoTitle = entity.SeoTitle;
+            result.SeoKeywords = entity.SeoKeywords;
+            result.SeoDescription = entity.SeoDescription;
+            result.EditUserName = entity.EditUserName;
+            result.EditTime = entity.EditTime;
+            result.AuditState = entity.AuditState;
+            result.AuditReason = entity.AuditReason;
+            result.AuditRemark = entity.AuditRemark;
+            result.AuditTime = entity.AuditTime;
+            result.AuditUserName = entity.AuditUserName;
+            return result;
+        }
+        /// <summary>
+        /// 根据ID提交审核单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int ShenQingById(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【根据ID提交申请】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID同意单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int TongYi(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【同意审核】的代码
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID拒绝单个实体
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int JuJue(string id,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return ret;
+            //实体赋值获取
+            ////TODO 根据实际情况填写【拒绝审核】的代码
+            {
+            }
+            {
+            }
+            return ret;
+        }
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <returns>执行结果</returns>
+        public static int Save(DrugshopInfoDALEntity entity,string corpId,string departmentId,string userName)
+        {
+            var ret = 0;
+            //验证名称
+            if (string.IsNullOrEmpty(entity.ShopId.ToStr()))
+                return ret;
+            entity.EditUserName=userName;
+entity.EditTime=Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+            ret = DrugshopInfoDAL.Update(0, entity,0);
+            return ret;
+        }
+        /// <summary>
+        /// 根据ID获取单个实体
+        /// </summary>
+        public static DrugshopInfoDALEntity GetEntity(string id,string corpId,string departmentId,string userName)
+        {
+            //验证ID和所属用户ID
+            if (string.IsNullOrEmpty(id.ToStr()))
+                return null;
+            //实体获取
+            var entity = DrugshopInfoDAL.Select(0, id,0);
+            return entity;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugshopInfoDALEntity> GetList( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList,
+             int CurrentPageIndex, int PageSize,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugshopInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugshopInfoQueryParameter();
+            if (dropList["IsVerify"].IsNullOrEmptys()==false) parm.EqualTo.IsVerify = dropList["IsVerify"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["ShopName"].IsNullOrEmptys() == false) parm.Like.ShopName = textBoxInOne["ShopName"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+            parm.Pager.PageIndex = CurrentPageIndex-1;//数据从索引0开始
+            parm.Pager.OnePageSize = PageSize;
+            //统计查询  分页使用
+            count = DrugshopInfoDAL.Count(0, parm,0);
+            //数据库查询
+            list = DrugshopInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugshopInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugshopInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        /// <summary>
+        /// 根据所有者获取列表
+        /// </summary>
+        /// <param name="userid">用户ID</param>
+        /// <param name="pindex">页码</param>
+        /// <param name="psize">页大小</param>
+        /// <param name="count">列表统计</param>
+        /// <returns>项目实体列表</returns>
+        public static List<DrugshopInfoDALEntity> GetList4Export( YaohuaDict<string, string> dropList,
+            YaohuaDict<string, string> textBox,YaohuaDict<string, string> textBoxInOne, YaohuaDict<string, string> sortList
+            ,string corpId,string departmentId,string userName, out int count)
+        {
+            var list = new List<DrugshopInfoDALEntity>();
+            count = 0;
+            //查询实体赋值
+            var parm = new DrugshopInfoQueryParameter();
+            if (dropList["IsVerify"].IsNullOrEmptys()==false) parm.EqualTo.IsVerify = dropList["IsVerify"].ToString();
+            if (textBox["EditTime"].IsNullOrEmptys()==false) parm.Like.EditTime = textBox["EditTime"].ToDatetime();
+            if (textBoxInOne["ShopName"].IsNullOrEmptys() == false) parm.Like.ShopName = textBoxInOne["ShopName"].ToString();
+            if (textBoxInOne["EditUserName"].IsNullOrEmptys() == false) parm.Like.EditUserName = textBoxInOne["EditUserName"].ToString();
+            if (textBoxInOne["AuditUserName"].IsNullOrEmptys() == false) parm.Like.AuditUserName = textBoxInOne["AuditUserName"].ToString();
+            if (sortList.ContainsValue("按最后修改时间排序"))   {parm.OrderBy.Add("EditTime",YaohuaOrderByType.Desc);}
+            parm.Pager.PageIndex = 0;//数据从索引0开始
+            parm.Pager.OnePageSize = OnePageSize4Export;
+            //统计查询  分页使用
+            count = DrugshopInfoDAL.Count(0, parm,0);
+            //排序
+            parm.OrderBy.Add("ShopId", YaohuaOrderByType.Desc);
+            //数据库查询
+            list = DrugshopInfoDAL.Select(0, parm,0).ToList();
+            ////调试用SQL
+            string sql=SystemConfig.SQL;
+            ///////////////////////////////
+            var list2 = new List<DrugshopInfoDALEntity>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                DrugshopInfoDALEntity tmpEntity = list[i].Clone();
+                list2.Add(tmpEntity);
+            }
+            return list2;
+        }
+        public static string ImportExcel2Db(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugshopInfoDALEntity[] list = DrugshopInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugshopInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                item.IsVerify=SysConfigService.GetKey(corpId,"IS_VERIFY",item.IsVerify);
+                item.ShopGrade=SysConfigService.GetKey(corpId,"SHOP_GRADE",item.ShopGrade);
+                item.AreaId=SysConfigService.GetKey(corpId,"AREA_ID",item.AreaId);
+                item.ShopTime=SysConfigService.GetKey(corpId,"SHOP_TIME",item.ShopTime);
+                item.ShopMedicare=SysConfigService.GetKey(corpId,"SHOP_MEDICARE",item.ShopMedicare);
+                item.BusinessScope=SysConfigService.TextList2KeyList(corpId,"BUSINESS_SCOPE",item.BusinessScope);
+                item.ShopBusinessMode=SysConfigService.GetKey(corpId,"SHOP_BUSINESS_MODE",item.ShopBusinessMode);
+                item.IsSeo=SysConfigService.GetKey(corpId,"IS_SEO",item.IsSeo);
+                DrugshopInfoDALEntity oldEntity = null;
+                if (item.ShopId != null)
+                    oldEntity = DrugshopInfoBLL.GetEntity(item.ShopId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            ////将新数据写入
+                            Save(item, corpId, departmentId, userName);
+                            ////
+                            OkCount++;
+                        }
+                    break;
+                default:
+                    break;
+            }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        public static string ImportExcel2Db4Audit(DataTable table, ImportExcelType ImportType, string corpId, string departmentId, string userName)
+        {
+            if (table == null) return "请选择正确的EXCEL文件！";
+            int TotalCount = table.Rows.Count;
+            int OkCount = 0;
+            int AuditCount = 0;
+            DrugshopInfoDALEntity[] list = DrugshopInfoDAL.DataTable2Array4CnName(table, int.MaxValue);
+            foreach (var item in list)
+            {
+                if (DrugshopInfoDALEntity.IsEmpty(item) == true) continue;
+                ////解析数据
+                item.IsVerify=SysConfigService.GetKey(corpId,"IS_VERIFY",item.IsVerify);
+                item.ShopGrade=SysConfigService.GetKey(corpId,"SHOP_GRADE",item.ShopGrade);
+                item.AreaId=SysConfigService.GetKey(corpId,"AREA_ID",item.AreaId);
+                item.ShopTime=SysConfigService.GetKey(corpId,"SHOP_TIME",item.ShopTime);
+                item.ShopMedicare=SysConfigService.GetKey(corpId,"SHOP_MEDICARE",item.ShopMedicare);
+                item.BusinessScope=SysConfigService.TextList2KeyList(corpId,"BUSINESS_SCOPE",item.BusinessScope);
+                item.ShopBusinessMode=SysConfigService.GetKey(corpId,"SHOP_BUSINESS_MODE",item.ShopBusinessMode);
+                item.IsSeo=SysConfigService.GetKey(corpId,"IS_SEO",item.IsSeo);
+                DrugshopInfoDALEntity oldEntity = null;
+                if (item.ShopId != null)
+                    oldEntity = DrugshopInfoBLL.GetEntity(item.ShopId.ToString(), corpId, departmentId, userName);
+            switch (ImportType)
+            {
+                case ImportExcelType.NotExistImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            Add(item, corpId, departmentId, userName);
+                        ////
+                            OkCount++;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                        }
+                    break;
+                    case ImportExcelType.UseImport:
+                        ////如果没有老数据
+                        if (oldEntity == null)
+                        {
+                            ////将新数据写入
+                            var auditEntity2 = Entity2AuditEntity2(item);
+                            auditEntity2.AuditState = "待审核";
+                            DrugshopInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                        ////如果有老数据
+                        else
+                        {
+                            var auditEntity2=Entity2AuditEntity2(item);
+                            auditEntity2.AuditState="待审核";
+                            DrugshopInfoAuditDAL.Merge(0,auditEntity2);
+                            AuditCount++;
+                            break;
+                        }
+                    break;
+                default:
+                    break;
+                }
+            }
+            int NgCount = TotalCount - OkCount;
+            string msg = "";
+            msg = "读取" + TotalCount + "条数据";
+            if (OkCount > 0) msg += "，成功导入" + OkCount + "条";
+            if (NgCount > 0) msg += "，跳过" + NgCount + "条";
+            if (AuditCount > 0) msg += "，有" + AuditCount + "条需要审核";
+            return msg;
+        }
+        /// <summary>
+        /// 导出时最多导出多少条
+        /// </summary>
+        static public int OnePageSize4Export = 1000;
+        /// <summary>
+        /// 将实体数组转化为DataTable
+        /// 取最先N条
+        /// </summary>
+        /// <param name="input">数据列表</param>
+        /// <param name="TopCount">取最先N条</param>
+        /// <returns></returns>
+        static public DataTable EntityList2DataTableCn( DrugshopInfoDALEntity[] input)
+        {
+            DataTable result = new DataTable();
+            List<DrugshopInfoDALEntity> list = new List<DrugshopInfoDALEntity>();
+            ////将LIST列表的ID变成名字
+            foreach (var item in input)
+            {
+                ////克隆后加入新列表
+                DrugshopInfoDALEntity entity = item.Clone();
+                entity.IsVerify=SysConfigService.GetValue("","IS_VERIFY",item.IsVerify);
+                entity.ShopGrade=SysConfigService.GetValue("","SHOP_GRADE",item.ShopGrade);
+                entity.AreaId=SysConfigService.GetValue("","AREA_ID",item.AreaId);
+                entity.ShopTime=SysConfigService.GetValue("","SHOP_TIME",item.ShopTime);
+                entity.ShopMedicare=SysConfigService.GetValue("","SHOP_MEDICARE",item.ShopMedicare);
+                entity.BusinessScope=MultiSelectService.GetValue("","BUSINESS_SCOPE",item.BusinessScope.ToStr());
+                entity.ShopBusinessMode=SysConfigService.GetValue("","SHOP_BUSINESS_MODE",item.ShopBusinessMode);
+                entity.IsSeo=SysConfigService.GetValue("","IS_SEO",item.IsSeo);
+                list.Add(entity);
+            }
+            ////构建DataTable的列
+            result.Columns.Add("药店名称", typeof(string));
+            result.Columns.Add("是否认证", typeof(string));
+            result.Columns.Add("联系人", typeof(string));
+            result.Columns.Add("权重", typeof(int));
+            result.Columns.Add("等级", typeof(string));
+            result.Columns.Add("地区", typeof(string));
+            result.Columns.Add("街道地址", typeof(string));
+            result.Columns.Add("营业时间", typeof(string));
+            result.Columns.Add("上班时间", typeof(string));
+            result.Columns.Add("下班时间", typeof(string));
+            result.Columns.Add("电子邮箱", typeof(string));
+            result.Columns.Add("邮政编码", typeof(string));
+            result.Columns.Add("QQ", typeof(string));
+            result.Columns.Add("公司LOGO", typeof(string));
+            result.Columns.Add("联系电话", typeof(string));
+            result.Columns.Add("联系手机", typeof(string));
+            result.Columns.Add("传真", typeof(string));
+            result.Columns.Add("简介", typeof(string));
+            result.Columns.Add("医保属性", typeof(string));
+            result.Columns.Add("法人/代理人姓名", typeof(string));
+            result.Columns.Add("企业法人/代理人身份证照片", typeof(string));
+            result.Columns.Add("法人/代理人身份证号", typeof(string));
+            result.Columns.Add("营业执照", typeof(string));
+            result.Columns.Add("营业执照号码", typeof(string));
+            result.Columns.Add("营业执照有效期", typeof(string));
+            result.Columns.Add("经营范围", typeof(string));
+            result.Columns.Add("特色服务", typeof(string));
+            result.Columns.Add("地图标注", typeof(string));
+            result.Columns.Add("经营方式", typeof(string));
+            result.Columns.Add("药店官网", typeof(string));
+            result.Columns.Add("管理用户ID", typeof(string));
+            result.Columns.Add("SEO开关", typeof(string));
+            result.Columns.Add("SEO标题", typeof(string));
+            result.Columns.Add("SEO关键字", typeof(string));
+            result.Columns.Add("SEO描述", typeof(string));
+            result.Columns.Add(" ", typeof(string));
+            int i = 0;
+            ////填充DataTable的数据
+            foreach (DrugshopInfoDALEntity item in input)
+            {
+                result.Rows.Add(
+                item.ShopName,
+                item.IsVerify,
+                item.ShopLegal,
+                item.PowerIndex,
+                item.ShopGrade,
+                item.AreaId,
+                item.ShopAddress,
+                item.ShopTime,
+                item.OnHours,
+                item.OffHours,
+                item.ShopEmail,
+                item.ShopZip,
+                item.ShopQq,
+                item.ShopLogo,
+                item.ShopTel,
+                item.ShopMobile,
+                item.ShopFax,
+                item.ShopSynopsis,
+                item.ShopMedicare,
+                item.LegalName,
+                item.LegalIdentityPic,
+                item.LegalIdentity,
+                item.BusinessLicencePic,
+                item.BusinessLicenceNum,
+                item.BusinessLicenceTime,
+                item.BusinessScope,
+                item.ShopSpecial,
+                item.ShopMap,
+                item.ShopBusinessMode,
+                item.Website,
+                item.UserId,
+                item.IsSeo,
+                item.SeoTitle,
+                item.SeoKeywords,
+                item.SeoDescription,
+                "");
+                i++;
+            }
+            return result;
+        }
+    }
+}

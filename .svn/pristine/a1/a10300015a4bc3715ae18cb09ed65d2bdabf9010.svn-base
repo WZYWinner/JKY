@@ -1,0 +1,2 @@
+﻿ this.div王用户.Visible = check.CheckPower("WzyAdmin", "王用户");
+ this.div订单.Visible = check.CheckPower("WzyAdmin", "订单");

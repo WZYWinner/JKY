@@ -1,0 +1,557 @@
+/* ::::: https://res.mail.qq.com/zh_CN/htmledition/style/comm20101b5cf4.css ::::: */
+
+.somail
+{
+	float: right;
+	margin-top: -5px;
+}
+.ico_mailtitle
+{
+	border: medium none;
+	padding: 0px;
+	margin: 0px;
+}
+.ico_mailtitle
+{
+	background: url('../images/mail1acc05.png') no-repeat scroll 1px -82px transparent;
+	width: 26px;
+	height: 16px;
+}
+td, input, button, select, body
+{
+	font-family: "lucida Grande" ,Verdana;
+	font-size: 12px;
+}
+input, textarea, a
+{
+	outline: medium none;
+}
+form, body, ul, li
+{
+	margin: 0px;
+	padding: 0px;
+}
+select, body, textarea
+{
+	background-color: rgb(255, 255, 255);
+	font-size: 12px;
+}
+a
+{
+	text-decoration: none;
+	cursor: pointer;
+	outline: medium none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+body
+{
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
+.f_size
+{
+	font-size: 12px;
+}
+.bold
+{
+	font-weight: bold;
+}
+.normal
+{
+	font-weight: normal;
+}
+.black
+{
+	color: rgb(0, 0, 0);
+}
+.green, .grn, a.green:link, a.green:visited
+{
+	color: rgb(95, 162, 7);
+}
+.underline
+{
+	text-decoration: underline !important;
+}
+.nowrap
+{
+	white-space: nowrap;
+}
+.left, .qm_left
+{
+	float: left;
+}
+.cur_default
+{
+	cursor: default;
+}
+.right, .qm_right
+{
+	float: right;
+}
+.txtflow, .tf
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.tbody
+{
+	padding: 2px 7px 6px 4px;
+}
+.btn_blue, .btn_red, .btn_gray
+{
+	display: inline-block;
+	height: 22px;
+	min-width: 24px;
+	line-height: 22px;
+	font-family: Simsun;
+	padding: 0px 12px;
+	margin: 0px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: default;
+	-moz-user-select: none;
+	border-radius: 3px;
+}
+@media not all
+{
+	.btn_blue, .btn_red, .btn_gray
+	{
+		font-family: "lucida Grande" ,Verdana;
+	}
+}
+.btn_blue:hover, .btn_red:hover, .btn_gray:hover
+{
+	text-decoration: none;
+}
+.btn_blue:active, .btn_red:active, .btn_gray:active, btn_gray_active
+{
+	outline: medium none;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+.btn_gray:focus
+{
+	border-color: rgb(0, 116, 188);
+}
+.btn_gray
+{
+	border: 1px solid rgb(136, 136, 136);
+	color: rgb(0, 0, 0) !important;
+	background: -ms-linear-gradient(top, #EBEDF0, #E2E5E7 100%);
+	background: -moz-linear-gradient(top, #EBEDF0, #E2E5E7 100%);
+	background: -webkit-linear-gradient(top, #EBEDF0, #E2E5E7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EBEDF0', endColorstr='#E2E5E7'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#EBEDF0', endColorstr='#E2E5E7')"; /* IE8 */
+}
+.btn_gray:active, .btn_gray_active
+{
+	border-color: rgb(126, 126, 126);
+	background: -moz-linear-gradient(center top , rgb(235, 235, 235), rgb(243, 243, 243)) repeat scroll 0% 0% transparent;
+}
+@media not all
+{
+}
+.ico_select_s
+{
+	position: absolute;
+	background: url('../images/mail1acc05.png') no-repeat scroll 0px -128px transparent;
+	width: 14px;
+	height: 14px;
+	overflow: hidden;
+	display: block;
+}
+.btn_dropdown
+{
+	position: relative;
+	padding: 0px 22px 0px 7px;
+}
+.btn_dropdown .ico_select_s
+{
+	right: 8px;
+	top: 10px;
+	width: 7px;
+	height: 4px;
+	background-position: -32px -128px;
+}
+.btn_space
+{
+	margin-right: 3px;
+}
+@media not all
+{
+}
+.txt_title
+{
+	font-weight: bold;
+	font-size: 14px;
+	margin: 4px 0px 5px 8px;
+}
+.barspace2
+{
+	padding-left: 9px;
+}
+.Rr
+{
+	background: url('../images/mail1acc05.png') no-repeat scroll -48px -16px transparent;
+}
+.Ru
+{
+	background: url('../images/mail1acc05.png') no-repeat scroll -48px 0px transparent;
+}
+table.O2
+{
+	border-top: 1px solid rgb(255, 255, 255);
+	color: rgb(59, 59, 59);
+}
+table.O2 td
+{
+	border-bottom: 1px solid rgb(193, 200, 210);
+	background-color: rgb(242, 244, 246);
+	padding-top: 0px;
+}
+td.o_title2
+{
+	background: url('../images/mail1acc05.png') repeat-y scroll -128px 0px transparent;
+	margin: 0px;
+	padding: 0px 0px 0px 12px;
+}
+td.o_title2 a:link, td.o_title2 a:visited
+{
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+td.o_title2 a:hover
+{
+	color: rgb(0, 0, 0);
+	text-decoration: underline;
+}
+table.i
+{
+	table-layout: fixed;
+	width: 100%;
+}
+table.i td.cx, table.i td.cx_s
+{
+	vertical-align: top;
+	padding: 3px 0px 1px 5px;
+	width: 24px;
+}
+table.i td.ci
+{
+	vertical-align: top;
+	width: 50px;
+	padding: 4px 0px 0px;
+}
+table.i td.ci div
+{
+	float: left;
+}
+table.i td.ci div.ciz
+{
+	width: 9px;
+	margin-top: 2px;
+}
+table.i td.ci div.cir
+{
+	width: 18px;
+	height: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+table.i td.ci div.cij
+{
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	margin-top: 3px;
+}
+table.i td.l
+{
+	padding-top: 2px;
+	cursor: pointer;
+}
+table.i td.tl
+{
+	width: 117px;
+	padding-right: 12px;
+}
+table.i td.gt
+{
+	color: rgb(160, 160, 160);
+}
+table.i td.gt u
+{
+	text-decoration: none;
+}
+table.i .no
+{
+	font-weight: normal;
+}
+table.i .bold .tt, table.i .bold .tf
+{
+	font-weight: bold;
+}
+table.i td.dt
+{
+	width: 100px;
+	white-space: nowrap;
+}
+table.i td.dt div
+{
+	margin: 0px 0px 0px 12px;
+}
+table.i td.fg_n
+{
+	width: 16px;
+}
+table.i td.fg
+{
+	width: 20px;
+}
+table.M, table.F
+{
+	height: 24px;
+	border-bottom: 1px solid rgb(227, 230, 235);
+	font-weight: normal;
+	clear: both;
+}
+@media not all
+{
+}
+.TagDiv
+{
+	float: right;
+	position: relative;
+	margin-top: -15px;
+	margin-right: -1px;
+	height: 17px;
+	text-align: right;
+	overflow: hidden;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
+@media not all
+{
+}
+table.i td.fg div
+{
+	width: 14px;
+	height: 14px;
+	background: url('../images/mail1acc05.png') no-repeat scroll -32px -160px transparent;
+}
+.graytip_con
+{
+	height: 25px;
+	overflow: hidden;
+	transition: height 0.3s linear 0s;
+}
+.graytip
+{
+	line-height: 24px;
+	text-align: center;
+}
+.sidetip
+{
+	display: inline-block;
+	width: 0px;
+	visibility: hidden;
+	height: 20px;
+	margin-top: -2px;
+	margin-left: 10px;
+	padding-top: 2px;
+	overflow: hidden;
+	transition: width 0.5s linear 0s;
+	position: relative;
+}
+.sidetip_content
+{
+	background: none repeat scroll 0% 0% rgb(255, 255, 233);
+	margin-top: 1px;
+	border: 1px solid rgb(221, 221, 221);
+	padding: 1px 8px 3px;
+	white-space: nowrap;
+	margin-left: 4px;
+}
+.talk
+{
+	position: relative;
+}
+.sidetip
+{
+	position: absolute;
+}
+.sidetip .arrow
+{
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	height: 10px;
+	width: 5px;
+	overflow: hidden;
+}
+.sidetip .arrow_dk, .sidetip .arrow_lt
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+}
+.sidetip .arrow_dk
+{
+	border-width: 5px 5px 5px 0px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	border-color: transparent rgb(208, 208, 208);
+}
+.sidetip .arrow_lt
+{
+	left: 1px;
+	border-width: 4px 4px 4px 0px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	top: 1px;
+	border-color: transparent rgb(255, 255, 233);
+}
+.toolheight
+{
+	_display:inline-block;
+	*display:inline-block;
+}
+.toolheight:after
+{
+	display: block;
+	content: " ";
+	height: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+.toolheight .right, .toolheight .qm_right
+{
+	margin: 4px 0px 0px;
+}
+.toolbgline
+{
+	padding: 7px;
+	background-image: none;
+}
+@media not all
+{
+}
+.hide
+{
+	display: none;
+}
+@media not all, not all
+{
+	.ico_unreads, .ico_reads, .ico_unrss, .ico_remind_today, .ico_smsnotify_today, .ico_news_today, .ico_manage, .ico_mailtitle, .ico_dkim, .composebtn, .checkbtn, .addrbtn, .inputRound .tl, .inputRound .tr, .inputRound .bl, .inputRound .br, .msg_info .left, .rounded_pic .bd_left, .msg_info .right, .rounded_pic .bd_right, .msg_info .bottom_l, .rounded_pic .bd_left_bt, .msg_info .bottom_r, .rounded_pic .bd_right_bt, .roundedTable .tl, .roundedTable .tr, .roundedTable .bl, .roundedTable .br, .Rr, .Ru, .Rc, .Rh, .Rz, .Ju, .Ti, .Ss, .Sf, .Sp, input.s1bg, .ico_profileTips, .ico_offline, .ico_online, .Zh, .o_title, td.o_title2, table.i td.fs1_g, table.i td.fr, .ico_flag, .K, .K1, table.i td.pr0 div, table.i td.pr1 div, .ico_retome, li.fs .icon_folderlist_star, .icon_starred_min, li.fn .icon_folderlist_star, .icon_starred_min_black, li.fs .icon_folderlist_iclist, li.fn .icon_folderlist_iclist, li.fn .icon_starred_min, .icon_subfolder_1, .icon_star, .qm_ico_flagoff, table.i td.fg div, .icon_starred, .qm_ico_flagon, table.i td.fs1 div, .icon_star_b, .icon_starred_b, .qm_dialog .ico_close_d, .qm_dialog .ico_minimize, li.fs .vip_grouptitle, li.fn .vip_grouptitle, .tip_iclist_ico_btn, .tip_iclist_ico_remove_btn, .qm_ico_reopen, .qm_ico_remind, .qm_ico_remarkoff, .qm_ico_remarkon, .qm_ico_print, .qm_ico_addFilter, .qm_ico_quickdown, .qm_ico_quickup, .flogo, .icon_autoarchive, .editRemind, .setRemind, .uncheck, .checked, .fd_on, .fd_off, .imeon, .imeoff, .mixcheck, .ico_send, .ico_sendqzone, .ico_share, .unread_num .ico_unreadnum, .drifticon, .ml_ico_nummail, .wx_qrCode .qr_icon, .ico_reader, .ico_reader_unread, .ico_drift, .ico_flag_green, .new_update_ico, .new_update_ico_dark, .ico_select_s, .ico_Avira, .ico_ADList, .ico_foldSubMail, .mail_editmode .ico_close, .ico_close_mini, .ico_autoMark_on, .ico_autoMark_off
+	{
+	}
+}
+@media �screen
+{
+}
+html
+{
+	top: 0px;
+}
+/* ::::: https://rl.mail.qq.com/cgi-bin/getcss?sid=QbeHJmdRpszYNSh7&ft=skin ::::: */
+
+a, a:link, a:visited, a:hover
+{
+	color: rgb(0, 96, 145);
+}
+@media not all, not all
+{
+}
+a:hover, .txt_title_none a:hover, .tabtitle td a:hover
+{
+	color: rgb(0, 135, 202);
+}
+.toolbg, .toolbg1
+{
+	background: none repeat scroll 0% 0% rgb(165, 217, 240);
+}
+.toolbgline, .tabtitle td, .readmailinfo, .addr_line, .filtertd1, .bartools
+{
+	border-bottom: 1px solid rgb(111, 188, 226);
+}
+.tabtitle td.selected, .colorpanel, .bd, .tpinfo
+{
+	border: 1px solid rgb(111, 188, 226);
+}
+.addrtitle
+{
+	color: rgb(122, 143, 153);
+}
+.txt_title, .txt_title_tab, .biginfo, .tipstitle
+{
+	color: rgb(0, 51, 77);
+}
+.selbar_bt
+{
+	background: none repeat scroll 0% 0% rgb(244, 244, 244);
+	border-top: 1px solid rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(255, 255, 255);
+}
+.graytip
+{
+	background: none repeat scroll 0% 0% rgb(255, 255, 233);
+	border-bottom: 1px solid rgb(227, 230, 235);
+}
+u
+{
+	outline: medium none;
+}
+.tbody
+{
+	min-width: 675px;
+	overflow-x: auto;
+}
+.talk
+{
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	clear: both;
+	border-left: medium none;
+	border-right: medium none;
+	padding: 8px 0px 3px 9px;
+	border-width: medium medium 2px;
+	border-top: medium none;
+}
+.talk b
+{
+	font-size: 14px;
+}
+.talk .one
+{
+	left: 0px;
+}
+.toarea .F, .toarea .M
+{
+	border-bottom-width: 1px;
+}
+.talk label
+{
+	cursor: pointer;
+}
+.talk .cur_default
+{
+	text-decoration: none;
+}
+@media not all, not all
+{
+}

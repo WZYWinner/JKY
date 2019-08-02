@@ -1,0 +1,35 @@
+body{margin:0px;padding:0px; font:12px/1.5 \5b8b\4f53, Arial; color:#333; background:url(../images/login_bg.png) repeat-x scroll 0 0 #063774}
+h3,h4,p,span,input{margin:0px;padding:0px;list-style:none;}
+a{text-decoration:none; color:#333;}
+.login{ background:url(../images/login_pic.png) no-repeat; width:1288px; height:340px; margin:0 auto; padding-top:208px;}
+.login .login-wrap{margin-top:18px;}
+.login .login_box{width:304px; height:277px; padding:28px 48px; margin:0 auto;}
+.login .login_box h3,.login .login_box a.btn{font-size:18px; font-family:"Microsoft yahei",Arial, Helvetica, sans-serif; color:#444647; font-weight:normal;}
+.login .login_box h3,.login .login_box input.btn{font-size:18px; font-family:"Microsoft yahei",Arial, Helvetica, sans-serif; color:#444647; font-weight:normal; border :none;text-align: center;}
+.login .login_box .wrong{height:23px; width:304px;}
+.login .login_box .wrong h4{float:right; color:#ff0000; background:url(../images/wrong.png) left center no-repeat; padding-left:17px; font-weight:normal; font-size:12px;}
+.login .login_box input{margin-bottom:15px;}
+.login .login_box input.name{width:274px; height:34px; line-height:34px; border:1px solid #cfcfcf; background:url(../images/name.png) left center no-repeat; padding-left:28px; font-size:14px; color:black;}
+.login .login_box input.password{width:274px; height:34px; line-height:34px; border:1px solid #cfcfcf; background:url(../images/password.png) left center no-repeat; padding-left:28px; font-size:14px; color:black;}
+.login .login_box input.code{width:166px; height:34px; line-height:34px; border:1px solid #cfcfcf; background:url(../images/password.png) left center no-repeat; padding-left:28px; font-size:14px; color:#bbbaba;}
+.login .login_box img{width:80px; height:34px; border:1px solid #abc2d6; float:right;cursor:pointer;margin:0px 10px;}
+.login .login_box a.btn{width:304px; height:42px; line-height:42px; text-align:center; background:#0c69bd; display:inline-block; color:#fff; margin-bottom:23px;}
+.login .login_box input.btn{width:304px; height:42px; line-height:42px; text-align:center; background:#0c69bd; display:inline-block; color:#fff; margin-bottom:20px;margin-top: 20px;}
+.login .login_box a.btn:hover{background:#117bdb; text-decoration:none;}
+.login .login_box input.btn:hover{background:#117bdb; text-decoration:none;}
+.login .login_box p{text-align:center;color: #b6b6b6;font-size: 14px; font-weight: 300;position: relative; left: -15px;top: 5px;}
+.login .login_box p span{padding:0 10px;}
+.login .login_box input.input_code{width:145px;background:url(../images/valid_icon.png) left center no-repeat;}
+.login .login_box a.bt_img{line-height:51px;}
+.login p{float:left;width:304px;height:28px;}
+.login p span{display:inline-block;}
+.login .login_box p span input{margin:0px;}
+.login .ck_1{float:left;line-height:15px;}
+.login label{margin-left:3px;}
+/*¿Í·þ*/
+.service{text-align:center;position: absolute;bottom: 2em;left: 50%;margin-left: -50%;width: 100%;}
+.service span{font-size:1.5em;color:#ccc;margin-right: 20px;}
+/**/
+.option{ margin-top:-5px;}
+.option a{}
+.option a:hover{color:#0C69BD;}

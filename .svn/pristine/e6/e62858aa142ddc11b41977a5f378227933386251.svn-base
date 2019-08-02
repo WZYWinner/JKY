@@ -1,0 +1,1 @@
+﻿ this.divHUANG用户.Visible = check.CheckPower("SysAdmin", "HUANG用户");

@@ -1,0 +1,4 @@
+﻿.plupload_container .btn_up { background: url('../img/icon_plus.png') no-repeat; cursor: pointer; display: inline-block;height: 60px; width: 60px;  overflow: hidden; }
+.plupload_preview img { border: 1px solid #ddd; border-radius: 2px; height: 100px; width: 100px; overflow: hidden; background: url('../img/throbber.gif') center no-repeat; outline: 0; }
+.plupload_preview { display: inline-block;  float: left; }
+.plupload_container { display: inline-block; vertical-align: top; float: left;margin-right: 5px; }

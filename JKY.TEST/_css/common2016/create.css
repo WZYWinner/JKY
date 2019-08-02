@@ -1,0 +1,84 @@
+﻿fieldset
+{
+    border: 1px solid #ccc;
+    margin: 1% 0;
+    max-width: 95%;
+    padding-left: 1%;
+    width: auto;
+}
+.form-group ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+/*列宽*/
+.form-group ul li
+{
+    width: 99%;
+    margin-bottom: 5px;
+    float: left;
+}
+.form-group ul.col1 li
+{
+    width: 99%;
+}
+.form-group ul.col2 li
+{
+    width: 49%;
+}
+
+.form-group ul.col3 li
+{
+    width: 32%;
+}
+.form-group ul.col4 li
+{
+    width: 24%;
+}
+.form-group ul.col5 li
+{
+    width: 19%;
+}
+.form-group ul.col6 li
+{
+    width: 16%;
+}
+/*ie需要*/
+.form-group .col-sm-4
+{
+    display: inherit;
+    display: inline-block\9;
+}
+/*table标签*/
+.form-horizontal .control-label
+{
+    text-align: right;
+}
+/*单选按钮*/
+.col-sm-4 input[type="radio"], col-sm-4 input[type="checkbox"]
+{
+    margin-top: 7px;
+}
+.col-sm-4
+{
+    width: auto;
+}
+.form-horizontal .txt_left
+{
+    text-align: left;
+}
+.col-sm-4.row
+{
+    min-width: 33.3333%;
+}
+.form-group.btn_block
+{
+    margin-bottom:0;
+    }
+.form-group.btn_block ul li
+{
+    width: auto;
+}
+

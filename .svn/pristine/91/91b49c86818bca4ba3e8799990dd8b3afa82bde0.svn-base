@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ChannelList>
+	<List>
+    <!--认证的失效时间-->
+    <Channel name="失效时间">
+        {year:0,month:6,day:0}
+    </Channel>
+    
+  </List>
+</ChannelList>

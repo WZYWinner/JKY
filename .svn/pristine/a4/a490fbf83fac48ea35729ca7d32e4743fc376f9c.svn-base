@@ -1,0 +1,24 @@
+﻿
+.ticket-attachment .preview {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-top: 20px;
+    max-height: 400px;
+    max-width: 600px;
+    padding: 2px 10px 10px;
+}
+.ticket-attachment .preview .operations {
+    line-height: 8px;
+}
+.ticket-attachment .preview .operations a {
+    color: #666;
+}
+.ticket-attachment .preview .operations a:hover {
+    color: #039;
+}
+.ticket-attachment .preview img.previewImage {
+    margin-top: 5px;
+    max-height: 320px;
+    max-width: 600px;
+}

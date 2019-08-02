@@ -1,0 +1,21 @@
+﻿
+.ticket-scene .type-title {
+    margin-bottom: 20px;
+}
+.question-tree {
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.question-tree dl {
+    margin-bottom: 10px;
+}
+.question-tree dl a {
+    text-decoration: none;
+}
+.question-tree dl .nav > li > a {
+    padding: 3px 15px;
+}
+.question-tree-sub dl .nav > li > a {
+    padding-left: 0;
+}

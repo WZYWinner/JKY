@@ -1,0 +1,163 @@
+/* ::::: https://res.mail.qq.com/zh_CN/htmledition/style/comm20101b5cf4.css ::::: */
+
+.frame_class { padding: 0px; margin: 0px; width: 100%; height: 100%; overflow: hidden; }
+.lgoo { position: absolute; left: 5px; z-index: 6; }
+.topdata { height: 66px; }
+.search_subject { position: absolute; z-index: 11; right: 0px; width: 286px; top: 37px; }
+.search_subject .smartsearch { position: relative; border: 1px solid rgb(187, 187, 187); background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 1px 21px; height: 18px; line-height: 18px; margin: 3px 5px 3px 2px; border-radius: 2px; box-shadow: 0px 1px 1px rgb(230, 230, 230) inset; }
+.search_subject .smartsearch input.searchinput { background: none repeat scroll 0% 0% rgb(255, 255, 255); width: 100%; height: 18px; line-height: 18px; font-size: 12px; padding: 0px; margin: 0px; border: 0px none; outline: medium none; }
+.ss_fronticon, .ss_endicon { position: absolute; }
+.ss_fronticon { left: 2px; top: 2px; }
+.ss_endicon { right: 2px; top: 3px; }
+.ss_icon { width: 18px; height: 16px; display: inline-block; vertical-align: middle; background: url('../images/smartsearch104474.png') no-repeat scroll 0% 0% transparent; }
+.ss_icon_search { background-position: -3px -3px; }
+.ss_icon_arrowdown { background-position: -27px -4px; }
+.imglogo { display: block; float: left; }
+.switch { display: block; float: left; margin: 12px 0px 0px; line-height: 18px; }
+.setinfo { margin: 6px 8px 0px 0px; text-align: right; }
+.topline { height: 11px; }
+.toplineimg { width: 184px; height: 22px; }
+.navbar { width: 179px; height: 107px; margin: 0px; list-style: none outside none; }
+.navbar a { text-decoration: none; font-weight: bold; font-size: 14px; font-family: "lucida Grande",Verdana; }
+.navbottom { width: 179px; height: 13px; }
+.sepline { font: 1px/0px "lucida Grande",Verdana; height: 1px; overflow: hidden; margin: 5px 5px 0px; }
+li.fs, li.fn, li.f_calender { height: 23px; line-height: 22px; padding-left: 13px; padding-right: 2px; margin: 0px 5px 3px; }
+.ico_input { border: medium none; padding: 0px; margin: 0px; width: 16px; height: 16px; }
+.topbg { float: right; width: 486px; height: 66px; }
+.fdwidthmax { width: 100px; }
+.newskinbody ul.navbar li.fs input { float: left; border: 0px none; padding: 0px; width: 20px; height: 20px; margin: -20px 0px 0px 12px; }
+.composebtn { background: url('../images/mail1acc05.png') no-repeat scroll 0px -1px transparent; }
+.checkbtn { background: url('../images/mail1acc05.png') no-repeat scroll 0px -33px transparent; }
+.addrbtn { background: url('../images/mail1acc05.png') no-repeat scroll 0px -63px transparent; }
+.newskinbody ul.navbar li.checkpart { margin: 6px 10px 0px 11px; }
+.newskinbody ul.navbar li.addrpart { margin: 6px 10px 0px 11px; }
+.newskinbody ul.navbar li.fs, .newskinbody ul.navbar li.fs a { height: 24px ! important; }
+.newskinbody ul.navbar li.fs a { line-height: 24px; padding-left: 41px; }
+.newskinbody ul.navbar li.composepart { margin: 0px 10px 0px 11px; padding: 2px 0px 0px; height: 26px; }
+#topDataTd { height: 66px; overflow: hidden; }
+#sepLineTd { position: absolute; top: 66px; left: 0px; right: 0px; height: 11px; }
+#mainFrameContainer { position: absolute; top: 77px; left: 192px; bottom: 0px; right: 0px; overflow: hidden; z-index: 4; }
+#mainFrame { width: 100%; height: 100%; z-index: 5; }
+#leftPanel { position: absolute; top: 77px; width: 179px; left: 8px; bottom: 0px; border-left: 0px none; height: auto; }
+.bodybgbt { position: absolute; top: 77px; width: 179px; bottom: 0px; }
+#navBarDiv { right: 0px; z-index: 3; }
+.listflow { position: absolute; top: 107px; left: 0px; right: 0px; bottom: 13px; overflow: hidden; height: auto; }
+.folderDiv { margin: 0px 5px 0px 6px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; overflow-y: auto; overflow-x: hidden; }
+#navBottomTd { position: absolute; bottom: 0px; height: 13px; overflow: hidden; background-repeat: no-repeat; }
+.newskinbody li.fs, .newskinbody li.fn { padding-left: 0px; padding-right: 0px; }
+.newskinbody li.fs a, .newskinbody li.fn a { display: block; height: 22px; overflow: hidden; padding-left: 13px; text-decoration: none; }
+.newskinbody li.fs a.fdleft, .newskinbody li.fn a.fdleft, .newskinbody li.fs a.fdleft:hover, .newskinbody li.fn a.fdleft:hover { background: none repeat scroll 0% 0% transparent; padding-left: 0px; margin-right: 2px; }
+.newskinbody #my_note li.fs_sep a, .newskinbody li a.fdleft { display: inline; height: auto; }
+.newskinbody li.fs a.fdleft { color: rgb(146, 146, 146); }
+.newskinbody .empty_link { margin: -22px 2px 0px -32px; float: right; }
+.newskinbody li.fs_sep { white-space: nowrap; padding-left: 9px; }
+.newskinbody #my_note li.fs_sep a, .newskinbody #my_note li.fs_sep .fn_list a { white-space: nowrap; padding: 1px 4px 3px; border: medium none ! important; }
+.newskinbody li .fd_on, .newskinbody li .fd_off { float: left; margin: -21px 0px 0px 1px; }
+#newfolders a.fdlist_width, #personalfolders a.fdlist_width, #SysFolderList a.sub_folder_1 { display: block; padding-left: 25px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.sepline { height: 0px ! important; }
+.sepline_height { height: 4px; overflow: hidden; }
+td, input, button, select, body { font-family: "lucida Grande",Verdana; font-size: 12px; }
+ul, li { list-style: none outside none; }
+input, textarea, a { outline: medium none; }
+form, body, ul, li { margin: 0px; padding: 0px; }
+select, body, textarea { background-color: rgb(255, 255, 255); font-size: 12px; }
+img { border: medium none; }
+a { text-decoration: none; cursor: pointer; outline: medium none; }
+a:hover { text-decoration: underline; }
+#msgBoxDIV, #load_process { margin-left: -283px; z-index: 1121; }
+.autosave { white-space: nowrap; color: rgb(255, 255, 255); position: relative; left: 283px; height: 19px; line-height: 19px; }
+.autosave_txt { padding: 0px 6px; background: none repeat scroll 0% 0% rgb(75, 152, 29); }
+body { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.f_size { font-size: 12px; }
+.bold { font-weight: bold; }
+.normal { font-weight: normal; }
+.nowrap { white-space: nowrap; }
+.left, .qm_left { float: left; }
+.pointer { cursor: pointer; }
+.right, .qm_right { float: right; }
+.txtflow, .tf { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+@media not all {
+}
+@media not all {
+}
+@media not all {
+}
+.arrow_fontsize { font-size: 11px; font-family: arial,sans-serif; padding-bottom: 5px; opacity: 0.45; }
+li.fs, li.fn, li.f_calender { height: 22px; line-height: 20px; overflow: hidden; padding: 0px 2px 0px 13px; margin-bottom: 1px; margin-top: 0px; }
+.icon_folderlist_star, .icon_folderlist_iclist { position: absolute; }
+.icon_folderlist_star { margin: 4px 0px 0px 5px; }
+.staradjust {  }
+li.fs .icon_folderlist_star, .icon_starred_min { background: url('../images/mail1acc05.png') no-repeat scroll -48px -176px transparent; width: 12px; height: 12px; }
+@media not all {
+}
+.wqbg { position: absolute; height: 20px; top: 145px; left: 115px; overflow: hidden; z-index: 90; width: 55px; }
+@media not all {
+}
+.menu_base { border-radius: 5px; }
+.menu_base_if { position: absolute; z-index: 1000; background: none repeat scroll 0% 0% transparent; }
+.menu_bd { background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 4px 0px; border: 1px solid rgb(160, 160, 160); border-radius: 3px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+#gplayer_container { padding-right: 10px; margin: 0px; }
+.maillogo { width: 215px; height: 60px; border: medium none; }
+.fd_on { background: url('../images/mail1acc05.png') no-repeat scroll -127px -27px transparent; width: 13px; height: 14px; border: 0px none; padding: 0px; margin: 3px 0px 0px -13px; cursor: pointer; }
+@media not all {
+	.ico_input, .todaybottominfo input, .flaglistinput, .btn_sepline {  }
+}
+.drag_out { z-index: 9999; position: absolute; background-color: rgb(255, 255, 255); border-color: rgb(119, 119, 119); border-style: solid; border-width: 2px; padding: 6px 6px 6px 8px; margin-left: 7px; margin-top: 4px; opacity: 0.8; }
+.drifticon { vertical-align: middle; margin: -4px 0px 0px 5px; background: url('../images/mail1acc05.png') no-repeat scroll 0% 0% transparent; width: 12px; height: 14px; }
+li.fs .drifticon { background-position: 0px -190px; }
+.drifticonadjust {  }
+.backsendsdiv { width: 50%; position: absolute; z-index: 100; top: 0px; left: 25%; text-align: center; }
+.backsendstatus { white-space: nowrap; background: none repeat scroll 0% 0% rgb(75, 152, 29); display: inline-block; color: rgb(255, 255, 255); padding: 5px 8px; font-size: 12px; }
+#folder_ftn_td {  }
+.ftn_uploading { display: none; width: 12px; height: 12px; background: url('../images/uploading104470.gif') no-repeat scroll 0% 0% transparent; margin-left: 3px; vertical-align: -2px; }
+.hidden { visibility: hidden; font-size: 0px; }
+@media not all, not all {
+	.ico_unreads, .ico_reads, .ico_unrss, .ico_remind_today, .ico_smsnotify_today, .ico_news_today, .ico_manage, .ico_mailtitle, .ico_dkim, .composebtn, .checkbtn, .addrbtn, .inputRound .tl, .inputRound .tr, .inputRound .bl, .inputRound .br, .msg_info .left, .rounded_pic .bd_left, .msg_info .right, .rounded_pic .bd_right, .msg_info .bottom_l, .rounded_pic .bd_left_bt, .msg_info .bottom_r, .rounded_pic .bd_right_bt, .roundedTable .tl, .roundedTable .tr, .roundedTable .bl, .roundedTable .br, .Rr, .Ru, .Rc, .Rh, .Rz, .Ju, .Ti, .Ss, .Sf, .Sp, input.s1bg, .ico_profileTips, .ico_offline, .ico_online, .Zh, .o_title, td.o_title2, table.i td.fs1_g, table.i td.fr, .ico_flag, .K, .K1, table.i td.pr0 div, table.i td.pr1 div, .ico_retome, li.fs .icon_folderlist_star, .icon_starred_min, li.fn .icon_folderlist_star, .icon_starred_min_black, li.fs .icon_folderlist_iclist, li.fn .icon_folderlist_iclist, li.fn .icon_starred_min, .icon_subfolder_1, .icon_star, .qm_ico_flagoff, table.i td.fg div, .icon_starred, .qm_ico_flagon, table.i td.fs1 div, .icon_star_b, .icon_starred_b, .qm_dialog .ico_close_d, .qm_dialog .ico_minimize, li.fs .vip_grouptitle, li.fn .vip_grouptitle, .tip_iclist_ico_btn, .tip_iclist_ico_remove_btn, .qm_ico_reopen, .qm_ico_remind, .qm_ico_remarkoff, .qm_ico_remarkon, .qm_ico_print, .qm_ico_addFilter, .qm_ico_quickdown, .qm_ico_quickup, .flogo, .icon_autoarchive, .editRemind, .setRemind, .uncheck, .checked, .fd_on, .fd_off, .imeon, .imeoff, .mixcheck, .ico_send, .ico_sendqzone, .ico_share, .unread_num .ico_unreadnum, .drifticon, .ml_ico_nummail, .wx_qrCode .qr_icon, .ico_reader, .ico_reader_unread, .ico_drift, .ico_flag_green, .new_update_ico, .new_update_ico_dark, .ico_select_s, .ico_Avira, .ico_ADList, .ico_foldSubMail, .mail_editmode .ico_close, .ico_close_mini, .ico_autoMark_on, .ico_autoMark_off {  }
+	.ss_icon {  }
+}
+@media �screen {
+}
+html { top: 0px; }
+/* ::::: https://rl.mail.qq.com/cgi-bin/getcss?sid=QbeHJmdRpszYNSh7&ft=skin ::::: */
+
+a, a:link, a:visited, a:hover { color: rgb(0, 96, 145); }
+li.fs a.fdleft, li.fs a.fdleft:link, li.fs a.fdleft:visited, li.fs a.fdleft:active, li.fd_mg a.fdleft, li.fd_mg a.fdleft:link, li.fd_mg a.fdleft:visited, li.fd_mg a.fdleft:active { color: rgb(226, 241, 220); }
+li.fs a.fdleft:hover, li.fd_mg a.fdleft:hover { color: rgb(255, 255, 255); }
+.newskinbody li.fs a:hover, .newskinbody li.fs_sep a:hover { background: none repeat scroll 0% 0% rgb(97, 139, 58); text-decoration: none; }
+.skinlogo img { background-image: url('../images/logo_16_0104473.gif'); }
+@media not all, not all {
+	.skinlogo img {  }
+}
+.frame_class { padding: 0px; }
+.getuserdata { background: url('../images/top_bg_list104473.gif') repeat-x scroll 0% 0% transparent; }
+.topdata { background: url('../images/top_data104473.gif') no-repeat scroll 0% 0% transparent; }
+.topline { background: url('../images/topline_bg104473.gif') repeat-x scroll 0% 0% transparent; }
+.toplineimg { background: url('../images/topline104473.gif') no-repeat scroll 0% 0% transparent; width: 197px; height: 11px; }
+.bodybgbt { width: 192px; }
+#leftPanel { left: 0px; width: 192px; }
+.listflow { margin-left: 8px; bottom: 5px; }
+.newskinbody { background: url('../images/left_normal_bg104473.jpg') no-repeat scroll 0% 0% transparent; padding-left: 8px; }
+.fdbody { background: url('../images/left_bottom_bg104473.jpg') repeat scroll 0px 596px rgb(103, 185, 220); }
+.folderDiv { margin-right: 14px; }
+li.fn { background: none repeat scroll 0% 0% rgb(79, 115, 51); color: rgb(255, 255, 255); padding-right: 1px; }
+li.fs .icon_folderlist_star { background-position: -80px -176px; }
+li.fs .drifticon { background-position: -32px -190px; }
+a:hover, .txt_title_none a:hover, .tabtitle td a:hover { color: rgb(0, 135, 202); }
+.addrtitle { color: rgb(122, 143, 153); }
+.topbg { float: right; background: url('../images/top_bg104473.jpg') no-repeat scroll right center transparent; width: 745px; height: 68px; }
+.sepline { border-top: 1px solid rgb(75, 97, 35); border-bottom: 1px solid rgb(134, 172, 106); height: 0px; overflow: hidden; }
+li.fs a:link, li.fs a:visited, li.fd_mg a:link, li.fd_mg a:visited { color: rgb(226, 241, 220); }
+li.fn a:link, li.fn a:visited { color: rgb(255, 255, 255); }
+ul.navbar li a:link, ul.navbar li a:visited { color: rgb(0, 96, 145); }
+ul.navbar li.fs a:hover { background: none repeat scroll 0% 0% rgb(123, 199, 240); }
+#mainFrameContainer { left: 195px; }
+#mainFrame {  }
+/* ::::: https://res.mail.qq.com/zh_CN/htmledition/style/webpushtip1ae717.css ::::: */
+
+@media not all {
+}
+@media not all {
+}
+html, body { padding: 0px; margin: 0px; overflow-y: auto; overflow-x: hidden; }
+html { height: 100%; }
+#mainFrame { position: absolute; }

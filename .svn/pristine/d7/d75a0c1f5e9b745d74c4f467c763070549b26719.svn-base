@@ -1,0 +1,4 @@
+
+
+MKDIR   D:\YAOHUA_内网SVN\加密代码\YaohuaEntity\YaohuaEntity\bin\Release\_Config\JKY.TEST\
+COPY  *.INI   D:\YAOHUA_内网SVN\加密代码\YaohuaEntity\YaohuaEntity\bin\Release\_Config\JKY.TEST\

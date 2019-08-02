@@ -1,0 +1,16 @@
+﻿
+（按钮出现在列表页、明细页、编辑页中，所有状态都会出现，需要判断状态的按钮内部的业务逻辑自行判断）
+（处理的方法名直接用转义方式改造）
+（优先匹配本系统的，如果没有则匹配通配符的）
+（模版列表：list,modify,detail,create）
+
+
+
+
+表名		系统		模版列表			按钮1		按钮2		按钮3
+CUST_ORDER_DEL	SysAdmin	list	一键下载
+CUST_ORDER_DEL	BusinessAdmin	list	一键下载
+CUST_ORDER_DEL_B	SysAdmin	list	一键下载
+CUST_ORDER_DEL_B	BusinessAdmin	list	一键下载
+CUST_ORDER_DEL_D	SysAdmin	list	一键下载
+CUST_ORDER_DEL_D	BusinessAdmin	list	一键下载

@@ -1,0 +1,153 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Yaohuasoft.Framework.BLL
+{
+    public static class PayConfig
+    {
+        ////平台公钥
+        public static string PlatformKeyPublic = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCAFhw8Xd8uRFv1tLE/S3gf0B/44WPqYv969l1MWe7Dvjq7OBVsEHNJMVAM3WwMmF0ep0V9GDdBEB9S8nBcWR3TZowY5YAw39UcEnAIZwKiS1KCvK2dMya8FScSmYZ/ISK1Ds7EYDq4eR2cmZZq7wFTKDu/ixwxtTZXATyOtM4orwIDAQAB";
+        ////支付公钥
+        public static string KeyPublic = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmkxtyBhyHZYDypaLEXf+uePmFs2ToAiNacTaDyjgg5IEks7P15uup476/WaQB17UXiht7g0IsTix373TACbGljZm6fKYDm9n6UCdKT+cNCG7b/iFbyGqggjPmwO8POnFMOCcSDfcFpQb/k9k0Dd53Uyy2UKhJ5c3389IgmIfkEYSCIBjbsJ85jeGQ4jy8dOA0Q+xGZUNfeZACjVihHocigrbLCsnexsGa8KnHYn2eayTaPiH3Y/5BXIvhK2VrWuZ2ALD8P6cvEOOMnGxqGS8fn7My2mTZywXYU5GhkDqMMh8u6VidQT0/wgLawqRWrm+03jTubXLFnBbq0f3xDbEjQIDAQAB";// 商户支付Key
+        ////支付私钥
+        public static string PrivateKey = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCaTG3IGHIdlgPKlosRd/654+YWzZOgCI1pxNoPKOCDkgSSzs/Xm66njvr9ZpAHXtReKG3uDQixOLHfvdMAJsaWNmbp8pgOb2fpQJ0pP5w0Ibtv+IVvIaqCCM+bA7w86cUw4JxIN9wWlBv+T2TQN3ndTLLZQqEnlzffz0iCYh+QRhIIgGNuwnzmN4ZDiPLx04DRD7EZlQ195kAKNWKEehyKCtssKyd7GwZrwqcdifZ5rJNo+Ifdj/kFci+ErZWta5nYAsPw/py8Q44ycbGoZLx+fszLaZNnLBdhTkaGQOowyHy7pWJ1BPT/CAtrCpFaub7TeNO5tcsWcFurR/fENsSNAgMBAAECggEAXDCwIy7f9+dq6n9aJhzQ+FY/Yn5/5s1VWM3CD+63fkUfMGwa6NLe3sRiGEdQZOb28i8rx2DIQcMDHBC54kxIuPVWNg+5ZF6R8l6lyEB2XvuMl1EgwI6X5svG5vKrZKW0KQj6t3eQq3jg5Oig7ntG979c2MyjpxkFzFZ4F1bzTupwQamkz3cLeID8vKqDS7CJa6U73KRFQIZU4cY2glKAm6aBKWdkBVPmI8RqxQmhUsnUSvoKROZ6ngcyivvbgrd6X5LUe9AyaujvJKvWfjnsaZPLerZ7yW6+fmHVY91hKKLDqtke1agRTbRjwhGmxv++e/JzNyjc1paMx/CL01CqgQKBgQDayHrVoeh5fxPny8PTUVoJtSkAEPuerxYJK8VhnfoDkTFNxDfkJv1Yad1W2LuGD8fkCA1T+Qa8nZY/como4C4w7HQUBcCcmbNxRDarUsz487jc7JNomvhkoQSPOhLZnft16NlbH76RhyAfOhiafSzgcAKMdeUu9Ig5RNm4P4qnrQKBgQC0i8npxDkB+Vw3DIXHegHbFWX3PmDXrN2HdZ+GWkjSL72FAxuchoDPH5s5T8fdxLcXDKuzGUjZNgyJMpkKJWU7HAv6FftVTv3NuKxUeuUK9SKSCxxXKeKJ5vhKFfu0O9KdTl54dTTE/MnVLNmPTXyegNmMCdStKRHUd27sTLmsYQKBgAhvmITqREuDAeJ7MebRCTa8nIMbJIie2auq22aDL+O5UnxcJ4eNlVE2a8lwe/KUYzHAubrWLFNThDqYEQTI+B78zxECk8W2C3w/lBgRDkQ/KY6jNJ/g8dj3eHSJWba4Z7zJKLBhzfhQjIWHuPEkCHny97YwyZCA70u+AuMe2BrVAoGBAKSkZXjcC/CU6Vb6AHUr+c1D8jxJkh6b8Vi6FsN6SbYC+xz0/JT8wzIebHsTGfxOi3hlgZ5NjHUoKL5kedMazvncVb+1lADzi9eydNSFTaF0chYkM6/47jE7g2hsK6DsfOAeu1+14m1Q6O2RfMSFsQMKFVjzDhLqxOuwDmNGhHuBAoGAK8Jt8MRd4uwTKzHS6htb3UI/NKmjshSMa/ipBmJFUpsXUb/S6xRpO+V6DbBnm3BKBJvEeThTPOIMHxFrsCgnG9tjOPpvP0qtb24J1fohu98OsTkKqbZo4OVY5Hct4ixel9/Qwt7xWoLOKnOS1Fv5HmMJufbtQrA4WwqGTlLIeL8 = ";//商户支付密钥        ////商户支付ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        //商户ID
+        public static string merNo = "800440054111002";
+        //版本号
+        public static string version = "v1.0";
+        ////产品类型
+        //public static string payType = "0126";
+        ////支付产品名
+        //public static string goodsName = "TG娱乐";
+        ////后台异步通知地址
+        public static string notifyUrl = "http://www.tgyule.cn/WebHandler/NotifyHandler.ashx";
+        ////页面通知地址页面回调url 可为空
+        public static string returnUrl = "";
+
+    }
+    public class H5Pay
+    {
+        public string request;//流水号
+        public string version;//版本号
+        public string productId;//产品类型
+        public string transId;//交易类型        
+        public string merNo;//商户号
+        public string orderDate;//订单日期yyyyMMdd
+        public string orderNo;//订单号
+        public string returnUrl;//页面通知地址
+        public string notifyUrl;//异步通知地址
+        public string transAmt;//交易金额  单位分
+        public string commodityName;//商品名称
+        public string signature;//签名
+
+
+    }
+    public class MessagePay
+    {
+        public string requestNo;//流水号
+        public string version;//版本号
+        public string productId;//产品类型
+        public string transId;//交易类型        
+        public string merNo;//商户号
+        public string orderDate;//订单日期yyyyMMdd
+        public string orderNo;//订单号
+        public string returnUrl;//页面通知地址
+        public string notifyUrl;//异步通知地址
+        public string transAmt;//交易金额  单位分
+        public string commodityName;//商品名称
+        public string phoneNo;//银行卡预留手机号
+        public string customerName;//持卡人姓名
+        public string cerdType;//证件类型
+        public string cerdId;//证件号
+        public string acctNo;//银行卡号
+        public string cvn2;//CVN2 信用卡时必填
+        public string expDate;//卡有效期 (YYMM)
+        public string signature;//签名
+
+
+    }
+    public class ConfirmPay
+    {
+        public string requestNo;//流水号
+        public string version;//版本号
+        public string productId;//产品类型
+        public string transId;//交易类型        
+        public string merNo;//商户号
+        public string orderDate;//订单日期yyyyMMdd
+        public string orderNo;//订单号
+        public string returnUrl;//页面通知地址
+        public string notifyUrl;//异步通知地址
+        public string veriCode;//短信验证码
+        public string transAmt;//交易金额  单位分
+        public string commodityName;//商品名称
+        public string phoneNo;//银行卡预留手机号
+        public string customerName;//持卡人姓名
+        public string cerdType;//证件类型
+        public string cerdId;//证件号
+        public string acctNo;//银行卡号
+        public string cvn2;//CVN2 信用卡时必填
+        public string expDate;//卡有效期 (YYMM)
+        public string signature;//签名
+
+    }
+    public class GatewayPay
+    {
+        public string requestNo;//流水号
+        public string version;//版本号
+        public string productId;//产品类型
+        public string transId;//交易类型        
+        public string merNo;//商户号
+        public string orderDate;//订单日期yyyyMMdd
+        public string orderNo;//订单号
+        public string bankCode;//银行编码
+        public string returnUrl;//页面通知地址
+        public string notifyUrl;//异步通知地址
+        public string veriCode;//短信验证码
+        public string transAmt;//交易金额  单位分
+        public string commodityName;//商品名称
+        public string phoneNo;//银行卡预留手机号
+        public string customerName;//持卡人姓名
+        public string cerdType;//证件类型
+        public string cerdId;//证件号
+        public string acctNo;//银行卡号
+        public string cvn2;//CVN2 信用卡时必填
+        public string expDate;//卡有效期 (YYMM)
+        public string signature;//签名
+
+    }
+    public class H5rhPay
+    {
+        public int rand;
+        public string member_id;
+        public string order_id;
+        public string user_name;
+        public decimal order_money;
+        public int istype;
+        public string key;
+        public string notify_url;
+
+    }
+    public class H5Payresult
+    {
+        public string merId;
+        public string orderNo;
+        public string amount;
+        public string mp;
+        public string status;
+        public string trxNo;
+        public string payTime;
+        public string sign;
+    }
+    public class H5rhPayresult
+    {
+        public string order_id;
+        public string key;
+        public string status;
+        public string money;
+        public string realprice;
+        public string rank;     
+
+    }
+}

@@ -1,0 +1,5 @@
+<div class="big_btn"   id="div反馈信息" runat="server"><h3><a href="javascript:showRight('/WebUI/BLL.DrugDealer/DrugFeedback_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">反馈信息</a></h3></div>
+<div class="big_btn"   id="div友情链接" runat="server"><h3><a href="javascript:showRight('/WebUI/BLL.DrugDealer/DrugLink_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">友情链接</a></h3></div>
+<div class="big_btn"   id="div药品信息" runat="server"><h3><a href="javascript:showRight('/WebUI/BLL.DrugDealer/DrugInfo_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">药品信息</a></h3></div>
+<div class="big_btn"   id="div经销商信息" runat="server"><h3><a href="javascript:showRight('/WebUI/BLL.DrugDealer/DrugdealerInfo_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">经销商信息</a></h3></div>
+<div class="big_btn"   id="div经销商售药" runat="server"><h3><a href="javascript:showRight('/WebUI/BLL.DrugDealer/DrugdealerSellDrug_List.aspx?rnd="+YaohuaID.GenRandomInt()+"')">经销商售药</a></h3></div>
