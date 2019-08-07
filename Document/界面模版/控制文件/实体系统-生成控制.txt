@@ -12,10 +12,10 @@ ORDER_DETAIL	SysAdmin			WzyAdmin
 GUO_USER	SysAdmin	GsfAdmin				
 LIU_USER	SysAdmin		LqAdmin			
 GUO_ADDRESS	SysAdmin	GsfAdmin				
-						
-						
-						
-						
+MERCHANT_SORT	SysAdmin	GsfAdmin				
+GUO_MERCHANT	SysAdmin	GsfAdmin				
+GOODS_SORT	SysAdmin	GsfAdmin				
+GUO_GOODS	SysAdmin	GsfAdmin				
 						
 						
 						

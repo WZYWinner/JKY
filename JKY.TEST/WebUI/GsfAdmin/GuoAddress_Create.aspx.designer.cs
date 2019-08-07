@@ -23,6 +23,7 @@ protected global::System.Web.UI.WebControls.TextBox tbHouseNumber;
 protected global::System.Web.UI.WebControls.TextBox tbReceiver;
 protected global::System.Web.UI.WebControls.TextBox tbTelephone;
 protected global::System.Web.UI.WebControls.TextBox tbLaber;
+protected global::System.Web.UI.WebControls.TextBox tbLaberTittle;
  protected global::System.Web.UI.WebControls.Button btn_Save;
 }
 }

@@ -11,6 +11,11 @@ ORDER_DETAIL	是	是	是	是	否	否	否	是	是	是	是	否	否
 LIU_USER	是	是	是	是	否	否	否	是	是	是	是	否	否	
 GUO_ADDRESS	是	是	是	是	否	否	否	是	是	是	是	否	否	
 GUO_USER	是	是	是	是	否	否	否	是	是	是	是	否	否	
+MERCHANT_SORT	是	是	是	是	否	否	否	是	是	是	是	否	否	
+GUO_MERCHANT	是	是	是	是	否	否	否	是	是	是	是	否	否	
+GOODS_SORT	是	是	是	是	否	否	否	是	是	是	是	否	否	
+GUO_GOODS	是	是	是	是	否	否	否	是	是	是	是	否	否	
+														
 王兆宇后台														
 														
 WANG_USER	是	是	是	是	否	否	否	是	是	是	是	否	否	
@@ -26,6 +31,10 @@ ORDER_DETAIL	是	是	是	是	否	否	否	是	是	是	是	否	否
 														
 GUO_USER	是	是	是	是	否	否	否	是	是	是	是	否	否	
 GUO_ADDRESS	是	是	是	是	否	否	否	是	是	是	是	否	否	
+MERCHANT_SORT	是	是	是	是	否	否	否	是	是	是	是	否	否	
+GUO_MERCHANT	是	是	是	是	否	否	否	是	是	是	是	否	否	
+GOODS_SORT	是	是	是	是	否	否	否	是	是	是	是	否	否	
+GUO_GOODS	是	是	是	是	否	否	否	是	是	是	是	否	否	
 刘庆后台														
 														
 LIU_USER	是	是	是	是	否	否	否	是	是	是	是	否	否	

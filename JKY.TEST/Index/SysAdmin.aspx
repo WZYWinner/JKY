@@ -372,7 +372,8 @@
                             </div>
                             <ul style="" class="entrance-nav sidebar-trans">
                                  <li class="nav-item ng-scope" title="郭用户" src="/WebUI/SysAdmin/GuoUser_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">郭用户</span></a></li>
-                                   <li class="nav-item ng-scope" title="郭地址" src="/WebUI/SysAdmin/GuoAddress_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">郭地址</span></a></li>
+                                  <li class="nav-item ng-scope" title="郭地址" src="/WebUI/SysAdmin/GuoAddress_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">郭地址</span></a></li>
+
                             </ul>
                         </div>
 

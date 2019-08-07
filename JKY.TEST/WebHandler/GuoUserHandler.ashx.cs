@@ -80,10 +80,6 @@ namespace Yaohuasoft.Framework.Web
                                     }
                                     else
                                     {
-
-
-
-
                                         var mYID = user.GuoUserId;
                                         var mTEL = user.Telephone;
                                         output = JsonSerializer.Serialize(new { result_state = true,yourID=mYID,yourTel= mTEL, msg = "登录成功" });
@@ -92,78 +88,163 @@ namespace Yaohuasoft.Framework.Web
                             }
                         }
                         break;
-                
-                    case "UpdateRealname":
+
+                    ////创建收货地址
+                    case "newAddress":
                         {
-                            //获取用户ID
+                            //获取用户Id
                             string userId = request["userId"] ?? "";
-                            //获取用户修改后的真实姓名
-                            string realName = request["realName"] ?? "";
-                            //判断参数是否为空
-                            if (userId.IsNullOrEmptys() || userId == "undefined" || realName.IsNullOrEmptys() || realName.IsNullOrEmptys())
+                            //获取收货人省份
+                            string userProvince = request["userProvince"] ?? "";
+                            //获取收货地址
+                            string newAddress = request["newAddress"] ?? "";
+                            //获取收货人门牌号
+                            string userHouseNumber = request["userHouseNumber"] ?? "";
+                            //获取收货人姓名
+                            string userName = request["userName"] ?? "";
+                            //获取收货人电话
+                            string userPhone = request["userPhone"] ?? "";
+                            //获取地址ID方便查询，可以不获取，忽略新建
+                            string guoaddressid = request["guoaddressid"] ?? "";
+                            //获取收货标签头
+                            string labertittle = request["labertittle"]??"";
+                            if (labertittle == "0")
                             {
-                                throw new Exception("参数不能为空");
+                                labertittle = "家";
+                            }else if (labertittle=="1")
+                            {
+                                labertittle = "公司";
                             }
                             else
                             {
-                                //查询用户，判断用户是否存在
-                                LanUserQueryParameter getUser = new LanUserQueryParameter();
-                                getUser.EqualTo.LanUserId = userId;
-                                //存放查询到的用户信息
-                                var user = LanUserDAL.Select(0, getUser).FirstOrDefault();
-                                //判断用户是否存在
-                                if (user.IsNullOrEmptys())
+                                labertittle = "学校";
+                            }
+                            GuoAddressQueryParameter GuoAddress = new GuoAddressQueryParameter();
+                            GuoAddress.EqualTo.GuoAddressId = guoaddressid;
+                            var dAddress = GuoAddressDAL.Select(0, GuoAddress);
+                            var fAddress = GuoAddressDAL.Select(0, GuoAddress).FirstOrDefault();
+                            if (fAddress.IsNullOrEmptys())
+                            {
+                                if (labertittle == "undefined" || labertittle.IsNullOrEmptys() || userId == "undefined" || userId.IsNullOrEmptys() || userName == "undefined" || userName.IsNullOrEmptys() || userProvince == "undefined" || userProvince.IsNullOrEmptys() || userHouseNumber == "undefined" || userHouseNumber.IsNullOrEmptys() || userPhone == "undefined" || userPhone.IsNullOrEmptys() || newAddress == "undefined" || newAddress.IsNullOrEmptys())
                                 {
-                                    throw new Exception("用户不存在");
+                                    throw new Exception("内容不能为空");
                                 }
-                                //用户存在
                                 else
-                                {                                    
-                                    //修改用户的真实姓名
-                                    user.LanUserRealname = realName;
-                                    //更新保存用户信息
-                                    LanUserDAL.Update(0, user);
-                                    output = JsonSerializer.Serialize(new { result_state = true, msg = "真实姓名修改成功！！！" });
+                                {
+                                    var useraddressid = YaohuaID.NewID();
+                                    //创建存储空间，存放一条收货地址
+                                    var entity = new GuoAddressDALEntity();
+                                    //绑定用户的ID
+                                    entity.Laber = userId;
+                                    //存放收货人省份
+                                    entity.Province = userProvince;
+                                    //存放收货地址
+                                    entity.Address = newAddress;
+                                    //存放收货门牌号
+                                    entity.HouseNumber = userHouseNumber;
+                                    //存放收货人名字
+                                    entity.Receiver = userName;
+                                    //存储收货人电话
+                                    entity.Telephone = userPhone;
+                                    //新建收货地址ID
+                                    entity.GuoAddressId = useraddressid;
+                                    //新建标签头
+                                    entity.LaberTittle = labertittle;
+                                    //添加一条新的记录
+                                    GuoAddressDAL.Merge(0, entity);
+                                    string sql = SystemConfig.SQL;
+                                    output = JsonSerializer.Serialize(new { result_state = true, msg = "收货地址添加成功", addressid = useraddressid });
                                 }
                             }
+                            else
+                            {
+                                var entity = new GuoAddressDALEntity();
+                                //绑定用户的ID
+                                entity.Laber = userId;
+                                //存放收货人省份
+                                entity.Province = userProvince;
+                                //存放收货地址
+                                entity.Address = newAddress;
+                                //存放收货门牌号
+                                entity.HouseNumber = userHouseNumber;
+                                //存放收货人名字
+                                entity.Receiver = userName;
+                                //存储收货人电话
+                                entity.Telephone = userPhone;
+                                //新建收货地址ID
+                                entity.GuoAddressId = guoaddressid;
+                                //新建标签头
+                                entity.LaberTittle = labertittle;
+                                //添加一条新的记录
+                                GuoAddressDAL.Merge(0, entity);
+                                string sql = SystemConfig.SQL;
+                                output = JsonSerializer.Serialize(new { result_state = true, msg = "收货地址修改成功" });
+                                //output = JsonSerializer.Serialize(new { result_state = true, msg = "地址成功", address = dAddress });
+                            }
+
+                          
                         }
                         break;
-                    case "UpdatePhone":
+                    case "findUserAddress":
                         {
-                            //获取用户ID
                             string userId = request["userId"] ?? "";
-                            //获取用户修改后的手机号码
-                            string userPhone = request["userPhone"] ?? "";
-                            //判断参数是否为空
-                            if (userId.IsNullOrEmptys() || userId == "undefined" || userPhone.IsNullOrEmptys() || userPhone.IsNullOrEmptys())
+                            //查询数据库中的记录
+                            GuoAddressQueryParameter GuoAddress = new GuoAddressQueryParameter();
+                            GuoAddress.EqualTo.Laber = userId;
+                            var dAddress = GuoAddressDAL.Select(0, GuoAddress);
+                            var fAddress = GuoAddressDAL.Select(0, GuoAddress).FirstOrDefault();
+                            if (fAddress.IsNullOrEmptys())
                             {
-                                throw new Exception("参数不能为空");
+                                throw new Exception("该地址不存在");
                             }
                             else
                             {
-                                //查询用户，判断用户是否存在
-                                LanUserQueryParameter getUser = new LanUserQueryParameter();
-                                getUser.EqualTo.LanUserId = userId;
-                                //存放查询到的用户信息
-                                var user = LanUserDAL.Select(0, getUser).FirstOrDefault();
-                                //判断用户是否存在
-                                if (user.IsNullOrEmptys())
-                                {
-                                    throw new Exception("用户不存在");
-                                }
-                                //用户存在
-                                else
-                                {
-                                    //修改用户的手机号码
-                                    user.LanUserPhone = userPhone;
-                                    //更新保存用户信息
-                                    LanUserDAL.Update(0, user);
-                                    output = JsonSerializer.Serialize(new { result_state = true, msg = "手机号码修改成功！！！" });
-                                }
+                                 output = JsonSerializer.Serialize(new { result_state = true, msg = "地址成功", address=dAddress });
                             }
+                           
+                        }
+                        
+
+                        break;
+                    case "findAddress":
+                        {
+                            string useraddressid = request["useraddressid"] ?? "";
+                            //查询数据库中的记录
+                            GuoAddressQueryParameter GuoAddress = new GuoAddressQueryParameter();
+                            GuoAddress.EqualTo.GuoAddressId = useraddressid;
+                            var dAddress = GuoAddressDAL.Select(0, GuoAddress);
+                            var fAddress = GuoAddressDAL.Select(0, GuoAddress).FirstOrDefault();
+                            if (fAddress.IsNullOrEmptys())
+                            {
+                                throw new Exception("该地址不存在");
+                            }
+                            else
+                            {
+                                output = JsonSerializer.Serialize(new { result_state = true, msg = "地址成功", address = dAddress });
+                            }
+
+                        }
+
+
+                        break;
+                    case "deleteAddress":
+                        {
+                            string guoaddressid = request["guoaddressid"] ?? "";
+
+                            //查询数据库中的记录
+                            GuoAddressQueryParameter address = new GuoAddressQueryParameter();
+                            address.EqualTo.GuoAddressId = guoaddressid;
+                            var deleteAddress = GuoAddressDAL.Select(0, address).FirstOrDefault();
+
+                            //删除一条记录
+                            GuoAddressDAL.Delete(0, guoaddressid);
+                            output = JsonSerializer.Serialize(new { result_state = true, msg = "地址删除成功" });
+
+
                         }
                         break;
                     default:
+                
                         break;
                 }
             }

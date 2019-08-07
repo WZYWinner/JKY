@@ -69,7 +69,7 @@ padding-bottom: 8px !important;
 <tbody>
 <tr> <td  title ="省份" colspan ="3"><span class="col_name">省份：</span><%=HttpUtility.HtmlEncode(entity.Province.ToStr()) %></td><td  title ="地址" colspan ="3"><span class="col_name">地址：</span><%=HttpUtility.HtmlEncode(entity.Address.ToStr()) %></td> </tr>
 <tr> <td  title ="门牌号" colspan ="2"><span class="col_name">门牌号：</span><%=HttpUtility.HtmlEncode(entity.HouseNumber.ToStr()) %></td><td  title ="收货人" colspan ="2"><span class="col_name">收货人：</span><%=HttpUtility.HtmlEncode(entity.Receiver.ToStr()) %></td><td  title ="电话" colspan ="2"><span class="col_name">电话：</span><%=HttpUtility.HtmlEncode(entity.Telephone.ToStr()) %></td> </tr>
-<tr> <td  title ="标签" colspan ="6"><span class="col_name">标签：</span><%=HttpUtility.HtmlEncode(entity.Laber.ToStr()) %></td> </tr>
+<tr> <td  title ="标签" colspan ="3"><span class="col_name">标签：</span><%=HttpUtility.HtmlEncode(entity.Laber.ToStr()) %></td><td  title ="标签头" colspan ="3"><span class="col_name">标签头：</span><%=HttpUtility.HtmlEncode(entity.LaberTittle.ToStr()) %></td> </tr>
 </tbody>
 </table>
 </div>

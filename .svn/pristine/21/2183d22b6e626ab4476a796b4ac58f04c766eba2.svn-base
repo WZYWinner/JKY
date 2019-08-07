@@ -1,0 +1,51 @@
+﻿										
+										
+GUO_USER	GUO_USER_ID	GsfAdmin	否	否	否	否	否	否	否	否
+GUO_USER	USER_NAME	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_USER	PASSWORD	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_USER	TELEPHONE	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_USER	ADDRESS	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	GUO_ADDRESS_ID	GsfAdmin	否	否	否	否	否	否	否	否
+GUO_ADDRESS	PROVINCE	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	ADDRESS	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	HOUSE_NUMBER	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	RECEIVER	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	TELEPHONE	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	LABER	GsfAdmin	是	是	是	是	否	否	否	否
+GUO_ADDRESS	LABER_TITTLE	GsfAdmin	是	是	是	是	否	否	否	否
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+LIU_USER	LIU_USER_ID	LqAdmin	否	否	否	否	否	否	否	否
+LIU_USER	LIU_NAME	LqAdmin	是	是	是	是	否	否	否	否
+LIU_USER	PASSWORD	LqAdmin	是	是	是	是	否	否	否	否
+LIU_USER	TELEPHONE	LqAdmin	是	是	是	是	否	否	否	否
+										
+										
+WANG_USER	WANG_USER_ID		否	否	否	否	否	否	否	否
+WANG_USER	USER_NAME		是	是	是	是	否	否	否	否
+WANG_USER	PASSWORD		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_ID		否	否	否	否	否	否	否	否
+ORDER_FORM	ORDER_USER		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_TIME		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_TOTAL_PRICE		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_DISCOUNTS		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_REAL_PEICE		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_TEL		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_ADDRESS		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_MERCHANTS		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_NOTE		是	是	是	是	否	否	否	否
+ORDER_FORM	ORDER_STATUS		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_DETAIL_ID		否	否	否	否	否	否	否	否
+ORDER_DETAIL	ORDER_ID		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_NAME		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_UNIT_PRICE		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_NUM		是	是	是	是	否	否	否	否
+ORDER_DETAIL	ORDER_SUBTOTAL		是	是	是	是	否	否	否	否

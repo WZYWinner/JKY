@@ -92,3 +92,24 @@ GUO_ADDRESS	HOUSE_NUMBER	是	是	是	是	否	否	否	否
 GUO_ADDRESS	RECEIVER	是	是	是	是	否	否	否	否
 GUO_ADDRESS	TELEPHONE	是	是	是	是	否	否	否	否
 GUO_ADDRESS	LABER	是	是	是	是	否	否	否	否
+GUO_ADDRESS	LABER_TITTLE	是	是	是	是	否	否	否	否
+MERCHANT_SORT	MERCHANT_SORT_ID	否	否	否	否	否	否	否	否
+MERCHANT_SORT	SORT_NAME	是	是	是	是	否	否	否	否
+MERCHANT_SORT	SORT_IMG	是	是	是	是	否	否	否	否
+GUO_MERCHANT	MERCHANT_ID	否	否	否	否	否	否	否	否
+GUO_MERCHANT	MERCHANT_NAME	是	是	是	是	否	否	否	否
+GUO_MERCHANT	MERCHANT_IMG	是	是	是	是	否	否	否	否
+GUO_MERCHANT	MERCHANT_DELIVERY	是	是	是	是	否	否	否	否
+GUO_MERCHANT	LABER	是	是	是	是	否	否	否	否
+GOODS_SORT	GOODS_SORT_ID	否	否	否	否	否	否	否	否
+GOODS_SORT	SORT_NAME	是	是	是	是	否	否	否	否
+GOODS_SORT	LABER	是	是	是	是	否	否	否	否
+GUO_GOODS	GOODS_ID	否	否	否	否	否	否	否	否
+GUO_GOODS	GOODS_NAME	是	是	是	是	否	否	否	否
+GUO_GOODS	GOODS_PRICE	是	是	是	是	否	否	否	否
+GUO_GOODS	GOODS_NUM	是	是	是	是	否	否	否	否
+GUO_GOODS	GOODS_IMG	是	是	是	是	否	否	否	否
+GUO_GOODS	LABER	是	是	是	是	否	否	否	否
+									
+									
+									

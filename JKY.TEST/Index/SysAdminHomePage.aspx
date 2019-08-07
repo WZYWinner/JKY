@@ -59,6 +59,10 @@
         height: 7px;
         background-color: whitesmoke;
         }
+        .top1_bottom2_left .percent{
+        height: 7px;
+        background-color: red;
+        }
         .top1_bottom2_right,.top1_bottom4_right{
         color: #ccc;
         font-size: 12px;
@@ -89,6 +93,32 @@
         color: #777777;
         border: whitesmoke 1px solid;
         }
+        .active{
+        color: deepskyblue !important;
+        border-bottom: 1px solid deepskyblue !important;
+        }
+        .wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        }
+        .blue{
+        width: 25px;
+        height: 13px;
+        background-color: deepskyblue;
+        border-radius: 20%;
+        }
+        .red{
+        width: 25px;
+        height: 13px;
+        background-color: red;
+        border-radius: 20%;
+        margin-left: 8px;
+        }
+        .active1{
+        border: 1px solid deepskyblue !important;
+        }
     </style>
     <script src="/_js/jquery-1.8.2.js" type="text/javascript"></script>
     <script src="/_js/layer/layer.js" type="text/javascript"></script>
@@ -105,9 +135,30 @@
                 area: [x, y],
                 content: url
             });
+            }
+
+        var ali = document.getElementById('ad');
+        var li = ali.getElementsByTagName('li');
+        for (var i = 0; i < li.length; i++) {
+            li[i].onclick = function (e) {
+                clear();
+                e.target.className = 'active'
+            }
         }
+        var clear = function () {
+            for (var i = 0; i < li.length; i++) {
+                li[i].setAttribute('class', '')
+            }
+        }
+        var c = document.getElementById("myCanvas");
+        var cxt = c.getContext("2d");
+        cxt.moveTo(10, 10);
+        cxt.lineTo(10, 150);
+        cxt.lineTo(500, 150);
+        cxt.stroke();
     </script>
 </head>
+
 <body>
     <div class="total">
     <div class="top">
@@ -126,7 +177,9 @@
     <div class="top1_bottom1_right">0张</div>
     </div>
     <div class="top1_bottom2">
-        <div class="top1_bottom2_left"></div>
+        <div class="top1_bottom2_left">
+        <div class="percent" style="width: 80%"></div>
+</div>
         <div class="top1_bottom2_right">0%</div>
         </div>
         <div class="top1_bottom3">
@@ -155,7 +208,9 @@
     <div class="top1_bottom1_right">0条</div>
     </div>
     <div class="top1_bottom2">
-        <div class="top1_bottom2_left"></div>
+        <div class="top1_bottom2_left">
+        <div class="percent" style="width: 80%"></div>
+</div>
         <div class="top1_bottom2_right">0%</div>
         </div>
         <div class="top1_bottom3">
@@ -183,7 +238,9 @@
     <div class="top1_bottom1_right">0单</div>
     </div>
     <div class="top1_bottom2">
-        <div class="top1_bottom2_left"></div>
+        <div class="top1_bottom2_left">
+        <div class="percent" style="width: 80%"></div>
+</div>
         <div class="top1_bottom2_right">0%</div>
         </div>
         <div class="top1_bottom3">
@@ -211,7 +268,9 @@
     <div class="top1_bottom1_right">0单</div>
     </div>
     <div class="top1_bottom2">
-        <div class="top1_bottom2_left"></div>
+        <div class="top1_bottom2_left">
+        <div class="percent" style="width: 80%"></div>
+</div>
         <div class="top1_bottom2_right">0%</div>
         </div>
         <div class="top1_bottom3">
@@ -239,7 +298,9 @@
     <div class="top1_bottom1_right">0位</div>
     </div>
     <div class="top1_bottom2">
-        <div class="top1_bottom2_left"></div>
+        <div class="top1_bottom2_left">
+        <div class="percent" style="width: 80%"></div>
+</div>
         <div class="top1_bottom2_right">0%</div>
         </div>
         <div class="top1_bottom3">
@@ -267,7 +328,9 @@
     <div class="top1_bottom1_right">0台</div>
     </div>
     <div class="top1_bottom2">
-        <div class="top1_bottom2_left"></div>
+        <div class="top1_bottom2_left">
+        <div class="percent" style="width: 80%"></div>
+</div>
         <div class="top1_bottom2_right">0%</div>
         </div>
         <div class="top1_bottom3">
@@ -275,7 +338,9 @@
             <div class="top1_bottom3_right">0台</div>
             </div>
             <div class="top1_bottom4">
-                <div class="top1_bottom4_left"></div>
+                <div class="top1_bottom4_left">
+
+</div>
                 <div class="top1_bottom4_right">0%</div>
             </div>
     </div>
@@ -284,23 +349,33 @@
 </div>
     <div class="bottom">
     <div class="bottom_left">
-    <ul>
-   <a href=""><li>打印量</li></a>
-    <a href=""><li>任务量</li></a>
-    <a href=""><li>工单量</li></a>
-    <a href=""><li>账单量</li></a>
-    <a href=""><li>租户量</li></a>
-    <a href=""><li>设备量</li></a>
+    <ul id="ad">
+   <a href="javascript:;"><li class="active">打印量</li></a>
+    <a href="javascript:;"><li>任务量</li></a>
+    <a href="javascript:;"><li>工单量</li></a>
+    <a href="javascript:;"><li>账单量</li></a>
+    <a href="javascript:;"><li>租户量</li></a>
+    <a href="javascript:;"><li>设备量</li></a>
 </ul>
     </div>
 <div class="bottom_right">
-<ul>
-<li>日</li>
-<li>月</li>
-<li>年</li>
+<ul id="bd">
+<a href=""><li class="active1">日</li></a>
+<a href=""><li>月</li></a>
+<a href=""><li>年</li></a>
 </ul>
 </div>
 </div>
+    <div class="wrap">
+    <div class="blue"></div>
+    <p>黑白纸张</p>
+    <div class="red"></div>
+    <p>彩色纸张</p>
+</div>
+    <%--<div class="tongji"><img src="../images/tongji.jpg" alt=""></div>--%>
+        <canvas id="myCanvas" style="width: 100%;height: 100%">
+    Your browser does not support the canvas element.
+</canvas>
 </div>
     <%--<form id="form1" runat="server">--%>
     <%--<div id="outerwrap">--%>
@@ -353,5 +428,8 @@
         <%--</div>--%>
     <%--</div> --%>
     <%--</form>--%>
+
+
 </body>
+
 </html>

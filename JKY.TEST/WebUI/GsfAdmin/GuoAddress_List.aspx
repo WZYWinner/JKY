@@ -214,6 +214,7 @@ return;
 <th style="    min-width: 80px;">收货人</th>
 <th style="    min-width: 80px;">电话</th>
 <th style="    min-width: 80px;">标签</th>
+<th style="    min-width: 80px;">标签头</th>
  </tr>
  </thead>
  <tbody>
@@ -230,6 +231,7 @@ return;
  <td class="c_point" _url="" _Color="" _Key="" onclick="javascript:pic_list_click(this)" ><span> <%#HttpUtility.HtmlEncode(Eval("Receiver").ToStrCn()) %> </span></td>
  <td class="c_point" _url="" _Color="" _Key="" onclick="javascript:pic_list_click(this)" ><span> <%#HttpUtility.HtmlEncode(Eval("Telephone").ToStrCn()) %> </span></td>
  <td class="c_point" _url="" _Color="" _Key="" onclick="javascript:pic_list_click(this)" ><span> <%#HttpUtility.HtmlEncode(Eval("Laber").ToStrCn()) %> </span></td>
+ <td class="c_point" _url="" _Color="" _Key="" onclick="javascript:pic_list_click(this)" ><span> <%#HttpUtility.HtmlEncode(Eval("LaberTittle").ToStrCn()) %> </span></td>
  </tr>
  </ItemTemplate>
  <EmptyDataTemplate>

@@ -12,10 +12,10 @@ ORDER_DETAIL	订单明细
 GUO_USER	郭用户
 LIU_USER	刘用户
 GUO_ADDRESS	郭地址
-	
-	
-	
-	
+MERCHANT_SORT	商家分类
+GUO_MERCHANT	商家
+GOODS_SORT	商品分类
+GUO_GOODS	商品
 	
 	
 	

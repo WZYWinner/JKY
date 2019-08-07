@@ -76,6 +76,7 @@ tbHouseNumber.Text=entity.HouseNumber.ToStr();
 tbReceiver.Text=entity.Receiver.ToStr();
 tbTelephone.Text=entity.Telephone.ToStr();
 tbLaber.Text=entity.Laber.ToStr();
+tbLaberTittle.Text=entity.LaberTittle.ToStr();
 ////GuoAddressModify初始化替换代码之后
 }
 private void InitEntity()
@@ -121,6 +122,7 @@ else
  entity.Receiver=tbReceiver.Text.ToString();
  entity.Telephone=tbTelephone.Text.ToString();
  entity.Laber=tbLaber.Text.ToString();
+ entity.LaberTittle=tbLaberTittle.Text.ToString();
 ////GuoAddressModify赋值之后保存
 ////GuoAddressModify保存的处理之前
 {

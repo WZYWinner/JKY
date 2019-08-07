@@ -72,6 +72,7 @@ var entity = new GuoAddressDALEntity();
  entity.Receiver=tbReceiver.Text.ToString();
  entity.Telephone=tbTelephone.Text.ToString();
  entity.Laber=tbLaber.Text.ToString();
+ entity.LaberTittle=tbLaberTittle.Text.ToString();
 ////GuoAddressCreate赋值之后保存
 ////GuoAddressCreate保存的处理之前
 {

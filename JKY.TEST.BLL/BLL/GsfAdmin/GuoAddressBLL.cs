@@ -354,6 +354,7 @@ result.Columns.Add("门牌号", typeof(string));
 result.Columns.Add("收货人", typeof(string));
 result.Columns.Add("电话", typeof(string));
 result.Columns.Add("标签", typeof(string));
+result.Columns.Add("标签头", typeof(string));
 result.Columns.Add(" ", typeof(string));
 int i = 0;
 ////填充DataTable的数据
@@ -366,6 +367,7 @@ item.HouseNumber,
 item.Receiver,
 item.Telephone,
 item.Laber,
+item.LaberTittle,
 "");
 i++;
 }
