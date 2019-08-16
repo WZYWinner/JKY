@@ -1,0 +1,1 @@
+﻿<li class="nav-item ng-scope" title="用户地址" src="/WebUI/SysAdmin/LiuAddress_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">用户地址</span></a></li>

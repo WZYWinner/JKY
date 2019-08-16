@@ -1,0 +1,2 @@
+﻿<li class="nav-item ng-scope" title="商品" src="/WebUI/SysAdmin/GuoGoods_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">商品</span></a></li>
+<li class="nav-item ng-scope" title="商家" src="/WebUI/SysAdmin/GuoMerchant_List.aspx?&rnd=<%=YaohuaID.GenRandomInt()%>"><a class="ng-scope" href="javascript:void(0)"><div class="nav-icon"><span class="icon-yunxunizhuji"></span></div><span class="nav-title ng-binding">商家</span></a></li>

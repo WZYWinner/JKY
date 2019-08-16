@@ -1,0 +1,2 @@
+﻿ this.div商品.Visible = check.CheckPower("SysAdmin", "商品");
+ this.div商家.Visible = check.CheckPower("SysAdmin", "商家");
